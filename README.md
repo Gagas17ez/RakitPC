@@ -1,6 +1,8 @@
 # rakit_pc
 
-A new Flutter project.
+<h1>Rakit PC Team RPL B2</h1>
+
+<h2>Politeknik Elektronika Negeri Surabaya</h2>
 
 ## Getting Started
 
