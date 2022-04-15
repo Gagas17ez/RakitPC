@@ -47,12 +47,6 @@ class _MyHomePageState extends State<MyHomePage>
         padding: const EdgeInsets.only(left: 20.0),
         children: <Widget>[
           const SizedBox(height: 15.0),
-          const Text('Categories',
-              style: TextStyle(
-                  fontFamily: 'Varela',
-                  fontSize: 42.0,
-                  fontWeight: FontWeight.bold)),
-          const SizedBox(height: 15.0),
           Container(
               height: MediaQuery.of(context).size.height - 50.0,
               width: double.infinity,
@@ -66,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage>
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: const Color(0xFFF17532),
-        child: const Icon(Icons.fastfood),
+        child: const Icon(Icons.build),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),

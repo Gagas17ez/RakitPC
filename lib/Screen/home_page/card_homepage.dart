@@ -20,13 +20,13 @@ class card_home extends StatelessWidget {
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
-                    _buildCard('Build PC', '\$3.99', 'assets/BuildPC.png',
+                    _buildCard('Build PC', 'assets/img/BuildPC.png',
                         false, false, context),
-                    _buildCard('Upgrade PC', '\$5.99', 'assets/UpgradePC.png',
+                    _buildCard('Upgrade PC', 'assets/img/UpgradePC.png',
                         false, false, context),
-                    _buildCard('Part PC', '\$1.99', 'assets/PartPC.png', false,
+                    _buildCard('Part PC', 'assets/img/PartPC.png', false,
                         false, context),
-                    _buildCard('Build Guides', '\$2.99', 'assets/GuidesPC.png',
+                    _buildCard('Build Guides', 'assets/img/GuidesPC.png',
                         false, false, context),
                   ])),
           const SizedBox(height: 15.0)
@@ -35,7 +35,7 @@ class card_home extends StatelessWidget {
     );
   }
 
-  Widget _buildCard(String name, String price, String imgPath, bool added,
+  Widget _buildCard(String name, String imgPath, bool added,
       bool isFavorite, context) {
     return Padding(
         padding:
@@ -60,16 +60,18 @@ class card_home extends StatelessWidget {
                     color: Colors.white),
                 child: Column(children: [
                   Padding(
-                      padding: const EdgeInsets.all(5.0),
+                      padding: const EdgeInsets.all(45.0),
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            isFavorite
-                                ? const Icon(Icons.favorite,
-                                    color: Color(0xFFEF7532))
-                                : const Icon(Icons.favorite_border,
-                                    color: Color(0xFFEF7532))
-                          ])),
+                          // children: [
+                          //   isFavorite
+                          //       ? const Icon(Icons.favorite,
+                          //           color: Color(0xFFEF7532))
+                          //       : const Icon(Icons.favorite_border,
+                          //           color: Color(0xFFEF7532))
+                          // ]
+                      )
+                  ),
                   Hero(
                       tag: imgPath,
                       child: Container(
@@ -80,47 +82,47 @@ class card_home extends StatelessWidget {
                                   image: AssetImage(imgPath),
                                   fit: BoxFit.contain)))),
                   const SizedBox(height: 7.0),
-                  Text(price,
-                      style: const TextStyle(
-                          color: Color(0xFFCC8053),
-                          fontFamily: 'Varela',
-                          fontSize: 14.0)),
+                  // Text(price,
+                  //     style: const TextStyle(
+                  //         color: Color(0xFFCC8053),
+                  //         fontFamily: 'Varela',
+                  //         fontSize: 14.0)),
                   Text(name,
                       style: const TextStyle(
                           color: Color(0xFF575E67),
                           fontFamily: 'Varela',
                           fontSize: 14.0)),
-                  Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          color: const Color(0xFFEBEBEB), height: 1.0)),
-                  Padding(
-                      padding: const EdgeInsets.only(left: 5.0, right: 5.0),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            if (!added) ...[
-                              const Icon(Icons.shopping_basket,
-                                  color: Color(0xFFD17E50), size: 12.0),
-                              const Text('add to cart',
-                                  style: TextStyle(
-                                      fontFamily: 'Varela',
-                                      color: Color(0xFFD17E50),
-                                      fontSize: 12.0)),
-                            ],
-                            if (added) ...[
-                              const Icon(Icons.remove_circle_outline,
-                                  color: Color(0xFFD17E50), size: 12.0),
-                              const Text('3',
-                                  style: TextStyle(
-                                      fontFamily: 'Varela',
-                                      color: Color(0xFFD17E50),
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12.0)),
-                              const Icon(Icons.add_circle_outline,
-                                  color: Color(0xFFD17E50), size: 12.0),
-                            ]
-                          ]))
+                  // Padding(
+                  //     padding: const EdgeInsets.all(8.0),
+                  //     child: Container(
+                  //         color: const Color(0xFFEBEBEB), height: 1.0)),
+                  // Padding(
+                  //     padding: const EdgeInsets.only(left: 5.0, right: 5.0),
+                  //     child: Row(
+                  //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  //         children: [
+                  //           if (!added) ...[
+                  //             const Icon(Icons.build,
+                  //                 color: Color(0xFFD17E50), size: 12.0),
+                  //             const Text('add to build',
+                  //                 style: TextStyle(
+                  //                     fontFamily: 'Varela',
+                  //                     color: Color(0xFFD17E50),
+                  //                     fontSize: 12.0)),
+                  //           ],
+                  //           if (added) ...[
+                  //             const Icon(Icons.remove_circle_outline,
+                  //                 color: Color(0xFFD17E50), size: 12.0),
+                  //             const Text('3',
+                  //                 style: TextStyle(
+                  //                     fontFamily: 'Varela',
+                  //                     color: Color(0xFFD17E50),
+                  //                     fontWeight: FontWeight.bold,
+                  //                     fontSize: 12.0)),
+                  //             const Icon(Icons.add_circle_outline,
+                  //                 color: Color(0xFFD17E50), size: 12.0),
+                  //           ]
+                  //         ]))
                 ]))));
   }
 }
