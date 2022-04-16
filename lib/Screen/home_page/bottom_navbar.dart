@@ -4,6 +4,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
+        // ignore: prefer_const_constructors
         shape: CircularNotchedRectangle(),
         notchMargin: 6.0,
         color: Colors.transparent,
@@ -11,7 +12,7 @@ class BottomBar extends StatelessWidget {
         clipBehavior: Clip.antiAlias,
         child: Container(
             height: 50.0,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25.0),
                     topRight: Radius.circular(25.0)),
@@ -25,7 +26,7 @@ class BottomBar extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          Icon(Icons.home, color: Color(0xFFEF7532)),
+                          const Icon(Icons.home, color: Color(0xFFEF7532)),
                           //Icon(Icons.chat, color: Color(0xFF676E79))
                         ],
                       )),
@@ -35,8 +36,9 @@ class BottomBar extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                         // Icon(Icons.history, color: Color(0xFF676E79)),
-                          Icon(Icons.account_circle, color: Color(0xFF676E79))
+                          // Icon(Icons.history, color: Color(0xFF676E79)),
+                          const Icon(Icons.account_circle,
+                              color: const Color(0xFF676E79))
                         ],
                       )),
                 ])));

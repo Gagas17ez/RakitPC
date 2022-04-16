@@ -29,11 +29,11 @@ class Part extends StatelessWidget {
               padding: const EdgeInsets.all(8),
               child: GestureDetector(
                 onTap: () => Navigator.of(context).pop(),
-                child: Icon(Icons.arrow_back_rounded),
+                child: const Icon(Icons.arrow_back_rounded),
               ),
             ),
             //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-            title: Text('Part'),
+            title: const Text('Part'),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           body: SafeArea(
@@ -41,7 +41,7 @@ class Part extends StatelessWidget {
             itemCount: questions.length,
             itemBuilder: (context, index) => Card(
               elevation: 6,
-              margin: EdgeInsets.all(15),
+              margin: const EdgeInsets.all(15),
               child: SizedBox(
                 height: 100,
                 child: ListTile(
@@ -56,10 +56,10 @@ class Part extends StatelessWidget {
                     //subtitle: Text(penjelas[index]),
                     trailing: Image.asset(gambar[index]),
                     selected: true,
-                    selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                    selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5),
-                        side: BorderSide(width: 2)),
+                        side: const BorderSide(width: 2)),
                     onTap: () => Listpart()),
               ),
             ),
