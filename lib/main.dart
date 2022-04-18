@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
+import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
+
+import 'Screen/part_page/part_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MenuWisatapi(),
+      home: Part(),
     );
   }
 }
