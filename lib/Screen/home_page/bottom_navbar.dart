@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:rakit_pc/Screen/home_page/homepage.dart';
+import 'package:rakit_pc/Screen/part_page/part_page.dart';
 
 class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-        // ignore: prefer_const_constructors
+      // ignore: prefer_const_constructors
         shape: CircularNotchedRectangle(),
         notchMargin: 6.0,
         color: Colors.transparent,
@@ -20,7 +22,8 @@ class BottomBar extends StatelessWidget {
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  InkWell(
+                    child: Container(
                       height: 50.0,
                       width: MediaQuery.of(context).size.width / 2 - 40.0,
                       child: Row(
@@ -29,18 +32,34 @@ class BottomBar extends StatelessWidget {
                           const Icon(Icons.home, color: Color(0xFFEF7532)),
                           //Icon(Icons.chat, color: Color(0xFF676E79))
                         ],
-                      )),
-                  Container(
-                      height: 50.0,
-                      width: MediaQuery.of(context).size.width / 2 - 40.0,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          // Icon(Icons.history, color: Color(0xFF676E79)),
-                          const Icon(Icons.account_circle,
-                              color: const Color(0xFF676E79))
-                        ],
-                      )),
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => MyHomePage()),
+                      );
+                    },
+                  ),
+                  InkWell(
+                    child: Container(
+                        height: 50.0,
+                        width: MediaQuery.of(context).size.width / 2 - 40.0,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            // Icon(Icons.history, color: Color(0xFF676E79)),
+                            const Icon(Icons.devices_other,
+                                color: const Color(0xFF676E79))
+                          ],
+                        )),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Part()),
+                      );
+                    },
+                  )
                 ])));
   }
 }

@@ -22,11 +22,11 @@ class card_home extends StatelessWidget {
                   children: <Widget>[
                     _buildCard('Build PC', 'assets/img/BuildPC.png',
                         false, false, context),
-                    _buildCard('Upgrade PC', 'assets/img/UpgradePC.png',
-                        false, false, context),
                     _buildCard('Part PC', 'assets/img/PartPC.png', false,
                         false, context),
-                    _buildCard('Build Guides', 'assets/img/GuidesPC.png',
+                    _buildCard('Coming Soon', 'assets/img/UpgradePC.png',
+                        false, false, context),
+                    _buildCard('Coming Soon', 'assets/img/GuidesPC.png',
                         false, false, context),
                   ])),
           const SizedBox(height: 15.0)
