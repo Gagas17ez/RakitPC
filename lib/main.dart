@@ -4,6 +4,8 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+
 
 import 'Screen/part_page/part_page.dart';
 
