@@ -53,62 +53,48 @@ class _CpuCoolerListState extends State<CpuCoolerList> {
               itemCount: data1.length,
               itemBuilder: (context, index) {
                 return Card(
-                  child:Container(
-                    height: 100,
-                    width: 200,
-                    color: Colors.white,
-                    child: Row(
-                      children: [
-                        Center(
-                          child: Padding(
-                            padding: EdgeInsets.all(10),
-                            child: Expanded(
-                              child:Image.network(data1[index].imageLink),
-                              flex:2 ,
-                            ),
+                  clipBehavior: Clip.antiAlias,
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  child: InkWell(
+                    onTap: (){},
+                    child: Container(
+                      // height: 330,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min ,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Stack(
+                            alignment: Alignment.bottomLeft,
+                            children: [
+                              Image.network(data1[index].imageLink,
+                                // height: 400,
+                              ),
+                            ],
                           ),
-                        ),
-                        Expanded(
-                          child:Container(
-                            alignment: Alignment.topLeft,
+                          Padding(
+                            padding: const EdgeInsets.all(20),
                             child: Column(
-                              children: [
-                                Expanded(
-                                  flex: 5,
-                                  child: ListTile(
-                                    title: Text(data1[index].namaCooler),
-                                    subtitle: Text("RP 3.000.000"),
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  data1[index].namaCooler,
+                                  style: TextStyle(color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20,
                                   ),
                                 ),
-                                Expanded(
-                                  flex: 5,
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      TextButton(
-                                        child:Text("Beli"),
-                                        onPressed: ()
-                                        {},
-                                      ),
-                                      SizedBox(width: 8,),
-                                      TextButton(
-                                        child: Text("Tambahkan ke List"),
-                                        onPressed: (){},
-                                      ),
-                                      SizedBox(width: 8,)
-                                    ],
-                                  ),
-                                )
+                                Text( data1[index].merkCooler),
+                                Text(data1[index].powerCooler),
+                                Text(data1[index].fanSpeed),
                               ],
                             ),
                           ),
-                          flex:8 ,
-                        ),
-                      ],
+                          ButtonBar(),
+                        ],
+                      ),
                     ),
                   ),
-                  elevation: 8,
-                  margin: EdgeInsets.all(10),
                 );
               }),
     );
