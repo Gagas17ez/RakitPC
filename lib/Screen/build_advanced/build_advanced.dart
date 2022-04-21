@@ -148,7 +148,7 @@ class HomePage extends StatelessWidget {
               children: [
                 ElevatedButton.icon(
                     onPressed: () {},
-                    icon: const Icon(Icons.add),
+                    icon: const Icon(Icons.                                                                                                                                                       add),
                     label: const Text('Choose CPU',
                     style: TextStyle(
                       

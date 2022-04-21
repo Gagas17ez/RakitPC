@@ -97,6 +97,10 @@ flutter:
       fonts:
             - asset: assets/font/DMSans-Bold.ttf
 
+    - family: SfM
+      fonts:
+            - asset: assets/font/SF-Pro-Display-Medium.ttf
+
   # fonts:
   #   - family: Schyler
   #     fonts:
