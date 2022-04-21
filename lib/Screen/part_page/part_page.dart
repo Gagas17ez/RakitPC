@@ -49,8 +49,14 @@ class _PartState extends State<Part> {
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text('Casing'),
-                      Text('Tempat Sebagian Besar Komponen'),
+                      Text(
+                        'Casing',
+                        textAlign: TextAlign.center,
+                      ),
+                      Text(
+                        'Tempat Sebagian Besar Komponen',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
@@ -81,7 +87,7 @@ class _PartState extends State<Part> {
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text('C{U Cooler'),
+                      Text('CPU Cooler'),
                       Text('Pendingin CPU'),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -178,7 +184,10 @@ class _PartState extends State<Part> {
                   title: Column(
                     children: <Widget>[
                       Text('Motherboard'),
-                      Text('Dasar Komputer Penyambung Komponen'),
+                      Text(
+                        'Dasar Komputer Penyambung Komponen',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
@@ -211,7 +220,10 @@ class _PartState extends State<Part> {
                   title: Column(
                     children: <Widget>[
                       Text('RAM'),
-                      Text('Penyimpanan Memori Komputer Sementara'),
+                      Text(
+                        'Penyimpanan Memori Komputer Sementara',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
@@ -307,7 +319,10 @@ class _PartState extends State<Part> {
                   title: Column(
                     children: <Widget>[
                       Text('VGA'),
-                      Text('Penerjemah Tampilan Monitor'),
+                      Text(
+                        'Penerjemah Tampilan Monitor',
+                        textAlign: TextAlign.center,
+                      ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
