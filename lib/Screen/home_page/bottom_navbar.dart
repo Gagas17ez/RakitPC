@@ -6,7 +6,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      // ignore: prefer_const_constructors
+        // ignore: prefer_const_constructors
         shape: CircularNotchedRectangle(),
         notchMargin: 6.0,
         color: Colors.transparent,
@@ -29,7 +29,8 @@ class BottomBar extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          const Icon(Icons.home, color: Color(0xFFEF7532)),
+                          const Icon(Icons.home,
+                              color: const Color(0xFF676E79)),
                           //Icon(Icons.chat, color: Color(0xFF676E79))
                         ],
                       ),
@@ -37,7 +38,7 @@ class BottomBar extends StatelessWidget {
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MyHomePage()),
+                        MaterialPageRoute(builder: (context) => homepage()),
                       );
                     },
                   ),

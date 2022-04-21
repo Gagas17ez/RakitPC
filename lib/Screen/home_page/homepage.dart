@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/card_homepage.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+class homepage extends StatefulWidget {
+  const homepage({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _homepageState createState() => _homepageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class _homepageState extends State<homepage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -58,7 +59,12 @@ class _MyHomePageState extends State<MyHomePage>
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+          );
+        },
         backgroundColor: const Color(0xFFF17532),
         child: const Icon(Icons.build),
       ),

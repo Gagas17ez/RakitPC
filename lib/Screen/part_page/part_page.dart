@@ -28,7 +28,7 @@ class _PartState extends State<Part> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => MyHomePage()),
+                MaterialPageRoute(builder: (context) => homepage()),
               );
             },
             child: Icon(Icons.arrow_back_rounded),
