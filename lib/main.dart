@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rakit_pc/Screen/build_advanced/build_advanced.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-
 
 import 'Screen/part_page/part_page.dart';
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Part(),
+      home: build_advanced(),
     );
   }
 }
