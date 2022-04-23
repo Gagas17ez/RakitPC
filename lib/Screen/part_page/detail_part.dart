@@ -6,7 +6,7 @@ import 'package:rakit_pc/Models/models_psu.dart';
 import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
-import 'package:rakit_pc/Screen/build_advanced/OLD_build_advanced.dart';
+
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 
 import '../../../../../Api/api_casing.dart';

@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:rakit_pc/Api/api_cpu_id.dart';
+import 'package:rakit_pc/Api/api_motherboard_id.dart';
 import 'package:rakit_pc/Models/models_cpu.dart';
+import 'package:rakit_pc/Models/models_motherboard.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:rakit_pc/global.dart' as global;
 
@@ -495,6 +497,87 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           },
           icon: const Icon(Icons.add),
           label: const Text('Choose CPU',
+              style: TextStyle(
+                fontFamily: 'DmSans',
+                fontSize: 18,
+              )));
+    }
+  }
+
+  Widget getmobowoi() {
+    if (global.id_mobo_adv != 0) {
+      return FutureBuilder(
+          future: fetch_motherboard_id(global.id_mobo_adv),
+          builder: (context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  itemCount: snapshot.data!.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, index) {
+                    Motherboard mobogan = snapshot.data[index];
+                    return Card(
+                        margin: EdgeInsets.all(5),
+                        color: Colors.blue[400],
+                        shadowColor: Colors.grey,
+                        elevation: 10,
+                        child: new InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => ListPart()),
+                            );
+                            setState(
+                              () {
+                                global.nama_part = "Motherboard";
+                              },
+                            );
+                          },
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              ListTile(
+                                leading: Image.network(mobogan.imageLink),
+                                title: Text(
+                                  mobogan.namaMobo,
+                                  style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'poppins',
+                                      color: Colors.white70),
+                                ),
+                                subtitle: Text(
+                                  mobogan.socketMobo,
+                                  style: TextStyle(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'poppins',
+                                      color: Colors.black45),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ));
+                  });
+            }
+            return CircularProgressIndicator();
+          });
+      //
+    } else {
+      return ElevatedButton.icon(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => ListPart()),
+            );
+            setState(
+              () {
+                global.nama_part = "Motherboard";
+              },
+            );
+          },
+          icon: const Icon(Icons.add),
+          label: const Text('Choose Mobo',
               style: TextStyle(
                 fontFamily: 'DmSans',
                 fontSize: 18,

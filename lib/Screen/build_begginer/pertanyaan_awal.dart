@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/widgets.dart';
-import 'package:rakit_pc/Screen/build_advanced/OLD_build_advanced.dart';
+
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
