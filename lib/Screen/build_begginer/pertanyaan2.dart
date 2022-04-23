@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:im_stepper/stepper.dart';
+
+import 'package:hexcolor/hexcolor.dart';
 
 class Pertanyaan2 extends StatefulWidget {
-  Pertanyaan2({Key? key}) : super(key: key);
+  const Pertanyaan2({Key? key}) : super(key: key);
 
   @override
   State<Pertanyaan2> createState() => _Pertanyaan2State();
@@ -14,25 +16,37 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor("#272B40"),
       appBar: AppBar(
-        title: const Text('Pertanyaan 2'),
-      ),
+          title: Text('Pertanyaan 2', textAlign: TextAlign.center),
+          backgroundColor: HexColor("#272B40")),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: <Widget>[
+          const SizedBox(
+            height: 50,
+          ),
           Container(
-            margin: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-            child: const Card(
-              child: const SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Center(
-                    child: Text(
-                      "Apa kegunaan dari komputer tersebut",
-                      textAlign: TextAlign.center,
-                    ),
-                  )),
-            ),
+              height: 165,
+              width: 327,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                color: Colors.white,
+              ),
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "Apa kegunaan dari komputer tersebut ??",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    height: 2.0,
+                    fontFamily: 'SfM',
+                  ),
+                ),
+              )),
+          const SizedBox(
+            height: 30,
           ),
           Container(
             margin: const EdgeInsets.fromLTRB(5, 50, 5, 5),
@@ -46,8 +60,14 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                       borderRadius: BorderRadius.circular(32.0)),
                   minimumSize: const Size(100, 40), //////// HERE
                 ),
-                onPressed: () {},
-                child: const Text('Button 1')),
+                onPressed: () {
+                  setState(
+                    () {
+                      global.kegunaan = 1;
+                    },
+                  );
+                },
+                child: const Text('Penggunaan ringan Browser/Sekolah/Kerja')),
           ),
           Container(
             margin: const EdgeInsets.all(5),
@@ -61,8 +81,18 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                       borderRadius: BorderRadius.circular(32.0)),
                   minimumSize: const Size(100, 40), //////// HERE
                 ),
-                onPressed: () {},
-                child: const Text('Button 2')),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                  );
+                  setState(
+                    () {
+                      global.kegunaan = 2;
+                    },
+                  );
+                },
+                child: const Text('Penggunaan moderate Kuliah/Programming')),
           ),
           Container(
             margin: const EdgeInsets.all(5),
@@ -76,8 +106,18 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                       borderRadius: BorderRadius.circular(32.0)),
                   minimumSize: const Size(100, 40), //////// HERE
                 ),
-                onPressed: () {},
-                child: const Text('Button 2')),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                  );
+                  setState(
+                    () {
+                      global.kegunaan = 3;
+                    },
+                  );
+                },
+                child: const Text('Penggunaan berat Gaming/3D/Video Editing')),
           ),
           Container(
             margin: const EdgeInsets.all(5),
@@ -91,95 +131,70 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                       borderRadius: BorderRadius.circular(32.0)),
                   minimumSize: const Size(100, 40), //////// HERE
                 ),
-                onPressed: () {},
-                child: const Text('Button 2')),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                  );
+                  setState(
+                    () {
+                      global.kegunaan = 4;
+                    },
+                  );
+                },
+                child: const Text(
+                    'Pengunaan sangat berat Workstation/MachineLearning/Server')),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 100),
-            child: Column(
-              children: [
-                DotStepper(
-                  // direction: Axis.vertical,
-                  dotCount: global.dot_count,
-                  dotRadius: 12,
-
-                  /// THIS MUST BE SET. SEE HOW IT IS CHANGED IN NEXT/PREVIOUS BUTTONS AND JUMP BUTTONS.
-                  activeStep: global.active_dot,
-                  shape: Shape.circle,
-                  spacing: 10,
-                  indicator: Indicator.shift,
-
-                  /// TAPPING WILL NOT FUNCTION PROPERLY WITHOUT THIS PIECE OF CODE.
-                  onDotTapped: (tappedDotIndex) {
-                    setState(() {
-                      global.active_dot = tappedDotIndex;
-                    });
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            buttonPadding:
+                const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            children: [
+              Container(
+                width: 90,
+                height: 50,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(HexColor("7A77FF")),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ))),
+                  child: Icon(Icons.arrow_back_ios_rounded),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => pertanyaan_awal()),
+                    );
                   },
-
-                  // DOT-STEPPER DECORATIONS
                 ),
-
-                /// Jump buttons.
-                Padding(padding: const EdgeInsets.all(18.0), child: steps()),
-
-                // Next and Previous buttons.
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [previousButton(), nextButton()],
-                )
-              ],
-            ),
-          )
+              ),
+              Container(
+                width: 90,
+                height: 50,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(HexColor("7A77FF")),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ))),
+                  child: Icon(Icons.arrow_forward_ios_rounded),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ],
       ),
-    );
-  }
-
-  Row steps() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(global.dot_count, (index) {
-        return ElevatedButton(
-          child: Text('${index + 1}'),
-          onPressed: () {
-            setState(() {
-              global.active_dot = index;
-            });
-          },
-        );
-      }),
-    );
-  }
-
-  Widget nextButton() {
-    return ElevatedButton(
-      child: Text('Next'),
-      onPressed: () {
-        /// ACTIVE STEP MUST BE CHECKED FOR (dotCount - 1) AND NOT FOR dotCount To PREVENT Overflow ERROR.
-        if (global.active_dot < global.dot_count - 1) {
-          setState(() {
-            global.active_dot++;
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
-            );
-          });
-        }
-      },
-    );
-  }
-
-  Widget previousButton() {
-    return ElevatedButton(
-      child: Text('Prev'),
-      onPressed: () {
-        // activeStep MUST BE GREATER THAN 0 TO PREVENT OVERFLOW.
-        if (global.active_dot > 0) {
-          setState(() {
-            global.active_dot--;
-          });
-        }
-      },
     );
   }
 }

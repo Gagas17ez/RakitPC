@@ -115,15 +115,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('Casing'),
+          title: const Text('Casing'),
         ),
         body: data1.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -139,7 +139,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 1;
@@ -168,7 +169,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data1[index].namaCasing,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -179,7 +180,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -199,15 +200,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('CPU Cooler'),
+          title: const Text('CPU Cooler'),
         ),
         body: data2.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -223,7 +224,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 2;
@@ -252,7 +254,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data2[index].namaCooler,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -264,7 +266,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -284,15 +286,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('CPU'),
+          title: const Text('CPU'),
         ),
         body: data3.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -308,7 +310,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 3;
@@ -337,7 +340,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data3[index].namaCpu,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -348,7 +351,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -368,15 +371,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('Fan'),
+          title: const Text('Fan'),
         ),
         body: data4.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -392,7 +395,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 4;
@@ -421,7 +425,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data4[index].namaFans,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -432,7 +436,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -452,15 +456,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('Motherboard'),
+          title: const Text('Motherboard'),
         ),
         body: data5.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -476,7 +480,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 5;
@@ -505,7 +510,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data5[index].namaMobo,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -516,7 +521,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -536,14 +541,14 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('RAM'),
+          title: const Text('RAM'),
         ),
         body: data6.length == 0
-            ? Center(
+            ? const Center(
                 child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
@@ -560,7 +565,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 6;
@@ -589,7 +595,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data6[index].namaRam,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -601,7 +607,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -621,15 +627,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('Storage'),
+          title: const Text('Storage'),
         ),
         body: data7.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -645,7 +651,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 7;
@@ -674,7 +681,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data7[index].namaStorage,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -686,7 +693,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -706,15 +713,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('PSU'),
+          title: const Text('PSU'),
         ),
         body: data8.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -730,7 +737,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 8;
@@ -759,7 +767,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data8[index].namaPsu,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -770,7 +778,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -790,15 +798,15 @@ class _ListPartState extends State<ListPart> {
                   MaterialPageRoute(builder: (context) => Part()),
                 );
               },
-              child: Icon(Icons.arrow_back_rounded),
+              child: const Icon(Icons.arrow_back_rounded),
             ),
           ),
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-          title: Text('VGA'),
+          title: const Text('VGA'),
         ),
         body: data9.length == 0
-            ? Center(
-                child: CircularProgressIndicator(
+            ? const Center(
+                child: const CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -814,7 +822,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => DetailPart()),
+                          MaterialPageRoute(
+                              builder: (context) => const DetailPart()),
                         );
                         setState(() {
                           global.id_part = 9;
@@ -843,7 +852,7 @@ class _ListPartState extends State<ListPart> {
                                 children: <Widget>[
                                   Text(
                                     data9[index].namaVga,
-                                    style: TextStyle(
+                                    style: const TextStyle(
                                       color: Colors.black,
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20,
@@ -855,7 +864,7 @@ class _ListPartState extends State<ListPart> {
                                 ],
                               ),
                             ),
-                            ButtonBar(),
+                            const ButtonBar(),
                           ],
                         ),
                       ),
@@ -864,8 +873,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else {
-      return Scaffold(
-          body: Center(
+      return const Scaffold(
+          body: const Center(
         child: CircularProgressIndicator(
           color: Colors.black,
         ),

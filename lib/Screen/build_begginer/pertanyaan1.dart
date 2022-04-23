@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/stepper.dart';
-import 'package:im_stepper/stepper.dart';
+
+import 'package:hexcolor/hexcolor.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class Pertanyaan1 extends StatefulWidget {
   Pertanyaan1({Key? key}) : super(key: key);
@@ -14,26 +17,45 @@ class Pertanyaan1 extends StatefulWidget {
 class _Pertanyaan1State extends State<Pertanyaan1> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pertanyaan 1'),
+    return ScaffoldGradientBackground(
+      gradient: LinearGradient(
+        begin: Alignment.bottomRight,
+        end: Alignment.topLeft,
+        colors: [
+          Color(0xFFAE52BB),
+          Color(0xFF0C062A),
+        ],
       ),
+      appBar: AppBar(
+          title: Text('Pertanyaan 1', textAlign: TextAlign.center),
+          backgroundColor: HexColor("#0C062A")),
       body: ListView(
         padding: const EdgeInsets.all(20),
         children: <Widget>[
+          const SizedBox(
+            height: 50,
+          ),
           Container(
-            margin: const EdgeInsets.fromLTRB(5, 5, 5, 5),
-            child: const Card(
-              child: SizedBox(
-                  width: 50,
-                  height: 50,
-                  child: Center(
-                    child: Text(
-                      "Berapa Budget anda ?",
-                      textAlign: TextAlign.center,
-                    ),
-                  )),
-            ),
+              height: 165,
+              width: 327,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(15)),
+                color: Colors.white,
+              ),
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "Seberapa besar budget anda ??",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    height: 2.0,
+                    fontFamily: 'SfM',
+                  ),
+                ),
+              )),
+          const SizedBox(
+            height: 30,
           ),
           Container(
             margin: const EdgeInsets.fromLTRB(5, 50, 5, 5),
@@ -58,7 +80,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     },
                   );
                 },
-                child: const Text('Button 1')),
+                child: const Text('Mulai dari Rp4.000.000,00')),
           ),
           Container(
             margin: const EdgeInsets.all(5),
@@ -83,7 +105,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     },
                   );
                 },
-                child: const Text('Button 2')),
+                child: const Text('Mulai dari Rp7.000.000,00')),
           ),
           Container(
             margin: const EdgeInsets.all(5),
@@ -108,7 +130,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     },
                   );
                 },
-                child: const Text('Button 2')),
+                child: const Text('Mulai dari Rp10.000.000,00')),
           ),
           Container(
             margin: const EdgeInsets.all(5),
@@ -133,94 +155,58 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     },
                   );
                 },
-                child: const Text('Button 2')),
+                child: const Text('Mulai dari Rp15.000.000,00')),
           ),
-          Padding(
-            padding: EdgeInsets.only(top: 100),
-            child: Column(
-              children: [
-                DotStepper(
-                  // direction: Axis.vertical,
-                  dotCount: global.dot_count,
-                  dotRadius: 12,
-
-                  /// THIS MUST BE SET. SEE HOW IT IS CHANGED IN NEXT/PREVIOUS BUTTONS AND JUMP BUTTONS.
-                  activeStep: global.active_dot,
-                  shape: Shape.circle,
-                  spacing: 10,
-                  indicator: Indicator.shift,
-
-                  /// TAPPING WILL NOT FUNCTION PROPERLY WITHOUT THIS PIECE OF CODE.
-                  onDotTapped: (tappedDotIndex) {
-                    setState(() {
-                      global.active_dot = tappedDotIndex;
-                    });
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
+            buttonPadding:
+                const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+            children: [
+              Container(
+                width: 90,
+                height: 50,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(HexColor("7A77FF")),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ))),
+                  child: Icon(Icons.arrow_back_ios_rounded),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => pertanyaan_awal()),
+                    );
                   },
-
-                  // DOT-STEPPER DECORATIONS
                 ),
-
-                /// Jump buttons.
-                Padding(padding: const EdgeInsets.all(18.0), child: steps()),
-
-                // Next and Previous buttons.
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [previousButton(), nextButton()],
-                )
-              ],
-            ),
+              ),
+              Container(
+                width: 90,
+                height: 50,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(HexColor("7A77FF")),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ))),
+                  child: Icon(Icons.arrow_forward_ios_rounded),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    );
+                  },
+                ),
+              ),
+            ],
           ),
         ],
       ),
-    );
-  }
-
-  Row steps() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(global.dot_count, (index) {
-        return ElevatedButton(
-          child: Text('${index + 1}'),
-          onPressed: () {
-            setState(() {
-              global.active_dot = index;
-            });
-          },
-        );
-      }),
-    );
-  }
-
-  Widget nextButton() {
-    return ElevatedButton(
-      child: Text('Next'),
-      onPressed: () {
-        /// ACTIVE STEP MUST BE CHECKED FOR (dotCount - 1) AND NOT FOR dotCount To PREVENT Overflow ERROR.
-        if (global.active_dot < global.dot_count - 1) {
-          setState(() {
-            global.active_dot++;
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => Pertanyaan2()),
-            );
-          });
-        }
-      },
-    );
-  }
-
-  Widget previousButton() {
-    return ElevatedButton(
-      child: Text('Prev'),
-      onPressed: () {
-        // activeStep MUST BE GREATER THAN 0 TO PREVENT OVERFLOW.
-        if (global.active_dot > 0) {
-          setState(() {
-            global.active_dot--;
-          });
-        }
-      },
     );
   }
 }

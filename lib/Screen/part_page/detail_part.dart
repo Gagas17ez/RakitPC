@@ -6,6 +6,8 @@ import 'package:rakit_pc/Models/models_psu.dart';
 import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
+import 'package:rakit_pc/Screen/build_advanced/OLD_build_advanced.dart';
+import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 
 import '../../../../../Api/api_casing.dart';
 import '../../../../../Models/models_casing.dart';
@@ -186,7 +188,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_case_adv = int.parse(
+                                            data1[global.id_detail].idCasing);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -484,7 +499,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(20, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_case_adv = int.parse(
+                                            data2[global.id_detail].idCooler);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -737,7 +765,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_cpu_adv = int.parse(
+                                            data3[global.id_detail].idCpu);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -1022,7 +1063,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_fan_adv = int.parse(
+                                            data4[global.id_detail].idFans);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -1290,7 +1344,21 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_mobo_adv = int.parse(
+                                            data5[global.id_detail]
+                                                .idMotherboard);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -1606,7 +1674,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_ram_adv = int.parse(
+                                            data6[global.id_detail].idRam);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -1876,7 +1957,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_storage_adv = int.parse(
+                                            data7[global.id_detail].idStorage);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -2165,7 +2259,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_psu_adv = int.parse(
+                                            data8[global.id_detail].idPsu);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),
@@ -2456,7 +2563,20 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(100, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              buildpc_advanced()),
+                                    );
+                                    setState(
+                                      () {
+                                        global.id_vga_adv = int.parse(
+                                            data9[global.id_detail].idVga);
+                                      },
+                                    );
+                                  },
                                   child: const Text('Add to Build')),
                             ],
                           ),

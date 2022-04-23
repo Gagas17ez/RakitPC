@@ -2,12 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class card_home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFFFCFAF8),
+    return ScaffoldGradientBackground(
+      gradient: LinearGradient(
+        begin: Alignment.bottomRight,
+        end: Alignment.topLeft,
+        colors: [
+          Color(0xFFAE52BB),
+          Color(0xFF0C062A),
+        ],
+      ),
       body: ListView(
         children: <Widget>[
           const SizedBox(height: 20.0),
@@ -51,28 +60,31 @@ class card_home extends StatelessWidget {
                         spreadRadius: 3.0,
                         blurRadius: 5.0)
                   ],
-                  color: Colors.white),
+                  color: HexColor("7A77FF")),
               child: Column(children: [
                 Padding(
-                    padding: const EdgeInsets.all(25),
+                    padding: const EdgeInsets.all(15),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                     )),
                 Hero(
                     tag: imgPath,
                     child: Container(
-                        height: 70.0,
-                        width: 75.0,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(imgPath),
-                                fit: BoxFit.contain)))),
-                const SizedBox(height: 7.0),
+                      height: 100.0,
+                      width: 100.0,
+                      child: Image.asset(imgPath),
+                      // decoration: BoxDecoration(
+                      //     image: DecorationImage(
+                      //   image: AssetImage(imgPath),
+                      // ))
+                    )),
+                const SizedBox(height: 15.0),
                 Text(name,
                     style: const TextStyle(
-                        color: Color(0xFF575E67),
-                        fontFamily: 'Varela',
-                        fontSize: 14.0)),
+                        color: Colors.white,
+                        fontFamily: 'SfM',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w400)),
               ])),
         ));
   }

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/card_homepage.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/global.dart' as global;
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class homepage extends StatefulWidget {
   const homepage({Key? key}) : super(key: key);
@@ -18,36 +21,47 @@ class _homepageState extends State<homepage>
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
+    global.id_builds = 0;
+    global.id_cpu_adv = 0;
+    global.id_cpu_cooler_adv = 0;
+    global.id_fan_adv = 0;
+    global.id_mobo_adv = 0;
+    global.id_part = 0;
+    global.id_psu_adv = 0;
+    global.id_ram_adv = 0;
+    global.id_storage_adv = 0;
+    global.id_ram_adv = 0;
+    global.nama_part = "";
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ScaffoldGradientBackground(
+      gradient: LinearGradient(
+        begin: Alignment.bottomRight,
+        end: Alignment.topLeft,
+        colors: [
+          Color(0xFFAE52BB),
+          Color(0xFF0C062A),
+        ],
+      ),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: HexColor("#272B40"),
         elevation: 0.0,
         centerTitle: true,
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Color(0xFF545D68)),
-          onPressed: () {},
-        ),
         title: const Text('Home Page',
             style: TextStyle(
-                fontFamily: 'Varela',
-                fontSize: 20.0,
-                color: Color(0xFF545D68))),
+                fontFamily: 'Varela', fontSize: 20.0, color: Colors.white)),
         actions: <Widget>[
           IconButton(
-            icon:
-                const Icon(Icons.notifications_none, color: Color(0xFF545D68)),
+            icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},
           ),
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.only(left: 20.0),
+        padding: const EdgeInsets.only(left: 6),
         children: <Widget>[
-          const SizedBox(height: 15.0),
           Container(
               height: MediaQuery.of(context).size.height - 50.0,
               width: double.infinity,

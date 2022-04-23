@@ -25,16 +25,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                     itemBuilder: (BuildContext context, index) {
                       Builds build = snapshot.data[index];
                       return Card(
-                        margin: EdgeInsets.all(1),
+                        margin: const EdgeInsets.all(1),
                         color: Colors.blue.withOpacity(0.1),
                         shadowColor: Colors.grey.withOpacity(0.0),
                         elevation: 10,
-                        child: new InkWell(
+                        child: InkWell(
                           child: Column(
                             mainAxisSize: MainAxisSize.min,
                             children: [
+                              // ignore: prefer_const_constructors
                               Card(
-                                child: SizedBox(
+                                child: const SizedBox(
                                     width: 200,
                                     height: 50,
                                     child: Center(
@@ -46,7 +47,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                               ),
                               ListTile(
                                 contentPadding:
-                                    EdgeInsets.fromLTRB(10, 50, 10, 5),
+                                    const EdgeInsets.fromLTRB(10, 50, 10, 5),
                                 leading: Image.network(build.imgCpu,
                                     width: 50, height: 50, fit: BoxFit.cover),
                                 title: Text(
@@ -59,6 +60,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp.${build.hargaCpu}",
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -67,7 +69,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
-                                contentPadding: EdgeInsets.symmetric(
+                                contentPadding: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgMobo,
                                     width: 50, height: 50, fit: BoxFit.cover),
@@ -81,6 +83,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaMobo,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -89,6 +92,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
+                                // ignore: prefer_const_constructors
                                 contentPadding: EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgRam,
@@ -103,6 +107,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaRam,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -111,7 +116,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
-                                contentPadding: EdgeInsets.symmetric(
+                                contentPadding: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgVga,
                                     width: 50, height: 50, fit: BoxFit.cover),
@@ -125,6 +130,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaVga,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -133,7 +139,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
-                                contentPadding: EdgeInsets.symmetric(
+                                contentPadding: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgStorage,
                                     width: 50, height: 50, fit: BoxFit.cover),
@@ -147,6 +153,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaStorage,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -155,6 +162,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
+                                // ignore: prefer_const_constructors
                                 contentPadding: EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgPsu,
@@ -169,6 +177,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaPsu,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -177,6 +186,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
+                                // ignore: prefer_const_constructors
                                 contentPadding: EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgCpuCooler,
@@ -191,6 +201,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaCpuCooler,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -199,7 +210,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
-                                contentPadding: EdgeInsets.symmetric(
+                                contentPadding: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgFans,
                                     width: 50, height: 50, fit: BoxFit.cover),
@@ -213,6 +224,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaFans,
+                                  // ignore: prefer_const_constructors
                                   style: TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
@@ -221,7 +233,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                               ),
                               ListTile(
-                                contentPadding: EdgeInsets.symmetric(
+                                contentPadding: const EdgeInsets.symmetric(
                                     vertical: 5, horizontal: 10),
                                 leading: Image.network(build.imgCasing,
                                     width: 50, height: 50, fit: BoxFit.cover),
@@ -235,7 +247,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 subtitle: Text(
                                   "Rp. " + build.hargaCasing,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 14,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -250,7 +262,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
               }
               return SizedBox(
                 height: MediaQuery.of(context).size.height / 1.3,
-                child: Center(
+                child: const Center(
                   child: CircularProgressIndicator(
                     valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
                   ),

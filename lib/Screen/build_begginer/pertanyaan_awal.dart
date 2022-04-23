@@ -2,8 +2,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/widgets.dart';
-import 'package:rakit_pc/Screen/build_advanced/build_advanced.dart';
+import 'package:rakit_pc/Screen/build_advanced/OLD_build_advanced.dart';
+import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 class pertanyaan_awal extends StatelessWidget {
   const pertanyaan_awal({Key? key}) : super(key: key);
@@ -12,7 +14,9 @@ class pertanyaan_awal extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Rakit PC', textAlign: TextAlign.center),
+      ),
       body: Center(
         child: Column(
           children: <Widget>[
@@ -65,7 +69,7 @@ class pertanyaan_awal extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => build_advanced()),
+                            builder: (context) => buildpc_advanced()),
                       );
                     },
                   ),
