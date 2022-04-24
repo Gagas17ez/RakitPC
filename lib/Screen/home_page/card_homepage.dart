@@ -27,7 +27,7 @@ class card_home extends StatelessWidget {
               child: GridView.count(
                   crossAxisCount: 2,
                   primary: false,
-                  crossAxisSpacing: 10.0,
+                  crossAxisSpacing: 2.0,
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
@@ -45,8 +45,8 @@ class card_home extends StatelessWidget {
   Widget _buildCard(
       String name, String imgPath, bool added, bool isFavorite, context) {
     return Padding(
-        padding:
-            const EdgeInsets.only(top: 6.0, bottom: 5.0, left: 12.0, right: 12.0),
+        padding: const EdgeInsets.only(
+            top: 6.0, bottom: 5.0, left: 12.0, right: 12.0),
         child: InkWell(
           onTap: () {
             returnbutton(context, name);
@@ -69,21 +69,17 @@ class card_home extends StatelessWidget {
                     )),
                 Hero(
                     tag: imgPath,
-                    child: Container(
-                      height: 100.0,
-                      width: 100.0,
+                    child: SizedBox(
+                      height: 110.0,
+                      width: 110.0,
                       child: Image.asset(imgPath),
-                      // decoration: BoxDecoration(
-                      //     image: DecorationImage(
-                      //   image: AssetImage(imgPath),
-                      // ))
                     )),
-                const SizedBox(height: 15.0),
+                const SizedBox(height: 25.0),
                 Text(name,
                     style: const TextStyle(
                         color: Colors.white,
                         fontFamily: 'SfM',
-                        fontSize: 24.0,
+                        fontSize: 20.0,
                         fontWeight: FontWeight.w400)),
               ])),
         ));

@@ -46,10 +46,10 @@ class _homepageState extends State<homepage>
         ],
       ),
       appBar: AppBar(
-        backgroundColor: HexColor("#272B40"),
+        backgroundColor: Color(0xFF272B40).withOpacity(0.0),
         elevation: 0.0,
         centerTitle: true,
-        title: const Text('Home Page',
+        title: const Text('HomePage',
             style: TextStyle(
                 fontFamily: 'SfM', fontSize: 20.0, color: Colors.white)),
         actions: <Widget>[
@@ -60,6 +60,7 @@ class _homepageState extends State<homepage>
         ],
       ),
       body: ListView(
+        shrinkWrap: false,
         padding: const EdgeInsets.only(left: 0),
         children: <Widget>[
           Container(
@@ -79,8 +80,11 @@ class _homepageState extends State<homepage>
             MaterialPageRoute(builder: (context) => pertanyaan_awal()),
           );
         },
-        backgroundColor: const Color(0xFFF17532),
-        child: const Icon(Icons.build),
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
