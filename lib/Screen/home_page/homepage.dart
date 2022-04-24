@@ -51,7 +51,7 @@ class _homepageState extends State<homepage>
         centerTitle: true,
         title: const Text('Home Page',
             style: TextStyle(
-                fontFamily: 'Varela', fontSize: 20.0, color: Colors.white)),
+                fontFamily: 'SfM', fontSize: 20.0, color: Colors.white)),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.notifications_none, color: Colors.white),
@@ -60,7 +60,7 @@ class _homepageState extends State<homepage>
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.only(left: 6),
+        padding: const EdgeInsets.only(left: 0),
         children: <Widget>[
           Container(
               height: MediaQuery.of(context).size.height - 50.0,

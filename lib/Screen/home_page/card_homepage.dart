@@ -21,7 +21,7 @@ class card_home extends StatelessWidget {
         children: <Widget>[
           const SizedBox(height: 20.0),
           Container(
-              padding: const EdgeInsets.only(right: 15.0),
+              padding: const EdgeInsets.only(right: 0.0),
               width: MediaQuery.of(context).size.width - 30.0,
               height: MediaQuery.of(context).size.height - 50.0,
               child: GridView.count(
@@ -46,7 +46,7 @@ class card_home extends StatelessWidget {
       String name, String imgPath, bool added, bool isFavorite, context) {
     return Padding(
         padding:
-            const EdgeInsets.only(top: 5.0, bottom: 5.0, left: 5.0, right: 5.0),
+            const EdgeInsets.only(top: 6.0, bottom: 5.0, left: 12.0, right: 12.0),
         child: InkWell(
           onTap: () {
             returnbutton(context, name);
@@ -83,7 +83,7 @@ class card_home extends StatelessWidget {
                     style: const TextStyle(
                         color: Colors.white,
                         fontFamily: 'SfM',
-                        fontSize: 18.0,
+                        fontSize: 24.0,
                         fontWeight: FontWeight.w400)),
               ])),
         ));
