@@ -2,6 +2,7 @@
 //
 //     final cpu = cpuFromJson(jsonString);
 
+import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Cpu> cpuFromJson(String str) =>
@@ -26,6 +27,7 @@ class Cpu {
     required this.unlocked,
     required this.maxTemp,
     required this.procTechnology,
+    required this.harga,
     required this.imageLink,
   });
 
@@ -43,6 +45,7 @@ class Cpu {
   String unlocked;
   String maxTemp;
   String procTechnology;
+  String harga;
   String imageLink;
 
   factory Cpu.fromJson(Map<String, dynamic> json) => Cpu(
@@ -60,6 +63,7 @@ class Cpu {
         unlocked: json["Unlocked"],
         maxTemp: json["MaxTemp"],
         procTechnology: json["ProcTechnology"],
+        harga: json["Harga"],
         imageLink: json["ImageLink"],
       );
 
@@ -78,6 +82,7 @@ class Cpu {
         "Unlocked": unlocked,
         "MaxTemp": maxTemp,
         "ProcTechnology": procTechnology,
+        "Harga": harga,
         "ImageLink": imageLink,
       };
 }

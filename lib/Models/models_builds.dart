@@ -53,6 +53,7 @@ class Builds {
     required this.hargaCasing,
     required this.imgCasing,
     required this.imgLinks,
+    required this.hargaBuilds,
   });
 
   String idBuilds;
@@ -95,6 +96,7 @@ class Builds {
   String hargaCasing;
   String imgCasing;
   String imgLinks;
+  String hargaBuilds;
 
   factory Builds.fromJson(Map<String, dynamic> json) => Builds(
         idBuilds: json["idBuilds"],
@@ -137,6 +139,7 @@ class Builds {
         hargaCasing: json["HargaCasing"],
         imgCasing: json["ImgCasing"],
         imgLinks: json["ImgLinks"],
+        hargaBuilds: json["HargaBuilds"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -180,5 +183,6 @@ class Builds {
         "HargaCasing": hargaCasing,
         "ImgCasing": imgCasing,
         "ImgLinks": imgLinks,
+        "HargaBuilds": hargaBuilds,
       };
 }

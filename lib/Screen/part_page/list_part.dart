@@ -346,7 +346,7 @@ class _ListPartState extends State<ListPart> {
                                       fontSize: 20,
                                     ),
                                   ),
-                                  Text(data3[index].threadsCount),
+                                  Text(data3[index].harga),
                                   Text(data3[index].maxClock),
                                 ],
                               ),

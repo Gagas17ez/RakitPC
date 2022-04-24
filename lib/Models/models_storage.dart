@@ -25,6 +25,7 @@ class Storage {
     required this.writeSpeed,
     required this.rpm,
     required this.storageWatt,
+    required this.harga,
     required this.imageLink,
   });
 
@@ -40,6 +41,7 @@ class Storage {
   String writeSpeed;
   String rpm;
   String storageWatt;
+  String harga;
   String imageLink;
 
   factory Storage.fromJson(Map<String, dynamic> json) => Storage(
@@ -55,6 +57,7 @@ class Storage {
         writeSpeed: json["WriteSpeed"],
         rpm: json["RPM"],
         storageWatt: json["StorageWatt"],
+        harga: json["Harga"],
         imageLink: json["ImageLink"],
       );
 
@@ -71,6 +74,7 @@ class Storage {
         "WriteSpeed": writeSpeed,
         "RPM": rpm,
         "StorageWatt": storageWatt,
+        "Harga": harga,
         "ImageLink": imageLink,
       };
 }

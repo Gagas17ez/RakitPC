@@ -1,13 +1,14 @@
 // To parse this JSON data, do
 //
-//     final Casing = CasingFromJson(jsonString);
+//     final casing = casingFromJson(jsonString);
 
+import 'package:meta/meta.dart';
 import 'dart:convert';
 
-List<Casing> CasingFromJson(String str) =>
+List<Casing> casingFromJson(String str) =>
     List<Casing>.from(json.decode(str).map((x) => Casing.fromJson(x)));
 
-String CasingToJson(List<Casing> data) =>
+String casingToJson(List<Casing> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class Casing {
@@ -26,6 +27,7 @@ class Casing {
     required this.maxCoolerHeight,
     required this.maxPsu,
     required this.casingSidePanel,
+    required this.harga,
     required this.imageLink,
   });
 
@@ -43,6 +45,7 @@ class Casing {
   String maxCoolerHeight;
   String maxPsu;
   String casingSidePanel;
+  String harga;
   String imageLink;
 
   factory Casing.fromJson(Map<String, dynamic> json) => Casing(
@@ -60,6 +63,7 @@ class Casing {
         maxCoolerHeight: json["MaxCoolerHeight"],
         maxPsu: json["MaxPSU"],
         casingSidePanel: json["CasingSidePanel"],
+        harga: json["Harga"],
         imageLink: json["ImageLink"],
       );
 
@@ -78,6 +82,7 @@ class Casing {
         "MaxCoolerHeight": maxCoolerHeight,
         "MaxPSU": maxPsu,
         "CasingSidePanel": casingSidePanel,
+        "Harga": harga,
         "ImageLink": imageLink,
       };
 }

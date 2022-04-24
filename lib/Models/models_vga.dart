@@ -35,6 +35,7 @@ class Vga {
     required this.rTcores,
     required this.color,
     required this.imageLink,
+    required this.harga,
     required this.graphicApi,
     required this.displayTechnology,
   });
@@ -61,6 +62,7 @@ class Vga {
   String rTcores;
   String color;
   String imageLink;
+  String harga;
   String graphicApi;
   String displayTechnology;
 
@@ -87,6 +89,7 @@ class Vga {
         rTcores: json["RTcores"],
         color: json["Color"],
         imageLink: json["ImageLink"],
+        harga: json["Harga"],
         graphicApi: json["GraphicAPI"],
         displayTechnology: json["DisplayTechnology"],
       );
@@ -114,6 +117,7 @@ class Vga {
         "RTcores": rTcores,
         "Color": color,
         "ImageLink": imageLink,
+        "Harga": harga,
         "GraphicAPI": graphicApi,
         "DisplayTechnology": displayTechnology,
       };

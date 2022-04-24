@@ -27,6 +27,7 @@ class Psu {
     required this.atxConnector,
     required this.colorPsu,
     required this.rgb,
+    required this.harga,
     required this.imageLink,
   });
 
@@ -44,6 +45,7 @@ class Psu {
   String atxConnector;
   String colorPsu;
   String rgb;
+  String harga;
   String imageLink;
 
   factory Psu.fromJson(Map<String, dynamic> json) => Psu(
@@ -61,6 +63,7 @@ class Psu {
         atxConnector: json["ATXConnector"],
         colorPsu: json["ColorPsu"],
         rgb: json["RGB"],
+        harga: json["Harga"],
         imageLink: json["ImageLink"],
       );
 
@@ -79,6 +82,7 @@ class Psu {
         "ATXConnector": atxConnector,
         "ColorPsu": colorPsu,
         "RGB": rgb,
+        "Harga": harga,
         "ImageLink": imageLink,
       };
 }

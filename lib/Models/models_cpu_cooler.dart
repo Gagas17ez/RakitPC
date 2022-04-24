@@ -2,6 +2,7 @@
 //
 //     final cpuCooler = cpuCoolerFromJson(jsonString);
 
+import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<CpuCooler> cpuCoolerFromJson(String str) =>
@@ -23,6 +24,7 @@ class CpuCooler {
     required this.powerCooler,
     required this.colorCooler,
     required this.rgb,
+    required this.harga,
     required this.imageLink,
   });
 
@@ -37,6 +39,7 @@ class CpuCooler {
   String powerCooler;
   String colorCooler;
   String rgb;
+  String harga;
   String imageLink;
 
   factory CpuCooler.fromJson(Map<String, dynamic> json) => CpuCooler(
@@ -51,6 +54,7 @@ class CpuCooler {
         powerCooler: json["PowerCooler"],
         colorCooler: json["ColorCooler"],
         rgb: json["RGB"],
+        harga: json["Harga"],
         imageLink: json["ImageLink"],
       );
 
@@ -66,6 +70,7 @@ class CpuCooler {
         "PowerCooler": powerCooler,
         "ColorCooler": colorCooler,
         "RGB": rgb,
+        "Harga": harga,
         "ImageLink": imageLink,
       };
 }

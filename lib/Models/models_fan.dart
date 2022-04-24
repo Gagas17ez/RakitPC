@@ -2,6 +2,7 @@
 //
 //     final fan = fanFromJson(jsonString);
 
+import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Fan> fanFromJson(String str) =>
@@ -17,9 +18,11 @@ class Fan {
     required this.merkFans,
     required this.sizeFans,
     required this.voltageFans,
+    required this.powerFans,
     required this.speedFans,
     required this.colorFans,
     required this.rgb,
+    required this.harga,
     required this.imageLinks,
     required this.powerConnector,
   });
@@ -29,9 +32,11 @@ class Fan {
   String merkFans;
   String sizeFans;
   String voltageFans;
+  String powerFans;
   String speedFans;
   String colorFans;
   String rgb;
+  String harga;
   String imageLinks;
   String powerConnector;
 
@@ -41,9 +46,11 @@ class Fan {
         merkFans: json["MerkFans"],
         sizeFans: json["SizeFans"],
         voltageFans: json["VoltageFans"],
+        powerFans: json["PowerFans"],
         speedFans: json["SpeedFans"],
         colorFans: json["ColorFans"],
         rgb: json["RGB"],
+        harga: json["Harga"],
         imageLinks: json["ImageLinks"],
         powerConnector: json["PowerConnector"],
       );
@@ -54,9 +61,11 @@ class Fan {
         "MerkFans": merkFans,
         "SizeFans": sizeFans,
         "VoltageFans": voltageFans,
+        "PowerFans": powerFans,
         "SpeedFans": speedFans,
         "ColorFans": colorFans,
         "RGB": rgb,
+        "Harga": harga,
         "ImageLinks": imageLinks,
         "PowerConnector": powerConnector,
       };

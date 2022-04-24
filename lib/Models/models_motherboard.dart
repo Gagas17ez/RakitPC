@@ -32,6 +32,7 @@ class Motherboard {
     required this.imageLink,
     required this.warna,
     required this.rgb,
+    required this.harga,
   });
 
   String idMotherboard;
@@ -53,6 +54,7 @@ class Motherboard {
   String imageLink;
   String warna;
   String rgb;
+  String harga;
 
   factory Motherboard.fromJson(Map<String, dynamic> json) => Motherboard(
         idMotherboard: json["idMotherboard"],
@@ -74,6 +76,7 @@ class Motherboard {
         imageLink: json["ImageLink"],
         warna: json["Warna"],
         rgb: json["RGB"],
+        harga: json["Harga"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -96,5 +99,6 @@ class Motherboard {
         "ImageLink": imageLink,
         "Warna": warna,
         "RGB": rgb,
+        "Harga": harga,
       };
 }

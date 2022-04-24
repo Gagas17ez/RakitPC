@@ -7,7 +7,7 @@ Future<List<Casing>> fetch_casing_id(int id) async {
       await http.post(Uri.parse(link), body: {'ID': id.toString()});
 
   if (response.statusCode == 200) {
-    return CasingFromJson(response.body);
+    return casingFromJson(response.body);
   } else {
     throw Exception('Failed to load Cpu');
   }

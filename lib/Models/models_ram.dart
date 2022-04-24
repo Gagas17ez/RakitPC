@@ -19,11 +19,12 @@ class Ram {
     required this.memoryType,
     required this.memorySize,
     required this.memorySpeed,
-    required this.latency,
+    required this.latencyCl,
     required this.voltage,
     required this.heatSpreader,
     required this.color,
     required this.rgb,
+    required this.harga,
     required this.imageLink,
   });
 
@@ -33,11 +34,12 @@ class Ram {
   String memoryType;
   String memorySize;
   String memorySpeed;
-  String latency;
+  String latencyCl;
   String voltage;
   String heatSpreader;
   String color;
   String rgb;
+  String harga;
   String imageLink;
 
   factory Ram.fromJson(Map<String, dynamic> json) => Ram(
@@ -47,11 +49,12 @@ class Ram {
         memoryType: json["MemoryType"],
         memorySize: json["MemorySize"],
         memorySpeed: json["MemorySpeed"],
-        latency: json["Latency"],
+        latencyCl: json["LatencyCL"],
         voltage: json["Voltage"],
         heatSpreader: json["HeatSpreader"],
         color: json["Color"],
         rgb: json["RGB"],
+        harga: json["Harga"],
         imageLink: json["ImageLink"],
       );
 
@@ -62,11 +65,12 @@ class Ram {
         "MemoryType": memoryType,
         "MemorySize": memorySize,
         "MemorySpeed": memorySpeed,
-        "Latency": latency,
+        "LatencyCL": latencyCl,
         "Voltage": voltage,
         "HeatSpreader": heatSpreader,
         "Color": color,
         "RGB": rgb,
+        "Harga": harga,
         "ImageLink": imageLink,
       };
 }
