@@ -508,7 +508,7 @@ class _DetailPartState extends State<DetailPart> {
                                     );
                                     setState(
                                       () {
-                                        global.id_case_adv = int.parse(
+                                        global.id_cpu_cooler_adv = int.parse(
                                             data2[global.id_detail].idCooler);
                                       },
                                     );

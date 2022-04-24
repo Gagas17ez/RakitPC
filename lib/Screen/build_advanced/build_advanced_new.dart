@@ -96,7 +96,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     color: HexColor("#2C85C5"),
                     clipBehavior: Clip.antiAlias,
                     child: Column(
-                       children: [
+                      children: [
                         ListTile(
                           leading: Icon(
                             Icons.offline_bolt_outlined,
@@ -129,8 +129,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -163,8 +162,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                              EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -197,8 +195,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -231,8 +228,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -265,8 +261,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -299,8 +294,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -333,8 +327,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -367,8 +360,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin:
-                            EdgeInsets.only(left: 10.0, right: 10.0),
+                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
                             child: Divider(
                               color: Colors.black,
                               height: 20,
@@ -484,7 +476,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   builder: (context) => ListPart()),
                             );
                             setState(
-                                  () {
+                              () {
                                 global.nama_part = "Casing";
                               },
                             );
@@ -527,7 +519,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               MaterialPageRoute(builder: (context) => ListPart()),
             );
             setState(
-                  () {
+              () {
                 global.nama_part = "Casing";
               },
             );
@@ -652,7 +644,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   builder: (context) => ListPart()),
                             );
                             setState(
-                                  () {
+                              () {
                                 global.nama_part = "CPU Cooler";
                               },
                             );
@@ -671,8 +663,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                       color: Colors.white70),
                                 ),
                                 subtitle: Text(
-                                  "Core/Threads : " +
-                                      cpucoolergan.typeCooler,
+                                  "Core/Threads : " + cpucoolergan.typeCooler,
                                   style: TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
@@ -696,7 +687,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               MaterialPageRoute(builder: (context) => ListPart()),
             );
             setState(
-                  () {
+              () {
                 global.nama_part = "CPU Cooler";
               },
             );
@@ -710,8 +701,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     }
   }
 
-
-  Widget getmobo(){
+  Widget getmobo() {
     if (global.id_mobo_adv != 0) {
       return FutureBuilder(
           future: fetch_motherboard_id(global.id_mobo_adv),
@@ -791,7 +781,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               )));
     }
   }
-  Widget getpower(){
+
+  Widget getpower() {
     if (global.id_psu_adv != 0) {
       return FutureBuilder(
           future: fetch_psu_id(global.id_psu_adv),
@@ -815,8 +806,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   builder: (context) => ListPart()),
                             );
                             setState(
-                                  () {
-                                global.nama_part = "Power Supply";
+                              () {
+                                global.nama_part = "PSU";
                               },
                             );
                           },
@@ -858,8 +849,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               MaterialPageRoute(builder: (context) => ListPart()),
             );
             setState(
-                  () {
-                global.nama_part = "Power Supply";
+              () {
+                global.nama_part = "PSU";
               },
             );
           },
@@ -871,7 +862,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               )));
     }
   }
-  Widget getram(){
+
+  Widget getram() {
     if (global.id_ram_adv != 0) {
       return FutureBuilder(
           future: fetch_ram_id(global.id_ram_adv),
@@ -895,7 +887,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   builder: (context) => ListPart()),
                             );
                             setState(
-                                  () {
+                              () {
                                 global.nama_part = "Ram";
                               },
                             );
@@ -938,7 +930,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               MaterialPageRoute(builder: (context) => ListPart()),
             );
             setState(
-                  () {
+              () {
                 global.nama_part = "Ram";
               },
             );
@@ -951,7 +943,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               )));
     }
   }
-  Widget getstorage(){
+
+  Widget getstorage() {
     if (global.id_storage_adv != 0) {
       return FutureBuilder(
           future: fetch_storage_id(global.id_storage_adv),
@@ -975,7 +968,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   builder: (context) => ListPart()),
                             );
                             setState(
-                                  () {
+                              () {
                                 global.nama_part = "Storage";
                               },
                             );
@@ -1018,7 +1011,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               MaterialPageRoute(builder: (context) => ListPart()),
             );
             setState(
-                  () {
+              () {
                 global.nama_part = "Storage";
               },
             );
@@ -1031,7 +1024,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               )));
     }
   }
-  Widget getvga(){
+
+  Widget getvga() {
     if (global.id_vga_adv != 0) {
       return FutureBuilder(
           future: fetch_vga_id(global.id_vga_adv),
@@ -1055,7 +1049,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   builder: (context) => ListPart()),
                             );
                             setState(
-                                  () {
+                              () {
                                 global.nama_part = "VGA";
                               },
                             );
@@ -1098,7 +1092,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               MaterialPageRoute(builder: (context) => ListPart()),
             );
             setState(
-                  () {
+              () {
                 global.nama_part = "VGA";
               },
             );
