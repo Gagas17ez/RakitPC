@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Models/models_cpu_cooler.dart';
 import 'package:rakit_pc/Models/models_fan.dart';
@@ -776,6 +778,8 @@ class _DetailPartState extends State<DetailPart> {
                                       () {
                                         global.id_cpu_adv = int.parse(
                                             data3[global.id_detail].idCpu);
+                                        global.socket_cpu =
+                                            data3[global.id_detail].socket;
                                       },
                                     );
                                   },
@@ -1356,6 +1360,8 @@ class _DetailPartState extends State<DetailPart> {
                                         global.id_mobo_adv = int.parse(
                                             data5[global.id_detail]
                                                 .idMotherboard);
+                                        global.socket_mobo =
+                                            data5[global.id_detail].socketMobo;
                                       },
                                     );
                                   },

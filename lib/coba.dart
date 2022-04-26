@@ -71,9 +71,9 @@ class _MenuWisataState extends State<MenuWisatapi> {
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
                                 ListTile(
-                                  leading: Image.network("${wisata.imageLink}"),
+                                  leading: Image.network(wisata.imageLink),
                                   title: Text(
-                                    "${wisata.namaStorage}",
+                                    wisata.namaStorage,
                                     style: const TextStyle(
                                         fontSize: 16,
                                         fontWeight: FontWeight.bold,
@@ -81,7 +81,7 @@ class _MenuWisataState extends State<MenuWisatapi> {
                                         color: Colors.white70),
                                   ),
                                   subtitle: Text(
-                                    "${wisata.idStorage}",
+                                    wisata.idStorage,
                                     style: TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,

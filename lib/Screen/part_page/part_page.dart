@@ -22,31 +22,31 @@ class _PartState extends State<Part> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => homepage()),
+                MaterialPageRoute(builder: (context) => const homepage()),
               );
             },
-            child: Icon(Icons.arrow_back_rounded),
+            child: const Icon(Icons.arrow_back_rounded),
           ),
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-        title: Text('Part'),
+        title: const Text('Part'),
       ),
       body: ListView(
         children: [
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text('Casing',
+                      const Text('Casing',
                           textAlign: TextAlign.center,
                           style: TextStyle(fontSize: 20)),
-                      Text(
+                      const Text(
                         'Tempat Sebagian Besar Komponen',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -57,14 +57,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/casing.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "Casing";
@@ -77,19 +77,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'CPU Cooler',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Pendingin CPU',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -100,14 +100,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset('assets/img/cpu_cooler.png'),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "CPU Cooler";
@@ -120,19 +120,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'CPU',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Otak Dari Komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -143,14 +143,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset('assets/img/cpu.png'),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "CPU";
@@ -163,19 +163,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'Fan',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Pendingin Sistem',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -186,14 +186,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/fan.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "Fan";
@@ -206,19 +206,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'Motherboard',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Dasar Komputer Penyambung Komponen',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -229,14 +229,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/motherboard.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "Motherboard";
@@ -249,19 +249,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'RAM',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Penyimpanan Memori Komputer Sementara',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -272,14 +272,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/ram.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "Ram";
@@ -292,19 +292,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'Storage',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                        style: const TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Penyimpanan Memori Komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -315,14 +315,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/storage.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "Storage";
@@ -335,19 +335,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'PSU',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Power Supply Komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -358,14 +358,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/psu.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "PSU";
@@ -378,19 +378,19 @@ class _PartState extends State<Part> {
           Container(
             child: Card(
               elevation: 6,
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      Text(
+                      const Text(
                         'VGA',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 20),
                       ),
-                      Text(
+                      const Text(
                         'Penerjemah Tampilan Monitor',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 14),
@@ -401,14 +401,14 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/vga.png"),
                   selected: true,
-                  selectedTileColor: Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
-                      side: BorderSide(width: 2)),
+                      side: const BorderSide(width: 2)),
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ListPart()),
+                      MaterialPageRoute(builder: (context) => const ListPart()),
                     );
                     setState(() {
                       global.nama_part = "VGA";

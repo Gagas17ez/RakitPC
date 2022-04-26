@@ -18,7 +18,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
       appBar: AppBar(
-          title: Text('Pertanyaan 2', textAlign: TextAlign.center),
+          title: const Text('Pertanyaan 2', textAlign: TextAlign.center),
           backgroundColor: HexColor("#272B40")),
       body: ListView(
         padding: const EdgeInsets.all(20),
@@ -33,9 +33,9 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                 color: Colors.white,
               ),
-              child: Align(
+              child: const Align(
                 alignment: Alignment.center,
-                child: Text(
+                child: const Text(
                   "Apa kegunaan dari komputer tersebut ??",
                   textAlign: TextAlign.center,
                   style: TextStyle(
@@ -84,7 +84,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -109,7 +110,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -134,7 +136,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -161,12 +164,12 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                           RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ))),
-                  child: Icon(Icons.arrow_back_ios_rounded),
+                  child: const Icon(Icons.arrow_back_ios_rounded),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => pertanyaan_awal()),
+                          builder: (context) => const pertanyaan_awal()),
                     );
                   },
                 ),
@@ -182,11 +185,12 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                           RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ))),
-                  child: Icon(Icons.arrow_forward_ios_rounded),
+                  child: const Icon(Icons.arrow_forward_ios_rounded),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
+                      MaterialPageRoute(
+                          builder: (context) => const Rekomendasi_pc()),
                     );
                   },
                 ),

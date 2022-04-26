@@ -18,16 +18,16 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
   @override
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
-      gradient: LinearGradient(
+      gradient: const LinearGradient(
         begin: Alignment.bottomRight,
         end: Alignment.topLeft,
         colors: [
-          Color(0xFFAE52BB),
+          const Color(0xFFAE52BB),
           Color(0xFF0C062A),
         ],
       ),
       appBar: AppBar(
-          title: Text('Pertanyaan 1', textAlign: TextAlign.center),
+          title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
           backgroundColor: HexColor("#0C062A")),
       body: ListView(
         padding: const EdgeInsets.all(20),
@@ -42,7 +42,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 borderRadius: BorderRadius.all(Radius.circular(15)),
                 color: Colors.white,
               ),
-              child: Align(
+              child: const Align(
                 alignment: Alignment.center,
                 child: Text(
                   "Seberapa besar budget anda ??",
@@ -72,7 +72,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -97,7 +98,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -122,7 +124,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -147,7 +150,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                    MaterialPageRoute(
+                        builder: (context) => const Pertanyaan2()),
                   );
                   setState(
                     () {
@@ -173,12 +177,12 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                           RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ))),
-                  child: Icon(Icons.arrow_back_ios_rounded),
+                  child: const Icon(Icons.arrow_back_ios_rounded),
                   onPressed: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => pertanyaan_awal()),
+                          builder: (context) => const pertanyaan_awal()),
                     );
                   },
                 ),
@@ -194,11 +198,12 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                           RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15),
                       ))),
-                  child: Icon(Icons.arrow_forward_ios_rounded),
+                  child: const Icon(Icons.arrow_forward_ios_rounded),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Pertanyaan2()),
+                      MaterialPageRoute(
+                          builder: (context) => const Pertanyaan2()),
                     );
                   },
                 ),

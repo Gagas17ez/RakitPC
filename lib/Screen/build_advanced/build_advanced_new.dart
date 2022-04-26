@@ -19,6 +19,7 @@ import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:rakit_pc/global.dart' as global;
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 void main() {
   runApp(buildpc_advanced());
@@ -32,6 +33,9 @@ class buildpc_advanced extends StatefulWidget {
 }
 
 class _buildpc_advancedState extends State<buildpc_advanced> {
+  String cpuSocket = "";
+  String moboSocket = "";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -49,7 +53,15 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       fontFamily: 'JakartaBold',
                       fontSize: 16,
                     )))),
-        home: Scaffold(
+        home: ScaffoldGradientBackground(
+          gradient: LinearGradient(
+            begin: Alignment.bottomRight,
+            end: Alignment.topLeft,
+            colors: [
+              Color(0xFFAE52BB),
+              Color(0xFF0C062A),
+            ],
+          ),
           appBar: AppBar(
             automaticallyImplyLeading: false,
             leading: new IconButton(
@@ -57,65 +69,18 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               onPressed: () => Navigator.of(context).pop(),
             ),
             centerTitle: true,
-            title: Text('System Builder'),
+            title: const Text('System Builder'),
           ),
           body: ListView(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             children: [
-              Column(
-                children: <Widget>[
-                  Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0),
-                    ),
-                    margin: EdgeInsets.all(0.0),
-                    color: HexColor("#00B16A"),
-                    clipBehavior: Clip.antiAlias,
-                    child: Column(
-                      children: [
-                        ListTile(
-                          dense: true,
-                          leading: Icon(
-                            Icons.check_circle_outline_rounded,
-                            color: Colors.white,
-                          ),
-                          title: const Text('Compatiblity : ',
-                              style: TextStyle(color: Colors.white)),
-                          subtitle: Text(
-                              'No issues or incompatibilities found.',
-                              style: TextStyle(color: Colors.white)),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Card(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0),
-                    ),
-                    margin: EdgeInsets.all(0.0),
-                    color: HexColor("#2C85C5"),
-                    clipBehavior: Clip.antiAlias,
-                    child: Column(
-                      children: [
-                        ListTile(
-                          leading: Icon(
-                            Icons.offline_bolt_outlined,
-                            color: Colors.white,
-                          ),
-                          title: Text('Estimated Wattage : OW',
-                              style: TextStyle(color: Colors.white)),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              kotak_compability(),
               const SizedBox(
                 width: 30,
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -129,8 +94,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -148,7 +114,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -162,8 +128,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -181,7 +148,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -195,8 +162,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -214,7 +182,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -228,8 +196,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -247,7 +216,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -261,8 +230,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -280,7 +250,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -294,8 +264,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -313,7 +284,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -327,8 +298,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -346,7 +318,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 height: 20,
               ),
               Container(
-                  margin: EdgeInsets.all(5),
+                  margin: const EdgeInsets.all(5),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
@@ -360,8 +332,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                       Expanded(
                         child: new Container(
-                            margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                            child: Divider(
+                            margin:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            child: const Divider(
                               color: Colors.black,
                               height: 20,
                             )),
@@ -464,7 +437,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Casing casinggan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -473,7 +446,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -488,7 +461,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(casinggan.imageLink),
                                 title: Text(
                                   casinggan.namaCasing,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -496,7 +469,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   casinggan.drivebayCasing,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -508,7 +481,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -516,7 +489,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -533,6 +506,158 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     }
   }
 
+  Widget kotak_compability() {
+    if (global.id_cpu_adv == 0 && global.id_mobo_adv == 0) {
+      return Column(
+        children: <Widget>[
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0),
+            ),
+            margin: const EdgeInsets.all(0.0),
+            color: HexColor("#00B16A"),
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: [
+                const ListTile(
+                  dense: true,
+                  leading: const Icon(
+                    Icons.check_circle_outline_rounded,
+                    color: Colors.white,
+                  ),
+                  title: Text('Compatiblity : ',
+                      style: TextStyle(color: Colors.white)),
+                  subtitle: const Text('No issues or incompatibilities found.',
+                      style: TextStyle(color: Colors.white)),
+                ),
+              ],
+            ),
+          ),
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0),
+            ),
+            margin: const EdgeInsets.all(0.0),
+            color: HexColor("#2C85C5"),
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: [
+                const ListTile(
+                  leading: Icon(
+                    Icons.offline_bolt_outlined,
+                    color: Colors.white,
+                  ),
+                  title: Text('Estimated Wattage : OW',
+                      style: TextStyle(color: Colors.white)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    } else {
+      if (global.socket_cpu.toLowerCase() == global.socket_mobo.toLowerCase()) {
+        return Column(
+          children: <Widget>[
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              margin: const EdgeInsets.all(0.0),
+              color: HexColor("#00B16A"),
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  const ListTile(
+                    dense: true,
+                    leading: const Icon(
+                      Icons.check_circle_outline_rounded,
+                      color: Colors.white,
+                    ),
+                    title: Text('Compatiblity : ',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle: const Text(
+                        'No issues or incompatibilities found.',
+                        style: TextStyle(color: Colors.white)),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              margin: const EdgeInsets.all(0.0),
+              color: HexColor("#2C85C5"),
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  const ListTile(
+                    leading: Icon(
+                      Icons.offline_bolt_outlined,
+                      color: Colors.white,
+                    ),
+                    title: Text('Estimated Wattage : OW',
+                        style: TextStyle(color: Colors.white)),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        );
+      } else {
+        return Column(
+          children: <Widget>[
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              margin: const EdgeInsets.all(0.0),
+              color: HexColor("#d62828"),
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  const ListTile(
+                    dense: true,
+                    leading: const Icon(
+                      Icons.clear_rounded,
+                      color: Colors.white,
+                    ),
+                    title: Text('Compatiblity : ',
+                        style: TextStyle(color: Colors.white)),
+                    subtitle: const Text(
+                        '1 issues or more incompatibilities found. \n motherboard and cpu not compatible',
+                        style: TextStyle(color: Colors.white)),
+                  ),
+                ],
+              ),
+            ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              margin: const EdgeInsets.all(0.0),
+              color: HexColor("#2C85C5"),
+              clipBehavior: Clip.antiAlias,
+              child: Column(
+                children: [
+                  const ListTile(
+                    leading: Icon(
+                      Icons.offline_bolt_outlined,
+                      color: Colors.white,
+                    ),
+                    title: Text('Estimated Wattage : OW',
+                        style: TextStyle(color: Colors.white)),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        );
+      }
+    }
+  }
+
   Widget getcpuwoi() {
     if (global.id_cpu_adv != 0) {
       return FutureBuilder(
@@ -545,7 +670,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Cpu cpugan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -554,7 +679,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -569,7 +694,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(cpugan.imageLink),
                                 title: Text(
                                   cpugan.namaCpu,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -580,7 +705,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                       cpugan.coreCount +
                                       "/" +
                                       cpugan.threadsCount,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -592,18 +717,18 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
       return ElevatedButton.icon(
           style: ElevatedButton.styleFrom(
-            maximumSize: Size(200, 50),
+            maximumSize: const Size(200, 50),
           ),
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -632,7 +757,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     CpuCooler cpucoolergan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -641,7 +766,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -656,7 +781,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(cpucoolergan.imageLink),
                                 title: Text(
                                   cpucoolergan.namaCooler,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -664,7 +789,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   "Core/Threads : " + cpucoolergan.typeCooler,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -676,7 +801,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -684,7 +809,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -713,7 +838,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Motherboard mobogan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -722,7 +847,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -737,7 +862,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(mobogan.imageLink),
                                 title: Text(
                                   mobogan.namaMobo,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -745,7 +870,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   mobogan.socketMobo,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -757,7 +882,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -765,7 +890,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -794,7 +919,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Psu psugan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -803,7 +928,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -818,7 +943,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(psugan.imageLink),
                                 title: Text(
                                   psugan.namaPsu,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -826,7 +951,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   psugan.wattPsu,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -838,7 +963,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -846,7 +971,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -875,7 +1000,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Ram ramgan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -884,7 +1009,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -899,7 +1024,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(ramgan.imageLink),
                                 title: Text(
                                   ramgan.namaRam,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -907,7 +1032,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   ramgan.memorySize,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -919,7 +1044,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -927,7 +1052,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -956,7 +1081,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Storage storagegan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -965,7 +1090,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -980,7 +1105,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(storagegan.imageLink),
                                 title: Text(
                                   storagegan.namaStorage,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -988,7 +1113,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   storagegan.typeStorage,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -1000,7 +1125,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -1008,7 +1133,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
@@ -1037,7 +1162,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Vga vgagan = snapshot.data[index];
                     return Card(
-                        margin: EdgeInsets.all(5),
+                        margin: const EdgeInsets.all(5),
                         color: Colors.blue[400],
                         shadowColor: Colors.grey,
                         elevation: 10,
@@ -1046,7 +1171,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => ListPart()),
+                                  builder: (context) => const ListPart()),
                             );
                             setState(
                               () {
@@ -1061,7 +1186,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 leading: Image.network(vgagan.imageLink),
                                 title: Text(
                                   vgagan.namaVga,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -1069,7 +1194,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 ),
                                 subtitle: Text(
                                   vgagan.generation,
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 11,
                                       fontWeight: FontWeight.bold,
                                       fontFamily: 'poppins',
@@ -1081,7 +1206,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ));
                   });
             }
-            return CircularProgressIndicator();
+            return const CircularProgressIndicator();
           });
       //
     } else {
@@ -1089,7 +1214,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => ListPart()),
+              MaterialPageRoute(builder: (context) => const ListPart()),
             );
             setState(
               () {
