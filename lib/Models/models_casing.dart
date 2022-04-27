@@ -29,6 +29,7 @@ class Casing {
     required this.casingSidePanel,
     required this.harga,
     required this.imageLink,
+    required this.links,
   });
 
   String idCasing;
@@ -47,6 +48,7 @@ class Casing {
   String casingSidePanel;
   String harga;
   String imageLink;
+  String links;
 
   factory Casing.fromJson(Map<String, dynamic> json) => Casing(
         idCasing: json["idCasing"],
@@ -65,6 +67,7 @@ class Casing {
         casingSidePanel: json["CasingSidePanel"],
         harga: json["Harga"],
         imageLink: json["ImageLink"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -84,5 +87,6 @@ class Casing {
         "CasingSidePanel": casingSidePanel,
         "Harga": harga,
         "ImageLink": imageLink,
+        "Links": links,
       };
 }

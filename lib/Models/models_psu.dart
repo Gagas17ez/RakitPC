@@ -29,6 +29,7 @@ class Psu {
     required this.rgb,
     required this.harga,
     required this.imageLink,
+    required this.links,
   });
 
   String idPsu;
@@ -47,6 +48,7 @@ class Psu {
   String rgb;
   String harga;
   String imageLink;
+  String links;
 
   factory Psu.fromJson(Map<String, dynamic> json) => Psu(
         idPsu: json["idPSU"],
@@ -65,6 +67,7 @@ class Psu {
         rgb: json["RGB"],
         harga: json["Harga"],
         imageLink: json["ImageLink"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -84,5 +87,6 @@ class Psu {
         "RGB": rgb,
         "Harga": harga,
         "ImageLink": imageLink,
+        "Links": links,
       };
 }

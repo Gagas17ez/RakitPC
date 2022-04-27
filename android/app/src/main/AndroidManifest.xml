@@ -2,6 +2,14 @@
     package="com.example.rakit_pc">
     <!-- Required to fetch data from the internet. -->
     <uses-permission android:name="android.permission.INTERNET" />
+    
+    <queries>
+    <!-- If your app opens https URLs -->
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+    </intent>
+    </queries>
 
    <application
         android:label="rakit_pc"
@@ -35,3 +43,4 @@
             android:value="2" />
     </application>
 </manifest>
+

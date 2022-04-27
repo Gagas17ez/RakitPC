@@ -8,8 +8,10 @@ import 'package:rakit_pc/Models/models_psu.dart';
 import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
-
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../../../../../Api/api_casing.dart';
 import '../../../../../Models/models_casing.dart';
@@ -108,8 +110,17 @@ class _DetailPartState extends State<DetailPart> {
 
   Widget getlistPart() {
     if (global.nama_part == "Casing") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -144,7 +155,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -163,7 +174,7 @@ class _DetailPartState extends State<DetailPart> {
                   Container(
                     child: ListTile(
                       //Text(questions[index])
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -176,7 +187,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama Casing",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -209,104 +221,97 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data1[global.id_detail].namaCasing + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek Casing",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].merkCasing + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Casing Side Panel",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].casingSidePanel + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Color Casing",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].colorCasing + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Dimension Casing",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].dimensionCasing + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Drivebay Casing",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].drivebayCasing + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Fan Support",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].fanSupport + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Panel Depan Casing",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].frontPanel + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Tinggi Max Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].maxCoolerHeight + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Max PSU",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].maxPsu + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Panjang Max VGA",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].maxVgaLength + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Berat Casing",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].weightCasing + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Motherboard Compatible",
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data1[global.id_detail].moboCompatible,
-                                  style: TextStyle(fontSize: 14))
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -324,54 +329,9 @@ class _DetailPartState extends State<DetailPart> {
                           Row(
                             children: [
                               Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Image.asset(
                                 "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
+                                width: 60,
+                                height: 60,
                               ),
                               Spacer(),
                               Column(
@@ -389,9 +349,12 @@ class _DetailPartState extends State<DetailPart> {
                                         minimumSize:
                                             const Size(100, 30), //////// HERE
                                       ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      onPressed: () async {},
+                                      child: Text("Rp " +
+                                          data1[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -407,7 +370,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data1[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -415,12 +384,68 @@ class _DetailPartState extends State<DetailPart> {
                       ),
                     ),
                   ),
+                  Container(
+                    child: Card(
+                      elevation: 6,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(167, 209, 206, 198))),
+                      margin: EdgeInsets.all(40),
+                      child: SizedBox(
+                        height: 270,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Text("Motherboard Compatible",
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                  )),
+                              Text(data1[global.id_detail].moboCompatible,
+                                  style: TextStyle(fontSize: 14)),
+                              Text(" ", style: TextStyle(fontSize: 20)),
+                              Text("Vga Compatible",
+                                  style: TextStyle(fontSize: 20)),
+                              Text(data1[global.id_detail].maxVgaLength,
+                                  style: TextStyle(fontSize: 14)),
+                              Text(" ", style: TextStyle(fontSize: 20)),
+                              Text("Fan Compatible",
+                                  style: TextStyle(fontSize: 20)),
+                              Text(
+                                data1[global.id_detail].fanSupport,
+                                style: TextStyle(fontSize: 14),
+                                textAlign: TextAlign.center,
+                              )
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          //subtitle: Text(penjelas[index]),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
       );
+
+      //cpucooler
     } else if (global.nama_part == "CPU Cooler") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -455,7 +480,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -474,7 +499,7 @@ class _DetailPartState extends State<DetailPart> {
                   Container(
                     child: ListTile(
                       //Text(questions[index])
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -487,7 +512,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama CPUCooler",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -515,66 +541,87 @@ class _DetailPartState extends State<DetailPart> {
                                       },
                                     );
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: const Text(
+                                    'Add to Build',
+                                  )),
                             ],
                           ),
                           Text(data2[global.id_detail].namaCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].merkCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Power CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].powerCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("RGB CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Socket CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].socketCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Type CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].typeCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Fan Quantitiy",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].fanQuantity + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Fan Speed",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].fanSpeed + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Color CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].colorCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Dimension CPU Cooler",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data2[global.id_detail].dimensionCooler + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
                       ),
                     ),
@@ -590,51 +637,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -658,9 +660,12 @@ class _DetailPartState extends State<DetailPart> {
                                         minimumSize:
                                             const Size(100, 30), //////// HERE
                                       ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      onPressed: () async {},
+                                      child: Text("Rp " +
+                                          data2[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -676,7 +681,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data2[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -687,9 +698,20 @@ class _DetailPartState extends State<DetailPart> {
                 ],
               ),
       );
+
+      //cpu
     } else if (global.nama_part == "CPU") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -724,7 +746,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           title: Column(
                             children: <Widget>[
@@ -753,7 +775,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama CPU",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -788,97 +811,77 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data3[global.id_detail].namaCpu + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek CPU",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data3[global.id_detail].merkCpu + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Proc Technology",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data3[global.id_detail].procTechnology + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Cores/Threads",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(
                               data3[global.id_detail].coreCount +
                                   "/" +
                                   data3[global.id_detail].threadsCount +
                                   "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Clock Speed",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(
                               data3[global.id_detail].baseClock +
                                   " to " +
                                   data3[global.id_detail].maxClock +
                                   "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Motherboard Socket",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data3[global.id_detail].socket + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Release Year",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data3[global.id_detail].launchDate + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Cache", style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Cache",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data3[global.id_detail].cache,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
                       ),
                     ),
                   ),
                   Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Default TDP",
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data3[global.id_detail].defaultTdp,
-                                  style: TextStyle(fontSize: 14)),
-                              Text("Max Temp", style: TextStyle(fontSize: 20)),
-                              Text(data3[global.id_detail].maxTemp,
-                                  style: TextStyle(fontSize: 14)),
-                              Text("Unlocked", style: TextStyle(fontSize: 20)),
-                              Text(data3[global.id_detail].unlocked,
-                                  style: TextStyle(fontSize: 14))
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
                     child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.fromLTRB(50, 20, 50, 0),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -887,51 +890,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -956,8 +914,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child: Text("Rp " +
+                                          data3[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -973,11 +934,57 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
+                                  onPressed: () async {
+                                    final url = data3[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
+                                  child: const Text('Beli',
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white))),
                             ],
                           ),
                         ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: Card(
+                      elevation: 6,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(167, 209, 206, 198))),
+                      margin: EdgeInsets.all(40),
+                      child: SizedBox(
+                        height: 200,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Text("Default TDP",
+                                  style: TextStyle(fontSize: 20)),
+                              Text(data3[global.id_detail].defaultTdp,
+                                  style: TextStyle(fontSize: 14)),
+                              Text(" ", style: TextStyle(fontSize: 20)),
+                              Text("Max Temp", style: TextStyle(fontSize: 20)),
+                              Text(data3[global.id_detail].maxTemp,
+                                  style: TextStyle(fontSize: 14)),
+                              Text(" ", style: TextStyle(fontSize: 20)),
+                              Text("Unlocked", style: TextStyle(fontSize: 20)),
+                              Text(data3[global.id_detail].unlocked,
+                                  style: TextStyle(fontSize: 14))
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          //subtitle: Text(penjelas[index]),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                        ),
                       ),
                     ),
                   ),
@@ -985,7 +992,15 @@ class _DetailPartState extends State<DetailPart> {
               ),
       );
     } else if (global.nama_part == "Fan") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
           leading: Padding(
             padding: const EdgeInsets.all(8),

@@ -38,6 +38,7 @@ class Vga {
     required this.harga,
     required this.graphicApi,
     required this.displayTechnology,
+    required this.links,
   });
 
   String idVga;
@@ -65,6 +66,7 @@ class Vga {
   String harga;
   String graphicApi;
   String displayTechnology;
+  String links;
 
   factory Vga.fromJson(Map<String, dynamic> json) => Vga(
         idVga: json["idVGA"],
@@ -92,6 +94,7 @@ class Vga {
         harga: json["Harga"],
         graphicApi: json["GraphicAPI"],
         displayTechnology: json["DisplayTechnology"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -120,5 +123,6 @@ class Vga {
         "Harga": harga,
         "GraphicAPI": graphicApi,
         "DisplayTechnology": displayTechnology,
+        "Links": links,
       };
 }

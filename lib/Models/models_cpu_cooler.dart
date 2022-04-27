@@ -26,6 +26,7 @@ class CpuCooler {
     required this.rgb,
     required this.harga,
     required this.imageLink,
+    required this.links,
   });
 
   String idCooler;
@@ -41,6 +42,7 @@ class CpuCooler {
   String rgb;
   String harga;
   String imageLink;
+  String links;
 
   factory CpuCooler.fromJson(Map<String, dynamic> json) => CpuCooler(
         idCooler: json["idCooler"],
@@ -56,6 +58,7 @@ class CpuCooler {
         rgb: json["RGB"],
         harga: json["Harga"],
         imageLink: json["ImageLink"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -72,5 +75,6 @@ class CpuCooler {
         "RGB": rgb,
         "Harga": harga,
         "ImageLink": imageLink,
+        "Links": links,
       };
 }

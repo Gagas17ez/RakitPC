@@ -26,6 +26,7 @@ class Ram {
     required this.rgb,
     required this.harga,
     required this.imageLink,
+    required this.links,
   });
 
   String idRam;
@@ -41,6 +42,7 @@ class Ram {
   String rgb;
   String harga;
   String imageLink;
+  String links;
 
   factory Ram.fromJson(Map<String, dynamic> json) => Ram(
         idRam: json["idRam"],
@@ -56,6 +58,7 @@ class Ram {
         rgb: json["RGB"],
         harga: json["Harga"],
         imageLink: json["ImageLink"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -72,5 +75,6 @@ class Ram {
         "RGB": rgb,
         "Harga": harga,
         "ImageLink": imageLink,
+        "Links": links,
       };
 }

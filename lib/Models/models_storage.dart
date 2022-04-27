@@ -27,6 +27,7 @@ class Storage {
     required this.storageWatt,
     required this.harga,
     required this.imageLink,
+    required this.links,
   });
 
   String idStorage;
@@ -43,6 +44,7 @@ class Storage {
   String storageWatt;
   String harga;
   String imageLink;
+  String links;
 
   factory Storage.fromJson(Map<String, dynamic> json) => Storage(
         idStorage: json["idStorage"],
@@ -59,6 +61,7 @@ class Storage {
         storageWatt: json["StorageWatt"],
         harga: json["Harga"],
         imageLink: json["ImageLink"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -76,5 +79,6 @@ class Storage {
         "StorageWatt": storageWatt,
         "Harga": harga,
         "ImageLink": imageLink,
+        "Links": links,
       };
 }

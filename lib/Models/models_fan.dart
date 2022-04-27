@@ -25,6 +25,7 @@ class Fan {
     required this.harga,
     required this.imageLinks,
     required this.powerConnector,
+    required this.links,
   });
 
   String idFans;
@@ -39,6 +40,7 @@ class Fan {
   String harga;
   String imageLinks;
   String powerConnector;
+  String links;
 
   factory Fan.fromJson(Map<String, dynamic> json) => Fan(
         idFans: json["idFans"],
@@ -53,6 +55,7 @@ class Fan {
         harga: json["Harga"],
         imageLinks: json["ImageLinks"],
         powerConnector: json["PowerConnector"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -68,5 +71,6 @@ class Fan {
         "Harga": harga,
         "ImageLinks": imageLinks,
         "PowerConnector": powerConnector,
+        "Links": links,
       };
 }

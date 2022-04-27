@@ -29,6 +29,7 @@ class Cpu {
     required this.procTechnology,
     required this.harga,
     required this.imageLink,
+    required this.links,
   });
 
   String idCpu;
@@ -47,6 +48,7 @@ class Cpu {
   String procTechnology;
   String harga;
   String imageLink;
+  String links;
 
   factory Cpu.fromJson(Map<String, dynamic> json) => Cpu(
         idCpu: json["idCPU"],
@@ -65,6 +67,7 @@ class Cpu {
         procTechnology: json["ProcTechnology"],
         harga: json["Harga"],
         imageLink: json["ImageLink"],
+        links: json["Links"],
       );
 
   Map<String, dynamic> toJson() => {
@@ -84,5 +87,6 @@ class Cpu {
         "ProcTechnology": procTechnology,
         "Harga": harga,
         "ImageLink": imageLink,
+        "Links": links,
       };
 }
