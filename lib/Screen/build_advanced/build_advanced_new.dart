@@ -90,7 +90,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'Casing',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -100,8 +100,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -124,7 +125,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'CPU',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -134,8 +135,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -158,7 +160,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'CPU Cooler',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -168,8 +170,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -192,7 +195,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'Motherboard',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -202,8 +205,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -226,7 +230,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'Power Supply',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -236,8 +240,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -260,7 +265,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'RAM',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -270,8 +275,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -294,7 +300,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'Storage',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -304,8 +310,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -328,7 +335,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       const Text(
                         'VGA',
                         style: TextStyle(
-                          color: Colors.blueGrey,
+                          color: Colors.white,
                           fontFamily: 'DmSans',
                           fontSize: 18,
                         ),
@@ -338,8 +345,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
-                              color: Colors.black,
-                              height: 20,
+                              color: Colors.white,
+                              height: 25,
+                              thickness: 3,
                             )),
                       ),
                     ],
@@ -350,49 +358,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   children: [getvga()],
                 ),
               ),
-              // const SizedBox(
-              //   width: 30,
-              //   height: 20,
-              // ),
-              // Container(
-              //     margin: EdgeInsets.all(5),
-              //     child: Row(
-              //       crossAxisAlignment: CrossAxisAlignment.start,
-              //       children: <Widget>[
-              //         const Text(
-              //           'Monitor',
-              //           style: TextStyle(
-              //             color: Colors.blueGrey,
-              //             fontFamily: 'DmSans',
-              //             fontSize: 18,
-              //           ),
-              //         ),
-              //         Expanded(
-              //           child: new Container(
-              //               margin:
-              //                   const EdgeInsets.only(left: 10.0, right: 10.0),
-              //               child: Divider(
-              //                 color: Colors.black,
-              //                 height: 20,
-              //               )),
-              //         ),
-              //       ],
-              //     )),
-              // Container(
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.start,
-              //     children: [
-              //       ElevatedButton.icon(
-              //           onPressed: () {},
-              //           icon: const Icon(Icons.add),
-              //           label: const Text('Choose Monitor',
-              //               style: TextStyle(
-              //                 fontFamily: 'DmSans',
-              //                 fontSize: 18,
-              //               ))),
-              //     ],
-              //   ),
-              // ),
+
               const SizedBox(
                 width: 30,
                 height: 40,
@@ -405,12 +371,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       onPressed: () {},
                       child: const Text('Simpan Build',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
                             fontFamily: 'DmSans',
                             fontSize: 20,
                           )),
                       style: ElevatedButton.styleFrom(
-                        primary: HexColor("#DBD8E3"),
+                        primary: HexColor("#2a292f"),
+                        // primary: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             vertical: 15, horizontal: 70),
                         shape: new RoundedRectangleBorder(
@@ -440,49 +407,61 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Casing casinggan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "Casing";
+
+                    return Container(
+                      height: MediaQuery.of(context).size.height* 0.12,
+                        child: Card(
+                            color: Colors.white70,
+                            shadowColor: Colors.grey,
+                            elevation: 10,
+                            child: new InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const ListPart()),
+                                );
+                                setState(
+                                      () {
+                                    global.nama_part = "Casing";
+                                  },
+                                );
                               },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(casinggan.imageLink),
-                                title: Text(
-                                  casinggan.namaCasing,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
-                                ),
-                                subtitle: Text(
-                                  casinggan.drivebayCasing,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              child: Column(
+
+                                children: <Widget>[
+                                  ListTile(
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                    leading: ClipRRect(
+                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                      child: Image.network(
+                                        casinggan.imageLink,
+                                        fit: BoxFit.fitWidth,
+
+                                      ),
+                                    ),
+
+                                    title: Text(
+                                      casinggan.namaCasing,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black),
+                                    ),
+                                    subtitle: Text(
+                                      casinggan.drivebayCasing,
+                                      style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ));
+                            )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -673,52 +652,62 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Cpu cpugan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "CPU";
-                              },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(cpugan.imageLink),
-                                title: Text(
-                                  cpugan.namaCpu,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                            child: Card(
+                              color: Colors.white70,
+                              shadowColor: Colors.grey,
+                              elevation: 10,
+                              child: new InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => const ListPart()),
+                                  );
+                                  setState(
+                                    () {
+                                      global.nama_part = "CPU";
+                                    },
+                                  );
+                                },
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: <Widget>[
+                                    ListTile(
+                                      // leading: Image.network(cpugan.imageLink),
+                                      contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                        leading: ClipRRect(
+                                          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                          child: Image.network(
+                                            cpugan.imageLink,
+                                            fit: BoxFit.fitWidth,
+                                            ),
+                                          ),
+                                      title: Text(
+                                        cpugan.namaCpu,
+                                        style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'poppins',
+                                            color: Colors.black),
+                                      ),
+                                      subtitle: Text(
+                                        "Core/Threads : " +
+                                            cpugan.coreCount +
+                                            "/" +
+                                            cpugan.threadsCount,
+                                        style: const TextStyle(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.bold,
+                                            fontFamily: 'poppins',
+                                            color: Colors.black45),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                subtitle: Text(
-                                  "Core/Threads : " +
-                                      cpugan.coreCount +
-                                      "/" +
-                                      cpugan.threadsCount,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ));
+                              )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -760,49 +749,60 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     CpuCooler cpucoolergan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "CPU Cooler";
-                              },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(cpucoolergan.imageLink),
-                                title: Text(
-                                  cpucoolergan.namaCooler,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "CPU Cooler";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(cpucoolergan.imageLink),
+                                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      cpucoolergan.imageLink,
+                                      fit: BoxFit.fitWidth,
+
+                                    ),
+                                  ),
+                                  title: Text(
+                                    cpucoolergan.namaCooler,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    "Core/Threads : " + cpucoolergan.typeCooler,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
                                 ),
-                                subtitle: Text(
-                                  "Core/Threads : " + cpucoolergan.typeCooler,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ));
+                              ],
+                            ),
+                          )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -841,49 +841,60 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Motherboard mobogan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "Motherboard";
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                        child: Card(
+                            color: Colors.white70,
+                            shadowColor: Colors.grey,
+                            elevation: 10,
+                            child: new InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const ListPart()),
+                                );
+                                setState(
+                                  () {
+                                    global.nama_part = "Motherboard";
+                                  },
+                                );
                               },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(mobogan.imageLink),
-                                title: Text(
-                                  mobogan.namaMobo,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
-                                ),
-                                subtitle: Text(
-                                  mobogan.socketMobo,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ListTile(
+                                    // leading: Image.network(mobogan.imageLink),
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                    leading: ClipRRect(
+                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                      child: Image.network(
+                                        mobogan.imageLink,
+                                        fit: BoxFit.fitWidth,
+
+                                      ),
+                                    ),
+                                    title: Text(
+                                      mobogan.namaMobo,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black),
+                                    ),
+                                    subtitle: Text(
+                                      mobogan.socketMobo,
+                                      style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ));
+                            )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -922,49 +933,60 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Psu psugan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "PSU";
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                        child:  Card(
+                            color: Colors.white70,
+                            shadowColor: Colors.grey,
+                            elevation: 10,
+                            child: new InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const ListPart()),
+                                );
+                                setState(
+                                  () {
+                                    global.nama_part = "PSU";
+                                  },
+                                );
                               },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(psugan.imageLink),
-                                title: Text(
-                                  psugan.namaPsu,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
-                                ),
-                                subtitle: Text(
-                                  psugan.wattPsu,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ListTile(
+                                    // leading: Image.network(psugan.imageLink),
+                                        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                        leading: ClipRRect(
+                                          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                          child: Image.network(
+                                            psugan.imageLink,
+                                            fit: BoxFit.fitWidth,
+
+                                          ),
+                                        ),
+                                    title: Text(
+                                      psugan.namaPsu,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black),
+                                    ),
+                                    subtitle: Text(
+                                      psugan.wattPsu,
+                                      style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ));
+                            )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -1003,49 +1025,60 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Ram ramgan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "Ram";
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                        child: Card(
+                            color: Colors.white70,
+                            shadowColor: Colors.grey,
+                            elevation: 10,
+                            child: new InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const ListPart()),
+                                );
+                                setState(
+                                  () {
+                                    global.nama_part = "Ram";
+                                  },
+                                );
                               },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(ramgan.imageLink),
-                                title: Text(
-                                  ramgan.namaRam,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
-                                ),
-                                subtitle: Text(
-                                  ramgan.memorySize,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ListTile(
+                                    // leading: Image.network(ramgan.imageLink),
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                    leading: ClipRRect(
+                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                      child: Image.network(
+                                        ramgan.imageLink,
+                                        fit: BoxFit.fitWidth,
+
+                                      ),
+                                    ),
+                                    title: Text(
+                                      ramgan.namaRam,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black),
+                                    ),
+                                    subtitle: Text(
+                                      ramgan.memorySize,
+                                      style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ));
+                            )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -1084,49 +1117,60 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Storage storagegan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "Storage";
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                        child: Card(
+                            color: Colors.white70,
+                            shadowColor: Colors.grey,
+                            elevation: 10,
+                            child: new InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const ListPart()),
+                                );
+                                setState(
+                                  () {
+                                    global.nama_part = "Storage";
+                                  },
+                                );
                               },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(storagegan.imageLink),
-                                title: Text(
-                                  storagegan.namaStorage,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
-                                ),
-                                subtitle: Text(
-                                  storagegan.typeStorage,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ListTile(
+                                    // leading: Image.network(storagegan.imageLink),
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                    leading: ClipRRect(
+                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                      child: Image.network(
+                                        storagegan.imageLink,
+                                        fit: BoxFit.fitWidth,
+
+                                      ),
+                                    ),
+                                    title: Text(
+                                      storagegan.namaStorage,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black),
+                                    ),
+                                    subtitle: Text(
+                                      storagegan.typeStorage,
+                                      style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ));
+                            )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
@@ -1165,49 +1209,60 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Vga vgagan = snapshot.data[index];
-                    return Card(
-                        margin: const EdgeInsets.all(5),
-                        color: Colors.blue[400],
-                        shadowColor: Colors.grey,
-                        elevation: 10,
-                        child: new InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ListPart()),
-                            );
-                            setState(
-                              () {
-                                global.nama_part = "VGA";
+                    return Container(
+                        height: MediaQuery.of(context).size.height* 0.12,
+                        child: Card(
+                            color: Colors.white70,
+                            shadowColor: Colors.grey,
+                            elevation: 10,
+                            child: new InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const ListPart()),
+                                );
+                                setState(
+                                  () {
+                                    global.nama_part = "VGA";
+                                  },
+                                );
                               },
-                            );
-                          },
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              ListTile(
-                                leading: Image.network(vgagan.imageLink),
-                                title: Text(
-                                  vgagan.namaVga,
-                                  style: const TextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.white70),
-                                ),
-                                subtitle: Text(
-                                  vgagan.generation,
-                                  style: const TextStyle(
-                                      fontSize: 11,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  ListTile(
+                                    // leading: Image.network(vgagan.imageLink),
+                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                    leading: ClipRRect(
+                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                      child: Image.network(
+                                        vgagan.imageLink,
+                                        fit: BoxFit.fitWidth,
+
+                                      ),
+                                    ),
+                                    title: Text(
+                                      vgagan.namaVga,
+                                      style: const TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black),
+                                    ),
+                                    subtitle: Text(
+                                      vgagan.generation,
+                                      style: const TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          fontFamily: 'poppins',
+                                          color: Colors.black45),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        ));
+                            )),
+                    );
                   });
             }
             return const CircularProgressIndicator();
