@@ -875,6 +875,12 @@ class _DetailPartState extends State<DetailPart> {
                           Text(data3[global.id_detail].cache,
                               style:
                                   TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("\nTechnology",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data3[global.id_detail].procTechnology,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
                       ),
                     ),
@@ -1002,6 +1008,7 @@ class _DetailPartState extends State<DetailPart> {
           ],
         ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -1036,7 +1043,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -1055,7 +1062,7 @@ class _DetailPartState extends State<DetailPart> {
                   Container(
                     child: ListTile(
                       //Text(questions[index])
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1068,7 +1075,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama Fan",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -1101,74 +1109,57 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data4[global.id_detail].namaFans + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek Fan",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data4[global.id_detail].merkFans + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Power Connector",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data4[global.id_detail].powerConnector + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Speed Fan",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data4[global.id_detail].speedFans + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Size Fan",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data4[global.id_detail].sizeFans + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Color Fan",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data4[global.id_detail].colorFans + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("RGB Fan",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data4[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Voltage Fan",
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data4[global.id_detail].voltageFans,
-                                  style: TextStyle(fontSize: 14))
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -1183,51 +1174,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -1252,8 +1198,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child: Text("Rp " +
+                                          data4[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -1269,7 +1218,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data4[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -1277,12 +1232,56 @@ class _DetailPartState extends State<DetailPart> {
                       ),
                     ),
                   ),
+                  Container(
+                    child: Card(
+                      elevation: 6,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(167, 209, 206, 198))),
+                      margin: EdgeInsets.all(40),
+                      child: SizedBox(
+                        height: 200,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Text("Power Usage Fan",
+                                  style: TextStyle(fontSize: 20)),
+                              Text(data4[global.id_detail].powerFans,
+                                  style: TextStyle(fontSize: 18)),
+                              Text(" ", style: TextStyle(fontSize: 20)),
+                              Text("Voltage Fan",
+                                  style: TextStyle(fontSize: 20)),
+                              Text(data4[global.id_detail].voltageFans,
+                                  style: TextStyle(fontSize: 18))
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          //subtitle: Text(penjelas[index]),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
       );
     } else if (global.nama_part == "Motherboard") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -1317,7 +1316,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 250,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -1349,7 +1348,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama Motherboard",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -1385,122 +1385,129 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data5[global.id_detail].namaMobo + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek Motherboard",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].merkMobo + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Memory Type",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Motherboard Socket",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data5[global.id_detail].socketMobo + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Supported Memory Type",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].memoryType + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Memory Slot ",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].slotMemory + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("M2 Slot",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].m2Slot + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Sata Slot",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].sataSlot + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("USB Port",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].usbPort + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Audio Port",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].audioPort + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("LAN Port",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].lanPort + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Form Factor",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].formFactor + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Display Output",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].displayOutput + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("PC I Gen",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("PCI-E Gen",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].pcIgen + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("PC I e",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("PCI-E",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].pcie + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("RGB Motherboard",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Warna MotherBoard",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data5[global.id_detail].warna + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Chipset Mobo",
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data5[global.id_detail].chipsetMobo,
-                                  style: TextStyle(fontSize: 14))
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -1515,51 +1522,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -1584,8 +1546,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child: Text("Rp " +
+                                          data5[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -1601,7 +1566,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data5[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -1609,12 +1580,51 @@ class _DetailPartState extends State<DetailPart> {
                       ),
                     ),
                   ),
+                  Container(
+                    child: Card(
+                      elevation: 6,
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(
+                              width: 2,
+                              color: Color.fromARGB(167, 209, 206, 198))),
+                      margin: EdgeInsets.all(40),
+                      child: SizedBox(
+                        height: 200,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Text("Chipset Motherboard",
+                                  style: TextStyle(fontSize: 20)),
+                              Text(data5[global.id_detail].chipsetMobo,
+                                  style: TextStyle(fontSize: 14))
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          //subtitle: Text(penjelas[index]),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
       );
     } else if (global.nama_part == "Ram") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -1649,7 +1659,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -1668,7 +1678,7 @@ class _DetailPartState extends State<DetailPart> {
                   Container(
                     child: ListTile(
                       //Text(questions[index])
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1681,7 +1691,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama RAM",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -1714,76 +1725,65 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data6[global.id_detail].namaRam + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Memory Type",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data6[global.id_detail].memoryType + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Memory Size",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data6[global.id_detail].memorySize + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Memory Speed",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data6[global.id_detail].memorySpeed + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek RAM",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data6[global.id_detail].merkRam + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Color RAM",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data6[global.id_detail].color + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("RGB ",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data6[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Heat Spreader",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data6[global.id_detail].heatSpreader + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Memory Type",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data6[global.id_detail].memoryType + "\n",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 14)),
-                              Text("Memory Size",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data6[global.id_detail].memorySize + "\n",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 14)),
-                              Text("Memory Speed",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data6[global.id_detail].memorySpeed + "\n",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 14)),
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -1798,51 +1798,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -1867,8 +1822,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child:
+                                          Text(data6[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -1884,7 +1842,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data6[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -1896,8 +1860,17 @@ class _DetailPartState extends State<DetailPart> {
               ),
       );
     } else if (global.nama_part == "Storage") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -1932,7 +1905,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -1951,7 +1924,7 @@ class _DetailPartState extends State<DetailPart> {
                   Container(
                     child: ListTile(
                       //Text(questions[index])
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1964,7 +1937,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama Storage",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -1997,95 +1971,89 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data7[global.id_detail].namaStorage + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Merek Storage",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data7[global.id_detail].merkStorage + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Read Speed",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data7[global.id_detail].readSpeed + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Rpm",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data7[global.id_detail].rpm + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Merek Storage",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data7[global.id_detail].writeSpeed + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Storage Capacity",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data7[global.id_detail].storageCapacity + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Storage Watt",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data7[global.id_detail].storageWatt + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Type Storage",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data7[global.id_detail].typeStorage + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Merk Storage",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].merkStorage + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Storage Capacity",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].storageCapacity + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Read Speed",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].readSpeed + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Write Speed",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].writeSpeed + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Rpm",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].rpm + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Storage Watt",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].storageWatt + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Cache",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data7[global.id_detail].cache + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Form Factor",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data7[global.id_detail].formFactor + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Storage Interface",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data7[global.id_detail].storageInterface + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Storage Interface",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
-                              Text(
-                                  data7[global.id_detail].storageInterface +
-                                      "\n",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 14)),
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -2100,51 +2068,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -2169,8 +2092,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child:
+                                          Text(data7[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -2186,7 +2112,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data7[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -2198,8 +2130,17 @@ class _DetailPartState extends State<DetailPart> {
               ),
       );
     } else if (global.nama_part == "PSU") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -2234,7 +2175,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           //Text(questions[index])
                           title: Column(
@@ -2253,7 +2194,7 @@ class _DetailPartState extends State<DetailPart> {
                   Container(
                     child: ListTile(
                       //Text(questions[index])
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2266,7 +2207,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama PSU",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -2299,100 +2241,97 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data8[global.id_detail].namaPsu + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Merek PSU",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].merkPsu + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("RGB ",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].rgb + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("PSU Color",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].colorPsu + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Modular",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].modular + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("PC IE Connector",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].pcieConnector + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Sata Connector",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].sataConnector + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Watt PSU",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data8[global.id_detail].wattPsu + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("Silent Mode",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Merek PSU",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data8[global.id_detail].silentMode + "\n",
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].merkPsu + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Modular",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].modular + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("ATX Connector",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data8[global.id_detail].atxConnector + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("PCI-E Connector",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].pcieConnector + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Sata Connector",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].sataConnector + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Silent Mode",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].silentMode + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("RGB ",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].rgb + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("Fan Size",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].fanSize + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("PSU Color",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data8[global.id_detail].colorPsu + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Form Factor",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data8[global.id_detail].formFactor + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("Fan Size",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data8[global.id_detail].fanSize + "\n",
-                                  textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 14)),
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -2407,51 +2346,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -2476,8 +2370,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child:
+                                          Text(data8[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -2493,7 +2390,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data8[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -2505,8 +2408,17 @@ class _DetailPartState extends State<DetailPart> {
               ),
       );
     } else if (global.nama_part == "VGA") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -2541,7 +2453,7 @@ class _DetailPartState extends State<DetailPart> {
                               color: Color.fromARGB(167, 209, 206, 198))),
                       margin: EdgeInsets.all(40),
                       child: SizedBox(
-                        height: 350,
+                        height: 300,
                         child: ListTile(
                           title: Column(
                             children: <Widget>[
@@ -2557,7 +2469,7 @@ class _DetailPartState extends State<DetailPart> {
                   ),
                   Container(
                     child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -2570,7 +2482,8 @@ class _DetailPartState extends State<DetailPart> {
                             children: [
                               Text("Nama VGA",
                                   textAlign: TextAlign.left,
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20, color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -2603,144 +2516,156 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data9[global.id_detail].namaVga + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Merek VGA",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].merkVga + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Architecture",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].architecture + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("RGB ",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data9[global.id_detail].rgb + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
-                          Text("RTCores",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
-                          Text(data9[global.id_detail].rTcores + "\n",
-                              textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Clocks",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(
                               data9[global.id_detail].baseClocks +
                                   " to " +
                                   data9[global.id_detail].boostClock +
                                   "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Memory Clock",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].memoryClock + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Memory Type",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].memoryType + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Memory VGA",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].memoryVga + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Memory Bus",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].memoryBus + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("VGA Interface",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data9[global.id_detail].vgaInterface + "\n",
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Output Port",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].outputPort + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Power Connection",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].powerConnection + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Power Consumption",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].powerConsumption + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Graphic Api",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].graphicApi + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Dimension VGA",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].dimensionVga + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Display Technology",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].displayTechnology + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("generation",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].generation + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Year",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 20)),
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data9[global.id_detail].releaseDate + "\n",
                               textAlign: TextAlign.left,
-                              style: TextStyle(fontSize: 14)),
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("RGB ",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data9[global.id_detail].rgb + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
+                          Text("RTCores",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 20, color: Colors.white)),
+                          Text(data9[global.id_detail].rTcores + "\n",
+                              textAlign: TextAlign.left,
+                              style:
+                                  TextStyle(fontSize: 14, color: Colors.white)),
                         ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      child: SizedBox(
-                        height: 200,
-                        child: ListTile(
-                          //Text(questions[index])
-                          title: Column(
-                            children: <Widget>[
-                              Text("VGA Interface",
-                                  style: TextStyle(fontSize: 20)),
-                              Text(data9[global.id_detail].vgaInterface,
-                                  style: TextStyle(fontSize: 14))
-                            ],
-                            mainAxisAlignment: MainAxisAlignment.center,
-                          ),
-                          //subtitle: Text(penjelas[index]),
-                          selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                        ),
                       ),
                     ),
                   ),
@@ -2755,51 +2680,6 @@ class _DetailPartState extends State<DetailPart> {
                         textDirection: TextDirection.ltr,
                         mainAxisSize: MainAxisSize.max,
                         children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/shoppe.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () {},
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                           Row(
                             children: [
                               Image.asset(
@@ -2824,8 +2704,11 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child: const Text('IDR 1 Rupiah')),
-                                  Text("Tersedia"),
+                                      child:
+                                          Text(data9[global.id_detail].harga)),
+                                  Text("Tersedia",
+                                      style: TextStyle(
+                                          fontSize: 14, color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -2841,7 +2724,13 @@ class _DetailPartState extends State<DetailPart> {
                                     minimumSize:
                                         const Size(60, 40), //////// HERE
                                   ),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    final url = data9[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
+                                  },
                                   child: const Text('Beli')),
                             ],
                           ),
@@ -2856,7 +2745,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
           body: Center(
         child: CircularProgressIndicator(
-          color: Colors.black,
+          color: Colors.purple,
         ),
       ));
     }

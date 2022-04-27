@@ -4,7 +4,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
-
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:rakit_pc/global.dart' as global;
 
 class Part extends StatefulWidget {
@@ -16,8 +16,17 @@ class Part extends StatefulWidget {
 
 class _PartState extends State<Part> {
   Widget build(BuildContext context) {
-    return Scaffold(
+    return ScaffoldGradientBackground(
+      gradient: LinearGradient(
+        begin: Alignment.bottomRight,
+        end: Alignment.topLeft,
+        colors: [
+          Color(0xFFAE52BB),
+          Color(0xFF0C062A),
+        ],
+      ),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         leading: Padding(
           padding: const EdgeInsets.all(8),
           child: GestureDetector(
@@ -37,6 +46,7 @@ class _PartState extends State<Part> {
         children: [
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
               margin: const EdgeInsets.all(30),
               child: SizedBox(
@@ -45,13 +55,23 @@ class _PartState extends State<Part> {
                   //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text('Casing',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(fontSize: 20)),
+                      const Text(
+                        'Casing',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'DmSans',
+                          fontSize: 25,
+                        ),
+                      ),
                       const Text(
                         'Tempat Sebagian Besar Komponen',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -59,10 +79,10 @@ class _PartState extends State<Part> {
                   //subtitle: Text(penjelas[index]),
                   trailing: Image.asset("assets/img/casing.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
