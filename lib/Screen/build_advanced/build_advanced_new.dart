@@ -20,6 +20,9 @@ import 'package:rakit_pc/Models/models_vga.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
+import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 
 void main() {
   runApp(buildpc_advanced());
@@ -420,6 +423,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               ),
             ],
           ),
+
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
         ));

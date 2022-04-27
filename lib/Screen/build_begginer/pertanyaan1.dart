@@ -7,6 +7,8 @@ import 'package:rakit_pc/stepper.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
+import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
+
 class Pertanyaan1 extends StatefulWidget {
   Pertanyaan1({Key? key}) : super(key: key);
 
@@ -212,6 +214,21 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+          );
+        },
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

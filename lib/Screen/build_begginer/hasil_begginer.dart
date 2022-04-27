@@ -3,6 +3,9 @@ import 'package:rakit_pc/Api/api_builds_id.dart';
 import 'package:rakit_pc/Api/api_cpu.dart';
 import 'package:rakit_pc/Models/models_builds.dart';
 import 'package:rakit_pc/Models/models_cpu.dart';
+import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 
 class Rekomendasi_pc extends StatefulWidget {
   const Rekomendasi_pc({Key? key}) : super(key: key);
@@ -268,6 +271,22 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                   ),
                 ),
               );
-            }));
+            }),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+          );
+        },
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomBar(),
+    );
   }
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 
@@ -420,6 +422,21 @@ class _PartState extends State<Part> {
           )
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+          );
+        },
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

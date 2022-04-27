@@ -7,6 +7,8 @@ import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
+import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
+
 class pertanyaan_awal extends StatelessWidget {
   const pertanyaan_awal({Key? key}) : super(key: key);
 
@@ -114,6 +116,21 @@ class pertanyaan_awal extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+          );
+        },
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

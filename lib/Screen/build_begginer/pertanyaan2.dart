@@ -4,6 +4,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
 
 import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 
 class Pertanyaan2 extends StatefulWidget {
   const Pertanyaan2({Key? key}) : super(key: key);
@@ -199,6 +200,21 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+          );
+        },
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
