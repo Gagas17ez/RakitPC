@@ -9,7 +9,6 @@ import 'package:rakit_pc/global.dart' as global;
 
 class Part extends StatefulWidget {
   Part({Key? key}) : super(key: key);
-
   @override
   State<Part> createState() => _PartState();
 }
@@ -44,25 +43,37 @@ class _PartState extends State<Part> {
       ),
       body: ListView(
         children: [
+          //Padding(padding: const EdgeInsets.symmetric(horizontal: 10)),
+
           Container(
             child: Card(
               color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'Casing',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontFamily: 'DmSans',
-                          fontSize: 25,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'Casing',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/casing.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          )
+                        ],
                       ),
                       const Text(
                         'Tempat Sebagian Besar Komponen',
@@ -76,8 +87,8 @@ class _PartState extends State<Part> {
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/casing.png"),
+
+                  //trailing: Image.asset("assets/img/casing.png"),
                   selected: true,
                   selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
@@ -98,34 +109,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'CPU Cooler',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'CPU Cooler\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white70,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            'assets/img/cpu_cooler.png',
+                            width: 45,
+                            height: 45,
+                            color: Colors.white70,
+                          ),
+                        ],
                       ),
                       const Text(
                         'Pendingin CPU',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset('assets/img/cpu_cooler.png'),
+                  //trailing: Image.asset('assets/img/cpu_cooler.png'),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -141,34 +170,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'CPU',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'CPU\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            'assets/img/cpu.png',
+                            height: 50,
+                            width: 50,
+                            color: Colors.white70,
+                          )
+                        ],
                       ),
                       const Text(
                         'Otak Dari Komputer',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset('assets/img/cpu.png'),
+                  //trailing: Image.asset('assets/img/cpu.png'),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -184,34 +231,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'Fan',
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'Fan\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/fan.png",
+                            width: 45,
+                            height: 45,
+                            color: Colors.white70,
+                          )
+                        ],
                       ),
                       const Text(
                         'Pendingin Sistem',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/fan.png"),
+                  //trailing: Image.asset("assets/img/fan.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -227,34 +292,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'Motherboard',
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'Motherboard\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/motherboard.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          ),
+                        ],
                       ),
                       const Text(
                         'Dasar Komputer Penyambung Komponen',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/motherboard.png"),
+                  //trailing: Image.asset("assets/img/motherboard.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -270,34 +353,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'RAM',
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'RAM\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/ram.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          ),
+                        ],
                       ),
                       const Text(
                         'Penyimpanan Memori Komputer Sementara',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/ram.png"),
+                  //trailing: Image.asset("assets/img/ram.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -313,34 +414,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'Storage',
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'Storage\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/storage.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          ),
+                        ],
                       ),
                       const Text(
                         'Penyimpanan Memori Komputer',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/storage.png"),
+                  //trailing: Image.asset("assets/img/storage.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -356,34 +475,52 @@ class _PartState extends State<Part> {
           ),
           Container(
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'PSU',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'PSU\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/psu.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          )
+                        ],
                       ),
                       const Text(
                         'Power Supply Komputer',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/psu.png"),
+                  //trailing: Image.asset("assets/img/psu.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -398,35 +535,54 @@ class _PartState extends State<Part> {
             ),
           ),
           Container(
+            margin: EdgeInsets.only(),
             child: Card(
+              color: Colors.transparent,
               elevation: 6,
-              margin: const EdgeInsets.all(30),
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
               child: SizedBox(
                 height: 150,
                 child: ListTile(
-                  //Text(questions[index])
                   title: Column(
                     children: <Widget>[
-                      const Text(
-                        'VGA',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 20),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'VGA\t',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'DmSans',
+                              fontSize: 25,
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/img/vga.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          )
+                        ],
                       ),
                       const Text(
                         'Penerjemah Tampilan Monitor',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 14),
+                        style: TextStyle(
+                          color: Colors.white70,
+                          fontFamily: 'DmSans',
+                          fontSize: 15,
+                        ),
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.center,
                   ),
-                  //subtitle: Text(penjelas[index]),
-                  trailing: Image.asset("assets/img/vga.png"),
+                  //trailing: Image.asset("assets/img/vga.png"),
                   selected: true,
-                  selectedTileColor: const Color.fromARGB(255, 205, 207, 207),
+                  selectedTileColor: Color(0xFF7A77FF),
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                      side: const BorderSide(width: 2)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   onTap: () {
                     Navigator.push(
                       context,
