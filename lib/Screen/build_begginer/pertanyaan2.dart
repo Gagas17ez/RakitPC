@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
 
@@ -65,13 +66,18 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     maximumSize: const Size(319, 84),
                   ),
                   onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
+                    );
                     setState(
-                          () {
+                      () {
                         global.kegunaan = 1;
                       },
                     );
                   },
-                  child: const Text('Penggunaan ringan Browser/Sekolah/Kerja',
+                  child: const Text(
+                    'Penggunaan ringan Browser/Sekolah/Kerja',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -97,16 +103,16 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
+                      MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
                     );
                     setState(
-                          () {
+                      () {
                         global.kegunaan = 2;
                       },
                     );
                   },
-                  child: const Text('Penggunaan moderate Kuliah/Programming',
+                  child: const Text(
+                    'Penggunaan moderate Kuliah/Programming',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -132,16 +138,16 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
+                      MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
                     );
                     setState(
-                          () {
+                      () {
                         global.kegunaan = 3;
                       },
                     );
                   },
-                  child: const Text('Penggunaan berat Gaming/3D/Video Editing',
+                  child: const Text(
+                    'Penggunaan berat Gaming/3D/Video Editing',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
@@ -167,29 +173,28 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
+                      MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
                     );
                     setState(
-                          () {
+                      () {
                         global.kegunaan = 4;
                       },
                     );
                   },
                   child: const Text(
-                      'Pengunaan sangat berat Workstation/MachineLearning/Server',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 18.0,
-                          fontFamily: 'SfM',
-                        ),
+                    'Pengunaan sangat berat Workstation/MachineLearning/Server',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18.0,
+                      fontFamily: 'SfM',
+                    ),
                   )),
             ),
             ButtonBar(
               alignment: MainAxisAlignment.center,
               buttonPadding:
-              const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               children: [
                 Container(
                   width: 90,
@@ -197,17 +202,17 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                        MaterialStateProperty.all(HexColor("7A77FF")),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ))),
+                            MaterialStateProperty.all(HexColor("7A77FF")),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ))),
                     child: const Icon(Icons.arrow_back_ios_rounded),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const pertanyaan_awal()),
+                        MaterialPageRoute(builder: (context) => Pertanyaan1()),
                       );
                     },
                   ),
@@ -218,17 +223,17 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                        MaterialStateProperty.all(HexColor("7A77FF")),
-                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15),
-                            ))),
+                            MaterialStateProperty.all(HexColor("7A77FF")),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ))),
                     child: const Icon(Icons.arrow_forward_ios_rounded),
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(
-                            builder: (context) => const Rekomendasi_pc()),
+                        MaterialPageRoute(builder: (context) => Pertanyaan2()),
                       );
                     },
                   ),

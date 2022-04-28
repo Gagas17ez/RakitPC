@@ -17,6 +17,7 @@ class pertanyaan_awal extends StatelessWidget {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
       appBar: AppBar(
+        backgroundColor: HexColor("#0C062A"),
         title: Text('Rakit PC', textAlign: TextAlign.center),
       ),
       body: Center(
