@@ -55,7 +55,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               margin: const EdgeInsets.fromLTRB(5, 15, 5, 5),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                     primary: HexColor("#DBD8E3"),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
@@ -81,16 +81,19 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontFamily: 'SfM',
                     ),
                   )),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Container(
               margin: const EdgeInsets.all(5),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                     primary: HexColor("#DBD8E3"),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
@@ -116,16 +119,19 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontFamily: 'SfM',
                     ),
                   )),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Container(
               margin: const EdgeInsets.all(5),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                     primary: HexColor("#DBD8E3"),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
@@ -151,16 +157,19 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontFamily: 'SfM',
                     ),
                   )),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             Container(
               margin: const EdgeInsets.all(5),
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                     primary: HexColor("#DBD8E3"),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
@@ -186,18 +195,21 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 18.0,
+                      fontSize: 16.0,
                       fontFamily: 'SfM',
                     ),
                   )),
             ),
+            const SizedBox(
+              height: 40,
+            ),
             ButtonBar(
               alignment: MainAxisAlignment.center,
-              buttonPadding:
-                  const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              // buttonPadding:
+              //     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               children: [
                 Container(
-                  width: 90,
+                  width: 70,
                   height: 50,
                   child: ElevatedButton(
                     style: ButtonStyle(
@@ -217,8 +229,11 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     },
                   ),
                 ),
+                const SizedBox(
+                  width: 30,
+                ),
                 Container(
-                  width: 90,
+                  width: 70,
                   height: 50,
                   child: ElevatedButton(
                     style: ButtonStyle(
