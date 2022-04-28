@@ -99,17 +99,6 @@ class pertanyaan_awal extends StatelessWidget {
                       );
                     },
                   ),
-                  // child: RaisedButton(
-                  //   shape: RoundedRectangleBorder(
-                  //       borderRadius: BorderRadius.circular(32)),
-                  //   child: const Text(
-                  //     "Tidak",
-                  //     style: TextStyle(fontSize: 20),
-                  //   ),
-                  //   textColor: Colors.black,
-                  //   color: HexColor("D6B2B0"),
-                  //   onPressed: () {},
-                  // ),
                 ),
               ],
             ),
