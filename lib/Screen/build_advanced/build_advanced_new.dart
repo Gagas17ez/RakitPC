@@ -66,6 +66,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             ],
           ),
           appBar: AppBar(
+            backgroundColor: Colors.transparent,
             automaticallyImplyLeading: false,
             leading: new IconButton(
               icon: new Icon(Icons.arrow_back, color: Colors.white),
@@ -358,7 +359,6 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   children: [getvga()],
                 ),
               ),
-
               const SizedBox(
                 width: 30,
                 height: 40,
@@ -390,7 +390,6 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               ),
             ],
           ),
-
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerDocked,
         ));
@@ -409,58 +408,57 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     Casing casinggan = snapshot.data[index];
 
                     return Container(
-                      height: MediaQuery.of(context).size.height* 0.12,
-                        child: Card(
-                            color: Colors.white70,
-                            shadowColor: Colors.grey,
-                            elevation: 10,
-                            child: new InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ListPart()),
-                                );
-                                setState(
-                                      () {
-                                    global.nama_part = "Casing";
-                                  },
-                                );
-                              },
-                              child: Column(
-
-                                children: <Widget>[
-                                  ListTile(
-                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                    leading: ClipRRect(
-                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                      child: Image.network(
-                                        casinggan.imageLink,
-                                        fit: BoxFit.fitWidth,
-
-                                      ),
-                                    ),
-
-                                    title: Text(
-                                      casinggan.namaCasing,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      casinggan.drivebayCasing,
-                                      style: const TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black45),
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "Casing";
+                                },
+                              );
+                            },
+                            child: Column(
+                              children: <Widget>[
+                                ListTile(
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      casinggan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
                                   ),
-                                ],
-                              ),
-                            )),
+                                  title: Text(
+                                    casinggan.namaCasing,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    casinggan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }
@@ -653,60 +651,59 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Cpu cpugan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
-                            child: Card(
-                              color: Colors.white70,
-                              shadowColor: Colors.grey,
-                              elevation: 10,
-                              child: new InkWell(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => const ListPart()),
-                                  );
-                                  setState(
-                                    () {
-                                      global.nama_part = "CPU";
-                                    },
-                                  );
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "CPU";
                                 },
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: <Widget>[
-                                    ListTile(
-                                      // leading: Image.network(cpugan.imageLink),
-                                      contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                        leading: ClipRRect(
-                                          borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                          child: Image.network(
-                                            cpugan.imageLink,
-                                            fit: BoxFit.fitWidth,
-                                            ),
-                                          ),
-                                      title: Text(
-                                        cpugan.namaCpu,
-                                        style: const TextStyle(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: 'poppins',
-                                            color: Colors.black),
-                                      ),
-                                      subtitle: Text(
-                                        "Core/Threads : " +
-                                            cpugan.coreCount +
-                                            "/" +
-                                            cpugan.threadsCount,
-                                        style: const TextStyle(
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.bold,
-                                            fontFamily: 'poppins',
-                                            color: Colors.black45),
-                                      ),
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(cpugan.imageLink),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      cpugan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
-                                  ],
+                                  ),
+                                  title: Text(
+                                    cpugan.namaCpu,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    cpugan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
                                 ),
-                              )),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }
@@ -750,7 +747,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     CpuCooler cpucoolergan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
+                      height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
@@ -773,13 +770,14 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(cpucoolergan.imageLink),
-                                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
                                     child: Image.network(
                                       cpucoolergan.imageLink,
                                       fit: BoxFit.fitWidth,
-
                                     ),
                                   ),
                                   title: Text(
@@ -791,7 +789,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    "Core/Threads : " + cpucoolergan.typeCooler,
+                                    cpucoolergan.harga,
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -842,58 +840,59 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Motherboard mobogan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
-                        child: Card(
-                            color: Colors.white70,
-                            shadowColor: Colors.grey,
-                            elevation: 10,
-                            child: new InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ListPart()),
-                                );
-                                setState(
-                                  () {
-                                    global.nama_part = "Motherboard";
-                                  },
-                                );
-                              },
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ListTile(
-                                    // leading: Image.network(mobogan.imageLink),
-                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                    leading: ClipRRect(
-                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                      child: Image.network(
-                                        mobogan.imageLink,
-                                        fit: BoxFit.fitWidth,
-
-                                      ),
-                                    ),
-                                    title: Text(
-                                      mobogan.namaMobo,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      mobogan.socketMobo,
-                                      style: const TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black45),
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "Motherboard";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(mobogan.imageLink),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      mobogan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
                                   ),
-                                ],
-                              ),
-                            )),
+                                  title: Text(
+                                    mobogan.namaMobo,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    mobogan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }
@@ -934,58 +933,59 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Psu psugan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
-                        child:  Card(
-                            color: Colors.white70,
-                            shadowColor: Colors.grey,
-                            elevation: 10,
-                            child: new InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ListPart()),
-                                );
-                                setState(
-                                  () {
-                                    global.nama_part = "PSU";
-                                  },
-                                );
-                              },
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ListTile(
-                                    // leading: Image.network(psugan.imageLink),
-                                        contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                        leading: ClipRRect(
-                                          borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                          child: Image.network(
-                                            psugan.imageLink,
-                                            fit: BoxFit.fitWidth,
-
-                                          ),
-                                        ),
-                                    title: Text(
-                                      psugan.namaPsu,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      psugan.wattPsu,
-                                      style: const TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black45),
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "PSU";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(psugan.imageLink),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      psugan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
                                   ),
-                                ],
-                              ),
-                            )),
+                                  title: Text(
+                                    psugan.namaPsu,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    psugan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }
@@ -1026,58 +1026,59 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Ram ramgan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
-                        child: Card(
-                            color: Colors.white70,
-                            shadowColor: Colors.grey,
-                            elevation: 10,
-                            child: new InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ListPart()),
-                                );
-                                setState(
-                                  () {
-                                    global.nama_part = "Ram";
-                                  },
-                                );
-                              },
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ListTile(
-                                    // leading: Image.network(ramgan.imageLink),
-                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                    leading: ClipRRect(
-                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                      child: Image.network(
-                                        ramgan.imageLink,
-                                        fit: BoxFit.fitWidth,
-
-                                      ),
-                                    ),
-                                    title: Text(
-                                      ramgan.namaRam,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      ramgan.memorySize,
-                                      style: const TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black45),
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "Ram";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(ramgan.imageLink),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      ramgan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
                                   ),
-                                ],
-                              ),
-                            )),
+                                  title: Text(
+                                    ramgan.namaRam,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    ramgan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }
@@ -1118,58 +1119,59 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Storage storagegan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
-                        child: Card(
-                            color: Colors.white70,
-                            shadowColor: Colors.grey,
-                            elevation: 10,
-                            child: new InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ListPart()),
-                                );
-                                setState(
-                                  () {
-                                    global.nama_part = "Storage";
-                                  },
-                                );
-                              },
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ListTile(
-                                    // leading: Image.network(storagegan.imageLink),
-                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                    leading: ClipRRect(
-                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                      child: Image.network(
-                                        storagegan.imageLink,
-                                        fit: BoxFit.fitWidth,
-
-                                      ),
-                                    ),
-                                    title: Text(
-                                      storagegan.namaStorage,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      storagegan.typeStorage,
-                                      style: const TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black45),
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "Storage";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(storagegan.imageLink),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      storagegan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
                                   ),
-                                ],
-                              ),
-                            )),
+                                  title: Text(
+                                    storagegan.namaStorage,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    storagegan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }
@@ -1210,58 +1212,59 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Vga vgagan = snapshot.data[index];
                     return Container(
-                        height: MediaQuery.of(context).size.height* 0.12,
-                        child: Card(
-                            color: Colors.white70,
-                            shadowColor: Colors.grey,
-                            elevation: 10,
-                            child: new InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ListPart()),
-                                );
-                                setState(
-                                  () {
-                                    global.nama_part = "VGA";
-                                  },
-                                );
-                              },
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ListTile(
-                                    // leading: Image.network(vgagan.imageLink),
-                                    contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
-                                    leading: ClipRRect(
-                                      borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                                      child: Image.network(
-                                        vgagan.imageLink,
-                                        fit: BoxFit.fitWidth,
-
-                                      ),
-                                    ),
-                                    title: Text(
-                                      vgagan.namaVga,
-                                      style: const TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black),
-                                    ),
-                                    subtitle: Text(
-                                      vgagan.generation,
-                                      style: const TextStyle(
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.bold,
-                                          fontFamily: 'poppins',
-                                          color: Colors.black45),
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: new InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const ListPart()),
+                              );
+                              setState(
+                                () {
+                                  global.nama_part = "VGA";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(vgagan.imageLink),
+                                  contentPadding:
+                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(4.0)),
+                                    child: Image.network(
+                                      vgagan.imageLink,
+                                      fit: BoxFit.fitWidth,
                                     ),
                                   ),
-                                ],
-                              ),
-                            )),
+                                  title: Text(
+                                    vgagan.namaVga,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    vgagan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
                     );
                   });
             }

@@ -209,6 +209,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               //     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               children: [
                 Container(
+                  margin: const EdgeInsets.only(bottom: 70.0),
                   width: 70,
                   height: 50,
                   child: ElevatedButton(
@@ -233,6 +234,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   width: 30,
                 ),
                 Container(
+                  margin: const EdgeInsets.only(bottom: 70.0),
                   width: 70,
                   height: 50,
                   child: ElevatedButton(
