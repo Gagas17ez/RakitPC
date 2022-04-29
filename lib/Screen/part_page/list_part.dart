@@ -7,6 +7,7 @@ import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
+import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 import '../../../../../Api/api_casing.dart';
 import '../../../../../Models/models_casing.dart';
@@ -104,8 +105,17 @@ class _ListPartState extends State<ListPart> {
 
   Widget getPart() {
     if (global.nama_part == "Casing") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -131,10 +141,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data1.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -147,41 +163,60 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data1[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data1[index].namaCasing,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data1[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data1[index].namaCasing,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data1[index].casingSidePanel),
-                                  Text(data1[index].colorCasing),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data1[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data1[index].colorCasing,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data1[index].maxPsu,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -189,8 +224,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "CPU Cooler") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -216,10 +260,17 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data2.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                            color: Colors.deepPurpleAccent,
+                        )
+                    ),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -232,51 +283,79 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data2[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data2[index].namaCooler,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data2[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data2[index].namaCooler,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data2[index].merkCooler),
-                                  Text(data2[index].powerCooler),
-                                  Text(data2[index].fanSpeed),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data2[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data2[index].merkCooler,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data2[index].fanSpeed,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
+                  // cardddddddd
                   );
                 }),
       );
     } else if (global.nama_part == "CPU") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -302,10 +381,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data3.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -318,41 +403,60 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data3[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data3[index].namaCpu,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data3[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data3[index].namaCpu,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data3[index].harga),
-                                  Text(data3[index].maxClock),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data3[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data3[index].baseClock,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data3[index].threadsCount,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -360,8 +464,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Fan") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -387,10 +500,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data4.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -403,41 +522,60 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data4[index].imageLinks,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data4[index].namaFans,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data4[index].imageLinks),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data4[index].namaFans,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data4[index].merkFans),
-                                  Text(data4[index].colorFans),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data4[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data4[index].merkFans,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data4[index].colorFans,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -445,8 +583,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Motherboard") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -472,10 +619,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data5.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -488,41 +641,60 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data5[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data5[index].namaMobo,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data5[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data5[index].namaMobo,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data5[index].chipsetMobo),
-                                  Text(data5[index].audioPort),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data5[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data5[index].namaMobo,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data5[index].chipsetMobo,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -530,8 +702,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Ram") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -557,10 +738,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data6.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -573,42 +760,65 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data6[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data6[index].namaRam,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data6[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data6[index].namaRam,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data6[index].merkRam),
-                                  Text(data6[index].memorySize),
-                                  Text(data6[index].memorySpeed),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data6[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data6[index].merkRam,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data6[index].memorySize,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data6[index].memorySpeed,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -616,8 +826,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Storage") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -643,10 +862,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data7.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -659,42 +884,65 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data7[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data7[index].namaStorage,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 550,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data7[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data7[index].namaStorage,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data7[index].merkStorage),
-                                  Text(data7[index].storageCapacity),
-                                  Text(data7[index].storageInterface),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data7[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data7[index].merkStorage,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data7[index].storageCapacity,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data7[index].storageInterface,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -702,8 +950,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "PSU") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -729,10 +986,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data8.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -745,41 +1008,65 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data8[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data8[index].namaPsu,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data8[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data8[index].namaPsu,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data8[index].merkPsu),
-                                  Text(data8[index].colorPsu),
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data8[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data8[index].merkPsu,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data8[index].colorPsu,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data8[index].fanSize,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -787,8 +1074,17 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "VGA") {
-      return Scaffold(
+      return ScaffoldGradientBackground(
+        gradient: LinearGradient(
+          begin: Alignment.bottomRight,
+          end: Alignment.topLeft,
+          colors: [
+            Color(0xFFAE52BB),
+            Color(0xFF0C062A),
+          ],
+        ),
         appBar: AppBar(
+          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -814,10 +1110,16 @@ class _ListPartState extends State<ListPart> {
                 itemCount: data9.length,
                 itemBuilder: (context, index) {
                   return Card(
+                    elevation: 6,
                     clipBehavior: Clip.antiAlias,
-                    elevation: 10,
                     shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(20),
+                        side: BorderSide(
+                            width: 2,
+                            // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
+                    margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.push(
@@ -830,42 +1132,60 @@ class _ListPartState extends State<ListPart> {
                           global.id_detail = index;
                         });
                       },
-                      child: Container(
-                        // height: 330,
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Stack(
-                              alignment: Alignment.bottomLeft,
-                              children: [
-                                Image.network(
-                                  data9[index].imageLink,
-                                  // height: 400,
-                                ),
-                              ],
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(20),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    data9[index].namaVga,
-                                    style: const TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
+                      child: SizedBox(
+                        height: 500,
+                        child: ListTile(
+                          //Text(questions[index])
+                          title: Column(
+                            children: <Widget>[
+                              Image.network(data9[index].imageLink),
+                              Padding(
+                                padding: const EdgeInsets.all(20),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: <Widget>[
+                                    Text(
+                                      data9[index].namaVga,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 20,
+                                      ),
                                     ),
-                                  ),
-                                  Text(data9[index].architecture),
-                                  Text(data9[index].boostClock),
-                                  Text(data9[index].dimensionVga)
-                                ],
+                                    ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                          primary: Colors.white,
+                                          shadowColor: Colors.grey,
+                                          elevation: 5,
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                              BorderRadius.circular(10.0)),
+                                        ),
+                                        onPressed: () {
+                                        },
+                                        child: Text(data9[index].harga,
+                                          style: const TextStyle(
+                                            color: Colors.black,
+                                          ),
+                                        )),
+                                    Text(data9[index].architecture,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Text(data9[index].boostClock,
+                                      style: const TextStyle(
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
-                            ),
-                            const ButtonBar(),
-                          ],
+                            ],
+                            mainAxisAlignment: MainAxisAlignment.center,
+                          ),
+                          selected: true,
+                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
