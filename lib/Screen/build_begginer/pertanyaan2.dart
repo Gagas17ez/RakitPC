@@ -253,6 +253,9 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     },
                   ),
                 ),
+                const SizedBox(
+                  height: 30,
+                ),
               ],
             ),
           ],
