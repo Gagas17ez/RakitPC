@@ -18,6 +18,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: HexColor("#272B40"),
+      appBar: AppBar(
+          title: const Text('Hasil Rekomendasi', textAlign: TextAlign.center),
+          backgroundColor: HexColor("#0C062A")),
         body: FutureBuilder(
             future: fetch_builds_id(),
             builder: (context, AsyncSnapshot snapshot) {
@@ -27,240 +31,312 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                     shrinkWrap: true,
                     itemBuilder: (BuildContext context, index) {
                       Builds build = snapshot.data[index];
-                      return Card(
-                        margin: const EdgeInsets.all(1),
-                        color: Colors.blue.withOpacity(0.1),
-                        shadowColor: Colors.grey.withOpacity(0.0),
-                        elevation: 10,
-                        child: InkWell(
+                        return Container(
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
                           child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              // ignore: prefer_const_constructors
-                              Card(
-                                child: const SizedBox(
-                                    width: 200,
-                                    height: 50,
-                                    child: Center(
-                                      child: Text(
-                                        "Hasil Rekomendasi kami",
-                                        textAlign: TextAlign.center,
+                            children: <Widget>[
+                              // CPU
+                                  Container(
+                                    height: 100.0,
+                                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                    decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                      gradient: new LinearGradient(
+                                        begin: Alignment.bottomRight,
+                                        end: Alignment.topLeft,
+                                        colors: [
+                                          Color(0xFFAE52BB),
+                                          Color(0xFF0C062A),
+                                        ],
                                       ),
-                                    )),
+                                    ),
+                                    child: new Row(
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: <Widget>[
+                                        new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                          child: new Image.network(build.imgCpu, width: 50, height: 50, fit: BoxFit.cover),
+                                        ),
+                                        new Expanded(child:
+                                        new Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            new Text(build.namaCpu, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                            new SizedBox(height: 8.0,),
+                                            new Text("Rp.${build.hargaCpu}", style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                          ],)),
+                                      ],),
+
+                                  ),
+                              const SizedBox(
+                                height: 10,
+
                               ),
-                              ListTile(
-                                contentPadding:
-                                    const EdgeInsets.fromLTRB(10, 50, 10, 5),
-                                leading: Image.network(build.imgCpu,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaCpu,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
+
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
                                 ),
-                                subtitle: Text(
-                                  "Rp.${build.hargaCpu}",
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgMobo,width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaMobo, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaMobo, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
                               ),
-                              ListTile(
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgMobo,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaMobo,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
-                                ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaMobo,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              const SizedBox(
+                                height: 10,
                               ),
-                              ListTile(
-                                // ignore: prefer_const_constructors
-                                contentPadding: EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgRam,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaRam,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
                                 ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaRam,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgRam,width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaRam, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaRam, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
                               ),
-                              ListTile(
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgVga,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaVga,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
-                                ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaVga,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              const SizedBox(
+                                height: 10,
                               ),
-                              ListTile(
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgStorage,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaStorage,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
                                 ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaStorage,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgVga,width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaVga, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaVga, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
                               ),
-                              ListTile(
-                                // ignore: prefer_const_constructors
-                                contentPadding: EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgPsu,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaPsu,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
-                                ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaPsu,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              const SizedBox(
+                                height: 10,
                               ),
-                              ListTile(
-                                // ignore: prefer_const_constructors
-                                contentPadding: EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgCpuCooler,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaCpuCooler,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
                                 ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaCpuCooler,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgStorage,width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaStorage, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text( "Rp. " + build.hargaStorage, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
                               ),
-                              ListTile(
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgFans,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaFans,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
-                                ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaFans,
-                                  // ignore: prefer_const_constructors
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                              const SizedBox(
+                                height: 10,
                               ),
-                              ListTile(
-                                contentPadding: const EdgeInsets.symmetric(
-                                    vertical: 5, horizontal: 10),
-                                leading: Image.network(build.imgCasing,
-                                    width: 50, height: 50, fit: BoxFit.cover),
-                                title: Text(
-                                  build.namaCasing,
-                                  style: const TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
                                 ),
-                                subtitle: Text(
-                                  "Rp. " + build.hargaCasing,
-                                  style: const TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'poppins',
-                                      color: Colors.black45),
-                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgPsu,width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaPsu, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaPsu, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
                               ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
+                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgCpuCooler,width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaCpuCooler, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaCpuCooler, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
+                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgFans, width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaFans, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaFans, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
+                              ),
+                              const SizedBox(
+                                height: 10,
+                              ),
+                              Container(
+                                height: 100.0,
+                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                decoration: new BoxDecoration(borderRadius: new BorderRadius.all(new Radius.circular(10.0)),
+                                  gradient: new LinearGradient(
+                                    begin: Alignment.bottomRight,
+                                    end: Alignment.topLeft,
+                                    colors: [
+                                      Color(0xFFAE52BB),
+                                      Color(0xFF0C062A),
+                                    ],
+                                  ),
+                                ),
+                                child: new Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    new Padding(padding: new EdgeInsets.only(left: 10.0, right: 10.0),
+                                      child: new Image.network(build.imgCasing, width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    new Expanded(child:
+                                    new Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: <Widget>[
+                                        new Text(build.namaCasing, style: new TextStyle(fontSize: 20.0, color: Colors.white70, fontWeight: FontWeight.bold),),
+                                        new SizedBox(height: 8.0,),
+                                        new Text("Rp. " + build.hargaCasing, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
+                                      ],)),
+                                  ],),
+                              )
                             ],
                           ),
-                        ),
-                      );
+                        );
+
                     });
               }
               return SizedBox(
