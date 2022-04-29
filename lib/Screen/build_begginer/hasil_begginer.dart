@@ -32,7 +32,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                     itemBuilder: (BuildContext context, index) {
                       Builds build = snapshot.data[index];
                         return Container(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 20),
+                          padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
                           child: Column(
                             children: <Widget>[
                               // CPU
@@ -332,10 +332,81 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         new Text("Rp. " + build.hargaCasing, style: new TextStyle(fontSize: 12.0, color: Colors.white70),),
                                       ],)),
                                   ],),
-                              )
+                              ),
+                              const SizedBox(
+                                height: 30,
+                              ),
+                              new Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Container(
+                                    width: 160,
+                                    height: 54,
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                          backgroundColor:
+                                          MaterialStateProperty.all(HexColor("DBD8E3")),
+                                          shape:
+                                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                                              RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(14),
+                                              ))),
+                                      child: Text(
+                                        "Simpan Build",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 18.0,
+                                          fontFamily: 'SfM',
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        // Navigator.push(
+                                        //   context,
+                                        //   MaterialPageRoute(
+                                        //       builder: ( ),
+                                        // );
+                                      },
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 20,
+                                  ),
+                                  Container(
+                                    width: 160,
+                                    height: 54,
+                                    child: ElevatedButton(
+                                      style: ButtonStyle(
+                                          backgroundColor:
+                                          MaterialStateProperty.all(HexColor("DBD8E3")),
+                                          shape:
+                                          MaterialStateProperty.all<RoundedRectangleBorder>(
+                                              RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(14),
+                                              ))),
+                                      child: Text(
+                                        "Kembali ke Home",
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 18.0,
+                                          fontFamily: 'SfM',
+                                        ),
+                                      ),
+                                      onPressed: () {
+                                        // Navigator.push(
+                                        //   context,
+                                        //   MaterialPageRoute(builder: ( ),
+                                        // );
+                                      },
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ],
                           ),
                         );
+
 
                     });
               }
@@ -348,6 +419,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                 ),
               );
             }),
+
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(
