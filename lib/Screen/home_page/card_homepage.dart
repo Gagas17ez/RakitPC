@@ -19,11 +19,11 @@ class card_home extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          const SizedBox(height: 30.0),
+          const SizedBox(height: 20.0),
           Container(
               padding: const EdgeInsets.only(right: 0.0),
               width: MediaQuery.of(context).size.width - 30.0,
-              height: MediaQuery.of(context).size.height - 60.0,
+              height: MediaQuery.of(context).size.height - 100.0,
               child: GridView.count(
                   crossAxisCount: 2,
                   primary: false,
@@ -70,8 +70,8 @@ class card_home extends StatelessWidget {
                 Hero(
                     tag: imgPath,
                     child: SizedBox(
-                      height: 100.0,
-                      width: 100.0,
+                      height: 110.0,
+                      width: 110.0,
                       child: Image.asset(imgPath),
                     )),
                 const SizedBox(height: 25.0),
