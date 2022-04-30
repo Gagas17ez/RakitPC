@@ -17,6 +17,7 @@ import 'package:rakit_pc/Models/models_psu.dart';
 import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
+import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -368,8 +369,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     ElevatedButton(
-                      onPressed: () {},
-                      child: const Text('Simpan Build',
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => homepage()),
+                        );
+                      },
+                      child: const Text('Kembali ke Home',
                           style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'DmSans',
