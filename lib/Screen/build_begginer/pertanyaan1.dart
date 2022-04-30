@@ -237,11 +237,11 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
             ),
             ButtonBar(
               alignment: MainAxisAlignment.center,
-              // buttonPadding:
-              // const EdgeInsets.symmetric(horizontal: 40, vertical: 5),
+              buttonPadding:
+                const EdgeInsets.fromLTRB(0, 0, 0, 30),
               children: [
                 Container(
-                  margin: const EdgeInsets.only(bottom: 70.0),
+                  // margin: const EdgeInsets.only(bottom: 70.0),
                   width: 70,
                   height: 50,
                   child: ElevatedButton(
@@ -267,7 +267,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   width: 30,
                 ),
                 Container(
-                  margin: const EdgeInsets.only(bottom: 70.0),
+                  // margin: const EdgeInsets.only(bottom: 30.0),
                   width: 70,
                   height: 50,
                   child: ElevatedButton(
@@ -290,9 +290,6 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                             );
                     },
                   ),
-                ),
-                const SizedBox(
-                  height: 30,
                 ),
               ],
             ),
