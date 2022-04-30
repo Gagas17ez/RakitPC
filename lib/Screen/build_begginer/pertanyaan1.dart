@@ -17,6 +17,12 @@ class Pertanyaan1 extends StatefulWidget {
 }
 
 class _Pertanyaan1State extends State<Pertanyaan1> {
+  String button1color = "#DBD8E3";
+  String button2color = "#DBD8E3";
+  String button3color = "#DBD8E3";
+  String button4color = "#DBD8E3";
+  bool isDisable = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,7 +72,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor("#DBD8E3"),
+                    primary: HexColor(button1color),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
                     elevation: 3,
@@ -75,14 +81,19 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const Pertanyaan2()),
+                    // );
                     setState(
                       () {
                         global.budget = 1;
+                        button1color = "#8EE34B";
+                        button2color = "#DBD8E3";
+                        button3color = "#DBD8E3";
+                        button4color = "#DBD8E3";
+                        isDisable = false;
                       },
                     );
                   },
@@ -103,7 +114,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor("#DBD8E3"),
+                    primary: HexColor(button2color),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
                     elevation: 3,
@@ -112,14 +123,19 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const Pertanyaan2()),
+                    // );
                     setState(
                       () {
                         global.budget = 2;
+                        button1color = "#DBD8E3";
+                        button2color = "#8EE34B";
+                        button3color = "#DBD8E3";
+                        button4color = "#DBD8E3";
+                        isDisable = false;
                       },
                     );
                   },
@@ -140,7 +156,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor("#DBD8E3"),
+                    primary: HexColor(button3color),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
                     elevation: 3,
@@ -149,14 +165,19 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const Pertanyaan2()),
+                    // );
                     setState(
                       () {
                         global.budget = 3;
+                        button1color = "#DBD8E3";
+                        button2color = "#DBD8E3";
+                        button3color = "#8EE34B";
+                        button4color = "#DBD8E3";
+                        isDisable = false;
                       },
                     );
                   },
@@ -177,7 +198,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor("#DBD8E3"),
+                    primary: HexColor(button4color),
                     // onPrimary: Colors.white,
                     shadowColor: Colors.greenAccent,
                     elevation: 3,
@@ -186,14 +207,19 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const Pertanyaan2()),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(
+                    //       builder: (context) => const Pertanyaan2()),
+                    // );
                     setState(
                       () {
                         global.budget = 4;
+                        button1color = "#DBD8E3";
+                        button2color = "#DBD8E3";
+                        button3color = "#DBD8E3";
+                        button4color = "#8EE34B";
+                        isDisable = false;
                       },
                     );
                   },
@@ -255,11 +281,13 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                         ))),
                     child: const Icon(Icons.arrow_forward_ios_rounded),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const Pertanyaan2()),
-                      );
+                      isDisable
+                          ? null
+                          : Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Pertanyaan2()),
+                            );
                     },
                   ),
                 ),

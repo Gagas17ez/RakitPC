@@ -64,7 +64,7 @@ class _homepageState extends State<homepage>
         padding: const EdgeInsets.only(left: 0),
         children: <Widget>[
           Container(
-              height: MediaQuery.of(context).size.height - 50.0,
+              height: MediaQuery.of(context).size.height - 60.0,
               width: double.infinity,
               child: TabBarView(controller: _tabController, children: [
                 card_home(),

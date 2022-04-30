@@ -6,6 +6,7 @@ import 'package:rakit_pc/Models/models_cpu.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
+import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Rekomendasi_pc extends StatefulWidget {
@@ -556,31 +557,32 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 width: 140,
                                 height: 54,
                                 child: ElevatedButton(
-                                  style: ButtonStyle(
-                                      backgroundColor:
-                                          MaterialStateProperty.all(
-                                              HexColor("DBD8E3")),
-                                      shape: MaterialStateProperty.all<
-                                              RoundedRectangleBorder>(
-                                          RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(14),
-                                      ))),
-                                  child: Text(
-                                    "Kembali ke Home",
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 18.0,
-                                      fontFamily: 'SfM',
+                                    style: ButtonStyle(
+                                        backgroundColor:
+                                            MaterialStateProperty.all(
+                                                HexColor("DBD8E3")),
+                                        shape: MaterialStateProperty.all<
+                                                RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(14),
+                                        ))),
+                                    child: Text(
+                                      "Kembali ke Home",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 18.0,
+                                        fontFamily: 'SfM',
+                                      ),
                                     ),
-                                  ),
-                                  onPressed: () {
-                                    // Navigator.push(
-                                    //   context,
-                                    //   MaterialPageRoute(builder: ( ),
-                                    // );
-                                  },
-                                ),
+                                    onPressed: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => homepage()),
+                                      );
+                                    }),
                               ),
                             ],
                           ),
