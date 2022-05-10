@@ -227,12 +227,11 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   )),
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             ButtonBar(
               alignment: MainAxisAlignment.center,
-              buttonPadding:
-                const EdgeInsets.fromLTRB(0, 0, 0, 30),
+              buttonPadding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
               children: [
                 Container(
                   // margin: const EdgeInsets.only(bottom: 30.0),
@@ -284,7 +283,6 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     },
                   ),
                 ),
-
               ],
             ),
           ],

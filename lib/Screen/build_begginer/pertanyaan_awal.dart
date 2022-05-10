@@ -18,7 +18,7 @@ class pertanyaan_awal extends StatelessWidget {
       backgroundColor: HexColor("#272B40"),
       appBar: AppBar(
         backgroundColor: HexColor("#0C062A"),
-        title: Text('Rakit PC', textAlign: TextAlign.center),
+        title: const Text('Rakit PC', textAlign: TextAlign.center),
       ),
       body: Center(
         child: Column(
@@ -64,7 +64,7 @@ class pertanyaan_awal extends StatelessWidget {
                                 RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
                         ))),
-                    child: Text(
+                    child: const Text(
                       "Ya",
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
@@ -89,9 +89,9 @@ class pertanyaan_awal extends StatelessWidget {
                                 RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(32),
                         ))),
-                    child: Text(
+                    child: const Text(
                       "Tidak",
-                      style: TextStyle(fontSize: 20, color: Colors.black),
+                      style: const TextStyle(fontSize: 20, color: Colors.black),
                     ),
                     onPressed: () {
                       Navigator.push(
@@ -110,7 +110,7 @@ class pertanyaan_awal extends StatelessWidget {
         onPressed: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
+            MaterialPageRoute(builder: (context) => const pertanyaan_awal()),
           );
         },
         backgroundColor: HexColor("#7A77FF"),

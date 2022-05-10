@@ -27,15 +27,6 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
-      // return ScaffoldGradientBackground(
-      //   gradient: const LinearGradient(
-      //     begin: Alignment.bottomRight,
-      //     end: Alignment.topLeft,
-      //     colors: [
-      //       const Color(0xFFAE52BB),
-      //       Color(0xFF0C062A),
-      //     ],
-      //   ),
       appBar: AppBar(
           title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
           backgroundColor: HexColor("#0C062A")),
@@ -81,11 +72,6 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const Pertanyaan2()),
-                    // );
                     setState(
                       () {
                         global.budget = 1;
@@ -123,11 +109,6 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const Pertanyaan2()),
-                    // );
                     setState(
                       () {
                         global.budget = 2;
@@ -165,11 +146,6 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const Pertanyaan2()),
-                    // );
                     setState(
                       () {
                         global.budget = 3;
@@ -207,11 +183,6 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     minimumSize: const Size(319, 54), //////// HERE
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(
-                    //       builder: (context) => const Pertanyaan2()),
-                    // );
                     setState(
                       () {
                         global.budget = 4;
@@ -233,12 +204,11 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   )),
             ),
             const SizedBox(
-              height: 40,
+              height: 20,
             ),
             ButtonBar(
               alignment: MainAxisAlignment.center,
-              buttonPadding:
-                const EdgeInsets.fromLTRB(0, 0, 0, 30),
+              buttonPadding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
               children: [
                 Container(
                   // margin: const EdgeInsets.only(bottom: 70.0),

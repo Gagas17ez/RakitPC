@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Api/api_builds_id.dart';
 import 'package:rakit_pc/Api/api_cpu.dart';
@@ -41,10 +43,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -53,33 +55,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgCpu,
+                                  child: Image.network(build.imgCpu,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaCpu,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp.${build.hargaCpu}",
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -95,10 +97,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -107,33 +109,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgMobo,
+                                  child: Image.network(build.imgMobo,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaMobo,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaMobo,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -148,10 +150,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -160,33 +162,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgRam,
+                                  child: Image.network(build.imgRam,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaRam,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaRam,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -201,10 +203,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -213,33 +215,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgVga,
+                                  child: Image.network(build.imgVga,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaVga,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaVga,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -254,10 +256,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -266,33 +268,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgStorage,
+                                  child: Image.network(build.imgStorage,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaStorage,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaStorage,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -307,10 +309,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -319,33 +321,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgPsu,
+                                  child: Image.network(build.imgPsu,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaPsu,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaPsu,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -360,10 +362,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -372,33 +374,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgCpuCooler,
+                                  child: Image.network(build.imgCpuCooler,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaCpuCooler,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaCpuCooler,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -413,10 +415,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -425,33 +427,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgFans,
+                                  child: Image.network(build.imgFans,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaFans,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaFans,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -466,10 +468,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             height: 100.0,
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: new BoxDecoration(
-                              borderRadius: new BorderRadius.all(
-                                  new Radius.circular(10.0)),
-                              gradient: new LinearGradient(
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(const Radius.circular(10.0)),
+                              gradient: const LinearGradient(
                                 begin: Alignment.bottomRight,
                                 end: Alignment.topLeft,
                                 colors: [
@@ -478,33 +480,33 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ],
                               ),
                             ),
-                            child: new Row(
+                            child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                new Padding(
-                                  padding: new EdgeInsets.only(
+                                Padding(
+                                  padding: const EdgeInsets.only(
                                       left: 10.0, right: 10.0),
-                                  child: new Image.network(build.imgCasing,
+                                  child: Image.network(build.imgCasing,
                                       width: 50, height: 50, fit: BoxFit.cover),
                                 ),
-                                new Expanded(
-                                    child: new Column(
+                                Expanded(
+                                    child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: <Widget>[
-                                    new Text(
+                                    Text(
                                       build.namaCasing,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 20.0,
                                           color: Colors.white70,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    new SizedBox(
+                                    const SizedBox(
                                       height: 8.0,
                                     ),
-                                    new Text(
+                                    Text(
                                       "Rp. " + build.hargaCasing,
-                                      style: new TextStyle(
+                                      style: const TextStyle(
                                           fontSize: 12.0,
                                           color: Colors.white70),
                                     ),
@@ -516,7 +518,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           const SizedBox(
                             height: 30,
                           ),
-                          new Row(
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Container(

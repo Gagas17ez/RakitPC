@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -58,7 +60,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       fontSize: 16,
                     )))),
         home: ScaffoldGradientBackground(
-          gradient: LinearGradient(
+          gradient: const LinearGradient(
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
             colors: [
@@ -69,8 +71,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             automaticallyImplyLeading: false,
-            leading: new IconButton(
-              icon: new Icon(Icons.arrow_back, color: Colors.white),
+            leading: IconButton(
+              icon: Icon(Icons.arrow_back, color: Colors.white),
               onPressed: () => Navigator.of(context).pop(),
             ),
             centerTitle: true,
@@ -98,7 +100,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -133,7 +135,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -144,11 +146,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       ),
                     ],
                   )),
-              Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [getcpuwoi()],
-                ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [getcpuwoi()],
               ),
               const SizedBox(
                 width: 30,
@@ -168,7 +168,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -203,7 +203,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -238,7 +238,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -273,7 +273,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -308,7 +308,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -343,7 +343,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         ),
                       ),
                       Expanded(
-                        child: new Container(
+                        child: Container(
                             margin:
                                 const EdgeInsets.only(left: 10.0, right: 10.0),
                             child: const Divider(
@@ -372,7 +372,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => homepage()),
+                          MaterialPageRoute(
+                              builder: (context) => const homepage()),
                         );
                       },
                       child: const Text('Kembali ke Home',
@@ -386,8 +387,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         // primary: Colors.white,
                         padding: const EdgeInsets.symmetric(
                             vertical: 15, horizontal: 70),
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(14.89),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14.89),
                         ),
                       ),
                     ),
@@ -413,13 +414,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   itemBuilder: (BuildContext context, index) {
                     Casing casinggan = snapshot.data[index];
 
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -435,11 +436,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                             child: Column(
                               children: <Widget>[
                                 ListTile(
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        const Radius.circular(4.0)),
                                     child: Image.network(
                                       casinggan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -505,16 +506,16 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             color: HexColor("#00B16A"),
             clipBehavior: Clip.antiAlias,
             child: Column(
-              children: [
-                const ListTile(
+              children: const [
+                ListTile(
                   dense: true,
-                  leading: const Icon(
+                  leading: Icon(
                     Icons.check_circle_outline_rounded,
                     color: Colors.white,
                   ),
                   title: Text('Compatiblity : ',
                       style: TextStyle(color: Colors.white)),
-                  subtitle: const Text('No issues or incompatibilities found.',
+                  subtitle: Text('No issues or incompatibilities found.',
                       style: TextStyle(color: Colors.white)),
                 ),
               ],
@@ -528,8 +529,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             color: HexColor("#2C85C5"),
             clipBehavior: Clip.antiAlias,
             child: Column(
-              children: [
-                const ListTile(
+              children: const [
+                ListTile(
                   leading: Icon(
                     Icons.offline_bolt_outlined,
                     color: Colors.white,
@@ -554,17 +555,16 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               color: HexColor("#00B16A"),
               clipBehavior: Clip.antiAlias,
               child: Column(
-                children: [
-                  const ListTile(
+                children: const [
+                  ListTile(
                     dense: true,
-                    leading: const Icon(
+                    leading: Icon(
                       Icons.check_circle_outline_rounded,
                       color: Colors.white,
                     ),
                     title: Text('Compatiblity : ',
                         style: TextStyle(color: Colors.white)),
-                    subtitle: const Text(
-                        'No issues or incompatibilities found.',
+                    subtitle: Text('No issues or incompatibilities found.',
                         style: TextStyle(color: Colors.white)),
                   ),
                 ],
@@ -578,8 +578,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               color: HexColor("#2C85C5"),
               clipBehavior: Clip.antiAlias,
               child: Column(
-                children: [
-                  const ListTile(
+                children: const [
+                  ListTile(
                     leading: Icon(
                       Icons.offline_bolt_outlined,
                       color: Colors.white,
@@ -603,16 +603,16 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               color: HexColor("#d62828"),
               clipBehavior: Clip.antiAlias,
               child: Column(
-                children: [
-                  const ListTile(
+                children: const [
+                  ListTile(
                     dense: true,
-                    leading: const Icon(
+                    leading: Icon(
                       Icons.clear_rounded,
                       color: Colors.white,
                     ),
                     title: Text('Compatiblity : ',
                         style: TextStyle(color: Colors.white)),
-                    subtitle: const Text(
+                    subtitle: Text(
                         '1 issues or more incompatibilities found. \n motherboard and cpu not compatible',
                         style: TextStyle(color: Colors.white)),
                   ),
@@ -627,8 +627,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               color: HexColor("#2C85C5"),
               clipBehavior: Clip.antiAlias,
               child: Column(
-                children: [
-                  const ListTile(
+                children: const [
+                  ListTile(
                     leading: Icon(
                       Icons.offline_bolt_outlined,
                       color: Colors.white,
@@ -656,13 +656,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Cpu cpugan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -680,11 +680,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(cpugan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
                                     child: Image.network(
                                       cpugan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -752,13 +752,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     CpuCooler cpucoolergan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -776,11 +776,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(cpucoolergan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
                                     child: Image.network(
                                       cpucoolergan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -845,13 +845,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Motherboard mobogan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -869,11 +869,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(mobogan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        const Radius.circular(4.0)),
                                     child: Image.network(
                                       mobogan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -938,13 +938,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Psu psugan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -962,11 +962,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(psugan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
                                     child: Image.network(
                                       psugan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -1031,13 +1031,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Ram ramgan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -1055,11 +1055,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(ramgan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
                                     child: Image.network(
                                       ramgan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -1124,13 +1124,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Storage storagegan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -1148,11 +1148,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(storagegan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
                                     child: Image.network(
                                       storagegan.imageLink,
                                       fit: BoxFit.fitWidth,
@@ -1217,13 +1217,13 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Vga vgagan = snapshot.data[index];
-                    return Container(
+                    return SizedBox(
                       height: MediaQuery.of(context).size.height * 0.12,
                       child: Card(
                           color: Colors.white70,
                           shadowColor: Colors.grey,
                           elevation: 10,
-                          child: new InkWell(
+                          child: InkWell(
                             onTap: () {
                               Navigator.push(
                                 context,
@@ -1241,11 +1241,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               children: <Widget>[
                                 ListTile(
                                   // leading: Image.network(vgagan.imageLink),
-                                  contentPadding:
-                                      EdgeInsets.symmetric(horizontal: 16.0),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
                                   leading: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(4.0)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
                                     child: Image.network(
                                       vgagan.imageLink,
                                       fit: BoxFit.fitWidth,
