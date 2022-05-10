@@ -20,7 +20,7 @@ class _homepageState extends State<homepage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 1, vsync: this);
     global.id_builds = 0;
     global.id_cpu_adv = 0;
     global.id_cpu_cooler_adv = 0;
@@ -66,11 +66,8 @@ class _homepageState extends State<homepage>
           Container(
               height: MediaQuery.of(context).size.height - 60.0,
               width: double.infinity,
-              child: TabBarView(controller: _tabController, children: [
-                card_home(),
-                card_home(),
-                card_home(),
-              ]))
+              child: TabBarView(
+                  controller: _tabController, children: [card_home()]))
         ],
       ),
       floatingActionButton: FloatingActionButton(
