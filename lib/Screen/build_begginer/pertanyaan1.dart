@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:rakit_pc/stepper.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';

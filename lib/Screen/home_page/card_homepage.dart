@@ -88,19 +88,10 @@ class card_home extends StatelessWidget {
 
 Future returnbutton(context, name) {
   if (name == "Build PC") {
-    return Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => pertanyaan_awal()),
-    );
+    return Navigator.pushReplacementNamed(context, '/build');
   } else if (name == "Part PC") {
-    return Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Part()),
-    );
+    return Navigator.pushReplacementNamed(context, '/part');
   } else {
-    return Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Part()),
-    );
+    return Navigator.pushReplacementNamed(context, '/build');
   }
 }

@@ -47,6 +47,7 @@ class _homepageState extends State<homepage>
       ),
       appBar: AppBar(
         backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+        automaticallyImplyLeading: false,
         elevation: 0.0,
         centerTitle: true,
         title: const Text('HomePage',

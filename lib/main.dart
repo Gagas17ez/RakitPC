@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
+import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
+import 'package:rakit_pc/Screen/part_page/detail_part.dart';
+import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
@@ -25,7 +30,18 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: homepage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => homepage(),
+        '/build': (context) => pertanyaan_awal(),
+        '/build/advanced': (context) => buildpc_advanced(),
+        '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
+        '/build/begginer/pertanyaan2': (context) => Pertanyaan2(),
+        '/build/begginer/hasil': (context) => Rekomendasi_pc(),
+        '/part': (context) => Part(),
+        '/part/list': (context) => ListPart(),
+        '/part/list/detail': (context) => DetailPart(),
+      },
     );
   }
 }
