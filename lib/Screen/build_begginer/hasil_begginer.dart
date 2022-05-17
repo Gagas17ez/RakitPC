@@ -579,11 +579,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => homepage()),
-                                      );
+                                      Navigator.pushNamed(context, '/');
                                     }),
                               ),
                             ],
@@ -604,10 +600,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
           }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
-          );
+          Navigator.pushNamed(context, '/build');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(

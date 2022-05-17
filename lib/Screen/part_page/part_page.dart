@@ -30,10 +30,7 @@ class _PartState extends State<Part> {
           padding: const EdgeInsets.all(8),
           child: GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const homepage()),
-              );
+              Navigator.pushNamed(context, '/');
             },
             child: const Icon(Icons.arrow_back_rounded),
           ),
@@ -95,10 +92,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "Casing";
                     });
@@ -156,10 +150,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "CPU Cooler";
                     });
@@ -217,10 +208,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "CPU";
                     });
@@ -278,10 +266,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "Fan";
                     });
@@ -339,10 +324,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "Motherboard";
                     });
@@ -400,10 +382,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "Ram";
                     });
@@ -461,10 +440,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "Storage";
                     });
@@ -522,10 +498,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "PSU";
                     });
@@ -584,10 +557,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ListPart()),
-                    );
+                    Navigator.pushNamed(context, '/part/list');
                     setState(() {
                       global.nama_part = "VGA";
                     });
@@ -600,10 +570,7 @@ class _PartState extends State<Part> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
-          );
+          Navigator.pushNamed(context, '/build');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(
@@ -616,16 +583,3 @@ class _PartState extends State<Part> {
     );
   }
 }
-/*
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Pertanyaan2()),
-                  );
-                  setState(
-                    () {
-                      global.budget = 2;
-                    },
-                  );
-                },
- */

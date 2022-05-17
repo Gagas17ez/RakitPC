@@ -224,11 +224,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                         ))),
                     child: const Icon(Icons.arrow_back_ios_rounded),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const pertanyaan_awal()),
-                      );
+                      Navigator.pushNamed(context, '/build');
                     },
                   ),
                 ),
@@ -252,11 +248,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     onPressed: () {
                       isDisable
                           ? null
-                          : Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Pertanyaan2()),
-                            );
+                          : Navigator.pushNamed(
+                              context, '/build/begginer/pertanyaan2');
                     },
                   ),
                 ),
@@ -267,10 +260,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => pertanyaan_awal()),
-          );
+          Navigator.pushNamed(context, '/build');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(

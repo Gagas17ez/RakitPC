@@ -72,10 +72,6 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     maximumSize: const Size(319, 84),
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
-                    // );
                     setState(
                       () {
                         global.kegunaan = 1;
@@ -115,10 +111,6 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     maximumSize: const Size(319, 84),
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
-                    // );
                     setState(
                       () {
                         global.kegunaan = 2;
@@ -158,10 +150,6 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     maximumSize: const Size(319, 84),
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
-                    // );
                     setState(
                       () {
                         global.kegunaan = 3;
@@ -201,10 +189,6 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     maximumSize: const Size(319, 84),
                   ),
                   onPressed: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => Rekomendasi_pc()),
-                    // );
                     setState(
                       () {
                         global.kegunaan = 4;
@@ -248,10 +232,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                         ))),
                     child: const Icon(Icons.arrow_back_ios_rounded),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Pertanyaan1()),
-                      );
+                      Navigator.pushNamed(
+                          context, '/build/begginer/pertanyaan1');
                     },
                   ),
                 ),
@@ -275,11 +257,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     onPressed: () {
                       isDisable
                           ? null
-                          : Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Rekomendasi_pc()),
-                            );
+                          : Navigator.pushNamed(
+                              context, '/build/begginer/hasil');
                     },
                   ),
                 ),
@@ -290,10 +269,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Pertanyaan1()),
-          );
+          Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(

@@ -69,11 +69,7 @@ class pertanyaan_awal extends StatelessWidget {
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => buildpc_advanced()),
-                      );
+                      Navigator.pushNamed(context, '/build/advanced');
                     },
                   ),
                 ),
@@ -94,10 +90,8 @@ class pertanyaan_awal extends StatelessWidget {
                       style: const TextStyle(fontSize: 20, color: Colors.black),
                     ),
                     onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Pertanyaan1()),
-                      );
+                      Navigator.pushNamed(
+                          context, '/build/begginer/pertanyaan1');
                     },
                   ),
                 ),
@@ -108,10 +102,7 @@ class pertanyaan_awal extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const pertanyaan_awal()),
-          );
+          Navigator.pushNamed(context, '/build');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(

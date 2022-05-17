@@ -125,10 +125,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -203,12 +200,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_case_adv = int.parse(
@@ -450,10 +443,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -528,12 +518,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(20, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_cpu_cooler_adv = int.parse(
@@ -716,10 +702,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -791,12 +774,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_cpu_adv = int.parse(
@@ -1013,10 +992,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1091,12 +1067,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_fan_adv = int.parse(
@@ -1286,10 +1258,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1364,12 +1333,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_mobo_adv = int.parse(
@@ -1629,10 +1594,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1707,12 +1669,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_ram_adv = int.parse(
@@ -1875,10 +1833,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1953,12 +1908,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_storage_adv = int.parse(
@@ -2145,10 +2096,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -2223,12 +2171,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_psu_adv = int.parse(
@@ -2423,10 +2367,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ListPart()),
-                );
+                Navigator.pushNamed(context, '/part/list');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -2498,12 +2439,8 @@ class _DetailPartState extends State<DetailPart> {
                                         const Size(100, 40), //////// HERE
                                   ),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              buildpc_advanced()),
-                                    );
+                                    Navigator.pushNamed(
+                                        context, '/build/advanced');
                                     setState(
                                       () {
                                         global.id_vga_adv = int.parse(

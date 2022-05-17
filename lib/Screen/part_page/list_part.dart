@@ -120,10 +120,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -146,18 +143,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 1;
                           global.id_detail = index;
@@ -190,21 +183,23 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data1[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data1[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data1[index].colorCasing,
+                                    Text(
+                                      data1[index].colorCasing,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data1[index].maxPsu,
+                                    Text(
+                                      data1[index].maxPsu,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -239,10 +234,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -265,19 +257,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
-                            color: Colors.deepPurpleAccent,
-                        )
-                    ),
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
+                          color: Colors.deepPurpleAccent,
+                        )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 2;
                           global.id_detail = index;
@@ -310,21 +297,23 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data2[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data2[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data2[index].merkCooler,
+                                    Text(
+                                      data2[index].merkCooler,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data2[index].fanSpeed,
+                                    Text(
+                                      data2[index].fanSpeed,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -340,7 +329,7 @@ class _ListPartState extends State<ListPart> {
                         ),
                       ),
                     ),
-                  // cardddddddd
+                    // cardddddddd
                   );
                 }),
       );
@@ -360,10 +349,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -386,18 +372,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 3;
                           global.id_detail = index;
@@ -430,21 +412,23 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data3[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data3[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data3[index].baseClock,
+                                    Text(
+                                      data3[index].baseClock,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data3[index].threadsCount,
+                                    Text(
+                                      data3[index].threadsCount,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -479,10 +463,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -505,18 +486,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 4;
                           global.id_detail = index;
@@ -549,21 +526,23 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data4[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data4[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data4[index].merkFans,
+                                    Text(
+                                      data4[index].merkFans,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data4[index].colorFans,
+                                    Text(
+                                      data4[index].colorFans,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -598,10 +577,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -624,18 +600,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 5;
                           global.id_detail = index;
@@ -668,21 +640,23 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data5[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data5[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data5[index].namaMobo,
+                                    Text(
+                                      data5[index].namaMobo,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data5[index].chipsetMobo,
+                                    Text(
+                                      data5[index].chipsetMobo,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -717,10 +691,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -743,18 +714,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 6;
                           global.id_detail = index;
@@ -787,26 +754,29 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data6[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data6[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data6[index].merkRam,
+                                    Text(
+                                      data6[index].merkRam,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data6[index].memorySize,
+                                    Text(
+                                      data6[index].memorySize,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data6[index].memorySpeed,
+                                    Text(
+                                      data6[index].memorySpeed,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -841,10 +811,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -867,18 +834,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 7;
                           global.id_detail = index;
@@ -911,26 +874,29 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data7[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data7[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data7[index].merkStorage,
+                                    Text(
+                                      data7[index].merkStorage,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data7[index].storageCapacity,
+                                    Text(
+                                      data7[index].storageCapacity,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data7[index].storageInterface,
+                                    Text(
+                                      data7[index].storageInterface,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -965,10 +931,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -991,18 +954,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 8;
                           global.id_detail = index;
@@ -1035,26 +994,29 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data8[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data8[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data8[index].merkPsu,
+                                    Text(
+                                      data8[index].merkPsu,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data8[index].colorPsu,
+                                    Text(
+                                      data8[index].colorPsu,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data8[index].fanSize,
+                                    Text(
+                                      data8[index].fanSize,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
@@ -1089,10 +1051,7 @@ class _ListPartState extends State<ListPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Part()),
-                );
+                Navigator.pushNamed(context, '/part');
               },
               child: const Icon(Icons.arrow_back_rounded),
             ),
@@ -1115,18 +1074,14 @@ class _ListPartState extends State<ListPart> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                         side: BorderSide(
-                            width: 2,
-                            // color: Color.fromARGB(167, 209, 206, 198)
+                          width: 2,
+                          // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
                     margin: EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const DetailPart()),
-                        );
+                        Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
                           global.id_part = 9;
                           global.id_detail = index;
@@ -1159,21 +1114,23 @@ class _ListPartState extends State<ListPart> {
                                           elevation: 5,
                                           shape: RoundedRectangleBorder(
                                               borderRadius:
-                                              BorderRadius.circular(10.0)),
+                                                  BorderRadius.circular(10.0)),
                                         ),
-                                        onPressed: () {
-                                        },
-                                        child: Text(data9[index].harga,
+                                        onPressed: () {},
+                                        child: Text(
+                                          data9[index].harga,
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
                                         )),
-                                    Text(data9[index].architecture,
+                                    Text(
+                                      data9[index].architecture,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),
                                     ),
-                                    Text(data9[index].boostClock,
+                                    Text(
+                                      data9[index].boostClock,
                                       style: const TextStyle(
                                         color: Colors.black,
                                       ),

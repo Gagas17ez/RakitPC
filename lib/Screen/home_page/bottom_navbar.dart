@@ -38,10 +38,7 @@ class BottomBar extends StatelessWidget {
                       ),
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => homepage()),
-                      );
+                      Navigator.pushNamed(context, '/');
                     },
                   ),
                   InkWell(
@@ -57,10 +54,7 @@ class BottomBar extends StatelessWidget {
                           ],
                         )),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Part()),
-                      );
+                      Navigator.pushNamed(context, '/part');
                     },
                   )
                 ])));
