@@ -46,6 +46,7 @@ dependencies:
   scaffold_gradient_background: ^1.0.3+1
   url_launcher: ^6.1.0
   flutter_launcher_icons: ^0.9.2
+  sqflite: ^2.0.2+1
 
 dev_dependencies:
   flutter_lints: ^1.0.4
