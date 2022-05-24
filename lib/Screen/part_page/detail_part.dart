@@ -1673,8 +1673,13 @@ class _DetailPartState extends State<DetailPart> {
                                         context, '/build/advanced');
                                     setState(
                                       () {
-                                        global.id_ram_adv = int.parse(
-                                            data6[global.id_detail].idRam);
+                                        if (global.id_ram_adv != 0) {
+                                          global.id_ram2_adv = int.parse(
+                                              data6[global.id_detail].idRam);
+                                        } else {
+                                          global.id_ram_adv = int.parse(
+                                              data6[global.id_detail].idRam);
+                                        }
                                       },
                                     );
                                   },
