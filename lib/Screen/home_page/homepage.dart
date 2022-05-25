@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/card_homepage.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -53,7 +52,7 @@ class _homepageState extends State<homepage>
         title: const Text('HomePage',
             style: TextStyle(
                 fontFamily: 'SfM', fontSize: 20.0, color: Colors.white)),
-        actions: <Widget>[
+            actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},

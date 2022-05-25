@@ -9,6 +9,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
+import 'package:rakit_pc/Screen/simpan_build/simpanbuild.dart';
 import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -16,11 +17,11 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'Screen/part_page/part_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const simpan_build());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class simpan_build extends StatelessWidget {
+  const simpan_build({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => homepage(),
+        '/': (context) => Simpan(),
         '/build': (context) => pertanyaan_awal(),
         '/build/advanced': (context) => buildpc_advanced(),
         '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
