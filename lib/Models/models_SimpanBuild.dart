@@ -12,6 +12,9 @@ class SimpanBuild {
     required this.idStorage1,
     required this.idStorage2,
     required this.idVga,
+    required this.idFan1,
+    required this.idFan2,
+    required this.idFan3,
   });
 
   int compatible;
@@ -26,4 +29,7 @@ class SimpanBuild {
   int idStorage1;
   int idStorage2;
   int idVga;
+  int idFan1;
+  int idFan2;
+  int idFan3;
 }

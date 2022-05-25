@@ -17,9 +17,13 @@ int id_mobo_adv = 0;
 int id_vga_adv = 0;
 int id_cpu_cooler_adv = 0;
 int id_fan_adv = 0;
+int id_fan2_adv = 0;
+int id_fan3_adv = 0;
 int id_psu_adv = 0;
 int id_storage_adv = 0;
+int id_storage2_adv = 0;
 int id_ram_adv = 0;
+int id_ram2_adv = 0;
 
 //gawe compability
 String socket_cpu = "";

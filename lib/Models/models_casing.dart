@@ -32,23 +32,23 @@ class Casing {
     required this.links,
   });
 
-  String idCasing;
-  String namaCasing;
-  String merkCasing;
-  String moboCompatible;
-  String drivebayCasing;
-  String fanSupport;
-  String frontPanel;
-  String dimensionCasing;
-  String weightCasing;
-  String colorCasing;
-  String maxVgaLength;
-  String maxCoolerHeight;
-  String maxPsu;
-  String casingSidePanel;
-  String harga;
-  String imageLink;
-  String links;
+  final String idCasing;
+  final String namaCasing;
+  final String merkCasing;
+  final String moboCompatible;
+  final String drivebayCasing;
+  final String fanSupport;
+  final String frontPanel;
+  final String dimensionCasing;
+  final String weightCasing;
+  final String colorCasing;
+  final String maxVgaLength;
+  final String maxCoolerHeight;
+  final String maxPsu;
+  final String casingSidePanel;
+  final String harga;
+  final String imageLink;
+  final String links;
 
   factory Casing.fromJson(Map<String, dynamic> json) => Casing(
         idCasing: json["idCasing"],

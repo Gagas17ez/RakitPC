@@ -21,6 +21,9 @@ class MySqflite {
   static const columnIdStorage1 = 'idStorage1';
   static const columnIdStorage2 = 'idStorage2';
   static const columnIdVga = 'idVga';
+  static const columnIdFan1 = 'idFan1';
+  static const columnIdFan2 = 'idFan2';
+  static const columnIdFan3 = 'idFan3';
 
   // make this a singleton class
   MySqflite._privateConstructor();
@@ -82,6 +85,9 @@ class MySqflite {
       columnIdStorage1: model.idStorage1,
       columnIdStorage2: model.idStorage2,
       columnIdVga: model.idVga,
+      columnIdFan1: model.idFan1,
+      columnIdFan2: model.idFan2,
+      columnIdFan3: model.idFan3,
     };
 
     Database db = await instance.database;
@@ -107,6 +113,9 @@ class MySqflite {
         idStorage1: int.parse(data[columnIdStorage1].toString()),
         idStorage2: int.parse(data[columnIdStorage2].toString()),
         idVga: int.parse(data[columnIdVga].toString()),
+        idFan1: int.parse(data[columnIdFan1].toString()),
+        idFan2: int.parse(data[columnIdFan2].toString()),
+        idFan3: int.parse(data[columnIdFan3].toString()),
       ));
     }
 
@@ -132,6 +141,9 @@ class MySqflite {
         idStorage1: int.parse(allData[0][columnIdStorage1] as String),
         idStorage2: int.parse(allData[0][columnIdStorage2] as String),
         idVga: int.parse(allData[0][columnIdVga] as String),
+        idFan1: int.parse(allData[0][columnIdFan1] as String),
+        idFan2: int.parse(allData[0][columnIdFan1] as String),
+        idFan3: int.parse(allData[0][columnIdFan1] as String),
       );
     } else {
       return null;
