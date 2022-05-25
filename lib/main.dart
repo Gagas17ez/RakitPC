@@ -18,11 +18,11 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'Screen/part_page/part_page.dart';
 
 void main() {
-  runApp(const simpan_build());
+  runApp(const rakitpc());
 }
 
-class simpan_build extends StatelessWidget {
-  const simpan_build({Key? key}) : super(key: key);
+class rakitpc extends StatelessWidget {
+  const rakitpc({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override

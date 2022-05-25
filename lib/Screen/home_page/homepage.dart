@@ -31,6 +31,7 @@ class _homepageState extends State<homepage>
     global.id_storage_adv = 0;
     global.id_ram_adv = 0;
     global.nama_part = "";
+    global.seng_diganti = 0;
   }
 
   @override
@@ -52,7 +53,7 @@ class _homepageState extends State<homepage>
         title: const Text('HomePage',
             style: TextStyle(
                 fontFamily: 'SfM', fontSize: 20.0, color: Colors.white)),
-            actions: <Widget>[
+        actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.notifications_none, color: Colors.white),
             onPressed: () {},

@@ -11,6 +11,8 @@ import 'package:rakit_pc/Api/api_psu_id.dart';
 import 'package:rakit_pc/Api/api_ram_id.dart';
 import 'package:rakit_pc/Api/api_storage_id.dart';
 import 'package:rakit_pc/Api/api_vga_id.dart';
+import 'package:rakit_pc/Api/api_fan.dart';
+import 'package:rakit_pc/Api/api_fan_id.dart';
 import 'package:rakit_pc/Models/models_casing.dart';
 import 'package:rakit_pc/Models/models_cpu.dart';
 import 'package:rakit_pc/Models/models_cpu_cooler.dart';
@@ -19,6 +21,7 @@ import 'package:rakit_pc/Models/models_psu.dart';
 import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
+import 'package:rakit_pc/Models/models_fan.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -37,6 +40,7 @@ class buildpc_advanced extends StatefulWidget {
 class _buildpc_advancedState extends State<buildpc_advanced> {
   String cpuSocket = "";
   String moboSocket = "";
+  String messageCompability = "";
 
   @override
   Widget build(BuildContext context) {
@@ -299,7 +303,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           Container(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: [getstorage()],
+              children: [getstorage(), getstorageAgain()],
             ),
           ),
           const SizedBox(
@@ -335,6 +339,39 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [getvga()],
             ),
+          ),
+          const SizedBox(
+            width: 30,
+            height: 40,
+          ),
+          Container(
+              margin: const EdgeInsets.all(5),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text(
+                    'Fan',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'DmSans',
+                      fontSize: 18,
+                    ),
+                  ),
+                  Expanded(
+                    child: Container(
+                        margin: const EdgeInsets.only(left: 10.0, right: 10.0),
+                        child: const Divider(
+                          color: Colors.white,
+                          height: 25,
+                          thickness: 3,
+                        )),
+                  ),
+                ],
+              )),
+          Container(
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [getfan(), getfanAgain(), getfanAgainAgain()]),
           ),
           const SizedBox(
             width: 30,
@@ -459,7 +496,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
   }
 
   Widget kotak_compability() {
-    if (global.id_cpu_adv == 0 && global.id_mobo_adv == 0) {
+    if (global.id_cpu_adv == 0 &&
+        global.id_mobo_adv == 0 &&
+        global.id_ram_adv == 0 &&
+        global.id_ram2_adv == 0) {
       return Column(
         children: <Widget>[
           Card(
@@ -508,55 +548,19 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         ],
       );
     } else {
-      if (global.socket_cpu.toLowerCase() == global.socket_mobo.toLowerCase()) {
-        return Column(
-          children: <Widget>[
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(0),
-              ),
-              margin: const EdgeInsets.all(0.0),
-              color: HexColor("#00B16A"),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: const [
-                  ListTile(
-                    dense: true,
-                    leading: Icon(
-                      Icons.check_circle_outline_rounded,
-                      color: Colors.white,
-                    ),
-                    title: Text('Compatiblity : ',
-                        style: TextStyle(color: Colors.white)),
-                    subtitle: Text('No issues or incompatibilities found.',
-                        style: TextStyle(color: Colors.white)),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(0),
-              ),
-              margin: const EdgeInsets.all(0.0),
-              color: HexColor("#2C85C5"),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: const [
-                  ListTile(
-                    leading: Icon(
-                      Icons.offline_bolt_outlined,
-                      color: Colors.white,
-                    ),
-                    title: Text('Estimated Wattage : OW',
-                        style: TextStyle(color: Colors.white)),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        );
-      } else {
+      if ((global.socket_cpu.toLowerCase() !=
+              global.socket_mobo.toLowerCase()) ||
+          (global.id_ram_adv != global.id_ram2_adv)) {
+        if (global.socket_cpu.toLowerCase() !=
+            global.socket_mobo.toLowerCase()) {
+          messageCompability +=
+              "Cpu might not compatible with the current Motherboard\n";
+        }
+        if (global.id_ram_adv != global.id_ram2_adv) {
+          messageCompability +=
+              "\nDifferent Ram speed & size might cause instability or error\n";
+        }
+
         return Column(
           children: <Widget>[
             Card(
@@ -567,7 +571,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               color: HexColor("#d62828"),
               clipBehavior: Clip.antiAlias,
               child: Column(
-                children: const [
+                children: [
                   ListTile(
                     dense: true,
                     leading: Icon(
@@ -576,8 +580,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     ),
                     title: Text('Compatiblity : ',
                         style: TextStyle(color: Colors.white)),
-                    subtitle: Text(
-                        '1 issues or more incompatibilities found. \n motherboard and cpu not compatible',
+                    subtitle: Text(messageCompability,
                         style: TextStyle(color: Colors.white)),
                   ),
                 ],
@@ -606,6 +609,314 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           ],
         );
       }
+      return Column(
+        children: <Widget>[
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0),
+            ),
+            margin: const EdgeInsets.all(0.0),
+            color: HexColor("#00B16A"),
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: const [
+                ListTile(
+                  dense: true,
+                  leading: Icon(
+                    Icons.check_circle_outline_rounded,
+                    color: Colors.white,
+                  ),
+                  title: Text('Compatiblity : ',
+                      style: TextStyle(color: Colors.white)),
+                  subtitle: Text('No issues or incompatibilities found.',
+                      style: TextStyle(color: Colors.white)),
+                ),
+              ],
+            ),
+          ),
+          Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0),
+            ),
+            margin: const EdgeInsets.all(0.0),
+            color: HexColor("#2C85C5"),
+            clipBehavior: Clip.antiAlias,
+            child: Column(
+              children: const [
+                ListTile(
+                  leading: Icon(
+                    Icons.offline_bolt_outlined,
+                    color: Colors.white,
+                  ),
+                  title: Text('Estimated Wattage : OW',
+                      style: TextStyle(color: Colors.white)),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    }
+  }
+
+  Widget getfan() {
+    if (global.id_fan_adv != 0) {
+      return FutureBuilder(
+          future: fetch_fan_id(global.id_fan_adv),
+          builder: (context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  itemCount: snapshot.data!.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, index) {
+                    Fan fangan = snapshot.data[index];
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/part/list');
+                              setState(
+                                () {
+                                  global.seng_diganti = 1;
+                                  global.nama_part = "Fan";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(ramgan.imageLink),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
+                                    child: Image.network(
+                                      fangan.imageLinks,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                  title: Text(
+                                    fangan.namaFans,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    fangan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
+                    );
+                  });
+            }
+            return const CircularProgressIndicator();
+          });
+    } else {
+      return ElevatedButton.icon(
+          onPressed: () {
+            Navigator.pushNamed(context, '/part/list');
+            setState(
+              () {
+                global.seng_diganti = 1;
+                global.nama_part = "Fan";
+              },
+            );
+          },
+          icon: const Icon(Icons.add),
+          label: const Text('Choose Fan',
+              style: TextStyle(
+                fontFamily: 'DmSans',
+                fontSize: 18,
+              )));
+    }
+  }
+
+  Widget getfanAgain() {
+    if (global.id_fan2_adv != 0) {
+      return FutureBuilder(
+          future: fetch_fan_id(global.id_fan2_adv),
+          builder: (context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  itemCount: snapshot.data!.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, index) {
+                    Fan fangan = snapshot.data[index];
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/part/list');
+                              setState(
+                                () {
+                                  global.seng_diganti = 2;
+                                  global.nama_part = "Fan";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(ramgan.imageLink),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
+                                    child: Image.network(
+                                      fangan.imageLinks,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                  title: Text(
+                                    fangan.namaFans,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    fangan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
+                    );
+                  });
+            }
+            return const CircularProgressIndicator();
+          });
+    } else {
+      return ElevatedButton.icon(
+          onPressed: () {
+            Navigator.pushNamed(context, '/part/list');
+            setState(
+              () {
+                global.seng_diganti = 2;
+                global.nama_part = "Fan";
+              },
+            );
+          },
+          icon: const Icon(Icons.add),
+          label: const Text('Choose Fan',
+              style: TextStyle(
+                fontFamily: 'DmSans',
+                fontSize: 18,
+              )));
+    }
+  }
+
+  Widget getfanAgainAgain() {
+    if (global.id_fan3_adv != 0) {
+      return FutureBuilder(
+          future: fetch_fan_id(global.id_fan3_adv),
+          builder: (context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  itemCount: snapshot.data!.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, index) {
+                    Fan fangan = snapshot.data[index];
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/part/list');
+                              setState(
+                                () {
+                                  global.seng_diganti = 3;
+                                  global.nama_part = "Fan";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(ramgan.imageLink),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
+                                    child: Image.network(
+                                      fangan.imageLinks,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                  title: Text(
+                                    fangan.namaFans,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    fangan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
+                    );
+                  });
+            }
+            return const CircularProgressIndicator();
+          });
+    } else {
+      return ElevatedButton.icon(
+          onPressed: () {
+            Navigator.pushNamed(context, '/part/list');
+            setState(
+              () {
+                global.seng_diganti = 3;
+                global.nama_part = "Fan";
+              },
+            );
+          },
+          icon: const Icon(Icons.add),
+          label: const Text('Choose Fan',
+              style: TextStyle(
+                fontFamily: 'DmSans',
+                fontSize: 18,
+              )));
     }
   }
 
@@ -978,6 +1289,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               Navigator.pushNamed(context, '/part/list');
                               setState(
                                 () {
+                                  global.seng_diganti = 1;
                                   global.nama_part = "Ram";
                                 },
                               );
@@ -1028,6 +1340,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             Navigator.pushNamed(context, '/part/list');
             setState(
               () {
+                global.seng_diganti = 1;
                 global.nama_part = "Ram";
               },
             );
@@ -1063,6 +1376,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               Navigator.pushNamed(context, '/part/list');
                               setState(
                                 () {
+                                  global.seng_diganti = 2;
                                   global.nama_part = "Ram";
                                 },
                               );
@@ -1113,6 +1427,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             Navigator.pushNamed(context, '/part/list');
             setState(
               () {
+                global.seng_diganti = 2;
                 global.nama_part = "Ram";
               },
             );
@@ -1148,6 +1463,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               Navigator.pushNamed(context, '/part/list');
                               setState(
                                 () {
+                                  global.seng_diganti = 1;
                                   global.nama_part = "Storage";
                                 },
                               );
@@ -1199,6 +1515,95 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             Navigator.pushNamed(context, '/part/list');
             setState(
               () {
+                global.seng_diganti = 1;
+                global.nama_part = "Storage";
+              },
+            );
+          },
+          icon: const Icon(Icons.add),
+          label: const Text('Choose Storage',
+              style: TextStyle(
+                fontFamily: 'DmSans',
+                fontSize: 18,
+              )));
+    }
+  }
+
+  Widget getstorageAgain() {
+    if (global.id_storage2_adv != 0) {
+      return FutureBuilder(
+          future: fetch_storage_id(global.id_storage2_adv),
+          builder: (context, AsyncSnapshot snapshot) {
+            if (snapshot.hasData) {
+              return ListView.builder(
+                  itemCount: snapshot.data!.length,
+                  shrinkWrap: true,
+                  itemBuilder: (BuildContext context, index) {
+                    Storage storagegan = snapshot.data[index];
+                    return SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.12,
+                      child: Card(
+                          color: Colors.white70,
+                          shadowColor: Colors.grey,
+                          elevation: 10,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/part/list');
+                              setState(
+                                () {
+                                  global.seng_diganti = 2;
+                                  global.nama_part = "Storage";
+                                },
+                              );
+                            },
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  // leading: Image.network(storagegan.imageLink),
+                                  contentPadding: const EdgeInsets.symmetric(
+                                      horizontal: 16.0),
+                                  leading: ClipRRect(
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(4.0)),
+                                    child: Image.network(
+                                      storagegan.imageLink,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                  title: Text(
+                                    storagegan.namaStorage,
+                                    style: const TextStyle(
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black),
+                                  ),
+                                  subtitle: Text(
+                                    storagegan.harga,
+                                    style: const TextStyle(
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'poppins',
+                                        color: Colors.black45),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )),
+                    );
+                  });
+            }
+            return const CircularProgressIndicator();
+          });
+      //
+    } else {
+      return ElevatedButton.icon(
+          onPressed: () {
+            Navigator.pushNamed(context, '/part/list');
+            setState(
+              () {
+                global.seng_diganti = 2;
                 global.nama_part = "Storage";
               },
             );

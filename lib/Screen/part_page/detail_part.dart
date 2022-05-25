@@ -1071,8 +1071,16 @@ class _DetailPartState extends State<DetailPart> {
                                         context, '/build/advanced');
                                     setState(
                                       () {
-                                        global.id_fan_adv = int.parse(
-                                            data4[global.id_detail].idFans);
+                                        if (global.seng_diganti == 1) {
+                                          global.id_fan_adv = int.parse(
+                                              data4[global.id_detail].idFans);
+                                        } else if (global.seng_diganti == 2) {
+                                          global.id_fan2_adv = int.parse(
+                                              data4[global.id_detail].idFans);
+                                        } else if (global.seng_diganti == 3) {
+                                          global.id_fan3_adv = int.parse(
+                                              data4[global.id_detail].idFans);
+                                        }
                                       },
                                     );
                                   },
@@ -1673,11 +1681,11 @@ class _DetailPartState extends State<DetailPart> {
                                         context, '/build/advanced');
                                     setState(
                                       () {
-                                        if (global.id_ram_adv != 0) {
-                                          global.id_ram2_adv = int.parse(
-                                              data6[global.id_detail].idRam);
-                                        } else {
+                                        if (global.seng_diganti == 1) {
                                           global.id_ram_adv = int.parse(
+                                              data6[global.id_detail].idRam);
+                                        } else if (global.seng_diganti == 2) {
+                                          global.id_ram2_adv = int.parse(
                                               data6[global.id_detail].idRam);
                                         }
                                       },
@@ -1917,8 +1925,15 @@ class _DetailPartState extends State<DetailPart> {
                                         context, '/build/advanced');
                                     setState(
                                       () {
-                                        global.id_storage_adv = int.parse(
-                                            data7[global.id_detail].idStorage);
+                                        if (global.seng_diganti == 1) {
+                                          global.id_storage_adv = int.parse(
+                                              data7[global.id_detail]
+                                                  .idStorage);
+                                        } else if (global.seng_diganti == 2) {
+                                          global.id_storage2_adv = int.parse(
+                                              data7[global.id_detail]
+                                                  .idStorage);
+                                        }
                                       },
                                     );
                                   },

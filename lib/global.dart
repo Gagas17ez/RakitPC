@@ -9,6 +9,7 @@ int id_builds = 0;
 String nama_part = "";
 int id_part = 0;
 int id_detail = 0;
+int seng_diganti = 0;
 
 //gawe pilihan advanced
 int id_case_adv = 0;
