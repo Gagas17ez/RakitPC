@@ -120,6 +120,11 @@ flutter:
       fonts:
             - asset: assets/font/SF-Pro-Display-Medium.ttf
 
+    - family: Inter
+      fonts:
+            - asset: assets/font/inter/Inter-Regular.otf
+
+
   # fonts:
   #   - family: Schyler
   #     fonts:
