@@ -15,6 +15,7 @@ class Pertanyaan2 extends StatefulWidget {
 }
 
 class _Pertanyaan2State extends State<Pertanyaan2> {
+  int? _value = 1;
   String button1color = "#DBD8E3";
   String button2color = "#DBD8E3";
   String button3color = "#DBD8E3";
@@ -33,207 +34,215 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 50,
+              height: 40,
             ),
             Container(
-                height: 104,
-                width: 327,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  color: HexColor("#DBD8E3"),
+              padding: EdgeInsets.only(
+                  top: 0, right: 220, left: 0, bottom: 0),
+              height: 30,
+              width: 310,
+              alignment: Alignment.center,
+              child: Text(
+                "Question 2",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: HexColor("#D7D7D7"),
+                  fontWeight: FontWeight.bold,
+                  height: 1.5,
+                  fontFamily: 'Inter',
                 ),
-                child: const Align(
-                  alignment: Alignment.center,
-                  child: const Text(
-                    "Apa kegunaan dari komputer tersebut ??",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      height: 1.5,
-                      fontFamily: 'SfM',
-                    ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                  top: 0, right: 0, left: 5, bottom: 5),
+              height: 30,
+              width: 310,
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Apa kegunaan dari komputer tersebut ?",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: HexColor("#D7D7D7"),
+                  height: 1.5,
+                  fontFamily: 'Inter',
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+
+            Container(
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Kerja /Browse / Video / Sekolah",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 1,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
                 )),
-            const SizedBox(
-              height: 30,
-            ),
+            SizedBox(height: 20),
             Container(
-              margin: const EdgeInsets.fromLTRB(5, 15, 5, 5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                    primary: HexColor(button1color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54),
-                    maximumSize: const Size(319, 84),
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Kuliah / Programming",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 2,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.kegunaan = 1;
-                        button1color = "#8EE34B";
-                        button2color = "#DBD8E3";
-                        button3color = "#DBD8E3";
-                        button4color = "#DBD8E3";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Penggunaan ringan Browser/Sekolah/Kerja',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+                )),
+            SizedBox(height: 20),
             Container(
-              margin: const EdgeInsets.all(5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                    primary: HexColor(button2color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54),
-                    maximumSize: const Size(319, 84),
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Bermain game / Video editing",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 3,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.kegunaan = 2;
-                        button1color = "#DBD8E3";
-                        button2color = "#8EE34B";
-                        button3color = "#DBD8E3";
-                        button4color = "#DBD8E3";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Penggunaan moderate Kuliah/Programming',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+                )),
+            SizedBox(height: 20),
             Container(
-              margin: const EdgeInsets.all(5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                    primary: HexColor(button3color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54),
-                    maximumSize: const Size(319, 84),
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Workstation",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 4,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.kegunaan = 3;
-                        button1color = "#DBD8E3";
-                        button2color = "#DBD8E3";
-                        button3color = "#8EE34B";
-                        button4color = "#DBD8E3";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Penggunaan berat Gaming/3D/Video Editing',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              margin: const EdgeInsets.all(5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                    primary: HexColor(button4color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54),
-                    maximumSize: const Size(319, 84),
-                  ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.kegunaan = 4;
-                        button1color = "#DBD8E3";
-                        button2color = "#DBD8E3";
-                        button3color = "#DBD8E3";
-                        button4color = "#8EE34B";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Pengunaan sangat berat Workstation/MachineLearning/Server',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
+                )),
+            SizedBox(height: 50),
+
             ButtonBar(
               alignment: MainAxisAlignment.center,
               buttonPadding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
               children: [
                 Container(
-                  // margin: const EdgeInsets.only(bottom: 30.0),
-                  width: 70,
-                  height: 50,
+                  // margin: const EdgeInsets.only(bottom: 70.0),
+                  width: 50,
+                  height: 35,
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("7A77FF")),
+                        MaterialStateProperty.all(HexColor("FFAE52BB")),
                         shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
+                        MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ))),
                     child: const Icon(Icons.arrow_back_ios_rounded),
                     onPressed: () {
-                      Navigator.pushNamed(
-                          context, '/build/begginer/pertanyaan1');
+                      Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
                     },
                   ),
                 ),
@@ -241,24 +250,24 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   width: 30,
                 ),
                 Container(
-                  // margin: const EdgeInsets.only(bottom: 70.0),
-                  width: 70,
-                  height: 50,
+                  // margin: const EdgeInsets.only(bottom: 30.0),
+                  width: 50,
+                  height: 35,
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("7A77FF")),
+                        MaterialStateProperty.all(HexColor("FFAE52BB")),
                         shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
+                        MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(15),
+                            ))),
                     child: const Icon(Icons.arrow_forward_ios_rounded),
                     onPressed: () {
                       isDisable
                           ? null
                           : Navigator.pushNamed(
-                              context, '/build/begginer/hasil');
+                          context, '/build/begginer/hasil_beginner');
                     },
                   ),
                 ),

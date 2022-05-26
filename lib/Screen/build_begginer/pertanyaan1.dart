@@ -16,6 +16,7 @@ class Pertanyaan1 extends StatefulWidget {
 }
 
 class _Pertanyaan1State extends State<Pertanyaan1> {
+  int? _value = 1;
   String button1color = "#DBD8E3";
   String button2color = "#DBD8E3";
   String button3color = "#DBD8E3";
@@ -34,189 +35,207 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 50,
+              height: 40,
             ),
             Container(
-                height: 94,
-                width: 327,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
-                  color: HexColor("#DBD8E3"),
+              padding: EdgeInsets.only(
+                  top: 0, right: 220, left: 0, bottom: 0),
+              height: 30,
+              width: 310,
+              alignment: Alignment.topLeft,
+              child: Text(
+                "Question 1",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: HexColor("#D7D7D7"),
+                  fontWeight: FontWeight.bold,
+                  height: 1.5,
+                  fontFamily: 'Inter',
                 ),
-                child: const Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "Berapa budget anda ?",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 22.0,
-                      fontFamily: 'SfM',
-                    ),
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Container(
+              padding: EdgeInsets.only(
+                  top: 0, right: 110, left: 5, bottom: 5),
+              height: 30,
+              width: 310,
+              alignment: Alignment.center,
+              child: Text(
+                "Berapakah budget anda ?",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: HexColor("#D7D7D7"),
+                  height: 1.5,
+                  fontFamily: 'Inter',
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 80,
+            ),
+
+            Container(
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "± Rp 4.0000.000",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 1,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
                 )),
-            const SizedBox(
-              height: 30,
-            ),
+            SizedBox(height: 20),
             Container(
-              margin: const EdgeInsets.fromLTRB(5, 15, 5, 5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor(button1color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54), //////// HERE
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "± Rp 7.0000.000",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 2,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.budget = 1;
-                        button1color = "#8EE34B";
-                        button2color = "#DBD8E3";
-                        button3color = "#DBD8E3";
-                        button4color = "#DBD8E3";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Mulai dari Rp4.000.000,00',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+                )),
+            SizedBox(height: 20),
             Container(
-              margin: const EdgeInsets.all(5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor(button2color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54), //////// HERE
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "± Rp 10.0000.000",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 3,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.budget = 2;
-                        button1color = "#DBD8E3";
-                        button2color = "#8EE34B";
-                        button3color = "#DBD8E3";
-                        button4color = "#DBD8E3";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Mulai dari Rp7.000.000,00',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+                )),
+            SizedBox(height: 20),
             Container(
-              margin: const EdgeInsets.all(5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor(button3color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54), //////// HERE
+                height: 40,
+                width: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: HexColor("#C9C9C9"),),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      top: 5, right: 5, left: 20, bottom: 5),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "± Rp 15.0000.000",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                      Radio(
+                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
+                        value: 4,
+                        groupValue: _value,
+                        onChanged: (value) {
+                          setState(() {
+                            _value = value as int?;
+                          });
+                        },
+                      )
+                    ],
                   ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.budget = 3;
-                        button1color = "#DBD8E3";
-                        button2color = "#DBD8E3";
-                        button3color = "#8EE34B";
-                        button4color = "#DBD8E3";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Mulai dari Rp10.000.000,00',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Container(
-              margin: const EdgeInsets.all(5),
-              child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    // padding: EdgeInsets.fromLTRB(20, 12, 20, 12),
-                    primary: HexColor(button4color),
-                    // onPrimary: Colors.white,
-                    shadowColor: Colors.greenAccent,
-                    elevation: 3,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15.0)),
-                    minimumSize: const Size(319, 54), //////// HERE
-                  ),
-                  onPressed: () {
-                    setState(
-                      () {
-                        global.budget = 4;
-                        button1color = "#DBD8E3";
-                        button2color = "#DBD8E3";
-                        button3color = "#DBD8E3";
-                        button4color = "#8EE34B";
-                        isDisable = false;
-                      },
-                    );
-                  },
-                  child: const Text(
-                    'Mulai dari Rp15.000.000,00',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20.0,
-                      fontFamily: 'SfM',
-                    ),
-                  )),
-            ),
-            const SizedBox(
-              height: 20,
-            ),
+                )),
+            SizedBox(height: 50),
+
             ButtonBar(
               alignment: MainAxisAlignment.center,
               buttonPadding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
               children: [
                 Container(
                   // margin: const EdgeInsets.only(bottom: 70.0),
-                  width: 70,
-                  height: 50,
+                  width: 50,
+                  height: 35,
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("7A77FF")),
+                            MaterialStateProperty.all(HexColor("FFAE52BB")),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(
@@ -233,12 +252,12 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 ),
                 Container(
                   // margin: const EdgeInsets.only(bottom: 30.0),
-                  width: 70,
-                  height: 50,
+                  width: 50,
+                  height: 35,
                   child: ElevatedButton(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(HexColor("7A77FF")),
+                            MaterialStateProperty.all(HexColor("FFAE52BB")),
                         shape:
                             MaterialStateProperty.all<RoundedRectangleBorder>(
                                 RoundedRectangleBorder(

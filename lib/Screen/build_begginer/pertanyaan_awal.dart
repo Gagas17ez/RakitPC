@@ -133,7 +133,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  primary: HexColor("#AE52BB"),
+                  primary: HexColor("#FFAE52BB"),
                   padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   textStyle:
                   const TextStyle(
