@@ -50,23 +50,25 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               ),
             ),
             const SizedBox(
-              height: 390,
+              height: 300,
             ),
 
             Container(
                 height: 40,
                 width: 320,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: HexColor("#C9C9C9"),),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(
-                      top: 5, right: 5, left: 20, bottom: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
                         "Ya",
                         style: TextStyle(
                           fontSize: 16.0,
@@ -74,35 +76,29 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                      ),
-                      Radio(
-                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
-                        value: 1,
-                        groupValue: _value,
-                        onChanged: (value) {
-                          setState(() {
-                            _value = value as int?;
-                          });
-                        },
-                      )
-                    ],
+                        textAlign: TextAlign.left
+                    ),
                   ),
-                )),
+                )
+            ),
             SizedBox(height: 20),
+
             Container(
                 height: 40,
                 width: 320,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: HexColor("#C9C9C9"),),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(
-                      top: 5, right: 5, left: 20, bottom: 5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: OutlinedButton(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  ),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
                         "Tidak",
                         style: TextStyle(
                           fontSize: 16.0,
@@ -110,22 +106,12 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                      ),
-                      Radio(
-                        fillColor: MaterialStateColor.resolveWith((states) => Colors.white),
-                        value: 2,
-                        groupValue: _value,
-                        onChanged: (value) {
-                          setState(() {
-                            _value = value as int?;
-                          });
-                        },
-                      )
-                    ],
+                        textAlign: TextAlign.left
+                    ),
                   ),
-                )),
+                )
+            ),
             SizedBox(height: 30),
-
             ElevatedButton(
               child: const Text('Next'),
               onPressed: () {},
@@ -133,7 +119,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  primary: HexColor("#FFAE52BB"),
+                  primary: HexColor("#7A77FF"),
                   padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   textStyle:
                   const TextStyle(
@@ -144,6 +130,18 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
+        },
+        backgroundColor: HexColor("#7A77FF"),
+        child: const Icon(
+          Icons.build,
+          size: 30,
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomBar(),
     );
   }
 }
