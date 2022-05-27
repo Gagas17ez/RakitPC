@@ -40,481 +40,837 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                       child: Column(
                         children: <Widget>[
                           // CPU
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgCpu,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaCpu,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp.${build.hargaCpu}",
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
 
                           Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                            // height: 100.0,
+                            // padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
                             decoration: BoxDecoration(
                               borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
+                              BorderRadius.all(const Radius.circular(10.0)),
+                              // gradient: const LinearGradient(
+                              //   begin: Alignment.bottomRight,
+                              //   end: Alignment.topLeft,
+                              //   colors: [
+                              //     Color(0xFFAE52BB),
+                              //     Color(0xFF0C062A),
+                              //   ],
+                              // ),
                             ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
+
+                            child:  Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgMobo,
-                                      width: 50, height: 50, fit: BoxFit.cover),
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const [
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          'Rekomendasi system',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 24,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ]),
+                                Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: const [
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          'Rp 13.000.000',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 36,
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                    ]),
+                                const SizedBox(
+                                  height: 25,
                                 ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
                                   children: <Widget>[
-                                    Text(
-                                      build.namaMobo,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgCpu,
+                                          width: 70, height: 70, fit: BoxFit.cover),
                                     ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaMobo,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaCpu,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp.${build.hargaCpu}",
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
                                   ],
-                                )),
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgMobo,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaMobo,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaMobo,
+                                              style: TextStyle(
+                                                fontSize: 12.0,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white70,),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgRam,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaRam,
+                                              style: const TextStyle(
+                                                fontSize: 20.0,
+                                                color: Colors.white70,
+                                                fontWeight: FontWeight.bold,
+                                                fontFamily: 'SfM',
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaRam,
+                                              style: TextStyle(
+                                                fontSize: 12.0,
+                                                fontWeight: FontWeight.bold,
+                                                color: Colors.white70,
+                                              ),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgVga,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaVga,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaVga,
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgStorage,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaStorage,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  height: 1.3,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaStorage,
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgPsu,
+                                          width: 50, height: 50, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaPsu,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaPsu,
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgCpuCooler,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaCpuCooler,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaCpuCooler,
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgFans,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaFans,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaFans,
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 15,
+                                ),
+                                Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: <Widget>[
+                                    Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 10.0, right: 10.0),
+                                      child: Image.network(build.imgCasing,
+                                          width: 70, height: 70, fit: BoxFit.cover),
+                                    ),
+                                    Expanded(
+                                        child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Text(
+                                              build.namaCasing,
+                                              style: const TextStyle(
+                                                  fontSize: 20.0,
+                                                  color: Colors.white70,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Text(
+                                              "Rp. " + build.hargaCasing,
+                                              style: const TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70),
+                                            ),
+                                          ],
+                                        )),
+                                  ],
+                                ),
+                                const SizedBox(
+                                  height: 5,
+                                ),
                               ],
                             ),
                           ),
                           const SizedBox(
-                            height: 10,
+                            height: 0,
                           ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgRam,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaRam,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaRam,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgVga,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaVga,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaVga,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgStorage,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaStorage,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaStorage,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgPsu,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaPsu,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaPsu,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgCpuCooler,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaCpuCooler,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaCpuCooler,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgFans,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaFans,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaFans,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                            height: 100.0,
-                            padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            decoration: BoxDecoration(
-                              borderRadius:
-                                  BorderRadius.all(const Radius.circular(10.0)),
-                              gradient: const LinearGradient(
-                                begin: Alignment.bottomRight,
-                                end: Alignment.topLeft,
-                                colors: [
-                                  Color(0xFFAE52BB),
-                                  Color(0xFF0C062A),
-                                ],
-                              ),
-                            ),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: <Widget>[
-                                Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 10.0, right: 10.0),
-                                  child: Image.network(build.imgCasing,
-                                      width: 50, height: 50, fit: BoxFit.cover),
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      build.namaCasing,
-                                      style: const TextStyle(
-                                          fontSize: 20.0,
-                                          color: Colors.white70,
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    const SizedBox(
-                                      height: 8.0,
-                                    ),
-                                    Text(
-                                      "Rp. " + build.hargaCasing,
-                                      style: const TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.white70),
-                                    ),
-                                  ],
-                                )),
-                              ],
-                            ),
-                          ),
+
+                          // Container(
+                          //   height: 100.0,
+                          //   // padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     // gradient: const LinearGradient(
+                          //     //   begin: Alignment.bottomRight,
+                          //     //   end: Alignment.topLeft,
+                          //     //   colors: [
+                          //     //     Color(0xFFAE52BB),
+                          //     //     Color(0xFF0C062A),
+                          //     //   ],
+                          //     // ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgMobo,
+                          //             width: 70, height: 70, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaMobo,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaMobo,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 5,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgRam,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaRam,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaRam,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgVga,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaVga,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaVga,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgStorage,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaStorage,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaStorage,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgPsu,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaPsu,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaPsu,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgCpuCooler,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaCpuCooler,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaCpuCooler,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgFans,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaFans,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaFans,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
+                          // const SizedBox(
+                          //   height: 10,
+                          // ),
+                          // Container(
+                          //   height: 100.0,
+                          //   padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          //   decoration: BoxDecoration(
+                          //     borderRadius:
+                          //         BorderRadius.all(const Radius.circular(10.0)),
+                          //     gradient: const LinearGradient(
+                          //       begin: Alignment.bottomRight,
+                          //       end: Alignment.topLeft,
+                          //       colors: [
+                          //         Color(0xFFAE52BB),
+                          //         Color(0xFF0C062A),
+                          //       ],
+                          //     ),
+                          //   ),
+                          //   child: Row(
+                          //     crossAxisAlignment: CrossAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Padding(
+                          //         padding: const EdgeInsets.only(
+                          //             left: 10.0, right: 10.0),
+                          //         child: Image.network(build.imgCasing,
+                          //             width: 50, height: 50, fit: BoxFit.cover),
+                          //       ),
+                          //       Expanded(
+                          //           child: Column(
+                          //         mainAxisAlignment: MainAxisAlignment.center,
+                          //         crossAxisAlignment: CrossAxisAlignment.start,
+                          //         children: <Widget>[
+                          //           Text(
+                          //             build.namaCasing,
+                          //             style: const TextStyle(
+                          //                 fontSize: 20.0,
+                          //                 color: Colors.white70,
+                          //                 fontWeight: FontWeight.bold),
+                          //           ),
+                          //           const SizedBox(
+                          //             height: 8.0,
+                          //           ),
+                          //           Text(
+                          //             "Rp. " + build.hargaCasing,
+                          //             style: const TextStyle(
+                          //                 fontSize: 12.0,
+                          //                 color: Colors.white70),
+                          //           ),
+                          //         ],
+                          //       )),
+                          //     ],
+                          //   ),
+                          // ),
                           const SizedBox(
                             height: 30,
                           ),
@@ -527,13 +883,13 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 child: ElevatedButton(
                                   style: ButtonStyle(
                                       backgroundColor:
-                                          MaterialStateProperty.all(
-                                              HexColor("DBD8E3")),
+                                      MaterialStateProperty.all(
+                                          HexColor("DBD8E3")),
                                       shape: MaterialStateProperty.all<
-                                              RoundedRectangleBorder>(
+                                          RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(14),
-                                      ))),
+                                            borderRadius: BorderRadius.circular(14),
+                                          ))),
                                   child: Text(
                                     "Beli Build",
                                     textAlign: TextAlign.center,
@@ -561,14 +917,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 child: ElevatedButton(
                                     style: ButtonStyle(
                                         backgroundColor:
-                                            MaterialStateProperty.all(
-                                                HexColor("DBD8E3")),
+                                        MaterialStateProperty.all(
+                                            HexColor("DBD8E3")),
                                         shape: MaterialStateProperty.all<
-                                                RoundedRectangleBorder>(
+                                            RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
-                                          borderRadius:
+                                              borderRadius:
                                               BorderRadius.circular(14),
-                                        ))),
+                                            ))),
                                     child: Text(
                                       "Kembali ke Home",
                                       textAlign: TextAlign.center,
