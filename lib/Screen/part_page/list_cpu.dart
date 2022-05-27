@@ -3,22 +3,22 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_casingID_nyar.dart';
-import '../../../../../Models/models_casing.dart';
+import '../../Api/api_cpuID_nyar.dart';
+import '../../../../../Models/models_cpu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCasing extends StatefulWidget {
-  listCasing({Key? key}) : super(key: key);
+class listCpu extends StatefulWidget {
+  listCpu({Key? key}) : super(key: key);
 
   @override
-  State<listCasing> createState() => _listCasingState();
+  State<listCpu> createState() => _listCpuState();
 }
 
-class _listCasingState extends State<listCasing> {
+class _listCpuState extends State<listCpu> {
   late Future data;
 
-  List<Casing> casing = [];
+  List<Cpu> cpu = [];
   String query = '';
   Timer? debouncer;
 
@@ -46,8 +46,8 @@ class _listCasingState extends State<listCasing> {
   }
 
   Future init() async {
-    final casee = await CasingApi.fetch_casingID_nyar(query);
-    setState(() => this.casing = casee);
+    final cpuu = await CpuApi.fetch_cpuID_nyar(query);
+    setState(() => this.cpu = cpuu);
   }
 
   @override
@@ -73,16 +73,16 @@ class _listCasingState extends State<listCasing> {
           ),
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-        title: const Text('Casing'),
+        title: const Text('Cpu'),
       ),
       body: Column(
         children: <Widget>[
           buildSearch(),
           Expanded(
             child: ListView.builder(
-                itemCount: casing.length,
+                itemCount: cpu.length,
                 itemBuilder: (context, index) {
-                  final hasil = casing[index];
+                  final hasil = cpu[index];
                   return buildList(hasil, index);
                 }),
           )
@@ -97,7 +97,7 @@ class _listCasingState extends State<listCasing> {
         onChanged: searchGan,
       );
 
-  Widget buildList(Casing hasil, int index) => Card(
+  Widget buildList(Cpu hasil, int index) => Card(
         elevation: 6,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -112,8 +112,8 @@ class _listCasingState extends State<listCasing> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCasing) - 1;
-              global.nama_part = "Casing";
+              global.id_detail = int.parse(hasil.idCpu) - 1;
+              global.nama_part = "CPU";
             });
           },
           child: SizedBox(
@@ -129,7 +129,7 @@ class _listCasingState extends State<listCasing> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          hasil.namaCasing,
+                          hasil.namaCpu,
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -152,13 +152,13 @@ class _listCasingState extends State<listCasing> {
                               ),
                             )),
                         Text(
-                          hasil.colorCasing,
+                          hasil.baseClock,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
                         ),
                         Text(
-                          hasil.maxPsu,
+                          hasil.threadsCount,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
@@ -177,13 +177,13 @@ class _listCasingState extends State<listCasing> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final caseee = await CasingApi.fetch_casingID_nyar(query);
+        final cpuuu = await CpuApi.fetch_cpuID_nyar(query);
 
         if (!mounted) return;
 
         setState(() {
           this.query = query;
-          this.casing = caseee;
+          this.cpu = cpuuu;
         });
       });
 }

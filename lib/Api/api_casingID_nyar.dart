@@ -3,7 +3,7 @@ import 'package:rakit_pc/Models/models_casing.dart';
 import 'package:http/http.dart' as http;
 
 class CasingApi {
-  static Future<List<Casing>> fetch_casing_nyar(String query) async {
+  static Future<List<Casing>> fetch_casingID_nyar(String query) async {
     final url = Uri.parse("http://rakitpc.garuda.net.id/Api/ApiCasing.php");
     final response = await http.get(url);
 

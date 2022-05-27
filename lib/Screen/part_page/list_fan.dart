@@ -3,22 +3,22 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_casingID_nyar.dart';
-import '../../../../../Models/models_casing.dart';
+import '../../Api/api_fanID_nyar.dart';
+import '../../../../../Models/models_fan.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCasing extends StatefulWidget {
-  listCasing({Key? key}) : super(key: key);
+class listFan extends StatefulWidget {
+  listFan({Key? key}) : super(key: key);
 
   @override
-  State<listCasing> createState() => _listCasingState();
+  State<listFan> createState() => _listFanState();
 }
 
-class _listCasingState extends State<listCasing> {
+class _listFanState extends State<listFan> {
   late Future data;
 
-  List<Casing> casing = [];
+  List<Fan> fan = [];
   String query = '';
   Timer? debouncer;
 
@@ -46,8 +46,8 @@ class _listCasingState extends State<listCasing> {
   }
 
   Future init() async {
-    final casee = await CasingApi.fetch_casingID_nyar(query);
-    setState(() => this.casing = casee);
+    final fann = await FanApi.fetch_fanID_nyar(query);
+    setState(() => this.fan = fann);
   }
 
   @override
@@ -73,16 +73,16 @@ class _listCasingState extends State<listCasing> {
           ),
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-        title: const Text('Casing'),
+        title: const Text('Fan'),
       ),
       body: Column(
         children: <Widget>[
           buildSearch(),
           Expanded(
             child: ListView.builder(
-                itemCount: casing.length,
+                itemCount: fan.length,
                 itemBuilder: (context, index) {
-                  final hasil = casing[index];
+                  final hasil = fan[index];
                   return buildList(hasil, index);
                 }),
           )
@@ -97,7 +97,7 @@ class _listCasingState extends State<listCasing> {
         onChanged: searchGan,
       );
 
-  Widget buildList(Casing hasil, int index) => Card(
+  Widget buildList(Fan hasil, int index) => Card(
         elevation: 6,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -112,8 +112,8 @@ class _listCasingState extends State<listCasing> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCasing) - 1;
-              global.nama_part = "Casing";
+              global.nama_part = "Fan";
+              global.id_detail = int.parse(hasil.idFans) - 1;
             });
           },
           child: SizedBox(
@@ -122,14 +122,14 @@ class _listCasingState extends State<listCasing> {
               //Text(questions[index])
               title: Column(
                 children: <Widget>[
-                  Image.network(hasil.imageLink),
+                  Image.network(hasil.imageLinks),
                   Padding(
                     padding: const EdgeInsets.all(20),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          hasil.namaCasing,
+                          hasil.namaFans,
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -152,13 +152,13 @@ class _listCasingState extends State<listCasing> {
                               ),
                             )),
                         Text(
-                          hasil.colorCasing,
+                          hasil.merkFans,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
                         ),
                         Text(
-                          hasil.maxPsu,
+                          hasil.colorFans,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
@@ -177,13 +177,13 @@ class _listCasingState extends State<listCasing> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final caseee = await CasingApi.fetch_casingID_nyar(query);
+        final fannn = await FanApi.fetch_fanID_nyar(query);
 
         if (!mounted) return;
 
         setState(() {
           this.query = query;
-          this.casing = caseee;
+          this.fan = fannn;
         });
       });
 }

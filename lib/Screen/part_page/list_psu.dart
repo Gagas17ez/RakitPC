@@ -3,22 +3,22 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_casingID_nyar.dart';
-import '../../../../../Models/models_casing.dart';
+import '../../Api/api_psuID_nyar.dart';
+import '../../../../../Models/models_psu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCasing extends StatefulWidget {
-  listCasing({Key? key}) : super(key: key);
+class listPsu extends StatefulWidget {
+  listPsu({Key? key}) : super(key: key);
 
   @override
-  State<listCasing> createState() => _listCasingState();
+  State<listPsu> createState() => _listPsuState();
 }
 
-class _listCasingState extends State<listCasing> {
+class _listPsuState extends State<listPsu> {
   late Future data;
 
-  List<Casing> casing = [];
+  List<Psu> psu = [];
   String query = '';
   Timer? debouncer;
 
@@ -46,8 +46,8 @@ class _listCasingState extends State<listCasing> {
   }
 
   Future init() async {
-    final casee = await CasingApi.fetch_casingID_nyar(query);
-    setState(() => this.casing = casee);
+    final psuu = await PsuApi.fetch_psuID_nyar(query);
+    setState(() => this.psu = psuu);
   }
 
   @override
@@ -73,16 +73,16 @@ class _listCasingState extends State<listCasing> {
           ),
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-        title: const Text('Casing'),
+        title: const Text('Psu'),
       ),
       body: Column(
         children: <Widget>[
           buildSearch(),
           Expanded(
             child: ListView.builder(
-                itemCount: casing.length,
+                itemCount: psu.length,
                 itemBuilder: (context, index) {
-                  final hasil = casing[index];
+                  final hasil = psu[index];
                   return buildList(hasil, index);
                 }),
           )
@@ -93,11 +93,11 @@ class _listCasingState extends State<listCasing> {
 
   Widget buildSearch() => SearchWidget(
         text: query,
-        hintText: 'Cari Nama produk atau merk',
+        hintText: 'Cari Nama produk, merk atau besar watt',
         onChanged: searchGan,
       );
 
-  Widget buildList(Casing hasil, int index) => Card(
+  Widget buildList(Psu hasil, int index) => Card(
         elevation: 6,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -112,8 +112,8 @@ class _listCasingState extends State<listCasing> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCasing) - 1;
-              global.nama_part = "Casing";
+              global.nama_part = "PSU";
+              global.id_detail = int.parse(hasil.idPsu) - 1;
             });
           },
           child: SizedBox(
@@ -129,7 +129,7 @@ class _listCasingState extends State<listCasing> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          hasil.namaCasing,
+                          hasil.namaPsu,
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -152,13 +152,19 @@ class _listCasingState extends State<listCasing> {
                               ),
                             )),
                         Text(
-                          hasil.colorCasing,
+                          hasil.merkPsu,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
                         ),
                         Text(
-                          hasil.maxPsu,
+                          hasil.colorPsu,
+                          style: const TextStyle(
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          hasil.fanSize,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
@@ -177,13 +183,13 @@ class _listCasingState extends State<listCasing> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final caseee = await CasingApi.fetch_casingID_nyar(query);
+        final psuuu = await PsuApi.fetch_psuID_nyar(query);
 
         if (!mounted) return;
 
         setState(() {
           this.query = query;
-          this.casing = caseee;
+          this.psu = psuuu;
         });
       });
 }

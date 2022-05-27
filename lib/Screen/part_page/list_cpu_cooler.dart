@@ -3,22 +3,22 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_casingID_nyar.dart';
-import '../../../../../Models/models_casing.dart';
+import '../../Api/api_cpu_coolerID_nyar.dart';
+import '../../../../../Models/models_cpu_cooler.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCasing extends StatefulWidget {
-  listCasing({Key? key}) : super(key: key);
+class listCpuCooler extends StatefulWidget {
+  listCpuCooler({Key? key}) : super(key: key);
 
   @override
-  State<listCasing> createState() => _listCasingState();
+  State<listCpuCooler> createState() => _listCpuCoolerState();
 }
 
-class _listCasingState extends State<listCasing> {
+class _listCpuCoolerState extends State<listCpuCooler> {
   late Future data;
 
-  List<Casing> casing = [];
+  List<CpuCooler> cpucooler = [];
   String query = '';
   Timer? debouncer;
 
@@ -46,8 +46,8 @@ class _listCasingState extends State<listCasing> {
   }
 
   Future init() async {
-    final casee = await CasingApi.fetch_casingID_nyar(query);
-    setState(() => this.casing = casee);
+    final cooler = await CpuCoolerApi.fetch_cpu_coolerID_nyar(query);
+    setState(() => this.cpucooler = cooler);
   }
 
   @override
@@ -73,16 +73,16 @@ class _listCasingState extends State<listCasing> {
           ),
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-        title: const Text('Casing'),
+        title: const Text('CpuCooler'),
       ),
       body: Column(
         children: <Widget>[
           buildSearch(),
           Expanded(
             child: ListView.builder(
-                itemCount: casing.length,
+                itemCount: cpucooler.length,
                 itemBuilder: (context, index) {
-                  final hasil = casing[index];
+                  final hasil = cpucooler[index];
                   return buildList(hasil, index);
                 }),
           )
@@ -97,7 +97,7 @@ class _listCasingState extends State<listCasing> {
         onChanged: searchGan,
       );
 
-  Widget buildList(Casing hasil, int index) => Card(
+  Widget buildList(CpuCooler hasil, int index) => Card(
         elevation: 6,
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -112,8 +112,8 @@ class _listCasingState extends State<listCasing> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCasing) - 1;
-              global.nama_part = "Casing";
+              global.id_detail = int.parse(hasil.idCooler) - 1;
+              global.nama_part = "CPU Cooler";
             });
           },
           child: SizedBox(
@@ -129,7 +129,7 @@ class _listCasingState extends State<listCasing> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          hasil.namaCasing,
+                          hasil.namaCooler,
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -152,13 +152,13 @@ class _listCasingState extends State<listCasing> {
                               ),
                             )),
                         Text(
-                          hasil.colorCasing,
+                          hasil.merkCooler,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
                         ),
                         Text(
-                          hasil.maxPsu,
+                          hasil.fanSpeed,
                           style: const TextStyle(
                             color: Colors.black,
                           ),
@@ -174,16 +174,17 @@ class _listCasingState extends State<listCasing> {
             ),
           ),
         ),
+        // cardddddddd
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final caseee = await CasingApi.fetch_casingID_nyar(query);
+        final coolerr = await CpuCoolerApi.fetch_cpu_coolerID_nyar(query);
 
         if (!mounted) return;
 
         setState(() {
           this.query = query;
-          this.casing = caseee;
+          this.cpucooler = coolerr;
         });
       });
 }
