@@ -342,7 +342,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           ),
           const SizedBox(
             width: 30,
-            height: 40,
+            height: 20,
           ),
           Container(
               margin: const EdgeInsets.all(5),
@@ -430,7 +430,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/casing');
                               setState(
                                 () {
                                   global.nama_part = "Casing";
@@ -479,7 +479,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/casing');
             setState(
               () {
                 global.nama_part = "Casing";
@@ -678,7 +678,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/fan');
                               setState(
                                 () {
                                   global.seng_diganti = 1;
@@ -729,7 +729,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/fan');
             setState(
               () {
                 global.seng_diganti = 1;
@@ -765,7 +765,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/fan');
                               setState(
                                 () {
                                   global.seng_diganti = 2;
@@ -816,7 +816,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/fan');
             setState(
               () {
                 global.seng_diganti = 2;
@@ -852,7 +852,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/fan');
                               setState(
                                 () {
                                   global.seng_diganti = 3;
@@ -903,7 +903,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/fan');
             setState(
               () {
                 global.seng_diganti = 3;
@@ -939,7 +939,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/cpu');
                               setState(
                                 () {
                                   global.nama_part = "CPU";
@@ -993,7 +993,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             maximumSize: const Size(200, 50),
           ),
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/cpu');
             setState(
               () {
                 global.nama_part = "CPU";
@@ -1028,7 +1028,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/cooler');
                               setState(
                                 () {
                                   global.nama_part = "CPU Cooler";
@@ -1079,7 +1079,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/cooler');
             setState(
               () {
                 global.nama_part = "CPU Cooler";
@@ -1114,7 +1114,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(
+                                  context, '/part/list/motherboard');
                               setState(
                                 () {
                                   global.nama_part = "Motherboard";
@@ -1165,7 +1166,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/motherboard');
             setState(
               () {
                 global.nama_part = "Motherboard";
@@ -1200,7 +1201,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/psu');
                               setState(
                                 () {
                                   global.nama_part = "PSU";
@@ -1251,7 +1252,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/psu');
             setState(
               () {
                 global.nama_part = "PSU";
@@ -1286,7 +1287,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/ram');
                               setState(
                                 () {
                                   global.seng_diganti = 1;
@@ -1337,7 +1338,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/ram');
             setState(
               () {
                 global.seng_diganti = 1;
@@ -1373,7 +1374,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/ram');
                               setState(
                                 () {
                                   global.seng_diganti = 2;
@@ -1424,7 +1425,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/ram');
             setState(
               () {
                 global.seng_diganti = 2;
@@ -1433,7 +1434,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             );
           },
           icon: const Icon(Icons.add),
-          label: const Text('Choose RAM 2',
+          label: const Text('Choose RAM',
               style: TextStyle(
                 fontFamily: 'DmSans',
                 fontSize: 18,
@@ -1460,7 +1461,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(
+                                  context, '/part/list/storage');
                               setState(
                                 () {
                                   global.seng_diganti = 1;
@@ -1512,7 +1514,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/storage');
             setState(
               () {
                 global.seng_diganti = 1;
@@ -1548,7 +1550,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(
+                                  context, '/part/list/storage');
                               setState(
                                 () {
                                   global.seng_diganti = 2;
@@ -1600,7 +1603,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/storage');
             setState(
               () {
                 global.seng_diganti = 2;
@@ -1636,7 +1639,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           elevation: 10,
                           child: InkWell(
                             onTap: () {
-                              Navigator.pushNamed(context, '/part/list');
+                              Navigator.pushNamed(context, '/part/list/vga');
                               setState(
                                 () {
                                   global.nama_part = "VGA";
@@ -1687,7 +1690,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           onPressed: () {
-            Navigator.pushNamed(context, '/part/list');
+            Navigator.pushNamed(context, '/part/list/vga');
             setState(
               () {
                 global.nama_part = "VGA";
