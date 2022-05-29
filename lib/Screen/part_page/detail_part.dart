@@ -125,7 +125,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/casing');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -443,7 +443,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/cooler');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -702,7 +702,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/cpu');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -992,7 +992,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/fan');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1266,7 +1266,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/motherboard');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1602,7 +1602,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/ram');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -1846,7 +1846,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/storage');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -2116,7 +2116,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/psu');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
@@ -2387,7 +2387,7 @@ class _DetailPartState extends State<DetailPart> {
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
-                Navigator.pushNamed(context, '/part/list');
+                Navigator.pushNamed(context, '/part/list/vga');
               },
               child: Icon(Icons.arrow_back_rounded),
             ),
