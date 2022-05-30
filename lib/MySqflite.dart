@@ -5,7 +5,7 @@ import 'package:rakit_pc/Models/models_SimpanBuild.dart';
 class MySqflite {
   static const _databaseName = "SimpanBuild.db";
 
-  static const _databaseV1 = 1;
+  static const _databaseV1 = 5;
   static const tableSimpanBuild = 'Build';
 
   static const columnIdSimpan = 'idSimpan';
@@ -54,8 +54,8 @@ class MySqflite {
   void _onCreateTableSimpanBuild(Batch batch) async {
     batch.execute('''
           CREATE TABLE $tableSimpanBuild (
-            $columnCompatible INTEGER ,
-            $columnWaktu TEXT PRIMARY KEY,
+            $columnCompatible INTEGER,
+            $columnWaktu TEXT,
             $columnIdCasing INTEGER,
             $columnIdCpu INTEGER,
             $columnIdCpuCooler INTEGER,
@@ -66,6 +66,9 @@ class MySqflite {
             $columnIdStorage1 INTEGER,
             $columnIdStorage2 INTEGER,
             $columnIdVga INTEGER,
+            $columnIdFan1 INTEGER,
+            $columnIdFan2 INTEGER,
+            $columnIdFan3 INTEGER
           )
           ''');
   }
@@ -102,7 +105,7 @@ class MySqflite {
     for (var data in allData) {
       result.add(SimpanBuild(
         compatible: int.parse(data[columnCompatible].toString()),
-        waktu: columnWaktu,
+        waktu: data[columnWaktu].toString(),
         idCasing: int.parse(data[columnIdCasing].toString()),
         idCpu: int.parse(data[columnIdCpu].toString()),
         idCpuCooler: int.parse(data[columnIdCpuCooler].toString()),

@@ -3,6 +3,9 @@ import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:rakit_pc/global.dart' as global;
+import 'package:rakit_pc/Models/models_SimpanBuild.dart';
+import 'package:flutter/material.dart';
+import 'package:rakit_pc/MySqflite.dart';
 
 class Simpan extends StatefulWidget {
   Simpan({Key? key}) : super(key: key);
@@ -11,6 +14,18 @@ class Simpan extends StatefulWidget {
 }
 
 class _Simpan extends State<Simpan> {
+  List<SimpanBuild> builds = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+      builds = await MySqflite.instance.getBuild();
+      setState(() {});
+    });
+  }
+
   Widget build(BuildContext context) {
     return ScaffoldGradientBackground(
       gradient: LinearGradient(
@@ -34,72 +49,73 @@ class _Simpan extends State<Simpan> {
         ),
         title: const Text('History Build'),
       ),
-      body: ListView(
-        children: [
-          //Padding(padding: const EdgeInsets.symmetric(horizontal: 10)),
+      body: ListView.builder(
+          itemCount: builds.length,
+          itemBuilder: (BuildContext context, int index) {
+            var build = builds[index];
+            //Padding(padding: const EdgeInsets.symmetric(horizontal: 10)),
 
-          Container(
-            child: Card(
-              color: Colors.transparent,
-              elevation: 6,
-              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
-              child: SizedBox(
-                width: 200,
-                height: 70,
-                child: ListTile(
-                  title: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Image.asset(
-                            "assets/img/casing.png",
-                            width: 40,
-                            height: 40,
-                            color: Colors.white70,
-                          ),
-                          const Text(
-                            'Build 30/02/2022',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'DmSans',
-                              fontSize: 20,
+            return Container(
+              child: Card(
+                color: Colors.transparent,
+                elevation: 6,
+                margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+                child: SizedBox(
+                  width: 200,
+                  height: 70,
+                  child: ListTile(
+                    title: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Image.asset(
+                              "assets/img/casing.png",
+                              width: 40,
+                              height: 40,
+                              color: Colors.white70,
                             ),
-                          )
-                        ],
-                      ),
-                      const Text(
-                        '9 components',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontFamily: 'DmSans',
-                          fontSize: 14,
+                            Text(
+                              build.waktu.toString(),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'DmSans',
+                                fontSize: 20,
+                              ),
+                            )
+                          ],
                         ),
-                      ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.center,
-                  ),
+                        Text(
+                          build.waktu.toString(),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontFamily: 'DmSans',
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                      mainAxisAlignment: MainAxisAlignment.center,
+                    ),
 
-                  //trailing: Image.asset("assets/img/casing.png"),
-                  selected: true,
-                  selectedTileColor: Color(0xFF7A77FF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    //trailing: Image.asset("assets/img/casing.png"),
+                    selected: true,
+                    selectedTileColor: Color(0xFF7A77FF),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/part/list');
+                      setState(() {
+                        global.nama_part = "Casing";
+                      });
+                    },
                   ),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/part/list');
-                    setState(() {
-                      global.nama_part = "Casing";
-                    });
-                  },
                 ),
               ),
-            ),
-          )
-        ],
-      ),
+            );
+          }),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/build');
@@ -113,5 +129,11 @@ class _Simpan extends State<Simpan> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
     );
+  }
+
+  getBuilds() async {
+    FocusScope.of(context).requestFocus(new FocusNode());
+    builds = await MySqflite.instance.getBuild();
+    setState(() {});
   }
 }

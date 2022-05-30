@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, unnecessary_null_comparison
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +25,8 @@ import 'package:rakit_pc/Models/models_fan.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/Models/models_SimpanBuild.dart';
+import 'package:rakit_pc/MySqflite.dart';
 
 void main() {
   runApp(buildpc_advanced());
@@ -383,9 +385,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/');
+                    _onSaveBuild();
+                    Navigator.pushNamed(context, '/history');
                   },
-                  child: const Text('Kembali ke Home',
+                  child: const Text('Simpan Build',
                       style: TextStyle(
                         color: Colors.white,
                         fontFamily: 'DmSans',
@@ -408,6 +411,35 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
+  }
+
+  _onSaveBuild() async {
+    FocusScope.of(context).requestFocus(new FocusNode());
+
+    if ((global.id_case_adv != null) &&
+        (global.id_cpu_adv != null) &&
+        (global.id_vga_adv != null)) {
+      await MySqflite.instance.insertBuild(SimpanBuild(
+        compatible: global.compatible,
+        waktu: DateTime.now().toString(),
+        idCasing: global.id_case_adv,
+        idCpu: global.id_cpu_adv,
+        idCpuCooler: global.id_cpu_cooler_adv,
+        idMotherboard: global.id_mobo_adv,
+        idPsu: global.id_psu_adv,
+        idRam1: global.id_ram_adv,
+        idRam2: global.id_ram2_adv,
+        idStorage1: global.id_storage_adv,
+        idStorage2: global.id_storage2_adv,
+        idVga: global.id_vga_adv,
+        idFan1: global.id_fan_adv,
+        idFan2: global.id_fan2_adv,
+        idFan3: global.id_fan3_adv,
+      ));
+
+      // mahasiswa = await MySqflite.instance.getMahasiswa();
+      // setState(() {});
+    }
   }
 
   Widget getcasing() {
