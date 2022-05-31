@@ -421,6 +421,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         (global.id_vga_adv != null)) {
       await MySqflite.instance.insertBuild(SimpanBuild(
         compatible: global.compatible,
+        harga: global.hargaTot.toString(),
         waktu: DateTime.now().toString(),
         idCasing: global.id_case_adv,
         idCpu: global.id_cpu_adv,
@@ -538,11 +539,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(0),
             ),
-            margin: const EdgeInsets.all(0.0),
+            margin: EdgeInsets.all(0.0),
             color: HexColor("#00B16A"),
             clipBehavior: Clip.antiAlias,
             child: Column(
-              children: const [
+              children: [
                 ListTile(
                   dense: true,
                   leading: Icon(
@@ -565,13 +566,14 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             color: HexColor("#2C85C5"),
             clipBehavior: Clip.antiAlias,
             child: Column(
-              children: const [
+              children: [
                 ListTile(
                   leading: Icon(
                     Icons.offline_bolt_outlined,
                     color: Colors.white,
                   ),
-                  title: Text('Estimated Wattage : OW',
+                  title: Text(
+                      'Estimated Wattage : ' + global.hargaTot.toString(),
                       style: TextStyle(color: Colors.white)),
                 ),
               ],
@@ -580,6 +582,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         ],
       );
     } else {
+      setState(() {
+        global.compatible = "Part Incompatible";
+      });
       if ((global.socket_cpu.toLowerCase() !=
               global.socket_mobo.toLowerCase()) ||
           (global.id_ram_adv != global.id_ram2_adv)) {
@@ -975,6 +980,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               setState(
                                 () {
                                   global.nama_part = "CPU";
+                                  global.hargaTot += int.parse(cpugan.harga);
                                 },
                               );
                             },

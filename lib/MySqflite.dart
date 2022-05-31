@@ -10,6 +10,7 @@ class MySqflite {
 
   static const columnIdSimpan = 'idSimpan';
   static const columnCompatible = 'compatible';
+  static const columnHarga = 'harga';
   static const columnWaktu = 'waktu';
   static const columnIdCasing = 'idCasing';
   static const columnIdCpu = 'idCpu';
@@ -55,6 +56,7 @@ class MySqflite {
     batch.execute('''
           CREATE TABLE $tableSimpanBuild (
             $columnCompatible INTEGER,
+            $columnHarga TEXT,
             $columnWaktu TEXT,
             $columnIdCasing INTEGER,
             $columnIdCpu INTEGER,
@@ -77,6 +79,7 @@ class MySqflite {
   Future<int> insertBuild(SimpanBuild model) async {
     var row = {
       columnCompatible: model.compatible,
+      columnHarga: model.harga,
       columnWaktu: model.waktu,
       columnIdCasing: model.idCasing,
       columnIdCpu: model.idCpu,
@@ -104,7 +107,8 @@ class MySqflite {
     List<SimpanBuild> result = [];
     for (var data in allData) {
       result.add(SimpanBuild(
-        compatible: int.parse(data[columnCompatible].toString()),
+        compatible: data[columnCompatible].toString(),
+        harga: data[columnHarga].toString(),
         waktu: data[columnWaktu].toString(),
         idCasing: int.parse(data[columnIdCasing].toString()),
         idCpu: int.parse(data[columnIdCpu].toString()),
@@ -132,7 +136,8 @@ class MySqflite {
 
     if (allData.isNotEmpty) {
       return SimpanBuild(
-        compatible: int.parse(allData[0][columnWaktu] as String),
+        compatible: allData[0][columnWaktu] as String,
+        harga: allData[0][columnHarga] as String,
         waktu: allData[0][columnWaktu] as String,
         idCasing: int.parse(allData[0][columnIdCasing] as String),
         idCpu: int.parse(allData[0][columnIdCpu] as String),
@@ -158,9 +163,4 @@ class MySqflite {
     return await db
         .rawDelete('DELETE FROM $tableSimpanBuild Where $columnWaktu = $waktu');
   }
-
-  // clearAllData() async {
-  //   Database db = await instance.database;
-  //   await db.rawQuery("DELETE FROM $tableMahasiswa");
-  // }
 }

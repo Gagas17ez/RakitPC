@@ -1,6 +1,7 @@
 class SimpanBuild {
   SimpanBuild({
     required this.compatible,
+    required this.harga,
     required this.waktu,
     required this.idCasing,
     required this.idCpu,
@@ -17,7 +18,8 @@ class SimpanBuild {
     required this.idFan3,
   });
 
-  int compatible;
+  String compatible;
+  String harga;
   String waktu;
   int idCasing;
   int idCpu;
