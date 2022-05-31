@@ -146,7 +146,7 @@ class _listVgaState extends State<listVga> {
                             ),
                             onPressed: () {},
                             child: Text(
-                              hasil.harga,
+                              hasil.harga.toString(),
                               style: const TextStyle(
                                 color: Colors.black,
                               ),

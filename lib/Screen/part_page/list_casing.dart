@@ -146,7 +146,7 @@ class _listCasingState extends State<listCasing> {
                             ),
                             onPressed: () {},
                             child: Text(
-                              hasil.harga,
+                              hasil.harga.toString(),
                               style: const TextStyle(
                                 color: Colors.black,
                               ),

@@ -146,7 +146,7 @@ class _listCpuState extends State<listCpu> {
                             ),
                             onPressed: () {},
                             child: Text(
-                              hasil.harga,
+                              hasil.harga.toString(),
                               style: const TextStyle(
                                 color: Colors.black,
                               ),

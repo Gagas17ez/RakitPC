@@ -1,5 +1,5 @@
 // ignore_for_file: avoid_unnecessary_containers, unnecessary_null_comparison
-
+import 'package:intl/intl.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -43,21 +43,12 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
   String cpuSocket = "";
   String moboSocket = "";
   String messageCompability = "";
+  var formatter = NumberFormat('#,###,000');
 
   @override
   Widget build(BuildContext context) {
-    return
-        // Remove the debug banner
-
-        ScaffoldGradientBackground(
-      gradient: const LinearGradient(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-        colors: [
-          Color(0xFFAE52BB),
-          Color(0xFF0C062A),
-        ],
-      ),
+    return Scaffold(
+      backgroundColor: Color(0xff342C4C),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
@@ -421,7 +412,19 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         (global.id_vga_adv != null)) {
       await MySqflite.instance.insertBuild(SimpanBuild(
         compatible: global.compatible,
-        harga: global.hargaTot.toString(),
+        // harga: global.hargacooler + global.hargacase,
+        harga: (global.hargacase +
+            global.hargacooler +
+            global.hargacpu +
+            global.hargafan1 +
+            global.hargafan2 +
+            global.hargafan3 +
+            global.hargamobo +
+            global.hargapsu +
+            global.hargaram1 +
+            global.hargaram2 +
+            global.hargastorage1 +
+            global.hargastorage2),
         waktu: DateTime.now().toString(),
         idCasing: global.id_case_adv,
         idCpu: global.id_cpu_adv,
@@ -437,9 +440,6 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         idFan2: global.id_fan2_adv,
         idFan3: global.id_fan3_adv,
       ));
-
-      // mahasiswa = await MySqflite.instance.getMahasiswa();
-      // setState(() {});
     }
   }
 
@@ -492,8 +492,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    casinggan.harga,
-                                    style: const TextStyle(
+                                    "Rp" +
+                                        formatter
+                                            .format(int.parse(casinggan.harga))
+                                            .toString(),
+                                    style: TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
                                         fontFamily: 'poppins',
@@ -572,8 +575,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     Icons.offline_bolt_outlined,
                     color: Colors.white,
                   ),
-                  title: Text(
-                      'Estimated Wattage : ' + global.hargaTot.toString(),
+                  title: Text('Estimated Wattage : ',
                       style: TextStyle(color: Colors.white)),
                 ),
               ],
@@ -583,7 +585,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       );
     } else {
       setState(() {
-        global.compatible = "Part Incompatible";
+        global.compatible = "Some part Incompatible";
       });
       if ((global.socket_cpu.toLowerCase() !=
               global.socket_mobo.toLowerCase()) ||
@@ -720,6 +722,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 1;
                                   global.nama_part = "Fan";
+                                  global.hargafan1 = int.parse(fangan.harga);
                                 },
                               );
                             },
@@ -747,7 +750,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    fangan.harga,
+                                    fangan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -807,6 +810,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 2;
                                   global.nama_part = "Fan";
+                                  global.hargafan1 = int.parse(fangan.harga);
                                 },
                               );
                             },
@@ -834,7 +838,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    fangan.harga,
+                                    fangan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -894,6 +898,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 3;
                                   global.nama_part = "Fan";
+                                  global.hargafan3 = int.parse(fangan.harga);
                                 },
                               );
                             },
@@ -921,7 +926,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    fangan.harga,
+                                    fangan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -980,7 +985,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               setState(
                                 () {
                                   global.nama_part = "CPU";
-                                  global.hargaTot += int.parse(cpugan.harga);
+                                  global.hargacpu =
+                                      int.parse(cpugan.harga.toString());
                                 },
                               );
                             },
@@ -1008,7 +1014,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    cpugan.harga,
+                                    cpugan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1070,6 +1076,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               setState(
                                 () {
                                   global.nama_part = "CPU Cooler";
+                                  global.hargacooler =
+                                      int.parse(cpucoolergan.harga);
                                 },
                               );
                             },
@@ -1097,7 +1105,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    cpucoolergan.harga,
+                                    cpucoolergan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1156,6 +1164,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                   context, '/part/list/motherboard');
                               setState(
                                 () {
+                                  global.hargamobo = int.parse(mobogan.harga);
                                   global.nama_part = "Motherboard";
                                 },
                               );
@@ -1184,7 +1193,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    mobogan.harga,
+                                    mobogan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1243,6 +1252,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               setState(
                                 () {
                                   global.nama_part = "PSU";
+                                  global.hargapsu = int.parse(psugan.harga);
                                 },
                               );
                             },
@@ -1270,7 +1280,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    psugan.harga,
+                                    psugan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1330,6 +1340,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 1;
                                   global.nama_part = "Ram";
+                                  global.hargaram1 = int.parse(ramgan.harga);
                                 },
                               );
                             },
@@ -1357,7 +1368,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    ramgan.harga,
+                                    ramgan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1417,6 +1428,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 2;
                                   global.nama_part = "Ram";
+                                  global.hargaram2 = int.parse(ramgan.harga);
                                 },
                               );
                             },
@@ -1444,7 +1456,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    ramgan.harga,
+                                    ramgan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1505,6 +1517,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 1;
                                   global.nama_part = "Storage";
+                                  global.hargastorage1 =
+                                      int.parse(storagegan.harga);
                                 },
                               );
                             },
@@ -1532,7 +1546,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    storagegan.harga,
+                                    storagegan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1594,6 +1608,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                 () {
                                   global.seng_diganti = 2;
                                   global.nama_part = "Storage";
+                                  global.hargastorage2 =
+                                      int.parse(storagegan.harga);
                                 },
                               );
                             },
@@ -1621,7 +1637,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    storagegan.harga,
+                                    storagegan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1681,6 +1697,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                               setState(
                                 () {
                                   global.nama_part = "VGA";
+                                  global.hargavga = 69;
                                 },
                               );
                             },
@@ -1708,7 +1725,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    vgagan.harga,
+                                    vgagan.harga.toString(),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,

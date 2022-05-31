@@ -10,8 +10,21 @@ String nama_part = "";
 int id_part = 0;
 int id_detail = 0;
 int seng_diganti = 0;
-String compatible = "";
-int hargaTot = 0;
+String compatible = "All parts compatible";
+int hargacase = 0;
+int hargacasee = 0;
+int hargacooler = 0;
+int hargacpu = 0;
+int hargafan1 = 0;
+int hargafan2 = 0;
+int hargafan3 = 0;
+int hargamobo = 0;
+int hargapsu = 0;
+int hargaram1 = 0;
+int hargaram2 = 0;
+int hargastorage1 = 0;
+int hargastorage2 = 0;
+int hargavga = 0;
 
 //gawe pilihan advanced
 int id_case_adv = 0;

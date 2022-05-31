@@ -187,7 +187,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data1[index].harga,
+                                          data1[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -301,7 +301,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data2[index].harga,
+                                          data2[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -416,7 +416,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data3[index].harga,
+                                          data3[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -530,7 +530,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data4[index].harga,
+                                          data4[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -644,7 +644,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data5[index].harga,
+                                          data5[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -758,7 +758,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data6[index].harga,
+                                          data6[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -878,7 +878,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data7[index].harga,
+                                          data7[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -998,7 +998,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data8[index].harga,
+                                          data8[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),
@@ -1118,7 +1118,7 @@ class _ListPartState extends State<ListPart> {
                                         ),
                                         onPressed: () {},
                                         child: Text(
-                                          data9[index].harga,
+                                          data9[index].harga.toString(),
                                           style: const TextStyle(
                                             color: Colors.black,
                                           ),

@@ -146,7 +146,7 @@ class _listStorageState extends State<listStorage> {
                             ),
                             onPressed: () {},
                             child: Text(
-                              hasil.harga,
+                              hasil.harga.toString(),
                               style: const TextStyle(
                                 color: Colors.black,
                               ),

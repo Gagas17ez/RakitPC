@@ -206,6 +206,8 @@ class _DetailPartState extends State<DetailPart> {
                                       () {
                                         global.id_case_adv = int.parse(
                                             data1[global.id_detail].idCasing);
+                                        global.hargacase = int.parse(
+                                            data1[global.id_detail].harga);
                                       },
                                     );
                                   },
@@ -344,7 +346,9 @@ class _DetailPartState extends State<DetailPart> {
                                       ),
                                       onPressed: () async {},
                                       child: Text("Rp " +
-                                          data1[global.id_detail].harga)),
+                                          data1[global.id_detail]
+                                              .harga
+                                              .toString())),
                                   Text("Tersedia",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(color: Colors.white)),
@@ -524,6 +528,8 @@ class _DetailPartState extends State<DetailPart> {
                                       () {
                                         global.id_cpu_cooler_adv = int.parse(
                                             data2[global.id_detail].idCooler);
+                                        global.hargacooler = int.parse(
+                                            data2[global.id_detail].harga);
                                       },
                                     );
                                   },
@@ -648,7 +654,9 @@ class _DetailPartState extends State<DetailPart> {
                                       ),
                                       onPressed: () async {},
                                       child: Text("Rp " +
-                                          data2[global.id_detail].harga)),
+                                          data2[global.id_detail]
+                                              .harga
+                                              .toString())),
                                   Text("Tersedia",
                                       textAlign: TextAlign.center,
                                       style: TextStyle(color: Colors.white)),
@@ -782,6 +790,8 @@ class _DetailPartState extends State<DetailPart> {
                                             data3[global.id_detail].idCpu);
                                         global.socket_cpu =
                                             data3[global.id_detail].socket;
+                                        global.hargacpu = int.parse(
+                                            data3[global.id_detail].harga);
                                       },
                                     );
                                   },
@@ -900,7 +910,9 @@ class _DetailPartState extends State<DetailPart> {
                                       ),
                                       onPressed: () {},
                                       child: Text("Rp " +
-                                          data3[global.id_detail].harga)),
+                                          data3[global.id_detail]
+                                              .harga
+                                              .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),
@@ -1074,12 +1086,18 @@ class _DetailPartState extends State<DetailPart> {
                                         if (global.seng_diganti == 1) {
                                           global.id_fan_adv = int.parse(
                                               data4[global.id_detail].idFans);
+                                          global.hargafan1 = int.parse(
+                                              data4[global.id_detail].harga);
                                         } else if (global.seng_diganti == 2) {
                                           global.id_fan2_adv = int.parse(
                                               data4[global.id_detail].idFans);
+                                          global.hargafan2 = int.parse(
+                                              data4[global.id_detail].harga);
                                         } else if (global.seng_diganti == 3) {
                                           global.id_fan3_adv = int.parse(
                                               data4[global.id_detail].idFans);
+                                          global.hargafan3 = int.parse(
+                                              data4[global.id_detail].harga);
                                         }
                                       },
                                     );
@@ -1179,7 +1197,9 @@ class _DetailPartState extends State<DetailPart> {
                                       ),
                                       onPressed: () {},
                                       child: Text("Rp " +
-                                          data4[global.id_detail].harga)),
+                                          data4[global.id_detail]
+                                              .harga
+                                              .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),
@@ -1350,6 +1370,8 @@ class _DetailPartState extends State<DetailPart> {
                                                 .idMotherboard);
                                         global.socket_mobo =
                                             data5[global.id_detail].socketMobo;
+                                        global.hargacase = int.parse(
+                                            data5[global.id_detail].harga);
                                       },
                                     );
                                   },
@@ -1520,7 +1542,9 @@ class _DetailPartState extends State<DetailPart> {
                                       ),
                                       onPressed: () {},
                                       child: Text("Rp " +
-                                          data5[global.id_detail].harga)),
+                                          data5[global.id_detail]
+                                              .harga
+                                              .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),
@@ -1684,9 +1708,13 @@ class _DetailPartState extends State<DetailPart> {
                                         if (global.seng_diganti == 1) {
                                           global.id_ram_adv = int.parse(
                                               data6[global.id_detail].idRam);
+                                          global.hargaram1 = int.parse(
+                                              data6[global.id_detail].harga);
                                         } else if (global.seng_diganti == 2) {
                                           global.id_ram2_adv = int.parse(
                                               data6[global.id_detail].idRam);
+                                          global.hargaram2 = int.parse(
+                                              data6[global.id_detail].harga);
                                         }
                                       },
                                     );
@@ -1793,8 +1821,9 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child:
-                                          Text(data6[global.id_detail].harga)),
+                                      child: Text(data6[global.id_detail]
+                                          .harga
+                                          .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),
@@ -1929,10 +1958,14 @@ class _DetailPartState extends State<DetailPart> {
                                           global.id_storage_adv = int.parse(
                                               data7[global.id_detail]
                                                   .idStorage);
+                                          global.hargastorage1 = int.parse(
+                                              data7[global.id_detail].harga);
                                         } else if (global.seng_diganti == 2) {
                                           global.id_storage2_adv = int.parse(
                                               data7[global.id_detail]
                                                   .idStorage);
+                                          global.hargastorage2 = int.parse(
+                                              data7[global.id_detail].harga);
                                         }
                                       },
                                     );
@@ -2063,8 +2096,9 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child:
-                                          Text(data7[global.id_detail].harga)),
+                                      child: Text(data7[global.id_detail]
+                                          .harga
+                                          .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),
@@ -2197,6 +2231,8 @@ class _DetailPartState extends State<DetailPart> {
                                       () {
                                         global.id_psu_adv = int.parse(
                                             data8[global.id_detail].idPsu);
+                                        global.hargapsu = int.parse(
+                                            data8[global.id_detail].harga);
                                       },
                                     );
                                   },
@@ -2334,8 +2370,9 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child:
-                                          Text(data8[global.id_detail].harga)),
+                                      child: Text(data8[global.id_detail]
+                                          .harga
+                                          .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),
@@ -2465,6 +2502,8 @@ class _DetailPartState extends State<DetailPart> {
                                       () {
                                         global.id_vga_adv = int.parse(
                                             data9[global.id_detail].idVga);
+                                        global.hargavga = int.parse(
+                                            data9[global.id_detail].harga);
                                       },
                                     );
                                   },
@@ -2661,8 +2700,9 @@ class _DetailPartState extends State<DetailPart> {
                                             const Size(100, 30), //////// HERE
                                       ),
                                       onPressed: () {},
-                                      child:
-                                          Text(data9[global.id_detail].harga)),
+                                      child: Text(data9[global.id_detail]
+                                          .harga
+                                          .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
                                           fontSize: 14, color: Colors.white)),

@@ -108,7 +108,7 @@ class MySqflite {
     for (var data in allData) {
       result.add(SimpanBuild(
         compatible: data[columnCompatible].toString(),
-        harga: data[columnHarga].toString(),
+        harga: int.parse(data[columnHarga].toString()),
         waktu: data[columnWaktu].toString(),
         idCasing: int.parse(data[columnIdCasing].toString()),
         idCpu: int.parse(data[columnIdCpu].toString()),
@@ -125,7 +125,6 @@ class MySqflite {
         idFan3: int.parse(data[columnIdFan3].toString()),
       ));
     }
-
     return result;
   }
 
@@ -137,7 +136,7 @@ class MySqflite {
     if (allData.isNotEmpty) {
       return SimpanBuild(
         compatible: allData[0][columnWaktu] as String,
-        harga: allData[0][columnHarga] as String,
+        harga: int.parse(allData[0][columnHarga] as String),
         waktu: allData[0][columnWaktu] as String,
         idCasing: int.parse(allData[0][columnIdCasing] as String),
         idCpu: int.parse(allData[0][columnIdCpu] as String),

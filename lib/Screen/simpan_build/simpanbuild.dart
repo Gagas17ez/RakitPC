@@ -76,7 +76,7 @@ class _Simpan extends State<Simpan> {
                               color: Colors.white70,
                             ),
                             Text(
-                              build.waktu.toString(),
+                              build.compatible,
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
@@ -87,7 +87,7 @@ class _Simpan extends State<Simpan> {
                           ],
                         ),
                         Text(
-                          build.waktu.toString(),
+                          build.harga.toString(),
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white70,

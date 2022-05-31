@@ -19,7 +19,7 @@ class SimpanBuild {
   });
 
   String compatible;
-  String harga;
+  int harga;
   String waktu;
   int idCasing;
   int idCpu;
