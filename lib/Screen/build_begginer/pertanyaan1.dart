@@ -95,7 +95,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               ),
             ),
             const SizedBox(
-              height: 80,
+              height: 140,
             ),
 
             Container(
@@ -214,57 +214,22 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   ),
                 )
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 40),
 
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
-              buttonPadding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
-              children: [
-                Container(
-                  // margin: const EdgeInsets.only(bottom: 70.0),
-                  width: 50,
-                  height: 35,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(HexColor("FFAE52BB")),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
-                    child: const Icon(Icons.arrow_back_ios_rounded),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/build');
-                    },
+            ElevatedButton(
+              child: const Text('Next'),
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
-                Container(
-                  // margin: const EdgeInsets.only(bottom: 30.0),
-                  width: 50,
-                  height: 35,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(HexColor("FFAE52BB")),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
-                    child: const Icon(Icons.arrow_forward_ios_rounded),
-                    onPressed: () {
-                      isDisable
-                          ? null
-                          : Navigator.pushNamed(
-                              context, '/build/begginer/pertanyaan2');
-                    },
-                  ),
-                ),
-              ],
+                  primary: HexColor("#7A77FF"),
+                  padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  textStyle:
+                  const TextStyle(
+                    fontSize: 16.0,
+                    fontFamily: 'Inter',
+                  )),
             ),
           ],
         ),

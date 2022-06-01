@@ -43,7 +43,7 @@ class rakitpc extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => Pertanyaan2(),
+        '/': (context) => pertanyaan_awal(),
         '/history': (context) => Simpan(),
         '/build': (context) => pertanyaan_awal(),
         '/build/advanced': (context) => buildpc_advanced(),
