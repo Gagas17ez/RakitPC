@@ -22,91 +22,117 @@ class _pertanyaanAwalNewState extends State<pertanyaanAwalNew> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: HexColor("#272B40"),
+      backgroundColor: HexColor("#0C062A"),
       appBar: AppBar(
         backgroundColor: HexColor("#0C062A"),
-        title: const Text("Rakit PC", textAlign: TextAlign.center),
+        title: const Text("How it Works", textAlign: TextAlign.center),
+        leading: BackButton(
+          color: Colors.white,
+        ),
+
       ),
       body: Center(
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 20,
+              height: 40,
             ),
             Container(
-              height: 60,
-              width: 300,
-              alignment: Alignment.center,
-              child: Text(
-                "Apakah anda berpengalaman di bidang komputer ? ",
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: HexColor("#D7D7D7"),
-                  height: 1.5,
-                  fontFamily: 'Inter',
-                ),
+              child: Row(
+                children: [
+                  Container(
+                    height: 100,
+                    width: 40,
+                  ),
+                  Container(
+                      height: 100,
+                      child: Text(
+                        "Step 1: ",
+                        textAlign: TextAlign.right,
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.white,
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                    ),
+                  Container(
+                    height: 100,
+                    width: 30,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 100,
+                      child: Text(
+                        "Kita akan bertanya beberapa pertanyaan untuk memahami kebutuhanmu",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: Colors.white,
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             const SizedBox(
-              height: 300,
+              height: 20,
             ),
+
             Container(
-                height: 40,
-                width: 320,
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide(
-                      color: HexColor("#C9C9C9"),
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+              child: Row(
+                children: [
+                  Container(
+                    height: 100,
+                    width: 40,
+                  ),
+                  Container(
+                    height: 100,
+                    child: Text(
+                      "Step 2: ",
+                      textAlign: TextAlign.right,
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.white,
+                        height: 1.5,
+                        fontFamily: 'Inter',
+                      ),
                     ),
                   ),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text("Ya",
+                  Container(
+                    height: 100,
+                    width: 30,
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      height: 100,
+                      child: Text(
+                        "Memberikan rekomendasi komponen PC sesuai jawaban ",
+                        textAlign: TextAlign.left,
                         style: TextStyle(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left),
-                  ),
-                )),
-            SizedBox(height: 20),
-            Container(
-                height: 40,
-                width: 320,
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: OutlinedButton(
-                  onPressed: () {},
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide(
-                      color: HexColor("#C9C9C9"),
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+                      ),
                     ),
                   ),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text("Tidak",
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
-                          height: 1.5,
-                          fontFamily: 'Inter',
-                        ),
-                        textAlign: TextAlign.left),
+                  Container(
+                    height: 100,
+                    width: 40,
                   ),
-                )),
-            SizedBox(height: 30),
+                ],
+              ),
+            ),
+
+            SizedBox(height: 230),
             ElevatedButton(
               child: const Text('Next'),
               onPressed: () {},

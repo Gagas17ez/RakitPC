@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/widgets.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
@@ -23,14 +24,31 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
-      appBar: AppBar(
-        backgroundColor: HexColor("#0C062A"),
-        title: const Text("Rakit PC", textAlign: TextAlign.center),
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: HexColor("#0C062A"),
+      //   title: const Text("Rakit PC", textAlign: TextAlign.center),
+      // ),
 
       body: Center(
         child: Column(
           children: <Widget>[
+            const SizedBox(
+              height: 30,
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: LinearPercentIndicator(
+                width: 360,
+                lineHeight: 30,
+                percent: 33/100,
+                animation: true,
+                animationDuration: 1500,
+                center: Text("1/3"),
+                barRadius: Radius.circular(20),
+                backgroundColor: HexColor("#C9C9C9"),
+                progressColor:HexColor("#EE5584"),
+              ),
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -50,7 +68,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               ),
             ),
             const SizedBox(
-              height: 300,
+              height: 270,
             ),
 
             Container(
@@ -111,7 +129,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   ),
                 )
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 40),
             ElevatedButton(
               child: const Text('Next'),
               onPressed: () {},

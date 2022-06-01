@@ -3,6 +3,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -28,15 +29,32 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
-      appBar: AppBar(
-          title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
-          backgroundColor: HexColor("#0C062A")),
+      // appBar: AppBar(
+      //     title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
+      //     backgroundColor: HexColor("#0C062A")),
       body: Center(
         // padding: const EdgeInsets.all(20),
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 40,
+              height: 30,
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: LinearPercentIndicator(
+                width: 360,
+                lineHeight: 30,
+                percent: 66/100,
+                animation: true,
+                animationDuration: 1500,
+                center: Text("2/3"),
+                barRadius: Radius.circular(20),
+                backgroundColor: HexColor("#C9C9C9"),
+                progressColor:HexColor("#EE5584"),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Container(
               padding: EdgeInsets.only(
