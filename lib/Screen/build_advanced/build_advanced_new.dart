@@ -65,7 +65,39 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           kotak_compability(),
           const SizedBox(
             width: 30,
-            height: 20,
+            height: 30,
+          ),
+          Column(mainAxisAlignment: MainAxisAlignment.center, children: const [
+            Align(
+              alignment: Alignment.topLeft,
+              child: Text(
+                'Total Harga : ',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ]),
+          Column(mainAxisAlignment: MainAxisAlignment.center, children: const [
+            Align(
+              alignment: Alignment.center,
+              child: Text(
+                'Rp 13.000.000',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 36,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ]),
+          const SizedBox(
+            width: 30,
+            height: 30,
           ),
           Container(
               margin: const EdgeInsets.all(5),

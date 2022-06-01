@@ -4,6 +4,7 @@ import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_nyarmaneh.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
@@ -42,7 +43,7 @@ class rakitpc extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => buildpc_advanced(),
+        '/': (context) => worksIT(),
         '/history': (context) => Simpan(),
         '/build': (context) => pertanyaan_awal(),
         '/build/advanced': (context) => buildpc_advanced(),

@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
@@ -16,6 +16,7 @@ class listCpu extends StatefulWidget {
 }
 
 class _listCpuState extends State<listCpu> {
+  var formatter = NumberFormat('#,###,000');
   late Future data;
 
   List<Cpu> cpu = [];
@@ -146,7 +147,11 @@ class _listCpuState extends State<listCpu> {
                             ),
                             onPressed: () {},
                             child: Text(
-                              hasil.harga.toString(),
+                              "Rp" +
+                                  formatter
+                                      .format(int.parse(hasil.harga.toString()))
+                                      .toString(),
+                              // hasil.harga.toString(),
                               style: const TextStyle(
                                 color: Colors.black,
                               ),
