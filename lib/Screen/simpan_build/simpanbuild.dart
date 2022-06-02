@@ -20,7 +20,7 @@ class _Simpan extends State<Simpan> {
   void initState() {
     super.initState();
 
-    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       builds = await MySqflite.instance.getBuild();
       setState(() {});
     });

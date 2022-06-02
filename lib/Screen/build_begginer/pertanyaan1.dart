@@ -3,6 +3,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -28,15 +29,32 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
-      appBar: AppBar(
-          title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
-          backgroundColor: HexColor("#0C062A")),
+      // appBar: AppBar(
+      //     title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
+      //     backgroundColor: HexColor("#0C062A")),
       body: Center(
         // padding: const EdgeInsets.all(20),
         child: Column(
           children: <Widget>[
             const SizedBox(
-              height: 40,
+              height: 30,
+            ),
+            Container(
+              padding: EdgeInsets.all(20),
+              child: LinearPercentIndicator(
+                width: 360,
+                lineHeight: 30,
+                percent: 66/100,
+                animation: true,
+                animationDuration: 1500,
+                center: Text("2/3"),
+                barRadius: Radius.circular(20),
+                backgroundColor: HexColor("#C9C9C9"),
+                progressColor:HexColor("#EE5584"),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
             ),
             Container(
               padding: EdgeInsets.only(
@@ -77,7 +95,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               ),
             ),
             const SizedBox(
-              height: 80,
+              height: 140,
             ),
 
             Container(
@@ -196,57 +214,22 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   ),
                 )
             ),
-            SizedBox(height: 50),
+            SizedBox(height: 40),
 
-            ButtonBar(
-              alignment: MainAxisAlignment.center,
-              buttonPadding: const EdgeInsets.fromLTRB(0, 0, 0, 30),
-              children: [
-                Container(
-                  // margin: const EdgeInsets.only(bottom: 70.0),
-                  width: 50,
-                  height: 35,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(HexColor("FFAE52BB")),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
-                    child: const Icon(Icons.arrow_back_ios_rounded),
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/build');
-                    },
+            ElevatedButton(
+              child: const Text('Next'),
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
                   ),
-                ),
-                const SizedBox(
-                  width: 30,
-                ),
-                Container(
-                  // margin: const EdgeInsets.only(bottom: 30.0),
-                  width: 50,
-                  height: 35,
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all(HexColor("FFAE52BB")),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ))),
-                    child: const Icon(Icons.arrow_forward_ios_rounded),
-                    onPressed: () {
-                      isDisable
-                          ? null
-                          : Navigator.pushNamed(
-                              context, '/build/begginer/pertanyaan2');
-                    },
-                  ),
-                ),
-              ],
+                  primary: HexColor("#7A77FF"),
+                  padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  textStyle:
+                  const TextStyle(
+                    fontSize: 16.0,
+                    fontFamily: 'Inter',
+                  )),
             ),
           ],
         ),
