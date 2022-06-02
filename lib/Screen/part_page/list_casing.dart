@@ -52,15 +52,8 @@ class _listCasingState extends State<listCasing> {
 
   @override
   Widget build(BuildContext context) {
-    return ScaffoldGradientBackground(
-      gradient: LinearGradient(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-        colors: [
-          Color(0xFFAE52BB),
-          Color(0xFF0C062A),
-        ],
-      ),
+    return Scaffold(
+      backgroundColor: Color(0xff342C4C),
       appBar: AppBar(
         backgroundColor: Color(0xFF272B40).withOpacity(0.0),
         leading: Padding(
@@ -132,6 +125,7 @@ class _listCasingState extends State<listCasing> {
                           hasil.namaCasing,
                           style: const TextStyle(
                             color: Colors.black,
+                            fontFamily: 'Inter',
                             fontWeight: FontWeight.bold,
                             fontSize: 20,
                           ),
@@ -148,18 +142,21 @@ class _listCasingState extends State<listCasing> {
                             child: Text(
                               hasil.harga.toString(),
                               style: const TextStyle(
+                                fontFamily: 'Inter',
                                 color: Colors.black,
                               ),
                             )),
                         Text(
                           hasil.colorCasing,
                           style: const TextStyle(
+                            fontFamily: 'Inter',
                             color: Colors.black,
                           ),
                         ),
                         Text(
                           hasil.maxPsu,
                           style: const TextStyle(
+                            fontFamily: 'Inter',
                             color: Colors.black,
                           ),
                         ),

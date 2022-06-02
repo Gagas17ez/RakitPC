@@ -36,23 +36,16 @@ class _homepageState extends State<homepage>
 
   @override
   Widget build(BuildContext context) {
-    return ScaffoldGradientBackground(
-      gradient: LinearGradient(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-        colors: [
-          Color(0xFFAE52BB),
-          Color(0xFF0C062A),
-        ],
-      ),
+    return Scaffold(
+      backgroundColor: Color(0xff342C4C),
       appBar: AppBar(
-        backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+        backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         elevation: 0.0,
         centerTitle: true,
         title: const Text('HomePage',
             style: TextStyle(
-                fontFamily: 'SfM', fontSize: 20.0, color: Colors.white)),
+                fontFamily: 'Inter', fontSize: 20.0, color: Colors.white)),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.notifications_none, color: Colors.white),

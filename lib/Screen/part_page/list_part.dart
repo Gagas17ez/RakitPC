@@ -105,15 +105,8 @@ class _ListPartState extends State<ListPart> {
 
   Widget getPart() {
     if (global.nama_part == "Casing") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -172,6 +165,7 @@ class _ListPartState extends State<ListPart> {
                                       data1[index].namaCasing,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -189,18 +183,21 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data1[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data1[index].colorCasing,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data1[index].maxPsu,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -219,15 +216,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "CPU Cooler") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -286,6 +276,7 @@ class _ListPartState extends State<ListPart> {
                                       data2[index].namaCooler,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -303,18 +294,21 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data2[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data2[index].merkCooler,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data2[index].fanSpeed,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -334,15 +328,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "CPU") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -400,6 +387,7 @@ class _ListPartState extends State<ListPart> {
                                     Text(
                                       data3[index].namaCpu,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
@@ -418,18 +406,21 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data3[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data3[index].baseClock,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data3[index].threadsCount,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -448,15 +439,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Fan") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -515,6 +499,7 @@ class _ListPartState extends State<ListPart> {
                                       data4[index].namaFans,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -532,18 +517,21 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data4[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data4[index].merkFans,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data4[index].colorFans,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -562,15 +550,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Motherboard") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -629,6 +610,7 @@ class _ListPartState extends State<ListPart> {
                                       data5[index].namaMobo,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -646,18 +628,21 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data5[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data5[index].namaMobo,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data5[index].chipsetMobo,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -676,15 +661,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Ram") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -743,6 +721,7 @@ class _ListPartState extends State<ListPart> {
                                       data6[index].namaRam,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -760,24 +739,28 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data6[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data6[index].merkRam,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data6[index].memorySize,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data6[index].memorySpeed,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -796,15 +779,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "Storage") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -863,6 +839,7 @@ class _ListPartState extends State<ListPart> {
                                       data7[index].namaStorage,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -880,24 +857,28 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data7[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data7[index].merkStorage,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data7[index].storageCapacity,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data7[index].storageInterface,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -916,15 +897,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "PSU") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -983,6 +957,7 @@ class _ListPartState extends State<ListPart> {
                                       data8[index].namaPsu,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -1000,24 +975,28 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data8[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data8[index].merkPsu,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data8[index].colorPsu,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data8[index].fanSize,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
@@ -1036,15 +1015,8 @@ class _ListPartState extends State<ListPart> {
                 }),
       );
     } else if (global.nama_part == "VGA") {
-      return ScaffoldGradientBackground(
-        gradient: LinearGradient(
-          begin: Alignment.bottomRight,
-          end: Alignment.topLeft,
-          colors: [
-            Color(0xFFAE52BB),
-            Color(0xFF0C062A),
-          ],
-        ),
+      return Scaffold(
+        backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
           backgroundColor: Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
@@ -1103,6 +1075,7 @@ class _ListPartState extends State<ListPart> {
                                       data9[index].namaVga,
                                       style: const TextStyle(
                                         color: Colors.black,
+                                        fontFamily: 'Inter',
                                         fontWeight: FontWeight.bold,
                                         fontSize: 20,
                                       ),
@@ -1120,18 +1093,21 @@ class _ListPartState extends State<ListPart> {
                                         child: Text(
                                           data9[index].harga.toString(),
                                           style: const TextStyle(
+                                            fontFamily: 'Inter',
                                             color: Colors.black,
                                           ),
                                         )),
                                     Text(
                                       data9[index].architecture,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
                                     Text(
                                       data9[index].boostClock,
                                       style: const TextStyle(
+                                        fontFamily: 'Inter',
                                         color: Colors.black,
                                       ),
                                     ),
