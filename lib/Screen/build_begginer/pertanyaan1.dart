@@ -103,7 +103,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               width: 320,
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
                 style: OutlinedButton.styleFrom(
                   padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                   side: BorderSide( color: HexColor("#C9C9C9"),),
@@ -133,7 +133,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide( color: HexColor("#C9C9C9"),),
@@ -162,7 +162,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide( color: HexColor("#C9C9C9"),),
@@ -191,7 +191,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide( color: HexColor("#C9C9C9"),),
@@ -217,8 +217,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
             SizedBox(height: 40),
 
             ElevatedButton(
-              child: const Text('Next'),
-              onPressed: () {},
+              child: const Text('Back'),
+              onPressed: () {Navigator.pushNamed(context, '/buildAwal');},
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

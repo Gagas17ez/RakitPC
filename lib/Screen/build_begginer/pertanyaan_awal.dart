@@ -76,7 +76,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, '/build/advanced');},
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide( color: HexColor("#C9C9C9"),),
@@ -106,7 +106,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan1');},
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide( color: HexColor("#C9C9C9"),),
@@ -131,8 +131,8 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
             ),
             SizedBox(height: 40),
             ElevatedButton(
-              child: const Text('Next'),
-              onPressed: () {},
+              child: const Text('Back'),
+              onPressed: () {Navigator.pushNamed(context, '/');},
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

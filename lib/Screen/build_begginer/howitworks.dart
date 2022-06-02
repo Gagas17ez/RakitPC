@@ -9,14 +9,14 @@ import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 
-class pertanyaanAwalNew extends StatefulWidget {
-  pertanyaanAwalNew({Key? key}) : super(key: key);
+class howItworks extends StatefulWidget {
+  howItworks({Key? key}) : super(key: key);
 
   @override
-  State<pertanyaanAwalNew> createState() => _pertanyaanAwalNewState();
+  State<howItworks> createState() => _howItworksState();
 }
 
-class _pertanyaanAwalNewState extends State<pertanyaanAwalNew> {
+class _howItworksState extends State<howItworks> {
   int? _value = 1;
 
   @override
@@ -24,7 +24,10 @@ class _pertanyaanAwalNewState extends State<pertanyaanAwalNew> {
     return Scaffold(
       backgroundColor: HexColor("#0C062A"),
       appBar: AppBar(
-        backgroundColor: HexColor("#0C062A"),
+        backgroundColor: Colors.transparent,
+        automaticallyImplyLeading: false,
+        elevation: 0.0,
+        centerTitle: true,
         title: const Text("How it Works", textAlign: TextAlign.center),
         leading: BackButton(
           color: Colors.white,
@@ -135,7 +138,7 @@ class _pertanyaanAwalNewState extends State<pertanyaanAwalNew> {
             SizedBox(height: 230),
             ElevatedButton(
               child: const Text('Next'),
-              onPressed: () {},
+              onPressed: () {Navigator.pushNamed(context, '/buildAwal');},
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
@@ -153,7 +156,7 @@ class _pertanyaanAwalNewState extends State<pertanyaanAwalNew> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
+          Navigator.pushNamed(context, '/buildAwal');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(
