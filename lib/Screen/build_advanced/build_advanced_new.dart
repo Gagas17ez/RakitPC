@@ -45,6 +45,29 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
   String messageCompability = "";
   var formatter = NumberFormat('#,###,000');
 
+  void initState() {
+    super.initState();
+
+    init();
+  }
+
+  void init() async {
+    setState(() {
+      global.hargaharga = global.hargacase +
+          global.hargacooler +
+          global.hargacpu +
+          global.hargafan1 +
+          global.hargafan2 +
+          global.hargafan3 +
+          global.hargamobo +
+          global.hargapsu +
+          global.hargaram1 +
+          global.hargaram2 +
+          global.hargastorage1 +
+          global.hargastorage2;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -81,11 +104,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               ),
             ),
           ]),
-          Column(mainAxisAlignment: MainAxisAlignment.center, children: const [
+          Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Align(
               alignment: Alignment.center,
               child: Text(
-                'Rp 13.000.000',
+                global.hargaharga.toString(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 36,
