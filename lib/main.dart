@@ -4,10 +4,7 @@ import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
-<<<<<<< HEAD
-=======
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal_new.dart';
->>>>>>> 183a30e6dd99d10437fc3e42bb0f59d1636ae3b3
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
@@ -46,11 +43,7 @@ class rakitpc extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-<<<<<<< HEAD
         '/': (context) => buildpc_advanced(),
-=======
-        '/': (context) => pertanyaan_awal(),
->>>>>>> 183a30e6dd99d10437fc3e42bb0f59d1636ae3b3
         '/history': (context) => Simpan(),
         '/build': (context) => pertanyaan_awal(),
         '/build/advanced': (context) => buildpc_advanced(),

@@ -569,6 +569,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          // ignore: prefer_const_constructors
+          style: ButtonStyle(
+            backgroundColor:
+                MaterialStateProperty.all<Color>(Color(0xff7A77FF)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/casing');
             setState(
