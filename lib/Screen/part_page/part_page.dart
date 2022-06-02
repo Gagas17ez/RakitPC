@@ -15,15 +15,8 @@ class Part extends StatefulWidget {
 
 class _PartState extends State<Part> {
   Widget build(BuildContext context) {
-    return ScaffoldGradientBackground(
-      gradient: LinearGradient(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-        colors: [
-          Color(0xFFAE52BB),
-          Color(0xFF0C062A),
-        ],
-      ),
+    return Scaffold(
+      backgroundColor: Color(0xff342C4C),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Padding(
@@ -60,7 +53,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -77,7 +70,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -119,7 +112,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white70,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -136,7 +129,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -177,7 +170,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -194,7 +187,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -235,7 +228,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -252,7 +245,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -293,7 +286,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -310,7 +303,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -351,7 +344,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -368,7 +361,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -409,7 +402,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -426,7 +419,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -467,7 +460,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -484,7 +477,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),
@@ -526,7 +519,7 @@ class _PartState extends State<Part> {
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
-                              fontFamily: 'DmSans',
+                              fontFamily: 'Inter',
                               fontSize: 25,
                             ),
                           ),
@@ -543,7 +536,7 @@ class _PartState extends State<Part> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white70,
-                          fontFamily: 'DmSans',
+                          fontFamily: 'Inter',
                           fontSize: 15,
                         ),
                       ),

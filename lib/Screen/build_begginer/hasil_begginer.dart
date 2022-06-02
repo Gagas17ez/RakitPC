@@ -193,7 +193,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 fontSize: 20.0,
                                                 color: Colors.white70,
                                                 fontWeight: FontWeight.bold,
-                                                fontFamily: 'SfM',
+                                                fontFamily: 'Inter',
                                               ),
                                             ),
                                             const SizedBox(
@@ -204,6 +204,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               style: TextStyle(
                                                 fontSize: 12.0,
                                                 fontWeight: FontWeight.bold,
+                                                fontFamily: 'Inter',
                                                 color: Colors.white70,
                                               ),
                                             ),
@@ -896,7 +897,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 18.0,
-                                      fontFamily: 'SfM',
+                                      fontFamily: 'Inter',
                                     ),
                                   ),
                                   onPressed: () async {
@@ -931,7 +932,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                       style: TextStyle(
                                         color: Colors.black,
                                         fontSize: 18.0,
-                                        fontFamily: 'SfM',
+                                        fontFamily: 'Inter',
                                       ),
                                     ),
                                     onPressed: () {

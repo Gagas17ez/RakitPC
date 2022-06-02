@@ -8,15 +8,8 @@ import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 class card_home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ScaffoldGradientBackground(
-      gradient: LinearGradient(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-        colors: [
-          Color(0xFFAE52BB),
-          Color(0xFF0C062A),
-        ],
-      ),
+    return Scaffold(
+      backgroundColor: Color(0xff342C4C),
       body: ListView(
         children: <Widget>[
           const SizedBox(height: 20.0),
@@ -78,7 +71,7 @@ class card_home extends StatelessWidget {
                 Text(name,
                     style: const TextStyle(
                         color: Colors.white,
-                        fontFamily: 'SfM',
+                        fontFamily: 'Inter',
                         fontSize: 20.0,
                         fontWeight: FontWeight.w400)),
               ])),
