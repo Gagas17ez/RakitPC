@@ -27,15 +27,8 @@ class _Simpan extends State<Simpan> {
   }
 
   Widget build(BuildContext context) {
-    return ScaffoldGradientBackground(
-      gradient: LinearGradient(
-        begin: Alignment.bottomRight,
-        end: Alignment.topLeft,
-        colors: [
-          HexColor("#0C062A"),
-          HexColor("#272B40"),
-        ],
-      ),
+    return Scaffold(
+      backgroundColor: Color(0xff272B40),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         leading: Padding(
@@ -59,7 +52,7 @@ class _Simpan extends State<Simpan> {
               child: Card(
                 color: Colors.transparent,
                 elevation: 6,
-                margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+                margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
                 child: SizedBox(
                   width: 200,
                   height: 70,
@@ -76,11 +69,11 @@ class _Simpan extends State<Simpan> {
                               color: Colors.white70,
                             ),
                             Text(
-                              build.waktu,
+                              build.waktu.substring(0, 16),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
-                                fontFamily: 'DmSans',
+                                fontFamily: 'Inter',
                                 fontSize: 20,
                               ),
                             )
@@ -91,7 +84,7 @@ class _Simpan extends State<Simpan> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white70,
-                            fontFamily: 'DmSans',
+                            fontFamily: 'Inter',
                             fontSize: 14,
                           ),
                         ),
