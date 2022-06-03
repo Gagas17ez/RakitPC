@@ -16,9 +16,11 @@ class Part extends StatefulWidget {
 class _PartState extends State<Part> {
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff342C4C),
+      backgroundColor: Color(0xff272B40),
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Color(0x44000000).withOpacity(0),
+        elevation: 0,
+
         leading: Padding(
           padding: const EdgeInsets.all(8),
           child: GestureDetector(
@@ -52,24 +54,26 @@ class _PartState extends State<Part> {
                             'Casing',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(width: 10),
                           Image.asset(
-                            "assets/img/casing.png",
+                            "assets/img/computer-case.png",
                             width: 50,
                             height: 50,
                             color: Colors.white70,
                           )
                         ],
                       ),
+                      SizedBox(height: 8),
                       const Text(
-                        'Tempat Sebagian Besar Komponen',
+                        'Wadah dari komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontFamily: 'Inter',
                           fontSize: 15,
                         ),
@@ -108,27 +112,149 @@ class _PartState extends State<Part> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           const Text(
-                            'CPU Cooler\t',
+                            'CPU',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white70,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
+                                color: Color(0xffDBD8E3),
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(width: 10),
                           Image.asset(
-                            'assets/img/cpu_cooler.png',
-                            width: 45,
-                            height: 45,
+                            'assets/img/cpu.png',
+                            height: 50,
+                            width: 50,
+                            color: Colors.white70,
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 8),
+                      const Text(
+                        'Otak Dari Komputer',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Inter',
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  ),
+                  //trailing: Image.asset('assets/img/cpu.png'),
+                  selected: true,
+                  selectedTileColor: Color(0xFF7A77FF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/part/list/cpu');
+                    setState(() {
+                      global.nama_part = "CPU";
+                    });
+                  },
+                ),
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.only(),
+            child: Card(
+              color: Colors.transparent,
+              elevation: 6,
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+              child: SizedBox(
+                height: 150,
+                child: ListTile(
+                  title: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'VGA',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(width: 10),
+                          Image.asset(
+                            "assets/img/vga.png",
+                            width: 50,
+                            height: 50,
+                            color: Colors.white70,
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 8),
+                      const Text(
+                        'Penerjemah tampilan komputer',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Inter',
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  ),
+                  //trailing: Image.asset("assets/img/vga.png"),
+                  selected: true,
+                  selectedTileColor: Color(0xFF7A77FF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/part/list/vga');
+                    setState(() {
+                      global.nama_part = "VGA";
+                    });
+                  },
+                ),
+              ),
+            ),
+          ),
+          Container(
+            child: Card(
+              color: Colors.transparent,
+              elevation: 6,
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+              child: SizedBox(
+                height: 150,
+                child: ListTile(
+                  title: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'CPU Cooler',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(width: 10),
+                          Image.asset(
+                            'assets/img/cooler.png',
+                            width: 50,
+                            height: 50,
                             color: Colors.white70,
                           ),
                         ],
                       ),
+                      SizedBox(height: 8),
                       const Text(
                         'Pendingin CPU',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontFamily: 'Inter',
                           fontSize: 15,
                         ),
@@ -166,130 +292,15 @@ class _PartState extends State<Part> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           const Text(
-                            'CPU\t',
+                            'Motherboard',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
+                                fontFamily: 'Inter',
+                                color: Color(0xffDBD8E3),
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
                           ),
-                          Image.asset(
-                            'assets/img/cpu.png',
-                            height: 50,
-                            width: 50,
-                            color: Colors.white70,
-                          )
-                        ],
-                      ),
-                      const Text(
-                        'Otak Dari Komputer',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontFamily: 'Inter',
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.center,
-                  ),
-                  //trailing: Image.asset('assets/img/cpu.png'),
-                  selected: true,
-                  selectedTileColor: Color(0xFF7A77FF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/part/list/cpu');
-                    setState(() {
-                      global.nama_part = "CPU";
-                    });
-                  },
-                ),
-              ),
-            ),
-          ),
-          Container(
-            child: Card(
-              color: Colors.transparent,
-              elevation: 6,
-              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
-              child: SizedBox(
-                height: 150,
-                child: ListTile(
-                  title: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          const Text(
-                            'Fan\t',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
-                          ),
-                          Image.asset(
-                            "assets/img/fan.png",
-                            width: 45,
-                            height: 45,
-                            color: Colors.white70,
-                          )
-                        ],
-                      ),
-                      const Text(
-                        'Pendingin Sistem',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontFamily: 'Inter',
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.center,
-                  ),
-                  //trailing: Image.asset("assets/img/fan.png"),
-                  selected: true,
-                  selectedTileColor: Color(0xFF7A77FF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/part/list/fan');
-                    setState(() {
-                      global.nama_part = "Fan";
-                    });
-                  },
-                ),
-              ),
-            ),
-          ),
-          Container(
-            child: Card(
-              color: Colors.transparent,
-              elevation: 6,
-              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
-              child: SizedBox(
-                height: 150,
-                child: ListTile(
-                  title: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          const Text(
-                            'Motherboard\t',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
-                          ),
+                          SizedBox(width: 10),
                           Image.asset(
                             "assets/img/motherboard.png",
                             width: 50,
@@ -298,11 +309,12 @@ class _PartState extends State<Part> {
                           ),
                         ],
                       ),
+                      SizedBox(height: 8),
                       const Text(
-                        'Dasar Komputer Penyambung Komponen',
+                        'Dasar komputer penyambung komponen',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontFamily: 'Inter',
                           fontSize: 15,
                         ),
@@ -340,14 +352,15 @@ class _PartState extends State<Part> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           const Text(
-                            'RAM\t',
+                            'RAM',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(width: 10),
                           Image.asset(
                             "assets/img/ram.png",
                             width: 50,
@@ -356,11 +369,12 @@ class _PartState extends State<Part> {
                           ),
                         ],
                       ),
+                      SizedBox(height: 8),
                       const Text(
-                        'Penyimpanan Memori Komputer Sementara',
+                        'Memori sementara komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontFamily: 'Inter',
                           fontSize: 15,
                         ),
@@ -398,27 +412,90 @@ class _PartState extends State<Part> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           const Text(
-                            'Storage\t',
+                            'Fan',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(width: 10),
                           Image.asset(
-                            "assets/img/storage.png",
+                            "assets/img/cooling-fan.png",
+                            width: 45,
+                            height: 45,
+                            color: Colors.white70,
+                          )
+                        ],
+                      ),
+                      SizedBox(height: 8),
+                      const Text(
+                        'Kipas pendingin Sistem',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontFamily: 'Inter',
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  ),
+                  //trailing: Image.asset("assets/img/fan.png"),
+                  selected: true,
+                  selectedTileColor: Color(0xFF7A77FF),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  onTap: () {
+                    Navigator.pushNamed(context, '/part/list/fan');
+                    setState(() {
+                      global.nama_part = "Fan";
+                    });
+                  },
+                ),
+              ),
+            ),
+          ),
+
+          Container(
+            child: Card(
+              color: Colors.transparent,
+              elevation: 6,
+              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
+              child: SizedBox(
+                height: 150,
+                child: ListTile(
+                  title: Column(
+                    children: <Widget>[
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          const Text(
+                            'Storage',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(width: 4),
+                          Image.asset(
+                            "assets/img/ssd.png",
                             width: 50,
                             height: 50,
                             color: Colors.white70,
                           ),
                         ],
                       ),
+                      SizedBox(height: 8),
                       const Text(
                         'Penyimpanan Memori Komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontFamily: 'Inter',
                           fontSize: 15,
                         ),
@@ -456,14 +533,15 @@ class _PartState extends State<Part> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           const Text(
-                            'PSU\t',
+                            'Power Supply',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
+                                color: Color(0xffDBD8E3),
+                                fontFamily: 'Inter',
+                                fontSize: 28,
+                                fontWeight: FontWeight.bold),
                           ),
+                          SizedBox(width: 10),
                           Image.asset(
                             "assets/img/psu.png",
                             width: 50,
@@ -472,11 +550,12 @@ class _PartState extends State<Part> {
                           )
                         ],
                       ),
+                      SizedBox(height: 8),
                       const Text(
-                        'Power Supply Komputer',
+                        'Pemasok listrik komputer',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontFamily: 'Inter',
                           fontSize: 15,
                         ),
@@ -500,65 +579,7 @@ class _PartState extends State<Part> {
               ),
             ),
           ),
-          Container(
-            margin: EdgeInsets.only(),
-            child: Card(
-              color: Colors.transparent,
-              elevation: 6,
-              margin: const EdgeInsets.fromLTRB(30, 30, 30, 0),
-              child: SizedBox(
-                height: 150,
-                child: ListTile(
-                  title: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          const Text(
-                            'VGA\t',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontSize: 25,
-                            ),
-                          ),
-                          Image.asset(
-                            "assets/img/vga.png",
-                            width: 50,
-                            height: 50,
-                            color: Colors.white70,
-                          )
-                        ],
-                      ),
-                      const Text(
-                        'Penerjemah Tampilan Monitor',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white70,
-                          fontFamily: 'Inter',
-                          fontSize: 15,
-                        ),
-                      ),
-                    ],
-                    mainAxisAlignment: MainAxisAlignment.center,
-                  ),
-                  //trailing: Image.asset("assets/img/vga.png"),
-                  selected: true,
-                  selectedTileColor: Color(0xFF7A77FF),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  onTap: () {
-                    Navigator.pushNamed(context, '/part/list/vga');
-                    setState(() {
-                      global.nama_part = "VGA";
-                    });
-                  },
-                ),
-              ),
-            ),
-          )
+          SizedBox(height: 40),
         ],
       ),
       floatingActionButton: FloatingActionButton(

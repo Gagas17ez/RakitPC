@@ -214,8 +214,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
             SizedBox(height: 40),
 
             ElevatedButton(
-              child: const Text('Next'),
-              onPressed: () {},
+              child: const Text('Back'),
+              onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan1');},
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),

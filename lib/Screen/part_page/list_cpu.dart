@@ -56,6 +56,7 @@ class _listCpuState extends State<listCpu> {
     return Scaffold(
       backgroundColor: Color(0xff342C4C),
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Color(0xFF272B40).withOpacity(0.0),
         leading: Padding(
           padding: const EdgeInsets.all(8),
@@ -67,7 +68,12 @@ class _listCpuState extends State<listCpu> {
           ),
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
-        title: const Text('Cpu'),
+        title: const Text('Cpu',
+            style: TextStyle(
+                color: Color(0xffDBD8E3),
+                fontFamily: 'Inter',
+                fontSize: 20,
+                fontWeight: FontWeight.bold)),
       ),
       body: Column(
         children: <Widget>[
@@ -101,7 +107,7 @@ class _listCpuState extends State<listCpu> {
               // color: Color.fromARGB(167, 209, 206, 198)
               color: Colors.deepPurpleAccent,
             )),
-        margin: EdgeInsets.all(30),
+        margin: EdgeInsets.fromLTRB(30, 15, 30, 10),
         child: InkWell(
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
@@ -111,23 +117,24 @@ class _listCpuState extends State<listCpu> {
             });
           },
           child: SizedBox(
-            height: 500,
+            height: 470,
             child: ListTile(
               //Text(questions[index])
               title: Column(
                 children: <Widget>[
-                  Image.network(hasil.imageLink),
                   Padding(
-                    padding: const EdgeInsets.all(20),
+                    padding: const EdgeInsets.fromLTRB(10, 5, 10, 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
+                        Image.network(hasil.imageLink),
+                        SizedBox(height: 10),
                         Text(
                           hasil.namaCpu,
                           style: const TextStyle(
-                            color: Colors.black,
+                            color: Color(0xff1C1255),
                             fontFamily: 'Inter',
-                            fontWeight: FontWeight.bold,
+                            fontWeight: FontWeight.w700,
                             fontSize: 20,
                           ),
                         ),
@@ -141,28 +148,32 @@ class _listCpuState extends State<listCpu> {
                             ),
                             onPressed: () {},
                             child: Text(
-                              "Rp" +
+                              // var formatter = NumberFormat('#,###,000');
+                              "Rp " +
                                   formatter
                                       .format(int.parse(hasil.harga.toString()))
                                       .toString(),
                               // hasil.harga.toString(),
                               style: const TextStyle(
-                                fontFamily: 'Inter',
-                                color: Colors.black,
-                              ),
+                                  fontFamily: 'Inter',
+                                  color: Color(0xff1C1255),
+                                  fontWeight: FontWeight.bold),
                             )),
                         Text(
-                          hasil.baseClock,
+                          "Max clock : " + hasil.maxClock,
                           style: const TextStyle(
                             fontFamily: 'Inter',
-                            color: Colors.black,
+                            color: Color(0xff1C1255),
                           ),
                         ),
                         Text(
-                          hasil.threadsCount,
+                          "Core/thread : " +
+                              hasil.coreCount +
+                              "/" +
+                              hasil.threadsCount,
                           style: const TextStyle(
                             fontFamily: 'Inter',
-                            color: Colors.black,
+                            color: Color(0xff1C1255),
                           ),
                         ),
                       ],

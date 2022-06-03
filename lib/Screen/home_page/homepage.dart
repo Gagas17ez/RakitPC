@@ -37,7 +37,7 @@ class _homepageState extends State<homepage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff342C4C),
+      backgroundColor: Color(0xff272B40),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
@@ -45,7 +45,10 @@ class _homepageState extends State<homepage>
         centerTitle: true,
         title: const Text('HomePage',
             style: TextStyle(
-                fontFamily: 'Inter', fontSize: 20.0, color: Colors.white)),
+                fontFamily: 'Inter',
+                fontSize: 20.0,
+                color: Colors.white,
+                fontWeight: FontWeight.bold)),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.notifications_none, color: Colors.white),

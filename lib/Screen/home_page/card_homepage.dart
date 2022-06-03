@@ -4,12 +4,13 @@ import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class card_home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff342C4C),
+      backgroundColor: Color(0xff272B40),
       body: ListView(
         children: <Widget>[
           const SizedBox(height: 20.0),
@@ -24,9 +25,9 @@ class card_home extends StatelessWidget {
                   mainAxisSpacing: 15.0,
                   childAspectRatio: 0.8,
                   children: <Widget>[
-                    _buildCard('Build PC', 'assets/img/rakitBuild.png', false,
+                    _buildCard('Build PC', 'assets/img/build1.png', false,
                         false, context),
-                    _buildCard('Part PC', 'assets/img/rakitPart.png', false,
+                    _buildCard('Part PC', 'assets/img/assemble.png', false,
                         false, context),
                   ])),
           const SizedBox(height: 15.0)
@@ -53,7 +54,7 @@ class card_home extends StatelessWidget {
                         spreadRadius: 3.0,
                         blurRadius: 5.0)
                   ],
-                  color: HexColor("7A77FF")),
+                  color: Color.fromARGB(225, 121, 119, 255)),
               child: Column(children: [
                 Padding(
                     padding: const EdgeInsets.all(15),
@@ -63,17 +64,17 @@ class card_home extends StatelessWidget {
                 Hero(
                     tag: imgPath,
                     child: SizedBox(
-                      height: 110.0,
-                      width: 110.0,
+                      height: 100.0,
+                      width: 100.0,
                       child: Image.asset(imgPath),
                     )),
-                const SizedBox(height: 25.0),
+                const SizedBox(height: 35.0),
                 Text(name,
-                    style: const TextStyle(
+                    style: TextStyle(
                         color: Colors.white,
+                        fontSize: 23.0,
                         fontFamily: 'Inter',
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w400)),
+                        fontWeight: FontWeight.normal)),
               ])),
         ));
   }

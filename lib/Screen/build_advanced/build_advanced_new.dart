@@ -73,6 +73,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     return Scaffold(
       backgroundColor: Color(0xff342C4C),
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         leading: IconButton(
@@ -98,8 +99,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
+                  fontFamily: 'Inter',
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ),
@@ -108,12 +110,16 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             Align(
               alignment: Alignment.center,
               child: Text(
-                global.hargaharga.toString(),
+                "Rp " +
+                    formatter
+                        .format(int.parse(global.hargaharga.toString()))
+                        .toString(),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 36,
+                  fontFamily: 'Inter',
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.normal,
                 ),
               ),
             ),
@@ -571,8 +577,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       return ElevatedButton.icon(
           // ignore: prefer_const_constructors
           style: ButtonStyle(
-            backgroundColor:
-                MaterialStateProperty.all<Color>(Color(0xff7A77FF)),
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
           ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/casing');
