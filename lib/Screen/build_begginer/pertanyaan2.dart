@@ -42,21 +42,20 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               child: LinearPercentIndicator(
                 width: 360,
                 lineHeight: 30,
-                percent: 100/100,
+                percent: 100 / 100,
                 animation: true,
                 animationDuration: 1500,
                 center: Text("3/3"),
                 barRadius: Radius.circular(20),
                 backgroundColor: HexColor("#C9C9C9"),
-                progressColor:HexColor("#EE5584"),
+                progressColor: HexColor("#EE5584"),
               ),
             ),
             const SizedBox(
               height: 20,
             ),
             Container(
-              padding: EdgeInsets.only(
-                  top: 0, right: 220, left: 0, bottom: 0),
+              padding: EdgeInsets.only(top: 0, right: 220, left: 0, bottom: 0),
               height: 30,
               width: 310,
               alignment: Alignment.center,
@@ -76,8 +75,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               height: 10,
             ),
             Container(
-              padding: EdgeInsets.only(
-                  top: 0, right: 0, left: 5, bottom: 5),
+              padding: EdgeInsets.only(top: 0, right: 0, left: 5, bottom: 5),
               height: 30,
               width: 310,
               alignment: Alignment.topLeft,
@@ -95,135 +93,151 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
             const SizedBox(
               height: 140,
             ),
-
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      global.kegunaan = 1;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/hasil');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Kerja /Browse / Video / Sekolah",
+                    child: Text("Kerja /Browse / Video / Sekolah",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 20),
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      global.kegunaan = 2;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/hasil');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Kuliah / Programming",
+                    child: Text("Kuliah / Programming",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 20),
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      global.kegunaan = 3;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/hasil');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Bermain game / Video editing",
+                    child: Text("Bermain game / Video editing",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 20),
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      global.kegunaan = 4;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/hasil');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Workstation",
+                    child: Text("Workstation",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 40),
-
             ElevatedButton(
               child: const Text('Back'),
-              onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan1');},
+              onPressed: () {
+                Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
+              },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                   primary: HexColor("#7A77FF"),
-                  padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle:
-                  const TextStyle(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  textStyle: const TextStyle(
                     fontSize: 16.0,
                     fontFamily: 'Inter',
                   )),

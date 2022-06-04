@@ -44,21 +44,20 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               child: LinearPercentIndicator(
                 width: 360,
                 lineHeight: 30,
-                percent: 66/100,
+                percent: 66 / 100,
                 animation: true,
                 animationDuration: 1500,
                 center: Text("2/3"),
                 barRadius: Radius.circular(20),
                 backgroundColor: HexColor("#C9C9C9"),
-                progressColor:HexColor("#EE5584"),
+                progressColor: HexColor("#EE5584"),
               ),
             ),
             const SizedBox(
               height: 20,
             ),
             Container(
-              padding: EdgeInsets.only(
-                  top: 0, right: 220, left: 0, bottom: 0),
+              padding: EdgeInsets.only(top: 0, right: 220, left: 0, bottom: 0),
               height: 30,
               width: 310,
               alignment: Alignment.topLeft,
@@ -78,8 +77,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               height: 10,
             ),
             Container(
-              padding: EdgeInsets.only(
-                  top: 0, right: 110, left: 0, bottom: 5),
+              padding: EdgeInsets.only(top: 0, right: 110, left: 0, bottom: 5),
               height: 30,
               width: 310,
               alignment: Alignment.center,
@@ -97,136 +95,152 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
             const SizedBox(
               height: 140,
             ),
+            Container(
+                height: 40,
+                width: 320,
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: OutlinedButton(
+                  onPressed: () {
+                    setState(() {
+                      global.budget = 1;
+                    });
 
-            Container(
-              height: 40,
-              width: 320,
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-              child: OutlinedButton(
-                onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
-                style: OutlinedButton.styleFrom(
-                  padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                  side: BorderSide( color: HexColor("#C9C9C9"),),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                      child: Text(
-                        "Rp 1.000.000 - Rp 4.0000.000",
-                        style: TextStyle(
-                          fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
-                          height: 1.5,
-                          fontFamily: 'Inter',
-                        ),
-                          textAlign: TextAlign.left
-                      ),
-                  ),
-              )
-            ),
-            
-            SizedBox(height: 20),
-            Container(
-                height: 40,
-                width: 320,
-                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                child: OutlinedButton(
-                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
+                    Navigator.pushNamed(context, '/build/begginer/pertanyaan2');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Rp 4.100.000 - Rp 7.0000.000",
+                    child: Text("Rp 3.000.000 - Rp 6.0000.000",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 20),
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
+                  onPressed: () {
+                    setState(() {
+                      global.budget = 2;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/pertanyaan2');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Rp 7.100.000 - Rp 10.0000.000",
+                    child: Text("Rp 6.100.000 - Rp 9.0000.000",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 20),
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan2');},
+                  onPressed: () {
+                    setState(() {
+                      global.budget = 3;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/pertanyaan2');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Rp 10.100.000 - Rp 15.0000.000",
+                    child: Text("Rp 9.100.000 - Rp 15.0000.000",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
+                        textAlign: TextAlign.left),
+                  ),
+                )),
+            SizedBox(height: 20),
+            Container(
+                height: 40,
+                width: 320,
+                padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                child: OutlinedButton(
+                  onPressed: () {
+                    setState(() {
+                      global.budget = 4;
+                    });
+                    Navigator.pushNamed(context, '/build/begginer/pertanyaan2');
+                  },
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                )
-            ),
+                  child: Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text("Rp 15.0000.000 < ",
+                        style: TextStyle(
+                          fontSize: 16.0,
+                          color: HexColor("#D7D7D7"),
+                          height: 1.5,
+                          fontFamily: 'Inter',
+                        ),
+                        textAlign: TextAlign.left),
+                  ),
+                )),
             SizedBox(height: 40),
-
             ElevatedButton(
               child: const Text('Back'),
-              onPressed: () {Navigator.pushNamed(context, '/buildAwal');},
+              onPressed: () {
+                Navigator.pushNamed(context, '/buildAwal');
+              },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                   primary: HexColor("#7A77FF"),
-                  padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle:
-                  const TextStyle(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  textStyle: const TextStyle(
                     fontSize: 16.0,
                     fontFamily: 'Inter',
                   )),
