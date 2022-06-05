@@ -42,10 +42,10 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               child: LinearPercentIndicator(
                 width: 350,
                 lineHeight: 30,
-                percent: 100 / 100,
+                percent: 75 / 100,
                 animation: true,
-                animationDuration: 1500,
-                center: Text("3/3"),
+                animationDuration: 700,
+                animateFromLastPercent: true,
                 barRadius: Radius.circular(20),
                 backgroundColor: HexColor("#C9C9C9"),
                 progressColor: HexColor("#EE5584"),

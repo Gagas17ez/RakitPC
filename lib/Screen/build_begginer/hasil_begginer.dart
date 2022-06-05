@@ -35,7 +35,6 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
       //   title: const Text('Hasil Rekomendasi', textAlign: TextAlign.center),
       // ),
       body: FutureBuilder(
-
           future: fetch_builds_id(),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
@@ -47,16 +46,20 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
 
                     return Container(
                       padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
-
                       child: Column(
                         children: <Widget>[
                           // CPU
                           Container(
-                            width: 300,
-                            height: 20,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20.0),
-                              color: Colors.green[300],
+                            padding: EdgeInsets.all(4),
+                            child: LinearPercentIndicator(
+                              width: 350,
+                              lineHeight: 30,
+                              percent: 25 / 100,
+                              animationDuration: 500,
+                              animateFromLastPercent: true,
+                              barRadius: Radius.circular(20),
+                              backgroundColor: HexColor("#C9C9C9"),
+                              progressColor: HexColor("#EE5584"),
                             ),
                           ),
                           const SizedBox(

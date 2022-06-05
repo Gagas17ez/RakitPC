@@ -4,7 +4,6 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
-
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -24,11 +23,6 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
-      // appBar: AppBar(
-      //   backgroundColor: HexColor("#0C062A"),
-      //   title: const Text("Rakit PC", textAlign: TextAlign.center),
-      // ),
-
       body: Center(
         child: Column(
           children: <Widget>[
@@ -40,13 +34,12 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               child: LinearPercentIndicator(
                 width: 350,
                 lineHeight: 30,
-                percent: 33/100,
-                animation: true,
-                animationDuration: 1500,
-                center: Text("1/3"),
+                percent: 25 / 100,
+                animationDuration: 500,
+                animateFromLastPercent: true,
                 barRadius: Radius.circular(20),
                 backgroundColor: HexColor("#C9C9C9"),
-                progressColor:HexColor("#EE5584"),
+                progressColor: HexColor("#EE5584"),
               ),
             ),
             const SizedBox(
@@ -70,77 +63,79 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
             const SizedBox(
               height: 270,
             ),
-
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {Navigator.pushNamed(context, '/build/advanced');},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/build/advanced');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Ya",
+                    child: Text("Ya",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 20),
-
             Container(
                 height: 40,
                 width: 320,
                 padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
                 child: OutlinedButton(
-                  onPressed: () {Navigator.pushNamed(context, '/build/begginer/pertanyaan1');},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
+                  },
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                    side: BorderSide( color: HexColor("#C9C9C9"),),
+                    side: BorderSide(
+                      color: HexColor("#C9C9C9"),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text(
-                        "Tidak",
+                    child: Text("Tidak",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
                           fontFamily: 'Inter',
                         ),
-                        textAlign: TextAlign.left
-                    ),
+                        textAlign: TextAlign.left),
                   ),
-                )
-            ),
+                )),
             SizedBox(height: 40),
             ElevatedButton(
               child: const Text('Back'),
-              onPressed: () {Navigator.pushNamed(context, '/');},
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20),
                   ),
                   primary: HexColor("#7A77FF"),
-                  padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle:
-                  const TextStyle(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  textStyle: const TextStyle(
                     fontSize: 16.0,
                     fontFamily: 'Inter',
                   )),
@@ -163,5 +158,3 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
     );
   }
 }
-
-
