@@ -52,10 +52,10 @@ class _Simpan extends State<Simpan> {
               child: Card(
                 color: Colors.transparent,
                 elevation: 6,
-                margin: const EdgeInsets.fromLTRB(10, 20, 10, 20),
+                margin: const EdgeInsets.fromLTRB(10, 8, 10, 8),
                 child: SizedBox(
                   width: 200,
-                  height: 70,
+                  height: 90,
                   child: ListTile(
                     title: Column(
                       children: <Widget>[
@@ -76,8 +76,17 @@ class _Simpan extends State<Simpan> {
                                 fontFamily: 'Inter',
                                 fontSize: 20,
                               ),
-                            )
+                            ),
                           ],
+                        ),
+                        Text(
+                          build.compatible.toString(),
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white70,
+                            fontFamily: 'Inter',
+                            fontSize: 14,
+                          ),
                         ),
                         Text(
                           build.harga.toString(),
