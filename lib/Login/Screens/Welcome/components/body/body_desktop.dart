@@ -4,9 +4,14 @@ import 'package:rakit_pc/Login/Screens/Login/login_screen.dart';
 import 'package:rakit_pc/Login/Screens/Signup/signup_screen.dart';
 import 'package:rakit_pc/Login/components/rounded_button.dart';
 
-class BodyDesktop extends StatelessWidget {
+class BodyDesktop extends StatefulWidget {
   const BodyDesktop({Key? key}) : super(key: key);
 
+  @override
+  State<BodyDesktop> createState() => _BodyDesktopState();
+}
+
+class _BodyDesktopState extends State<BodyDesktop> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

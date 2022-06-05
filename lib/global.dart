@@ -2,6 +2,9 @@
 
 library rakit.globals;
 
+import 'package:flutter/material.dart';
+import 'Screen/home_page/homepage.dart';
+
 //gawe common use
 int budget = 0;
 int kegunaan = 0;
@@ -45,3 +48,5 @@ int id_ram2_adv = 0;
 //gawe compability
 String socket_cpu = "";
 String socket_mobo = "";
+
+Widget currentState = const homepage();

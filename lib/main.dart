@@ -4,6 +4,7 @@ import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/build_begginer/howitworks.dart';
+import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
@@ -22,47 +23,85 @@ import 'package:rakit_pc/Screen/simpan_build/simpanbuild.dart';
 import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-
+import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'Screen/part_page/part_page.dart';
 
-void main() {
-  runApp(const rakitpc());
-}
-
-class rakitpc extends StatelessWidget {
-  const rakitpc({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'RakitPC',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: '/',
-      routes: {
-        '/': (context) => homepage(),
-        '/history': (context) => Simpan(),
-        '/build': (context) => howItworks(),
-        '/buildAwal': (context) => pertanyaan_awal(),
-        '/build/advanced': (context) => buildpc_advanced(),
-        '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
-        '/build/begginer/pertanyaan2': (context) => Pertanyaan2(),
-        '/build/begginer/hasil': (context) => Rekomendasi_pc(),
-        '/part': (context) => Part(),
-        '/part/list': (context) => ListPart(),
-        '/part/list/casing': (context) => listCasing(),
-        '/part/list/cooler': (context) => listCpuCooler(),
-        '/part/list/cpu': (context) => listCpu(),
-        '/part/list/fan': (context) => listFan(),
-        '/part/list/motherboard': (context) => listMotherboard(),
-        '/part/list/psu': (context) => listPsu(),
-        '/part/list/ram': (context) => listRam(),
-        '/part/list/storage': (context) => listStorage(),
-        '/part/list/vga': (context) => listVga(),
-        '/part/list/detail': (context) => DetailPart(),
-      },
-    );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  SharedPreferences logindata = await SharedPreferences.getInstance();
+  var email = logindata.getString('email');
+  if (email != null) {
+    global.currentState = homepage();
+  } else {
+    global.currentState = WelcomeScreen();
   }
+  //global.checkLogin();
+  runApp(MaterialApp(
+    theme: ThemeData(
+      scaffoldBackgroundColor: Color(0xff9837a5),
+    ),
+    initialRoute: '/',
+    routes: {
+      '/': (context) => global.currentState,
+      '/history': (context) => Simpan(),
+      '/build': (context) => howItworks(),
+      '/buildAwal': (context) => pertanyaan_awal(),
+      '/build/advanced': (context) => buildpc_advanced(),
+      '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
+      '/build/begginer/pertanyaan2': (context) => Pertanyaan2(),
+      '/build/begginer/hasil': (context) => Rekomendasi_pc(),
+      '/part': (context) => Part(),
+      '/part/list': (context) => ListPart(),
+      '/part/list/casing': (context) => listCasing(),
+      '/part/list/cooler': (context) => listCpuCooler(),
+      '/part/list/cpu': (context) => listCpu(),
+      '/part/list/fan': (context) => listFan(),
+      '/part/list/motherboard': (context) => listMotherboard(),
+      '/part/list/psu': (context) => listPsu(),
+      '/part/list/ram': (context) => listRam(),
+      '/part/list/storage': (context) => listStorage(),
+      '/part/list/vga': (context) => listVga(),
+      '/part/list/detail': (context) => DetailPart(),
+    },
+  ));
 }
+
+// class rakitpc extends StatelessWidget {
+//   const rakitpc({Key? key}) : super(key: key);
+
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       title: 'RakitPC',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       initialRoute: '/',
+//       routes: {
+//         '/': (context) => homepage(),
+        // '/history': (context) => Simpan(),
+        // '/build': (context) => howItworks(),
+        // '/buildAwal': (context) => pertanyaan_awal(),
+        // '/build/advanced': (context) => buildpc_advanced(),
+        // '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
+        // '/build/begginer/pertanyaan2': (context) => Pertanyaan2(),
+        // '/build/begginer/hasil': (context) => Rekomendasi_pc(),
+        // '/part': (context) => Part(),
+        // '/part/list': (context) => ListPart(),
+        // '/part/list/casing': (context) => listCasing(),
+        // '/part/list/cooler': (context) => listCpuCooler(),
+        // '/part/list/cpu': (context) => listCpu(),
+        // '/part/list/fan': (context) => listFan(),
+        // '/part/list/motherboard': (context) => listMotherboard(),
+        // '/part/list/psu': (context) => listPsu(),
+        // '/part/list/ram': (context) => listRam(),
+        // '/part/list/storage': (context) => listStorage(),
+        // '/part/list/vga': (context) => listVga(),
+        // '/part/list/detail': (context) => DetailPart(),
+//       },
+//     );
+//   }
+// }

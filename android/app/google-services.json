@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "969496212238",
+    "project_id": "rakit-pc-b2",
+    "storage_bucket": "rakit-pc-b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969496212238:android:7c67bc7d497297c7dcdd5f",
+        "android_client_info": {
+          "package_name": "com.rakitpc.rakitpc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969496212238-1f6iotg29o6q4amfbl95qb816bv5q0vj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rakitpc.rakitpc",
+            "certificate_hash": "5386834983d0cd71b8b555e2916153bc6723176b"
+          }
+        },
+        {
+          "client_id": "969496212238-7h5a68ddjg4basi3fqkuhgdata12uj25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVIyn2VfyiMcmKf_bQP77bIs92NqTlyD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969496212238-7h5a68ddjg4basi3fqkuhgdata12uj25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
