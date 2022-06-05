@@ -40,7 +40,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
             Container(
               padding: EdgeInsets.all(20),
               child: LinearPercentIndicator(
-                width: 360,
+                width: 350,
                 lineHeight: 30,
                 percent: 100 / 100,
                 animation: true,

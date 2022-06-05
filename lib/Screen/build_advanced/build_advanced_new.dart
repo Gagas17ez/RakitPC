@@ -440,14 +440,14 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     _onSaveBuild();
                     Navigator.pushNamed(context, '/history');
                   },
-                  child: const Text('Simpan Build',
+                  child: Text('Simpan Build',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: HexColor("#9997FF"),
                         fontFamily: 'DmSans',
                         fontSize: 20,
                       )),
                   style: ElevatedButton.styleFrom(
-                    primary: HexColor("#2a292f"),
+                    primary: Colors.white,
                     // primary: Colors.white,
                     padding: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 70),
@@ -834,6 +834,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           });
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/fan');
             setState(
@@ -922,6 +926,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           });
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/fan');
             setState(
@@ -1010,6 +1018,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           });
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/fan');
             setState(
@@ -1099,8 +1111,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
-          style: ElevatedButton.styleFrom(
-            maximumSize: const Size(200, 50),
+          style: ButtonStyle(
+
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
           ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/cpu');
@@ -1190,6 +1204,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/cooler');
             setState(
@@ -1278,6 +1296,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/motherboard');
             setState(
@@ -1365,6 +1387,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/psu');
             setState(
@@ -1452,6 +1478,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           });
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/ram');
             setState(
@@ -1540,6 +1570,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           });
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/ram');
             setState(
@@ -1631,6 +1665,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/storage');
             setState(
@@ -1722,6 +1760,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/storage');
             setState(
@@ -1810,6 +1852,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       //
     } else {
       return ElevatedButton.icon(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all<Color>(
+                Color.fromARGB(255, 121, 119, 255)),
+          ),
           onPressed: () {
             Navigator.pushNamed(context, '/part/list/vga');
             setState(

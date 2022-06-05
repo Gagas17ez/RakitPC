@@ -38,7 +38,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
             Container(
               padding: EdgeInsets.all(20),
               child: LinearPercentIndicator(
-                width: 360,
+                width: 350,
                 lineHeight: 30,
                 percent: 33/100,
                 animation: true,

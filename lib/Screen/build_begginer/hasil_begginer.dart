@@ -13,6 +13,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_SimpanBuild.dart';
 import 'package:rakit_pc/MySqflite.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class Rekomendasi_pc extends StatefulWidget {
   const Rekomendasi_pc({Key? key}) : super(key: key);
@@ -28,12 +29,13 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff342C4C),
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.transparent,
-        title: const Text('Hasil Rekomendasi', textAlign: TextAlign.center),
-      ),
+      // appBar: AppBar(
+      //   elevation: 0,
+      //   backgroundColor: Colors.transparent,
+      //   title: const Text('Hasil Rekomendasi', textAlign: TextAlign.center),
+      // ),
       body: FutureBuilder(
+
           future: fetch_builds_id(),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
@@ -42,11 +44,24 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
                     Builds build = snapshot.data[index];
+
                     return Container(
                       padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
+
                       child: Column(
                         children: <Widget>[
                           // CPU
+                          Container(
+                            width: 300,
+                            height: 20,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20.0),
+                              color: Colors.green[300],
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 25,
+                          ),
 
                           Container(
                             decoration: BoxDecoration(
