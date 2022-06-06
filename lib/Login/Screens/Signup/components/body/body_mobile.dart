@@ -63,13 +63,33 @@ class _BodyMobileState extends State<BodyMobile> {
                     .createUserWithEmailAndPassword(
                         email: _email, password: _password)
                     .then((_) {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen();
-                      },
-                    ),
+                  Widget okButton = FlatButton(
+                    child: Text("OK"),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return LoginScreen();
+                          },
+                        ),
+                      );
+                    },
+                  );
+                  // set up the AlertDialog
+                  AlertDialog alert = AlertDialog(
+                    title: Text("Notice"),
+                    content: Text("Akun anda berhasil dibuat"),
+                    actions: [
+                      okButton,
+                    ],
+                  );
+                  // show the dialog
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return alert;
+                    },
                   );
                 });
               },
@@ -78,14 +98,14 @@ class _BodyMobileState extends State<BodyMobile> {
             AlreadyHaveAnAccountCheck(
               login: false,
               press: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return LoginScreen();
-                      },
-                    ),
-                  );                
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return LoginScreen();
+                    },
+                  ),
+                );
               },
             ),
             const OrDivider(),
