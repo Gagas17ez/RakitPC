@@ -29,6 +29,8 @@ int hargastorage1 = 0;
 int hargastorage2 = 0;
 int hargavga = 0;
 int hargaharga = 0;
+bool darisimpan = false;
+bool janganTampilkanTutor = false;
 
 //gawe pilihan advanced
 int id_case_adv = 0;

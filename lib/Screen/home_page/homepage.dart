@@ -38,7 +38,9 @@ class _homepageState extends State<homepage>
   void initState() {
     super.initState();
     _tabController = TabController(length: 1, vsync: this);
+    global.darisimpan = false;
     global.id_builds = 0;
+    global.id_case_adv = 0;
     global.id_cpu_adv = 0;
     global.id_cpu_cooler_adv = 0;
     global.id_fan_adv = 0;
@@ -50,6 +52,19 @@ class _homepageState extends State<homepage>
     global.id_ram_adv = 0;
     global.nama_part = "";
     global.seng_diganti = 0;
+    global.hargacase = 0;
+    global.hargacooler = 0;
+    global.hargacpu = 0;
+    global.hargafan1 = 0;
+    global.hargafan2 = 0;
+    global.hargafan3 = 0;
+    global.hargamobo = 0;
+    global.hargapsu = 0;
+    global.hargaram1 = 0;
+    global.hargaram2 = 0;
+    global.hargastorage1 = 0;
+    global.hargastorage2 = 0;
+    global.hargaharga = 0;
     checkLogin();
   }
 

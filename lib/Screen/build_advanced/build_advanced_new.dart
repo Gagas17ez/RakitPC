@@ -53,18 +53,35 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
 
   void init() async {
     setState(() {
-      global.hargaharga = global.hargacase +
-          global.hargacooler +
-          global.hargacpu +
-          global.hargafan1 +
-          global.hargafan2 +
-          global.hargafan3 +
-          global.hargamobo +
-          global.hargapsu +
-          global.hargaram1 +
-          global.hargaram2 +
-          global.hargastorage1 +
-          global.hargastorage2;
+      if (global.darisimpan) {
+        global.hargaharga = global.hargaharga +
+            global.hargacase +
+            global.hargacooler +
+            global.hargacpu +
+            global.hargafan1 +
+            global.hargafan2 +
+            global.hargafan3 +
+            global.hargamobo +
+            global.hargapsu +
+            global.hargaram1 +
+            global.hargaram2 +
+            global.hargastorage1 +
+            global.hargastorage2;
+        global.darisimpan = false;
+      } else {
+        global.hargaharga = global.hargacase +
+            global.hargacooler +
+            global.hargacpu +
+            global.hargafan1 +
+            global.hargafan2 +
+            global.hargafan3 +
+            global.hargamobo +
+            global.hargapsu +
+            global.hargaram1 +
+            global.hargaram2 +
+            global.hargastorage1 +
+            global.hargastorage2;
+      }
     });
   }
 
@@ -111,9 +128,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               alignment: Alignment.center,
               child: Text(
                 "Rp " +
-                    formatter
-                        .format(int.parse(global.hargaharga.toString()))
-                        .toString(),
+                    formatter.format(int.parse(global.hargaharga.toString())),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 36,
@@ -816,7 +831,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    fangan.harga.toString(),
+                                    "Rp " +
+                                        formatter.format(
+                                            int.parse(fangan.harga.toString())),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -908,7 +925,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    fangan.harga.toString(),
+                                    "Rp " +
+                                        formatter.format(
+                                            int.parse(fangan.harga.toString())),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1000,7 +1019,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                                         color: Colors.black),
                                   ),
                                   subtitle: Text(
-                                    fangan.harga.toString(),
+                                    "Rp " +
+                                        formatter.format(
+                                            int.parse(fangan.harga.toString())),
                                     style: const TextStyle(
                                         fontSize: 11,
                                         fontWeight: FontWeight.bold,
@@ -1112,7 +1133,6 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
     } else {
       return ElevatedButton.icon(
           style: ButtonStyle(
-
             backgroundColor: MaterialStateProperty.all<Color>(
                 Color.fromARGB(255, 121, 119, 255)),
           ),
