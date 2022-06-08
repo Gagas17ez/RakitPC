@@ -18,6 +18,8 @@ class listCasing extends StatefulWidget {
 
 class _listCasingState extends State<listCasing> {
   late Future data;
+  bool isDescending = false;
+
   var formatter = NumberFormat('#,###,000');
   List<Casing> casing = [];
   String query = '';
@@ -75,13 +77,17 @@ class _listCasingState extends State<listCasing> {
                 fontSize: 20,
                 fontWeight: FontWeight.bold)),
       ),
-      body: Column(
+      body: Column(        
         children: <Widget>[
           buildSearch(),
+          buildSort(),
           Expanded(
             child: ListView.builder(
                 itemCount: casing.length,
                 itemBuilder: (context, index) {
+                  final sortedItems = casing
+                    ..sort((casing1, casing2) => isDescending ? casing2.compareTo(casing1) : casing1.compareTo(casing2));
+                  final data = sortedItems[index];
                   final hasil = casing[index];
                   return buildList(hasil, index);
                 }),
@@ -96,6 +102,23 @@ class _listCasingState extends State<listCasing> {
         hintText: 'Cari Nama produk atau merk',
         onChanged: searchGan,
       );
+  Widget buildSort() => Column(
+                children: [
+                    TextButton.icon(
+                      icon: RotatedBox(
+                        quarterTurns: 1,
+                        child: Icon(Icons.compare_arrows, size: 28)
+                      ),
+                      label: Text(
+                        isDescending ? 'Descending' : 'Ascending',
+                        style: TextStyle(fontSize: 16),
+                      ),
+                      onPressed: () => setState(() => isDescending = !isDescending),
+                    ),
+                    Expanded(child: Center()),
+                ],        
+
+      );  
 
   Widget buildList(Casing hasil, int index) => Card(
         elevation: 6,

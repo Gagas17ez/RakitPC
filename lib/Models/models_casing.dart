@@ -89,4 +89,6 @@ class Casing {
         "ImageLink": imageLink,
         "Links": links,
       };
+
+  compareTo(Casing casing1) {}
 }
