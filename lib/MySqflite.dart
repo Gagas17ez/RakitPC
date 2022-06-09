@@ -157,9 +157,14 @@ class MySqflite {
     }
   }
 
-  Future<int> deleteBuild(String waktu) async {
+  Future<int> deleteBuild(String waktuh) async {
     Database db = await instance.database;
-    return await db
-        .rawDelete('DELETE FROM $tableSimpanBuild Where $columnWaktu = $waktu');
+    return await db.rawDelete('DELETE * FROM $tableSimpanBuild');
+  }
+
+  clearData(String waktuh) async {
+    Database db = await instance.database;
+    await db.rawQuery(
+        "DELETE FROM $tableSimpanBuild WHERE $columnWaktu = '$waktuh'");
   }
 }

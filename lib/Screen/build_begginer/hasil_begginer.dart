@@ -146,7 +146,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
-                                                      int.parse(build.cpu);
+                                                      int.parse(build.cpu) - 1;
                                                   global.nama_part = "CPU";
                                                 });
                                               },
@@ -226,7 +226,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               context, '/part/list/detail');
                                           setState(() {
                                             global.id_detail =
-                                                int.parse(build.motherboard);
+                                                int.parse(build.motherboard) -
+                                                    1;
                                             global.nama_part = "Motherboard";
                                           });
                                         },
@@ -300,7 +301,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   context, '/part/list/detail');
                                               setState(() {
                                                 global.id_detail =
-                                                    int.parse(build.ram);
+                                                    int.parse(build.ram) - 1;
                                                 global.nama_part = "Ram";
                                               });
                                             },
@@ -376,7 +377,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
-                                                      int.parse(build.vga);
+                                                      int.parse(build.vga) - 1;
                                                   global.nama_part = "VGA";
                                                 });
                                               },
@@ -404,23 +405,36 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     height: 8.0,
                                                   ),
                                                   Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(
-                                                                  build.hargaVga
-                                                                      .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color(
-                                                                  0xff52BB6F)),
-                                                    ),
-                                                  ),
+                                                      child: int.parse(build
+                                                                  .hargaVga) ==
+                                                              0
+                                                          ? Text(
+                                                              "Gratis dengan CPU",
+                                                              style: GoogleFonts.poppins(
+                                                                  fontSize:
+                                                                      12.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  color: Color(
+                                                                      0xff52BB6F)),
+                                                            )
+                                                          : Text(
+                                                              "Rp " +
+                                                                  formatter
+                                                                      .format(int.parse(build
+                                                                          .hargaVga
+                                                                          .toString()))
+                                                                      .toString(),
+                                                              style: GoogleFonts.poppins(
+                                                                  fontSize:
+                                                                      12.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  color: Color(
+                                                                      0xff52BB6F)),
+                                                            )),
                                                 ],
                                               ))),
                                     ],
@@ -456,7 +470,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
-                                                      int.parse(build.storage);
+                                                      int.parse(build.storage) -
+                                                          1;
                                                   global.nama_part = "Storage";
                                                 });
                                               },
@@ -535,7 +550,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
-                                                      int.parse(build.psu);
+                                                      int.parse(build.psu) - 1;
                                                   global.nama_part = "PSU";
                                                 });
                                               },
@@ -615,7 +630,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail = int.parse(
-                                                      build.cpuCooler);
+                                                          build.cpuCooler) -
+                                                      1;
                                                   global.nama_part =
                                                       "CPU Cooler";
                                                 });
@@ -696,7 +712,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
-                                                      int.parse(build.fans);
+                                                      int.parse(build.fans) - 1;
                                                   global.nama_part = "Fan";
                                                 });
                                               },
@@ -777,7 +793,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
-                                                      int.parse(build.casing);
+                                                      int.parse(build.casing) -
+                                                          1;
                                                   global.nama_part = "Casing";
                                                 });
                                               },

@@ -22,7 +22,10 @@ class _Simpan extends State<Simpan> {
   @override
   void initState() {
     super.initState();
+    init();
+  }
 
+  void init() async {
     WidgetsBinding.instance.addPostFrameCallback((_) async {
       builds = await MySqflite.instance.getBuild();
       setState(() {});
@@ -153,5 +156,11 @@ class _Simpan extends State<Simpan> {
     FocusScope.of(context).requestFocus(new FocusNode());
     builds = await MySqflite.instance.getBuild();
     setState(() {});
+  }
+
+  _onDeleteBuild(String waktuh) async {
+    FocusScope.of(context).requestFocus(new FocusNode());
+    await MySqflite.instance.clearData(waktuh);
+    init();
   }
 }

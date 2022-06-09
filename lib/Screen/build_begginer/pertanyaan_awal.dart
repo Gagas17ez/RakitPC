@@ -54,7 +54,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 16.0,
-                  color: HexColor("#D7D7D7"),
+                  color: Colors.white,
                   height: 1.5,
                 ),
               ),
@@ -73,7 +73,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -84,7 +84,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                     child: Text("Sudah",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -102,7 +102,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -113,7 +113,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                     child: Text("Belum",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
