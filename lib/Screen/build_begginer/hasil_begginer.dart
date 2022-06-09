@@ -165,7 +165,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp.${build.hargaCpu}",
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaCpu
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight:
@@ -226,7 +231,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           ),
                                           Container(
                                               child:Text(
-                                                "Rp. " + build.hargaMobo,
+                                                "Rp " +
+                                                    formatter
+                                                        .format(int.parse(build
+                                                        .hargaMobo
+                                                        .toString()))
+                                                        .toString(),
                                                 style: TextStyle(
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.bold,
@@ -290,7 +300,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               ),
                                               Container(
                                                   child:Text(
-                                                    "Rp. " + build.hargaRam,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaRam
+                                                            .toString()))
+                                                            .toString(),
                                                     style: TextStyle(
                                                       fontSize: 12.0,
                                                       fontWeight: FontWeight.bold,
@@ -353,7 +368,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp. " + build.hargaVga,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaVga
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight:
@@ -415,7 +435,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp. " + build.hargaStorage,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaStorage
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight: FontWeight.bold,
@@ -475,7 +500,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp. " + build.hargaPsu,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaPsu
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight:
@@ -537,7 +567,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp. " + build.hargaCpuCooler,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaCpuCooler
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight:
@@ -599,7 +634,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp. " + build.hargaFans,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaFans
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight:
@@ -660,7 +700,12 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 ),
                                                 Container(
                                                   child: Text(
-                                                    "Rp. " + build.hargaCasing,
+                                                    "Rp " +
+                                                        formatter
+                                                            .format(int.parse(build
+                                                            .hargaCasing
+                                                            .toString()))
+                                                            .toString(),
                                                     style: const TextStyle(
                                                         fontSize: 12.0,
                                                         fontWeight:
