@@ -55,55 +55,41 @@ class _Simpan extends State<Simpan> {
                 margin: const EdgeInsets.fromLTRB(10, 8, 10, 8),
                 child: SizedBox(
                   width: 200,
-                  height: 90,
+                  height: 75,
                   child: ListTile(
-                    title: Column(
-                      children: <Widget>[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            Image.asset(
-                              "assets/img/casing.png",
-                              width: 40,
-                              height: 40,
-                              color: Colors.white70,
-                            ),
-                            Text(
-                              build.waktu.substring(0, 16),
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontFamily: 'Inter',
-                                fontSize: 20,
-                              ),
-                            ),
-                          ],
-                        ),
-                        Text(
-                          build.compatible.toString(),
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white70,
-                            fontFamily: 'Inter',
-                            fontSize: 14,
-                          ),
-                        ),
-                        Text(
-                          build.harga.toString(),
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white70,
-                            fontFamily: 'Inter',
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    leading: Image.asset(
+                      "assets/img/partgan.png",
+                      width: 50,
+                      height: 50,
                     ),
-
-                    //trailing: Image.asset("assets/img/casing.png"),
+                    title: Text(
+                      build.waktu.substring(0, 16),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Inter',
+                        fontSize: 20,
+                      ),
+                    ),
+                    subtitle: Text(
+                      build.compatible.toString(),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'Inter',
+                        fontSize: 14,
+                      ),
+                    ),
+                    trailing: Text(
+                      build.harga.toString(),
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: 'Inter',
+                        fontSize: 14,
+                      ),
+                    ),
                     selected: true,
-                    selectedTileColor: Color(0xFF7A77FF),
+                    selectedTileColor: Color(0xFFffffff),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
