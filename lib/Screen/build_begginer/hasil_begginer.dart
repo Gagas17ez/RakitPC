@@ -16,6 +16,7 @@ import 'package:rakit_pc/MySqflite.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Rekomendasi_pc extends StatefulWidget {
   const Rekomendasi_pc({Key? key}) : super(key: key);
@@ -80,13 +81,13 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                               children: <Widget>[
                                 Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children: const [
+                                    children:  [
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
                                           'Rekomendasi system',
                                           textAlign: TextAlign.center,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                             fontSize: 24,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
@@ -107,7 +108,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       .toString()))
                                                   .toString(),
                                           textAlign: TextAlign.center,
-                                          style: TextStyle(
+                                          style: GoogleFonts.poppins(
                                             fontSize: 36,
                                             color: Colors.white,
                                             fontWeight: FontWeight.bold,
@@ -153,7 +154,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaCpu,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                         fontWeight:
@@ -171,7 +172,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaCpu
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                         FontWeight.bold,
@@ -220,7 +221,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           Container(
                                               child:Text(
                                                 build.namaMobo,
-                                                style: const TextStyle(
+                                                style: GoogleFonts.poppins(
                                                     fontSize: 18.0,
                                                     color: Colors.white70,
                                                     fontWeight: FontWeight.bold),
@@ -237,7 +238,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                         .hargaMobo
                                                         .toString()))
                                                         .toString(),
-                                                style: TextStyle(
+                                                style: GoogleFonts.poppins(
                                                   fontSize: 12.0,
                                                   fontWeight: FontWeight.bold,
                                                   color: Colors.white70,
@@ -287,11 +288,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               Container(
                                                 child: Text(
                                                   build.namaRam,
-                                                  style: const TextStyle(
+                                                  style: GoogleFonts.poppins(
                                                     fontSize: 18.0,
                                                     color: Colors.white70,
                                                     fontWeight: FontWeight.bold,
-                                                    fontFamily: 'Inter',
                                                   ),
                                                 ),
                                               ),
@@ -306,10 +306,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaRam
                                                             .toString()))
                                                             .toString(),
-                                                    style: TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                       fontSize: 12.0,
                                                       fontWeight: FontWeight.bold,
-                                                      fontFamily: 'Inter',
                                                       color: Colors.white70,
                                                     ),
                                                   ),
@@ -357,7 +356,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaVga,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                         fontWeight: FontWeight.bold),
@@ -374,7 +373,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaVga
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                         FontWeight.bold,
@@ -423,7 +422,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaStorage,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                       fontWeight: FontWeight.bold,
@@ -441,7 +440,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaStorage
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight: FontWeight.bold,
                                                         color: Colors.white70),
@@ -489,7 +488,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaPsu,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                         fontWeight: FontWeight.bold),
@@ -506,7 +505,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaPsu
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                         FontWeight.bold,
@@ -555,7 +554,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaCpuCooler,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                         fontWeight:
@@ -573,7 +572,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaCpuCooler
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                         FontWeight.bold,
@@ -622,7 +621,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaFans,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                         fontWeight:
@@ -640,7 +639,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaFans
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                         FontWeight.bold,
@@ -689,7 +688,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 Container(
                                                   child: Text(
                                                     build.namaCasing,
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
                                                         fontWeight: FontWeight.bold),
@@ -706,7 +705,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                             .hargaCasing
                                                             .toString()))
                                                             .toString(),
-                                                    style: const TextStyle(
+                                                    style: GoogleFonts.poppins(
                                                         fontSize: 12.0,
                                                         fontWeight:
                                                         FontWeight.bold,
@@ -749,10 +748,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   child: Text(
                                     "Beli Build",
                                     textAlign: TextAlign.center,
-                                    style: TextStyle(
+                                    style: GoogleFonts.poppins(
                                       color: Colors.black,
                                       fontSize: 18.0,
-                                      fontFamily: 'Inter',
                                     ),
                                   ),
                                   onPressed: () async {
@@ -784,10 +782,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     child: Text(
                                       "Simpan Build",
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                         color: Colors.black,
                                         fontSize: 18.0,
-                                        fontFamily: 'Inter',
                                       ),
                                     ),
                                     onPressed: () {
