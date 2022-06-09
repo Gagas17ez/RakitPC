@@ -217,7 +217,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Rp 15.0000.000 < ",
+                    child: Text("≤  Rp 15.0000.000",
                         style: TextStyle(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),

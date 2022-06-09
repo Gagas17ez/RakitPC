@@ -50,12 +50,13 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                         children: <Widget>[
                           // CPU
                           Container(
-                            padding: EdgeInsets.all(4),
+                            padding: EdgeInsets.all(5),
                             child: LinearPercentIndicator(
-                              width: 350,
+                              width: 340,
                               lineHeight: 30,
-                              percent: 25 / 100,
-                              animationDuration: 500,
+                              percent: 100 / 100,
+                              animation: true,
+                              animationDuration: 700,
                               animateFromLastPercent: true,
                               barRadius: Radius.circular(20),
                               backgroundColor: HexColor("#C9C9C9"),
