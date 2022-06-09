@@ -14,6 +14,8 @@ import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_SimpanBuild.dart';
 import 'package:rakit_pc/MySqflite.dart';
 import 'package:percent_indicator/percent_indicator.dart';
+import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+import 'package:syncfusion_flutter_core/theme.dart';
 
 class Rekomendasi_pc extends StatefulWidget {
   const Rekomendasi_pc({Key? key}) : super(key: key);
@@ -122,10 +124,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgCpu,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgCpu),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -140,35 +146,39 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaCpu,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaCpu,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                        fontWeight:
+                                                        FontWeight.bold),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp.${build.hargaCpu}",
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp.${build.hargaCpu}",
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                        FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 5,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -176,10 +186,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgMobo,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgMobo),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -194,27 +208,31 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                       },
                                       child: Column(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.center,
+                                          MainAxisAlignment.spaceEvenly,
                                         crossAxisAlignment:
-                                            CrossAxisAlignment.start,
+                                          CrossAxisAlignment.start,
                                         children: <Widget>[
-                                          Text(
-                                            build.namaMobo,
-                                            style: const TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.white70,
-                                                fontWeight: FontWeight.bold),
+                                          Container(
+                                              child:Text(
+                                                build.namaMobo,
+                                                style: const TextStyle(
+                                                    fontSize: 18.0,
+                                                    color: Colors.white70,
+                                                    fontWeight: FontWeight.bold),
+                                              ),
                                           ),
                                           const SizedBox(
                                             height: 8.0,
                                           ),
-                                          Text(
-                                            "Rp. " + build.hargaMobo,
-                                            style: TextStyle(
-                                              fontSize: 12.0,
-                                              fontWeight: FontWeight.bold,
-                                              color: Colors.white70,
-                                            ),
+                                          Container(
+                                              child:Text(
+                                                "Rp. " + build.hargaMobo,
+                                                style: TextStyle(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.white70,
+                                                ),
+                                              ),
                                           ),
                                         ],
                                       ),
@@ -222,7 +240,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 5,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -230,10 +248,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgRam,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgRam),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                       child: InkWell(
@@ -248,30 +270,34 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           },
                                           child: Column(
                                             mainAxisAlignment:
-                                                MainAxisAlignment.center,
+                                              MainAxisAlignment.spaceEvenly,
                                             crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                              CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Text(
-                                                build.namaRam,
-                                                style: const TextStyle(
-                                                  fontSize: 20.0,
-                                                  color: Colors.white70,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontFamily: 'Inter',
+                                              Container(
+                                                child: Text(
+                                                  build.namaRam,
+                                                  style: const TextStyle(
+                                                    fontSize: 18.0,
+                                                    color: Colors.white70,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontFamily: 'Inter',
+                                                  ),
                                                 ),
                                               ),
                                               const SizedBox(
                                                 height: 8.0,
                                               ),
-                                              Text(
-                                                "Rp. " + build.hargaRam,
-                                                style: TextStyle(
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.bold,
-                                                  fontFamily: 'Inter',
-                                                  color: Colors.white70,
-                                                ),
+                                              Container(
+                                                  child:Text(
+                                                    "Rp. " + build.hargaRam,
+                                                    style: TextStyle(
+                                                      fontSize: 12.0,
+                                                      fontWeight: FontWeight.bold,
+                                                      fontFamily: 'Inter',
+                                                      color: Colors.white70,
+                                                    ),
+                                                  ),
                                               ),
                                             ],
                                           )),
@@ -279,7 +305,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -287,10 +313,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgVga,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgVga),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -305,35 +335,38 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaVga,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaVga,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                        fontWeight: FontWeight.bold),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp. " + build.hargaVga,
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp. " + build.hargaVga,
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                        FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -341,10 +374,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgStorage,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgStorage),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -359,36 +396,38 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaStorage,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      height: 1.3,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaStorage,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp. " + build.hargaStorage,
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp. " + build.hargaStorage,
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight: FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 5,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -396,10 +435,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgPsu,
-                                          width: 50,
-                                          height: 50,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgPsu),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -414,35 +457,38 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaPsu,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaPsu,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                        fontWeight: FontWeight.bold),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp. " + build.hargaPsu,
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp. " + build.hargaPsu,
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                        FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -450,10 +496,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgCpuCooler,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgCpuCooler),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -468,35 +518,39 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaCpuCooler,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaCpuCooler,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                        fontWeight:
+                                                        FontWeight.bold),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp. " + build.hargaCpuCooler,
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp. " + build.hargaCpuCooler,
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                        FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -504,10 +558,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgFans,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgFans),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -522,35 +580,39 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
+                                                CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaFans,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaFans,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                        fontWeight:
+                                                        FontWeight.bold),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp. " + build.hargaFans,
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp. " + build.hargaFans,
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                        FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
                                   ],
                                 ),
                                 const SizedBox(
-                                  height: 15,
+                                  height: 10,
                                 ),
                                 Row(
                                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -558,10 +620,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     Padding(
                                       padding: const EdgeInsets.only(
                                           left: 10.0, right: 10.0),
-                                      child: Image.network(build.imgCasing,
-                                          width: 70,
-                                          height: 70,
-                                          fit: BoxFit.cover),
+                                      child: Container(
+                                        width: 70,
+                                        height: 70,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(image: NetworkImage(build.imgCasing),
+                                                fit: BoxFit.contain)
+                                        ),
+                                      ),
                                     ),
                                     Expanded(
                                         child: InkWell(
@@ -576,28 +642,31 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                                  MainAxisAlignment.center,
+                                                  MainAxisAlignment.start,
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: <Widget>[
-                                                Text(
-                                                  build.namaCasing,
-                                                  style: const TextStyle(
-                                                      fontSize: 20.0,
-                                                      color: Colors.white70,
-                                                      fontWeight:
-                                                          FontWeight.bold),
+                                                Container(
+                                                  child: Text(
+                                                    build.namaCasing,
+                                                    style: const TextStyle(
+                                                        fontSize: 18.0,
+                                                        color: Colors.white70,
+                                                        fontWeight: FontWeight.bold),
+                                                  ),
                                                 ),
                                                 const SizedBox(
                                                   height: 8.0,
                                                 ),
-                                                Text(
-                                                  "Rp. " + build.hargaCasing,
-                                                  style: const TextStyle(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Colors.white70),
+                                                Container(
+                                                  child: Text(
+                                                    "Rp. " + build.hargaCasing,
+                                                    style: const TextStyle(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                        FontWeight.bold,
+                                                        color: Colors.white70),
+                                                  ),
                                                 ),
                                               ],
                                             ))),
