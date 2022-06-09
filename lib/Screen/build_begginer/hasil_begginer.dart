@@ -81,7 +81,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                               children: <Widget>[
                                 Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
-                                    children:  [
+                                    children: [
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
@@ -110,7 +110,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.poppins(
                                             fontSize: 36,
-                                            color: Colors.white,
+                                            color: Color(0xff52BB6F),
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -123,7 +123,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -132,16 +133,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgCpu),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgCpu),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
                                                       int.parse(build.cpu);
@@ -150,18 +152,22 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaCpu,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 18.0,
-                                                          color: Colors.white70,
-                                                          fontWeight:
-                                                          FontWeight.bold),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 18.0,
+                                                              color: Colors
+                                                                  .white70,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
                                                     ),
                                                   ),
                                                   const SizedBox(
@@ -171,15 +177,18 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     child: Text(
                                                       "Rp " +
                                                           formatter
-                                                              .format(int.parse(build
-                                                              .hargaCpu
-                                                              .toString()))
+                                                              .format(int.parse(
+                                                                  build.hargaCpu
+                                                                      .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                          FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                        fontSize: 12.0,
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color:
+                                                            Color(0xff52BB6F),
+                                                      ),
                                                     ),
                                                   ),
                                                 ],
@@ -194,7 +203,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -203,58 +213,60 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgMobo),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgMobo),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
-                                            onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, '/part/list/detail');
-                                              setState(() {
-                                                global.id_detail =
-                                                    int.parse(build.motherboard);
-                                                global.nama_part = "Motherboard";
-                                              });
-                                            },
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
-                                              crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                              children: <Widget>[
-                                                Container(
-                                                  child:Text(
-                                                    build.namaMobo,
-                                                    style: GoogleFonts.poppins(
-                                                        fontSize: 18.0,
-                                                        color: Colors.white70,
-                                                        fontWeight: FontWeight.bold),
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 8.0,
-                                                ),
-                                                Container(
-                                                  child:Text(
-                                                    "Rp " +
-                                                        formatter
-                                                            .format(int.parse(build
+                                        onTap: () {
+                                          Navigator.pushNamed(
+                                              context, '/part/list/detail');
+                                          setState(() {
+                                            global.id_detail =
+                                                int.parse(build.motherboard);
+                                            global.nama_part = "Motherboard";
+                                          });
+                                        },
+                                        child: Column(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: <Widget>[
+                                            Container(
+                                              child: Text(
+                                                build.namaMobo,
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 18.0,
+                                                    color: Colors.white70,
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                              ),
+                                            ),
+                                            const SizedBox(
+                                              height: 8.0,
+                                            ),
+                                            Container(
+                                              child: Text(
+                                                "Rp " +
+                                                    formatter
+                                                        .format(int.parse(build
                                                             .hargaMobo
                                                             .toString()))
-                                                            .toString(),
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 12.0,
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.white70,
-                                                    ),
-                                                  ),
+                                                        .toString(),
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 12.0,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Color(0xff52BB6F),
                                                 ),
-                                              ],
+                                              ),
                                             ),
-                                          )),
+                                          ],
+                                        ),
+                                      )),
                                     ],
                                   ),
                                 ),
@@ -265,7 +277,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -274,9 +287,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgRam),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgRam),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
@@ -292,9 +306,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                             },
                                             child: Column(
                                               mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
+                                                  MainAxisAlignment.spaceEvenly,
                                               crossAxisAlignment:
-                                              CrossAxisAlignment.start,
+                                                  CrossAxisAlignment.start,
                                               children: <Widget>[
                                                 Container(
                                                   child: Text(
@@ -302,7 +316,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 18.0,
                                                       color: Colors.white70,
-                                                      fontWeight: FontWeight.bold,
+                                                      fontWeight:
+                                                          FontWeight.bold,
                                                     ),
                                                   ),
                                                 ),
@@ -310,17 +325,18 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   height: 8.0,
                                                 ),
                                                 Container(
-                                                  child:Text(
+                                                  child: Text(
                                                     "Rp " +
                                                         formatter
-                                                            .format(int.parse(build
-                                                            .hargaRam
-                                                            .toString()))
+                                                            .format(int.parse(
+                                                                build.hargaRam
+                                                                    .toString()))
                                                             .toString(),
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 12.0,
-                                                      fontWeight: FontWeight.bold,
-                                                      color: Colors.white70,
+                                                      fontWeight:
+                                                          FontWeight.bold,
+                                                      color: Color(0xff52BB6F),
                                                     ),
                                                   ),
                                                 ),
@@ -337,7 +353,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -346,16 +363,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgVga),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgVga),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
                                                       int.parse(build.vga);
@@ -364,17 +382,22 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaVga,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 18.0,
-                                                          color: Colors.white70,
-                                                          fontWeight: FontWeight.bold),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 18.0,
+                                                              color: Colors
+                                                                  .white70,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
                                                     ),
                                                   ),
                                                   const SizedBox(
@@ -384,15 +407,18 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     child: Text(
                                                       "Rp " +
                                                           formatter
-                                                              .format(int.parse(build
-                                                              .hargaVga
-                                                              .toString()))
+                                                              .format(int.parse(
+                                                                  build.hargaVga
+                                                                      .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                          FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 12.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Color(
+                                                                  0xff52BB6F)),
                                                     ),
                                                   ),
                                                 ],
@@ -407,7 +433,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -416,16 +443,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgStorage),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgStorage),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
                                                       int.parse(build.storage);
@@ -434,17 +462,20 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaStorage,
-                                                      style: GoogleFonts.poppins(
+                                                      style:
+                                                          GoogleFonts.poppins(
                                                         fontSize: 18.0,
                                                         color: Colors.white70,
-                                                        fontWeight: FontWeight.bold,
+                                                        fontWeight:
+                                                            FontWeight.bold,
                                                       ),
                                                     ),
                                                   ),
@@ -456,13 +487,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       "Rp " +
                                                           formatter
                                                               .format(int.parse(build
-                                                              .hargaStorage
-                                                              .toString()))
+                                                                  .hargaStorage
+                                                                  .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight: FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 12.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Color(
+                                                                  0xff52BB6F)),
                                                     ),
                                                   ),
                                                 ],
@@ -476,8 +511,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 Container(
                                   height: 80,
                                   width: 350,
-                                  child:Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -486,16 +522,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgPsu),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgPsu),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
                                                       int.parse(build.psu);
@@ -504,17 +541,22 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaPsu,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 18.0,
-                                                          color: Colors.white70,
-                                                          fontWeight: FontWeight.bold),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 18.0,
+                                                              color: Colors
+                                                                  .white70,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
                                                     ),
                                                   ),
                                                   const SizedBox(
@@ -524,15 +566,18 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     child: Text(
                                                       "Rp " +
                                                           formatter
-                                                              .format(int.parse(build
-                                                              .hargaPsu
-                                                              .toString()))
+                                                              .format(int.parse(
+                                                                  build.hargaPsu
+                                                                      .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                          FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 12.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Color(
+                                                                  0xff52BB6F)),
                                                     ),
                                                   ),
                                                 ],
@@ -547,7 +592,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -556,36 +602,42 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgCpuCooler),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgCpuCooler),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.cpuCooler);
-                                                  global.nama_part = "CPU Cooler";
+                                                  global.id_detail = int.parse(
+                                                      build.cpuCooler);
+                                                  global.nama_part =
+                                                      "CPU Cooler";
                                                 });
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaCpuCooler,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 18.0,
-                                                          color: Colors.white70,
-                                                          fontWeight:
-                                                          FontWeight.bold),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 18.0,
+                                                              color: Colors
+                                                                  .white70,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
                                                     ),
                                                   ),
                                                   const SizedBox(
@@ -596,14 +648,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       "Rp " +
                                                           formatter
                                                               .format(int.parse(build
-                                                              .hargaCpuCooler
-                                                              .toString()))
+                                                                  .hargaCpuCooler
+                                                                  .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                          FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 12.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Color(
+                                                                  0xff52BB6F)),
                                                     ),
                                                   ),
                                                 ],
@@ -618,7 +673,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -627,16 +683,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgFans),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgFans),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
                                                       int.parse(build.fans);
@@ -645,18 +702,22 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaFans,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 18.0,
-                                                          color: Colors.white70,
-                                                          fontWeight:
-                                                          FontWeight.bold),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 18.0,
+                                                              color: Colors
+                                                                  .white70,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
                                                     ),
                                                   ),
                                                   const SizedBox(
@@ -666,15 +727,19 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     child: Text(
                                                       "Rp " +
                                                           formatter
-                                                              .format(int.parse(build
-                                                              .hargaFans
-                                                              .toString()))
+                                                              .format(int.parse(
+                                                                  build
+                                                                      .hargaFans
+                                                                      .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                          FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 12.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Color(
+                                                                  0xff52BB6F)),
                                                     ),
                                                   ),
                                                 ],
@@ -689,7 +754,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 80,
                                   width: 350,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Padding(
                                         padding: const EdgeInsets.only(
@@ -698,16 +764,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           width: 70,
                                           height: 70,
                                           decoration: BoxDecoration(
-                                              image: DecorationImage(image: NetworkImage(build.imgCasing),
-                                                  fit: BoxFit.contain)
-                                          ),
+                                              image: DecorationImage(
+                                                  image: NetworkImage(
+                                                      build.imgCasing),
+                                                  fit: BoxFit.contain)),
                                         ),
                                       ),
                                       Expanded(
                                           child: InkWell(
                                               onTap: () {
-                                                Navigator.pushNamed(
-                                                    context, '/part/list/detail');
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
                                                 setState(() {
                                                   global.id_detail =
                                                       int.parse(build.casing);
@@ -716,17 +783,22 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                               },
                                               child: Column(
                                                 mainAxisAlignment:
-                                                MainAxisAlignment.spaceEvenly,
+                                                    MainAxisAlignment
+                                                        .spaceEvenly,
                                                 crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
                                                   Container(
                                                     child: Text(
                                                       build.namaCasing,
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 18.0,
-                                                          color: Colors.white70,
-                                                          fontWeight: FontWeight.bold),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 18.0,
+                                                              color: Colors
+                                                                  .white70,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
                                                     ),
                                                   ),
                                                   const SizedBox(
@@ -737,14 +809,17 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       "Rp " +
                                                           formatter
                                                               .format(int.parse(build
-                                                              .hargaCasing
-                                                              .toString()))
+                                                                  .hargaCasing
+                                                                  .toString()))
                                                               .toString(),
-                                                      style: GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                          FontWeight.bold,
-                                                          color: Colors.white70),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              fontSize: 12.0,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold,
+                                                              color: Color(
+                                                                  0xff52BB6F)),
                                                     ),
                                                   ),
                                                 ],

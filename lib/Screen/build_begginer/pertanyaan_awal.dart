@@ -50,7 +50,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               width: 300,
               alignment: Alignment.center,
               child: Text(
-                "Apakah anda berpengalaman di bidang komputer ? ",
+                "Apakah anda sudah berpengalaman di bidang komputer ? ",
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 16.0,
@@ -81,7 +81,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Ya",
+                    child: Text("Sudah",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
@@ -110,7 +110,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   ),
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: Text("Tidak",
+                    child: Text("Belum",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
@@ -130,10 +130,9 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   primary: HexColor("#7A77FF"),
-                  padding:
-                  EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                      textStyle: GoogleFonts.poppins(
-                        fontSize: 16.0,
+                  padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                  textStyle: GoogleFonts.poppins(
+                    fontSize: 16.0,
                   )),
             ),
           ],
