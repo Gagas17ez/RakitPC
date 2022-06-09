@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -52,11 +52,10 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               child: Text(
                 "Apakah anda berpengalaman di bidang komputer ? ",
                 textAlign: TextAlign.left,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 16.0,
                   color: HexColor("#D7D7D7"),
                   height: 1.5,
-                  fontFamily: 'Inter',
                 ),
               ),
             ),
@@ -83,11 +82,10 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Ya",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                         textAlign: TextAlign.left),
                   ),
@@ -113,11 +111,10 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Tidak",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                         textAlign: TextAlign.left),
                   ),
@@ -134,10 +131,9 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   ),
                   primary: HexColor("#7A77FF"),
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle: const TextStyle(
-                    fontSize: 16.0,
-                    fontFamily: 'Inter',
+                  EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                      textStyle: GoogleFonts.poppins(
+                        fontSize: 16.0,
                   )),
             ),
           ],

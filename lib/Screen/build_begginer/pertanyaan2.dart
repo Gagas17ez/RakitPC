@@ -4,7 +4,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:percent_indicator/percent_indicator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 
@@ -62,12 +62,11 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               child: Text(
                 "Question 2",
                 textAlign: TextAlign.left,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 16.0,
                   color: HexColor("#D7D7D7"),
                   fontWeight: FontWeight.bold,
                   height: 1.5,
-                  fontFamily: 'Inter',
                 ),
               ),
             ),
@@ -82,11 +81,10 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
               child: Text(
                 "Apa kegunaan dari komputer tersebut ?",
                 textAlign: TextAlign.left,
-                style: TextStyle(
+                style: GoogleFonts.poppins(
                   fontSize: 16.0,
                   color: HexColor("#D7D7D7"),
                   height: 1.5,
-                  fontFamily: 'Inter',
                 ),
               ),
             ),
@@ -116,11 +114,10 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Kerja /Browse / Video / Sekolah",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                         textAlign: TextAlign.left),
                   ),
@@ -149,11 +146,10 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Kuliah / Programming",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                         textAlign: TextAlign.left),
                   ),
@@ -182,11 +178,10 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Bermain game / Video editing",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                         textAlign: TextAlign.left),
                   ),
@@ -215,11 +210,10 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text("Workstation",
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: HexColor("#D7D7D7"),
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                         textAlign: TextAlign.left),
                   ),
@@ -237,9 +231,8 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   primary: HexColor("#7A77FF"),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle: const TextStyle(
+                  textStyle:  GoogleFonts.poppins(
                     fontSize: 16.0,
-                    fontFamily: 'Inter',
                   )),
             ),
           ],
