@@ -27,6 +27,11 @@ class _listVgaState extends State<listVga> {
 
     init();
   }
+  
+  Future init() async {
+    final Vgau = await VgaApi.fetch_vgaID_nyar(query);
+    setState(() => this.vga = Vgau);
+  }
 
   @override
   void dispose() {
@@ -45,10 +50,7 @@ class _listVgaState extends State<listVga> {
     debouncer = Timer(duration, callback);
   }
 
-  Future init() async {
-    final Vgau = await VgaApi.fetch_vgaID_nyar(query);
-    setState(() => this.vga = Vgau);
-  }
+  
 
   @override
   Widget build(BuildContext context) {

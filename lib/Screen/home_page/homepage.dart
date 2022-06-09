@@ -56,6 +56,7 @@ class _homepageState extends State<homepage>
     global.hargacase = 0;
     global.hargacooler = 0;
     global.hargacpu = 0;
+    global.hargavga = 0;
     global.hargafan1 = 0;
     global.hargafan2 = 0;
     global.hargafan3 = 0;

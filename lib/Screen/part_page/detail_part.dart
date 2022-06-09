@@ -1543,7 +1543,7 @@ class _DetailPartState extends State<DetailPart> {
                                                 .idMotherboard);
                                         global.socket_mobo =
                                             data5[global.id_detail].socketMobo;
-                                        global.hargacase = int.parse(
+                                        global.hargamobo = int.parse(
                                             data5[global.id_detail].harga);
                                       },
                                     );

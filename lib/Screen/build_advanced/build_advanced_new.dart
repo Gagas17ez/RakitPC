@@ -55,35 +55,19 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
 
   void init() async {
     setState(() {
-      if (global.darisimpan) {
-        global.hargaharga = global.hargaharga +
-            global.hargacase +
-            global.hargacooler +
-            global.hargacpu +
-            global.hargafan1 +
-            global.hargafan2 +
-            global.hargafan3 +
-            global.hargamobo +
-            global.hargapsu +
-            global.hargaram1 +
-            global.hargaram2 +
-            global.hargastorage1 +
-            global.hargastorage2;
-        global.darisimpan = false;
-      } else {
-        global.hargaharga = global.hargacase +
-            global.hargacooler +
-            global.hargacpu +
-            global.hargafan1 +
-            global.hargafan2 +
-            global.hargafan3 +
-            global.hargamobo +
-            global.hargapsu +
-            global.hargaram1 +
-            global.hargaram2 +
-            global.hargastorage1 +
-            global.hargastorage2;
-      }
+      global.hargaharga = global.hargacase +
+          global.hargacooler +
+          global.hargacpu +
+          global.hargavga +
+          global.hargafan1 +
+          global.hargafan2 +
+          global.hargafan3 +
+          global.hargamobo +
+          global.hargapsu +
+          global.hargaram1 +
+          global.hargaram2 +
+          global.hargastorage1 +
+          global.hargastorage2;
     });
   }
 
@@ -164,13 +148,28 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   ),
                   Expanded(
                     child: Container(
-                        margin: EdgeInsets.only(left: 10.0, right: 10.0),
-                        child: Divider(
-                          color: Colors.white,
-                          height: 25,
-                          thickness: 3,
-                        )),
+                      margin: EdgeInsets.only(left: 10.0, right: 10.0),
+                      child: Divider(
+                        color: Colors.white,
+                        height: 25,
+                        thickness: 3,
+                      ),
+                    ),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_case_adv = 0;
+                        global.hargacase = 0;
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -204,6 +203,21 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_cpu_adv = 0;
+                        global.hargacpu = 0;
+                        messageCompability = "";
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Column(
@@ -235,6 +249,21 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_cpu_cooler_adv = 0;
+                        global.id_cpu_cooler_adv = 0;
+                        global.hargacooler = 0;
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -268,6 +297,21 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_mobo_adv = 0;
+                        global.hargamobo = 0;
+                        messageCompability = "";
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -301,6 +345,21 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.hargapsu = 0;
+                        global.id_psu_adv = 0;
+
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -334,6 +393,22 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_ram_adv = 0;
+                        global.id_ram2_adv = 0;
+                        global.hargaram1 = 0;
+                        global.hargaram2 = 0;
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -367,6 +442,22 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_storage_adv = 0;
+                        global.id_storage2_adv = 0;
+                        global.hargastorage1 = 0;
+                        global.hargastorage2 = 0;
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -400,6 +491,20 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_vga_adv = 0;
+                        global.hargavga = 0;
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -433,6 +538,24 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           thickness: 3,
                         )),
                   ),
+                  InkWell(
+                    child: Icon(
+                      Icons.close,
+                      color: Colors.redAccent,
+                      size: 30.0,
+                    ),
+                    onTap: () {
+                      setState(() {
+                        global.id_fan_adv = 0;
+                        global.id_fan2_adv = 0;
+                        global.id_fan3_adv = 0;
+                        global.hargafan1 = 0;
+                        global.hargafan2 = 0;
+                        global.hargafan3 = 0;
+                        init();
+                      });
+                    },
+                  )
                 ],
               )),
           Container(
@@ -694,11 +817,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         if (global.socket_cpu.toLowerCase() !=
             global.socket_mobo.toLowerCase()) {
           messageCompability +=
-              "Cpu might not compatible with the current Motherboard";
+              "Cpu might not compatible with the current Motherboard\n";
         }
         if (global.id_ram_adv != global.id_ram2_adv) {
           messageCompability +=
-              "\nDifferent Ram speed & size might cause instability or error";
+              "Single or Different Ram speed & size might cause instability or error\n";
         }
 
         return Column(
@@ -778,9 +901,15 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     color: Colors.white,
                   ),
                   title: Text('Compatiblity : ',
-                      style: GoogleFonts.poppins(color: Colors.white)),
+                      style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 19,
+                          fontWeight: FontWeight.w600)),
                   subtitle: Text('No issues or incompatibilities found.',
-                      style: GoogleFonts.poppins(color: Colors.white)),
+                      style: GoogleFonts.poppins(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400)),
                 ),
               ],
             ),
