@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:flutter/widgets.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -28,7 +28,15 @@ class _howItworksState extends State<howItworks> {
         automaticallyImplyLeading: false,
         elevation: 0.0,
         centerTitle: true,
-        title: const Text("How it Works", textAlign: TextAlign.center),
+        title: Text(
+          "How it Works",
+          textAlign: TextAlign.center,
+          style: GoogleFonts.poppins(
+            fontSize: 20,
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
         leading: BackButton(
           color: Colors.white,
         ),
@@ -51,11 +59,10 @@ class _howItworksState extends State<howItworks> {
                     child: Text(
                       "Step 1: ",
                       textAlign: TextAlign.right,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 16.0,
                         color: Colors.white,
                         height: 1.5,
-                        fontFamily: 'Inter',
                       ),
                     ),
                   ),
@@ -70,11 +77,10 @@ class _howItworksState extends State<howItworks> {
                       child: Text(
                         "Kita akan bertanya beberapa pertanyaan untuk memahami kebutuhanmu",
                         textAlign: TextAlign.left,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: Colors.white,
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                       ),
                     ),
@@ -97,11 +103,10 @@ class _howItworksState extends State<howItworks> {
                     child: Text(
                       "Step 2: ",
                       textAlign: TextAlign.right,
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         fontSize: 16.0,
                         color: Colors.white,
                         height: 1.5,
-                        fontFamily: 'Inter',
                       ),
                     ),
                   ),
@@ -116,11 +121,10 @@ class _howItworksState extends State<howItworks> {
                       child: Text(
                         "Memberikan rekomendasi komponen PC sesuai jawaban ",
                         textAlign: TextAlign.left,
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontSize: 16.0,
                           color: Colors.white,
                           height: 1.5,
-                          fontFamily: 'Inter',
                         ),
                       ),
                     ),
@@ -145,9 +149,8 @@ class _howItworksState extends State<howItworks> {
                   primary: HexColor("#7A77FF"),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle: const TextStyle(
+                  textStyle: GoogleFonts.poppins(
                     fontSize: 16.0,
-                    fontFamily: 'Inter',
                   )),
             ),
           ],

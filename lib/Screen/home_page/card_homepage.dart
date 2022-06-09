@@ -68,13 +68,16 @@ class card_home extends StatelessWidget {
                       width: 100.0,
                       child: Image.asset(imgPath),
                     )),
-                const SizedBox(height: 35.0),
-                Text(name,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 23.0,
-                        fontFamily: 'Inter',
-                        fontWeight: FontWeight.normal)),
+                const SizedBox(height: 40.0),
+                Text(
+                  name,
+                  textAlign: TextAlign.center,
+                  style: GoogleFonts.poppins(
+                    fontSize: 22,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
               ])),
         ));
   }

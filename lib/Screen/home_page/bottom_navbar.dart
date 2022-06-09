@@ -49,7 +49,7 @@ class BottomBar extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             Icon(Icons.history,
-                                color: Color(0xFF7A77FF), size: 43),
+                                color: Color(0xFF7A77FF), size: 46),
                             // const Icon(Icons.devices_other,
                             //     color: const Color(0xFF7A77FF), size: 40)
                           ],

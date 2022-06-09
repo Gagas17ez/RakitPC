@@ -209,205 +209,162 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data1[global.id_detail].namaCasing + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek Casing",
                               textAlign: TextAlign.left,
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data1[global.id_detail].merkCasing + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Casing Side Panel",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].casingSidePanel + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Color Casing",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].colorCasing + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Dimension Casing",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].dimensionCasing + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Drivebay Casing",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].drivebayCasing + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Fan Support",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].fanSupport + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Panel Depan Casing",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].frontPanel + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Tinggi Max Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].maxCoolerHeight + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Max PSU",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].maxPsu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Panjang Max VGA",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].maxVgaLength + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Berat Casing",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data1[global.id_detail].weightCasing + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 16.0,
-                                      height: 1.5,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white
-                                  )),
+                              style: TextStyle(
+                                  fontSize: 16.0,
+                                  height: 1.5,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -453,7 +410,9 @@ class _DetailPartState extends State<DetailPart> {
                                               .toString())),
                                   Text("Tersedia",
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(fontFamily: 'Inter',color: Colors.white)),
+                                      style: TextStyle(
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -506,31 +465,26 @@ class _DetailPartState extends State<DetailPart> {
                                   )),
                               Text(data1[global.id_detail].moboCompatible,
                                   style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      fontSize: 14)),
-                              Text(" ", style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 20)),
+                                      fontFamily: 'Inter', fontSize: 14)),
+                              Text(" ",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text("Vga Compatible",
                                   style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      fontSize: 20)),
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data1[global.id_detail].maxVgaLength,
                                   style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      fontSize: 14)),
-                              Text(" ", style: TextStyle(
-                                  fontFamily: 'Inter',
-                                  fontSize: 20)),
+                                      fontFamily: 'Inter', fontSize: 14)),
+                              Text(" ",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text("Fan Compatible",
                                   style: TextStyle(
-                                      fontFamily: 'Inter',
-                                      fontSize: 20)),
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(
                                 data1[global.id_detail].fanSupport,
                                 style: TextStyle(
-                                    fontFamily: 'Inter',
-                                    fontSize: 14),
+                                    fontFamily: 'Inter', fontSize: 14),
                                 textAlign: TextAlign.center,
                               )
                             ],
@@ -652,137 +606,118 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data2[global.id_detail].namaCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].merkCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Power CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].powerCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RGB CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Socket CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].socketCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Type CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].typeCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Fan Quantitiy",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].fanQuantity + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Fan Speed",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].fanSpeed + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Color CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].colorCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Dimension CPU Cooler",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data2[global.id_detail].dimensionCooler + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -828,7 +763,9 @@ class _DetailPartState extends State<DetailPart> {
                                               .toString())),
                                   Text("Tersedia",
                                       textAlign: TextAlign.center,
-                                      style: TextStyle(fontFamily: 'Inter', color: Colors.white)),
+                                      style: TextStyle(
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -964,64 +901,56 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data3[global.id_detail].namaCpu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek CPU",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data3[global.id_detail].merkCpu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Proc Technology",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data3[global.id_detail].procTechnology + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Cores/Threads",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(
                               data3[global.id_detail].coreCount +
                                   "/" +
                                   data3[global.id_detail].threadsCount +
                                   "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Clock Speed",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(
                               data3[global.id_detail].baseClock +
                                   " to " +
@@ -1032,56 +961,48 @@ class _DetailPartState extends State<DetailPart> {
                                   TextStyle(fontSize: 14, color: Colors.white)),
                           Text("Motherboard Socket",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data3[global.id_detail].socket + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Release Year",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data3[global.id_detail].launchDate + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Cache",
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data3[global.id_detail].cache,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("\nTechnology",
-                              style:
-                                  TextStyle(
-                                      fontSize: 20,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data3[global.id_detail].procTechnology,
-                              style:
-                                  TextStyle(
-                                      fontSize: 14,
-                                      fontFamily: 'Inter',
-                                      color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -1180,17 +1101,29 @@ class _DetailPartState extends State<DetailPart> {
                           title: Column(
                             children: <Widget>[
                               Text("Default TDP",
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data3[global.id_detail].defaultTdp,
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 14)),
-                              Text(" ", style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
-                              Text("Max Temp", style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 14)),
+                              Text(" ",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
+                              Text("Max Temp",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data3[global.id_detail].maxTemp,
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 14)),
-                              Text(" ", style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
-                              Text("Unlocked", style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 14)),
+                              Text(" ",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
+                              Text("Unlocked",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data3[global.id_detail].unlocked,
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 14))
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 14))
                             ],
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
@@ -1318,56 +1251,82 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data4[global.id_detail].namaFans + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek Fan",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data4[global.id_detail].merkFans + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Power Connector",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data4[global.id_detail].powerConnector + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Speed Fan",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data4[global.id_detail].speedFans + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Size Fan",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data4[global.id_detail].sizeFans + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Color Fan",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data4[global.id_detail].colorFans + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RGB Fan",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data4[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -1462,14 +1421,20 @@ class _DetailPartState extends State<DetailPart> {
                           title: Column(
                             children: <Widget>[
                               Text("Power Usage Fan",
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data4[global.id_detail].powerFans,
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 18)),
-                              Text(" ", style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 18)),
+                              Text(" ",
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text("Voltage Fan",
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data4[global.id_detail].voltageFans,
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 18))
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 18))
                             ],
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
@@ -1588,128 +1553,190 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data5[global.id_detail].namaMobo + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek Motherboard",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].merkMobo + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Motherboard Socket",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].socketMobo + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Supported Memory Type",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].memoryType + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Slot ",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].slotMemory + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("M2 Slot",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].m2Slot + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Sata Slot",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].sataSlot + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("USB Port",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].usbPort + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Audio Port",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].audioPort + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter',color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("LAN Port",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].lanPort + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Form Factor",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].formFactor + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Display Output",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].displayOutput + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("PCI-E Gen",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].pcIgen + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("PCI-E",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].pcie + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter',color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RGB Motherboard",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Warna MotherBoard",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data5[global.id_detail].warna + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -1755,7 +1782,9 @@ class _DetailPartState extends State<DetailPart> {
                                               .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
-                                          fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -1802,9 +1831,11 @@ class _DetailPartState extends State<DetailPart> {
                           title: Column(
                             children: <Widget>[
                               Text("Chipset Motherboard",
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 20)),
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 20)),
                               Text(data5[global.id_detail].chipsetMobo,
-                                  style: TextStyle(fontFamily: 'Inter', fontSize: 14))
+                                  style: TextStyle(
+                                      fontFamily: 'Inter', fontSize: 14))
                             ],
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
@@ -1887,7 +1918,9 @@ class _DetailPartState extends State<DetailPart> {
                               Text("Nama RAM",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                      fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                                      fontSize: 20,
+                                      fontFamily: 'Inter',
+                                      color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -1911,7 +1944,7 @@ class _DetailPartState extends State<DetailPart> {
                                               data6[global.id_detail].idRam);
                                           global.hargaram1 = int.parse(
                                               data6[global.id_detail].harga);
-                                        } else if (global.seng_diganti == 2) {
+                                        } else {
                                           global.id_ram2_adv = int.parse(
                                               data6[global.id_detail].idRam);
                                           global.hargaram2 = int.parse(
@@ -1925,64 +1958,92 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data6[global.id_detail].namaRam + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14,fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Type",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data6[global.id_detail].memoryType + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Size",
                               textAlign: TextAlign.left,
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white)),
                           Text(data6[global.id_detail].memorySize + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Speed",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data6[global.id_detail].memorySpeed + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek RAM",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data6[global.id_detail].merkRam + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Color RAM",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data6[global.id_detail].color + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RGB ",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data6[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Heat Spreader",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data6[global.id_detail].heatSpreader + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -2027,7 +2088,9 @@ class _DetailPartState extends State<DetailPart> {
                                           .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
-                                          fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -2129,7 +2192,9 @@ class _DetailPartState extends State<DetailPart> {
                               Text("Nama Storage",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                      fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                                      fontSize: 20,
+                                      fontFamily: 'Inter',
+                                      color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -2169,88 +2234,130 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data7[global.id_detail].namaStorage + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Type Storage",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].typeStorage + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merk Storage",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].merkStorage + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Storage Capacity",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter',color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].storageCapacity + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter',color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Read Speed",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter',color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].readSpeed + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Write Speed",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].writeSpeed + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Rpm",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].rpm + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Storage Watt",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].storageWatt + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Cache",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].cache + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Form Factor",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].formFactor + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Storage Interface",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data7[global.id_detail].storageInterface + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -2295,7 +2402,9 @@ class _DetailPartState extends State<DetailPart> {
                                           .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
-                                          fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -2397,7 +2506,9 @@ class _DetailPartState extends State<DetailPart> {
                               Text("Nama PSU",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                      fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                                      fontSize: 20,
+                                      fontFamily: 'Inter',
+                                      color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -2428,96 +2539,142 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data8[global.id_detail].namaPsu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Watt PSU",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].wattPsu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek PSU",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].merkPsu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Modular",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].modular + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("ATX Connector",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].atxConnector + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("PCI-E Connector",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].pcieConnector + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Sata Connector",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].sataConnector + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Silent Mode",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].silentMode + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter',color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RGB ",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Fan Size",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].fanSize + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("PSU Color",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].colorPsu + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Form Factor",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data8[global.id_detail].formFactor + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -2562,7 +2719,9 @@ class _DetailPartState extends State<DetailPart> {
                                           .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
-                                          fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),
@@ -2661,7 +2820,9 @@ class _DetailPartState extends State<DetailPart> {
                               Text("Nama VGA",
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
-                                      fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                                      fontSize: 20,
+                                      fontFamily: 'Inter',
+                                      color: Colors.white)),
                               Spacer(),
                               ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -2692,155 +2853,229 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           Text(data9[global.id_detail].namaVga + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Merek VGA",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].merkVga + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Architecture",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].architecture + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Clocks",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(
                               data9[global.id_detail].baseClocks +
                                   " to " +
                                   data9[global.id_detail].boostClock +
                                   "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Clock",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].memoryClock + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Type",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].memoryType + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory VGA",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].memoryVga + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Memory Bus",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].memoryBus + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("VGA Interface",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].vgaInterface + "\n",
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Output Port",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].outputPort + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Power Connection",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].powerConnection + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Power Consumption",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].powerConsumption + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Graphic Api",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].graphicApi + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Dimension VGA",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].dimensionVga + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Display Technology",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].displayTechnology + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("generation",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].generation + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("Year",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].releaseDate + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RGB ",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text("RTCores",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 20, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                           Text(data9[global.id_detail].rTcores + "\n",
                               textAlign: TextAlign.left,
-                              style:
-                                  TextStyle(fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontFamily: 'Inter',
+                                  color: Colors.white)),
                         ],
                       ),
                     ),
@@ -2885,7 +3120,9 @@ class _DetailPartState extends State<DetailPart> {
                                           .toString())),
                                   Text("Tersedia",
                                       style: TextStyle(
-                                          fontSize: 14, fontFamily: 'Inter', color: Colors.white)),
+                                          fontSize: 14,
+                                          fontFamily: 'Inter',
+                                          color: Colors.white)),
                                 ],
                               ),
                               Spacer(),

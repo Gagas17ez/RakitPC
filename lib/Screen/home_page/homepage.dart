@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
 import 'package:rakit_pc/Screen/home_page/card_homepage.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
@@ -77,12 +78,13 @@ class _homepageState extends State<homepage>
         automaticallyImplyLeading: false,
         elevation: 0.0,
         centerTitle: true,
-        title: const Text('HomePage',
-            style: TextStyle(
-                fontFamily: 'Inter',
-                fontSize: 20.0,
-                color: Colors.white,
-                fontWeight: FontWeight.bold)),
+        title: Text('HomePage',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.poppins(
+              fontSize: 22,
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+            )),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.exit_to_app_rounded, color: Colors.white),

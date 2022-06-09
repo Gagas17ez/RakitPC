@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
@@ -6,6 +7,7 @@ import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_SimpanBuild.dart';
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/MySqflite.dart';
+import 'package:intl/intl.dart';
 
 class Simpan extends StatefulWidget {
   Simpan({Key? key}) : super(key: key);
@@ -14,6 +16,7 @@ class Simpan extends StatefulWidget {
 }
 
 class _Simpan extends State<Simpan> {
+  var formatter = NumberFormat('#,###,000');
   List<SimpanBuild> builds = [];
 
   @override
@@ -64,28 +67,38 @@ class _Simpan extends State<Simpan> {
                     ),
                     title: Text(
                       build.waktu.substring(0, 16),
-                      style: TextStyle(
+                      style: GoogleFonts.poppins(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
-                        fontFamily: 'Inter',
-                        fontSize: 20,
+                        fontSize: 17,
                       ),
                     ),
-                    subtitle: Text(
-                      build.compatible.toString(),
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'Inter',
-                        fontSize: 14,
-                      ),
-                    ),
+                    subtitle: build.compatible == "All parts compatible"
+                        ? Text(
+                            build.compatible.toString(),
+                            style: GoogleFonts.poppins(
+                              color: Color(0xff52BB6F),
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          )
+                        : Text(
+                            build.compatible.toString(),
+                            style: GoogleFonts.poppins(
+                              color: Color(0xffEE3C6D),
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
                     trailing: Text(
-                      build.harga.toString(),
-                      style: TextStyle(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.harga.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
                         color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontFamily: 'Inter',
-                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15,
                       ),
                     ),
                     selected: true,
