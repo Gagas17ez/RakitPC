@@ -47,19 +47,16 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                   itemBuilder: (BuildContext context, index) {
                     Builds build = snapshot.data[index];
 
-                    return Container(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 50),
+                    return Center(
                       child: Column(
                         children: <Widget>[
-                          // CPU
                           Container(
-                            padding: EdgeInsets.all(5),
+                            margin: EdgeInsets.fromLTRB(15, 30, 15, 10),
                             child: LinearPercentIndicator(
-                              width: 340,
+                              width: 330,
                               lineHeight: 30,
                               percent: 100 / 100,
-                              animation: true,
-                              animationDuration: 700,
+                              animationDuration: 500,
                               animateFromLastPercent: true,
                               barRadius: Radius.circular(20),
                               backgroundColor: HexColor("#C9C9C9"),
@@ -69,7 +66,6 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           const SizedBox(
                             height: 25,
                           ),
-
                           Container(
                             decoration: BoxDecoration(
                               borderRadius:
@@ -77,7 +73,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -120,6 +116,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 25,
                                 ),
                                 Container(
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   height: 80,
                                   width: 350,
                                   child: Row(
@@ -163,7 +160,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors.white,
+                                                              color:
+                                                                  Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -199,6 +197,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 10,
                                 ),
                                 Container(
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   height: 80,
                                   width: 350,
                                   child: Row(
@@ -275,6 +274,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -347,10 +347,11 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 10,
+                                  height: 40,
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -393,7 +394,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors.white,
+                                                              color:
+                                                                  Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -443,6 +445,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -523,6 +526,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -565,7 +569,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors.white,
+                                                              color:
+                                                                  Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -602,6 +607,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -646,7 +652,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors.white,
+                                                              color:
+                                                                  Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -683,6 +690,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -725,7 +733,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors.white,
+                                                              color:
+                                                                  Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -763,6 +772,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 Container(
                                   height: 80,
+                                  margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
                                     crossAxisAlignment:
@@ -806,7 +816,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors.white,
+                                                              color:
+                                                                  Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -847,7 +858,6 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           const SizedBox(
                             height: 0,
                           ),
-
                           const SizedBox(
                             height: 30,
                           ),
@@ -925,6 +935,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                       Navigator.pushNamed(context, '/history');
                                     }),
                               ),
+                              SizedBox(
+                                height: 50.0,
+                              ),
                             ],
                           ),
                         ],
@@ -941,6 +954,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
               ),
             );
           }),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/build');

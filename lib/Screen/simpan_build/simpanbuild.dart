@@ -89,7 +89,7 @@ class _Simpan extends State<Simpan> {
                                 build.compatible.toString(),
                                 style: GoogleFonts.poppins(
                                   color: Color(0xff52BB6F),
-                                  fontSize: 14,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                 ),
                               )
@@ -97,7 +97,7 @@ class _Simpan extends State<Simpan> {
                                 build.compatible.toString(),
                                 style: GoogleFonts.poppins(
                                   color: Color(0xffEE3C6D),
-                                  fontSize: 14,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),

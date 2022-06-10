@@ -60,7 +60,7 @@ class _howItworksState extends State<howItworks> {
                       "Step 1 :",
                       textAlign: TextAlign.right,
                       style: GoogleFonts.poppins(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         color: Colors.white,
                         height: 1.5,
                       ),
@@ -75,10 +75,10 @@ class _howItworksState extends State<howItworks> {
                     child: Container(
                       height: 100,
                       child: Text(
-                        "Kita akan bertanya beberapa pertanyaan untuk memahami kebutuhanmu",
+                        "Kita akan menanyai beberapa pertanyaan untuk memahami kebutuhan & budget anda",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
-                          fontSize: 16.0,
+                          fontSize: 15.0,
                           color: Colors.white,
                           height: 1.5,
                         ),
@@ -104,7 +104,7 @@ class _howItworksState extends State<howItworks> {
                       "Step 2 :",
                       textAlign: TextAlign.right,
                       style: GoogleFonts.poppins(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         color: Colors.white,
                         height: 1.5,
                       ),
@@ -119,10 +119,10 @@ class _howItworksState extends State<howItworks> {
                     child: Container(
                       height: 100,
                       child: Text(
-                        "Memberikan rekomendasi komponen PC sesuai jawaban ",
+                        "Kami akan memberikan rekomendasi part PC terbaik sesuai kebutuhan anda",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
-                          fontSize: 16.0,
+                          fontSize: 15.0,
                           color: Colors.white,
                           height: 1.5,
                         ),

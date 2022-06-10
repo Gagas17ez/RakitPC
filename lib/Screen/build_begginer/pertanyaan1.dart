@@ -40,14 +40,13 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               height: 30,
             ),
             Container(
-              padding: EdgeInsets.all(20),
+              margin: EdgeInsets.fromLTRB(15, 30, 15, 10),
               child: LinearPercentIndicator(
-                width: 350,
+                width: 330,
                 lineHeight: 30,
                 percent: 50 / 100,
-                animation: true,
+                animationDuration: 500,
                 animateFromLastPercent: true,
-                animationDuration: 700,
                 barRadius: Radius.circular(20),
                 backgroundColor: HexColor("#C9C9C9"),
                 progressColor: HexColor("#EE5584"),
