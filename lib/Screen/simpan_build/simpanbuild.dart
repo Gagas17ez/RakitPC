@@ -61,7 +61,7 @@ class _Simpan extends State<Simpan> {
                 margin: const EdgeInsets.fromLTRB(10, 8, 10, 8),
                 child: SizedBox(
                   width: 200,
-                  height: 75,
+                  height: 95,
                   child: ListTile(
                     leading: Image.asset(
                       "assets/img/partgan.png",
@@ -93,17 +93,26 @@ class _Simpan extends State<Simpan> {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                    trailing: Text(
-                      "Rp " +
-                          formatter
-                              .format(int.parse(build.harga.toString()))
-                              .toString(),
-                      style: GoogleFonts.poppins(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 15,
-                      ),
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          "Rp " +
+                              formatter
+                                  .format(int.parse(build.harga.toString()))
+                                  .toString(),
+                          style: GoogleFonts.poppins(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w700,
+                            fontSize: 15,
+                          ),
+                        ),
+                        IconButton(onPressed: () {
+                          _onDeleteBuild(build.waktu.toString());
+                        }, icon: Icon(Icons.delete)),
+                      ],
                     ),
+
                     selected: true,
                     selectedTileColor: Color(0xFFffffff),
                     shape: RoundedRectangleBorder(
