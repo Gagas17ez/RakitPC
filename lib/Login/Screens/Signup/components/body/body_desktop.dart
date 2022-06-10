@@ -125,6 +125,9 @@ class _BodyDesktopState extends State<BodyDesktop> {
       });
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
+        case "email-already-exists":
+          errorMessage = "Account with this email already exist.";
+          break;
         case "invalid-email":
           errorMessage = "Your email address appears to be malformed.";
           break;

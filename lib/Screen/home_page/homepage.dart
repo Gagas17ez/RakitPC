@@ -93,13 +93,13 @@ class _homepageState extends State<homepage>
         automaticallyImplyLeading: false,
         elevation: 0.0,
         centerTitle: true,
-        title: Text('HomePage',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.poppins(
-              fontSize: 22,
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-            )),
+        // title: Text('RakitPC',
+        //     textAlign: TextAlign.center,
+        //     style: GoogleFonts.poppins(
+        //       fontSize: 22,
+        //       color: Colors.white,
+        //       fontWeight: FontWeight.w600,
+        //     )),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.exit_to_app_rounded, color: Colors.white),
@@ -111,19 +111,29 @@ class _homepageState extends State<homepage>
       ),
       body: ListView(
         shrinkWrap: false,
-        padding: const EdgeInsets.only(left: 0),
         children: <Widget>[
           Container(
-              padding: const EdgeInsets.all(15.0),
-              child: Text(
-                greetingMessage() + "${loggedInUser.name}",
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w500,
-                ),
-              )),
+            padding: const EdgeInsets.fromLTRB(15, 0, 0, 1),
+            child: Text(
+              "Homepage",
+              style: GoogleFonts.poppins(
+                color: Colors.white70,
+                fontSize: 19,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+          ),
+          Container(
+            padding: const EdgeInsets.fromLTRB(15, 2, 0, 1),
+            child: Text(
+              greetingMessage() + "${loggedInUser.name}",
+              style: GoogleFonts.poppins(
+                color: Colors.white,
+                fontSize: 19,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
           Container(
               height: MediaQuery.of(context).size.height - 60.0,
               width: double.infinity,

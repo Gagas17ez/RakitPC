@@ -13,7 +13,7 @@ class card_home extends StatelessWidget {
       backgroundColor: Color(0xff272B40),
       body: ListView(
         children: <Widget>[
-          const SizedBox(height: 20.0),
+          const SizedBox(height: 15.0),
           Container(
               padding: const EdgeInsets.only(right: 0.0),
               width: MediaQuery.of(context).size.width - 30.0,
@@ -40,7 +40,7 @@ class card_home extends StatelessWidget {
       String name, String imgPath, bool added, bool isFavorite, context) {
     return Padding(
         padding: const EdgeInsets.only(
-            top: 6.0, bottom: 5.0, left: 12.0, right: 12.0),
+            top: 9.0, bottom: 13.0, left: 12.0, right: 12.0),
         child: InkWell(
           onTap: () {
             returnbutton(context, name);
@@ -57,7 +57,7 @@ class card_home extends StatelessWidget {
                   color: Color.fromARGB(225, 121, 119, 255)),
               child: Column(children: [
                 Padding(
-                    padding: const EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(13),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                     )),

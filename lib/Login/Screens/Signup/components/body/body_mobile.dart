@@ -101,12 +101,12 @@ class _BodyMobileState extends State<BodyMobile> {
     try {
       await auth
           .createUserWithEmailAndPassword(email: email, password: password)
-          .then((value) => {postDetailsToFirestore()})
-          .catchError((e) {
-        Fluttertoast.showToast(msg: e!.message);
-      });
+          .then((value) => {postDetailsToFirestore()});
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
+        case "email-already-in-use":
+          errorMessage = "Account with this email already exist.";
+          break;
         case "invalid-email":
           errorMessage = "Your email address appears to be malformed.";
           break;
@@ -125,8 +125,10 @@ class _BodyMobileState extends State<BodyMobile> {
         case "operation-not-allowed":
           errorMessage = "Signing in with Email and Password is not enabled.";
           break;
+
         default:
-          errorMessage = "An undefined Error happened.";
+          errorMessage = "All coulum need to be filled.";
+          break;
       }
       Fluttertoast.showToast(msg: errorMessage!);
       print(error.code);
