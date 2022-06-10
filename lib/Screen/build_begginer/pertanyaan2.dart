@@ -64,7 +64,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 16.0,
-                  color: HexColor("#D7D7D7"),
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   height: 1.5,
                 ),
@@ -83,7 +83,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 16.0,
-                  color: HexColor("#D7D7D7"),
+                  color: Colors.white,
                   height: 1.5,
                 ),
               ),
@@ -105,7 +105,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -116,7 +116,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     child: Text("Kerja /Browse / Video / Sekolah",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -137,7 +137,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -148,7 +148,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     child: Text("Kuliah / Programming",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -169,7 +169,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -180,7 +180,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     child: Text("Bermain game / Video editing",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -201,7 +201,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -212,7 +212,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     child: Text("Workstation",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),

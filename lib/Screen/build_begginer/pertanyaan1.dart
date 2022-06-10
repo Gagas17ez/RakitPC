@@ -108,7 +108,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -140,7 +140,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -172,7 +172,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -204,7 +204,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   style: OutlinedButton.styleFrom(
                     padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
                     side: BorderSide(
-                      color: HexColor("#C9C9C9"),
+                      color: Colors.white,
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),

@@ -163,8 +163,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors
-                                                                  .white70,
+                                                              color: Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -242,7 +241,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 build.namaMobo,
                                                 style: GoogleFonts.poppins(
                                                     fontSize: 18.0,
-                                                    color: Colors.white70,
+                                                    color: Colors.white,
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
@@ -316,7 +315,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                     build.namaRam,
                                                     style: GoogleFonts.poppins(
                                                       fontSize: 18.0,
-                                                      color: Colors.white70,
+                                                      color: Colors.white,
                                                       fontWeight:
                                                           FontWeight.bold,
                                                     ),
@@ -394,8 +393,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors
-                                                                  .white70,
+                                                              color: Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -488,7 +486,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                         fontSize: 18.0,
-                                                        color: Colors.white70,
+                                                        color: Colors.white,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -567,8 +565,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors
-                                                                  .white70,
+                                                              color: Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -649,8 +646,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors
-                                                                  .white70,
+                                                              color: Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -729,8 +725,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors
-                                                                  .white70,
+                                                              color: Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
@@ -811,8 +806,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       style:
                                                           GoogleFonts.poppins(
                                                               fontSize: 18.0,
-                                                              color: Colors
-                                                                  .white70,
+                                                              color: Colors.white,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .bold),
