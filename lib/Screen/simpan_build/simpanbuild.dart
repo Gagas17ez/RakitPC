@@ -46,13 +46,15 @@ class _Simpan extends State<Simpan> {
             child: const Icon(Icons.arrow_back_rounded),
           ),
         ),
-        title: const Text('History Build'),
+        title: const Text(
+          'History Build',
+          textAlign: TextAlign.center,
+        ),
       ),
       body: ListView.builder(
           itemCount: builds.length,
           itemBuilder: (BuildContext context, int index) {
             var build = builds[index];
-            //Padding(padding: const EdgeInsets.symmetric(horizontal: 10)),
 
             return Container(
               child: Card(
@@ -61,41 +63,44 @@ class _Simpan extends State<Simpan> {
                 margin: const EdgeInsets.fromLTRB(10, 8, 10, 8),
                 child: SizedBox(
                   width: 200,
-                  height: 95,
+                  height: 90,
                   child: ListTile(
                     leading: Image.asset(
                       "assets/img/partgan.png",
-                      width: 50,
-                      height: 50,
+                      width: 57,
+                      height: 57,
                     ),
-                    title: Text(
-                      build.waktu.substring(0, 16),
-                      style: GoogleFonts.poppins(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17,
+                    title: Container(
+                      margin: const EdgeInsets.only(top: 5),
+                      child: Text(
+                        build.waktu.substring(0, 16),
+                        style: GoogleFonts.poppins(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 18,
+                        ),
                       ),
                     ),
-                    subtitle: build.compatible == "All parts compatible"
-                        ? Text(
-                            build.compatible.toString(),
-                            style: GoogleFonts.poppins(
-                              color: Color(0xff52BB6F),
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          )
-                        : Text(
-                            build.compatible.toString(),
-                            style: GoogleFonts.poppins(
-                              color: Color(0xffEE3C6D),
-                              fontSize: 13,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        build.compatible == "All parts compatible"
+                            ? Text(
+                                build.compatible.toString(),
+                                style: GoogleFonts.poppins(
+                                  color: Color(0xff52BB6F),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              )
+                            : Text(
+                                build.compatible.toString(),
+                                style: GoogleFonts.poppins(
+                                  color: Color(0xffEE3C6D),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
                         Text(
                           "Rp " +
                               formatter
@@ -107,12 +112,21 @@ class _Simpan extends State<Simpan> {
                             fontSize: 15,
                           ),
                         ),
-                        IconButton(onPressed: () {
-                          _onDeleteBuild(build.waktu.toString());
-                        }, icon: Icon(Icons.delete)),
                       ],
                     ),
-
+                    trailing: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            _onDeleteBuild(build.waktu.toString());
+                          },
+                          icon: Icon(Icons.delete),
+                          iconSize: 30,
+                        ),
+                      ],
+                    ),
                     selected: true,
                     selectedTileColor: Color(0xFFffffff),
                     shape: RoundedRectangleBorder(

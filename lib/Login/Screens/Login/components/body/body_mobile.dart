@@ -39,10 +39,6 @@ class _BodyMobileState extends State<BodyMobile> {
               width: size.width * 0.4,
             ),
             SizedBox(height: size.height * 0.03),
-            // SvgPicture.asset(
-            //   "assets/icons/login.svg",
-            //   height: size.height * 0.35,
-            // ),
             SizedBox(height: size.height * 0.03),
             RoundedInputField(
               hintText: "Email",
@@ -66,9 +62,7 @@ class _BodyMobileState extends State<BodyMobile> {
                 final SharedPreferences login =
                     await SharedPreferences.getInstance();
                 login.setString('email', _email);
-                // auth
-                //     .signInWithEmailAndPassword(
-                //         email: _email, password: _password)
+
                 signIn(_email, _password);
               },
             ),
@@ -105,7 +99,6 @@ class _BodyMobileState extends State<BodyMobile> {
       switch (error.code) {
         case "invalid-email":
           errorMessage = "Your email address appears to be malformed.";
-
           break;
         case "wrong-password":
           errorMessage = "Your password is wrong.";

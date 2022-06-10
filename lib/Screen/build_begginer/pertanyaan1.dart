@@ -66,7 +66,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 16.0,
-                  color: HexColor("#D7D7D7"),
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                   height: 1.5,
                 ),
@@ -85,7 +85,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 textAlign: TextAlign.left,
                 style: GoogleFonts.poppins(
                   fontSize: 16.0,
-                  color: HexColor("#D7D7D7"),
+                  color: Colors.white,
                   height: 1.5,
                 ),
               ),
@@ -119,7 +119,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     child: Text("Rp 3.000.000 - Rp 6.0000.000",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -151,7 +151,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     child: Text("Rp 6.100.000 - Rp 9.0000.000",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -183,7 +183,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     child: Text("Rp 9.100.000 - Rp 15.0000.000",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -215,7 +215,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     child: Text("≤  Rp 15.0000.000",
                         style: GoogleFonts.poppins(
                           fontSize: 16.0,
-                          color: HexColor("#D7D7D7"),
+                          color: Colors.white,
                           height: 1.5,
                         ),
                         textAlign: TextAlign.left),
@@ -234,7 +234,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   primary: HexColor("#7A77FF"),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                  textStyle:  GoogleFonts.poppins(
+                  textStyle: GoogleFonts.poppins(
                     fontSize: 16.0,
                   )),
             ),
