@@ -119,7 +119,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                         textAlign: TextAlign.left),
                   ),
                 )),
-            SizedBox(height: 40),
+            SizedBox(height: 24),
             ElevatedButton(
               child: const Text('Back'),
               onPressed: () {

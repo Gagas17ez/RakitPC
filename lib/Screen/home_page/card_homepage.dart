@@ -68,7 +68,7 @@ class card_home extends StatelessWidget {
                       width: 100.0,
                       child: Image.asset(imgPath),
                     )),
-                const SizedBox(height: 40.0),
+                const SizedBox(height: 20.0),
                 Text(
                   name,
                   textAlign: TextAlign.center,

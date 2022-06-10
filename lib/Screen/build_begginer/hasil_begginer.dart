@@ -350,7 +350,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   height: 40,
                                 ),
                                 Container(
-                                  height: 80,
+                                  height: 107,
                                   margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(
@@ -365,9 +365,11 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                           height: 70,
                                           decoration: BoxDecoration(
                                               image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgVga),
-                                                  fit: BoxFit.contain)),
+                                            image: NetworkImage(
+                                              build.imgVga,
+                                            ),
+                                            fit: BoxFit.contain,
+                                          )),
                                         ),
                                       ),
                                       Expanded(

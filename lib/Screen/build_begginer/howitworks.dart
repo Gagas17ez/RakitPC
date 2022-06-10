@@ -136,7 +136,7 @@ class _howItworksState extends State<howItworks> {
                 ],
               ),
             ),
-            SizedBox(height: 230),
+            SizedBox(height: 210),
             ElevatedButton(
               child: const Text('Next'),
               onPressed: () {
