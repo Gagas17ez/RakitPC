@@ -8,6 +8,8 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:rakit_pc/Models/model_user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class homepage extends StatefulWidget {
   const homepage({Key? key}) : super(key: key);
@@ -19,6 +21,8 @@ class homepage extends StatefulWidget {
 class _homepageState extends State<homepage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  User? user = FirebaseAuth.instance.currentUser;
+  UserModel loggedInUser = UserModel();
 
   late SharedPreferences logindata;
   void checkLogin() async {
@@ -68,6 +72,16 @@ class _homepageState extends State<homepage>
     global.hargastorage2 = 0;
     global.hargaharga = 0;
     checkLogin();
+
+    //get the data from firestore
+    FirebaseFirestore.instance
+        .collection("users")
+        .doc(user!.uid)
+        .get()
+        .then((value) {
+      loggedInUser = UserModel.fromMap(value.data());
+      setState(() {});
+    });
   }
 
   @override
@@ -100,6 +114,17 @@ class _homepageState extends State<homepage>
         padding: const EdgeInsets.only(left: 0),
         children: <Widget>[
           Container(
+              padding: const EdgeInsets.all(15.0),
+              child: Text(
+                greetingMessage() + "${loggedInUser.name}",
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w500,
+                ),
+              )),
+          Container(
               height: MediaQuery.of(context).size.height - 60.0,
               width: double.infinity,
               child: TabBarView(
@@ -121,6 +146,7 @@ class _homepageState extends State<homepage>
     );
   }
 
+  //this methode for logout
   Future<void> logout(BuildContext context) async {
     await FirebaseAuth.instance.signOut();
     Navigator.of(context).pushAndRemoveUntil(
@@ -131,5 +157,20 @@ class _homepageState extends State<homepage>
       logindata.remove('email');
       global.currentState = WelcomeScreen();
     });
+  }
+
+  //Methode for greeting based on time
+  String greetingMessage() {
+    var timeNow = DateTime.now().hour;
+
+    if (timeNow <= 12) {
+      return 'Good Morning, ';
+    } else if (timeNow > 12 && timeNow <= 16) {
+      return 'Good Afternoon, ';
+    } else if (timeNow > 16 && timeNow < 20) {
+      return 'Good Evening, ';
+    } else {
+      return 'Good Night, ';
+    }
   }
 }
