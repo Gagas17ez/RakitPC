@@ -176,40 +176,114 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama Casing",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        global.id_case_adv = int.parse(
-                                            data1[global.id_detail].idCasing);
-                                        global.hargacase = int.parse(
-                                            data1[global.id_detail].harga);
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data1[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data1[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_case_adv = int.parse(
+                                        data1[global.id_detail].idCasing);
+                                    global.hargacase = int.parse(
+                                        data1[global.id_detail].harga);
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama Casing",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].namaCasing + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -220,7 +294,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek Casing",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].merkCasing + "\n",
@@ -233,7 +307,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Casing Side Panel",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].casingSidePanel + "\n",
@@ -246,7 +320,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Color Casing",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].colorCasing + "\n",
@@ -259,7 +333,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Dimension Casing",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].dimensionCasing + "\n",
@@ -272,7 +346,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Drivebay Casing",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].drivebayCasing + "\n",
@@ -285,7 +359,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Fan Support",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].fanSupport + "\n",
@@ -298,7 +372,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Panel Depan Casing",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].frontPanel + "\n",
@@ -311,7 +385,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Tinggi Max Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].maxCoolerHeight + "\n",
@@ -324,7 +398,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Max PSU",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].maxPsu + "\n",
@@ -337,7 +411,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Panjang Max VGA",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].maxVgaLength + "\n",
@@ -350,7 +424,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Berat Casing",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].weightCasing + "\n",
@@ -363,7 +437,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Motherboard Compatible",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].moboCompatible + "\n",
@@ -376,7 +450,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Vga Compatible",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].maxVgaLength + "\n",
@@ -389,7 +463,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Fan Compatible",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data1[global.id_detail].fanSupport + "\n",
@@ -401,125 +475,6 @@ class _DetailPartState extends State<DetailPart> {
                                   color: Color(0xffD7D7D7))),
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 60,
-                                height: 60,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () async {},
-                                      child: Text("Rp " +
-                                          data1[global.id_detail]
-                                              .harga
-                                              .toString())),
-                                  Text("Tersedia",
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.poppins(
-                                          color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data1[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      // child: SizedBox(
-                      //   height: 270,
-                      //   child: ListTile(
-                      //     //Text(questions[index])
-                      //     title: Column(
-                      //       children: <Widget>[
-                      //         Text("Motherboard Compatible",
-                      //             style: GoogleFonts.poppins(
-                      //               fontSize: 20,
-                      //             )),
-                      //         Text(data1[global.id_detail].moboCompatible,
-                      //             style: GoogleFonts.poppins(fontSize: 14)),
-                      //         Text(" ",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text("Vga Compatible",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data1[global.id_detail].maxVgaLength,
-                      //             style: GoogleFonts.poppins(fontSize: 14)),
-                      //         Text(" ",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text("Fan Compatible",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(
-                      //           data1[global.id_detail].fanSupport,
-                      //           style: GoogleFonts.poppins(fontSize: 14),
-                      //           textAlign: TextAlign.center,
-                      //         )
-                      //       ],
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //     ),
-                      //     //subtitle: Text(penjelas[index]),
-                      //     selected: true,
-                      //     selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                      //   ),
-                      // ),
                     ),
                   ),
                 ],
@@ -593,42 +548,116 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama CPUCooler",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(20, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        global.id_cpu_cooler_adv = int.parse(
-                                            data2[global.id_detail].idCooler);
-                                        global.hargacooler = int.parse(
-                                            data2[global.id_detail].harga);
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data2[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text(
-                                    'Add to Build',
-                                  )),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data2[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(20, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_cpu_cooler_adv = int.parse(
+                                        data2[global.id_detail].idCooler);
+                                    global.hargacooler = int.parse(
+                                        data2[global.id_detail].harga);
+                                  },
+                                );
+                              },
+                              child: const Text(
+                                'Add to Build',
+                              )),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama CPUCooler",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].namaCooler + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -639,7 +668,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].merkCooler + "\n",
@@ -652,7 +681,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Power CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].powerCooler + "\n",
@@ -665,7 +694,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RGB CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].rgb + "\n",
@@ -678,7 +707,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Socket CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].socketCooler + "\n",
@@ -691,7 +720,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Type CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].typeCooler + "\n",
@@ -704,7 +733,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Fan Quantitiy",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].fanQuantity + "\n",
@@ -717,7 +746,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Fan Speed",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].fanSpeed + "\n",
@@ -730,7 +759,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Color CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].colorCooler + "\n",
@@ -743,7 +772,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Dimension CPU Cooler",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data2[global.id_detail].dimensionCooler + "\n",
@@ -753,78 +782,6 @@ class _DetailPartState extends State<DetailPart> {
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
                                   color: Color(0xffD7D7D7))),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () async {},
-                                      child: Text("Rp " +
-                                          data2[global.id_detail]
-                                              .harga
-                                              .toString())),
-                                  Text("Tersedia",
-                                      textAlign: TextAlign.center,
-                                      style: GoogleFonts.poppins(
-                                          color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data2[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -886,7 +843,7 @@ class _DetailPartState extends State<DetailPart> {
                   ),
                   Container(
                     child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 40),
                       title: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -897,43 +854,115 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama CPU",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7)
-                                  )),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        global.id_cpu_adv = int.parse(
-                                            data3[global.id_detail].idCpu);
-                                        global.socket_cpu =
-                                            data3[global.id_detail].socket;
-                                        global.hargacpu = int.parse(
-                                            data3[global.id_detail].harga);
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data3[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        110, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data3[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_cpu_adv = int.parse(
+                                        data3[global.id_detail].idCpu);
+                                    global.socket_cpu =
+                                        data3[global.id_detail].socket;
+                                    global.hargacpu = int.parse(
+                                        data3[global.id_detail].harga);
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama CPU",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].namaCpu + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -944,10 +973,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek CPU",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].merkCpu + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -958,7 +986,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Proc Technology",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].procTechnology + "\n",
@@ -971,7 +999,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Cores/Threads",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(
@@ -988,7 +1016,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Clock Speed",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(
@@ -1005,7 +1033,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Motherboard Socket",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].socket + "\n",
@@ -1018,7 +1046,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Release Year",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].launchDate + "\n",
@@ -1027,11 +1055,10 @@ class _DetailPartState extends State<DetailPart> {
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text("Cache",
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].cache + "\n",
@@ -1042,7 +1069,7 @@ class _DetailPartState extends State<DetailPart> {
                                   color: Color(0xffD7D7D7))),
                           Text("Technology",
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].procTechnology + "\n",
@@ -1054,7 +1081,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Default TDP",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].defaultTdp + "\n",
@@ -1063,12 +1090,11 @@ class _DetailPartState extends State<DetailPart> {
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text("Max Temp",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].maxTemp + "\n",
@@ -1077,12 +1103,11 @@ class _DetailPartState extends State<DetailPart> {
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text("Unlocked",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data3[global.id_detail].unlocked + "\n",
@@ -1091,125 +1116,9 @@ class _DetailPartState extends State<DetailPart> {
                                   fontSize: 14.0,
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.fromLTRB(50, 20, 50, 0),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text("Rp " +
-                                          data3[global.id_detail]
-                                              .harga
-                                              .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data3[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: Text('Beli',
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white))),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      // child: SizedBox(
-                      //   height: 200,
-                      //   child: ListTile(
-                      //     //Text(questions[index])
-                      //     title: Column(
-                      //       children: <Widget>[
-                      //         Text("Default TDP",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data3[global.id_detail].defaultTdp,
-                      //             style: GoogleFonts.poppins(fontSize: 14)),
-                      //         Text(" ",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text("Max Temp",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data3[global.id_detail].maxTemp,
-                      //             style: GoogleFonts.poppins(fontSize: 14)),
-                      //         Text(" ",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text("Unlocked",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data3[global.id_detail].unlocked,
-                      //             style: GoogleFonts.poppins(fontSize: 14))
-                      //       ],
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //     ),
-                      //     //subtitle: Text(penjelas[index]),
-                      //     selected: true,
-                      //     selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                      //   ),
-                      // ),
                     ),
                   ),
                 ],
@@ -1281,53 +1190,126 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama Fan",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7)
-                                  )),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        if (global.seng_diganti == 1) {
-                                          global.id_fan_adv = int.parse(
-                                              data4[global.id_detail].idFans);
-                                          global.hargafan1 = int.parse(
-                                              data4[global.id_detail].harga);
-                                        } else if (global.seng_diganti == 2) {
-                                          global.id_fan2_adv = int.parse(
-                                              data4[global.id_detail].idFans);
-                                          global.hargafan2 = int.parse(
-                                              data4[global.id_detail].harga);
-                                        } else if (global.seng_diganti == 3) {
-                                          global.id_fan3_adv = int.parse(
-                                              data4[global.id_detail].idFans);
-                                          global.hargafan3 = int.parse(
-                                              data4[global.id_detail].harga);
-                                        }
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data4[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data4[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    if (global.seng_diganti == 1) {
+                                      global.id_fan_adv = int.parse(
+                                          data4[global.id_detail].idFans);
+                                      global.hargafan1 = int.parse(
+                                          data4[global.id_detail].harga);
+                                    } else if (global.seng_diganti == 2) {
+                                      global.id_fan2_adv = int.parse(
+                                          data4[global.id_detail].idFans);
+                                      global.hargafan2 = int.parse(
+                                          data4[global.id_detail].harga);
+                                    } else if (global.seng_diganti == 3) {
+                                      global.id_fan3_adv = int.parse(
+                                          data4[global.id_detail].idFans);
+                                      global.hargafan3 = int.parse(
+                                          data4[global.id_detail].harga);
+                                    }
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama Fan",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].namaFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1338,10 +1320,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].merkFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1352,10 +1333,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Power Connector",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].powerConnector + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1366,10 +1346,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Speed Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].speedFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1380,10 +1359,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Size Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].sizeFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1394,10 +1372,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Color Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].colorFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1408,10 +1385,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RGB Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].rgb + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1422,10 +1398,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Power Usage Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].powerFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1436,10 +1411,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Voltage Fan",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data4[global.id_detail].voltageFans + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1447,116 +1421,8 @@ class _DetailPartState extends State<DetailPart> {
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
                                   color: Color(0xffD7D7D7))),
-
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text("Rp " +
-                                          data4[global.id_detail]
-                                              .harga
-                                              .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data4[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      // child: SizedBox(
-                      //   height: 200,
-                      //   child: ListTile(
-                      //     //Text(questions[index])
-                      //     title: Column(
-                      //       children: <Widget>[
-                      //         Text("Power Usage Fan",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data4[global.id_detail].powerFans,
-                      //             style: GoogleFonts.poppins(fontSize: 18)),
-                      //         Text(" ",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text("Voltage Fan",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data4[global.id_detail].voltageFans,
-                      //             style: GoogleFonts.poppins(fontSize: 18))
-                      //       ],
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //     ),
-                      //     //subtitle: Text(penjelas[index]),
-                      //     selected: true,
-                      //     selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                      //   ),
-                      // ),
                     ),
                   ),
                 ],
@@ -1628,42 +1494,115 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama Motherboard",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        global.id_mobo_adv = int.parse(
-                                            data5[global.id_detail]
-                                                .idMotherboard);
-                                        global.socket_mobo =
-                                            data5[global.id_detail].socketMobo;
-                                        global.hargamobo = int.parse(
-                                            data5[global.id_detail].harga);
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data5[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data5[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_mobo_adv = int.parse(
+                                        data5[global.id_detail].idMotherboard);
+                                    global.socket_mobo =
+                                        data5[global.id_detail].socketMobo;
+                                    global.hargamobo = int.parse(
+                                        data5[global.id_detail].harga);
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          Text("Nama Motherboard",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
+                          SizedBox(
+                            height: 10,
                           ),
                           Text(data5[global.id_detail].namaMobo + "\n",
                               textAlign: TextAlign.left,
@@ -1675,7 +1614,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek Motherboard",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].merkMobo + "\n",
@@ -1688,7 +1627,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Motherboard Socket",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].socketMobo + "\n",
@@ -1701,7 +1640,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Supported Memory Type",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].memoryType + "\n",
@@ -1714,7 +1653,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Slot ",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].slotMemory + "\n",
@@ -1727,7 +1666,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("M2 Slot",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].m2Slot + "\n",
@@ -1740,7 +1679,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Sata Slot",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].sataSlot + "\n",
@@ -1753,7 +1692,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("USB Port",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].usbPort + "\n",
@@ -1766,7 +1705,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Audio Port",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].audioPort + "\n",
@@ -1779,7 +1718,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("LAN Port",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].lanPort + "\n",
@@ -1792,7 +1731,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Form Factor",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].formFactor + "\n",
@@ -1805,7 +1744,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Display Output",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].displayOutput + "\n",
@@ -1818,7 +1757,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("PCI-E Gen",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].pcIgen + "\n",
@@ -1831,7 +1770,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("PCI-E",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].pcie + "\n",
@@ -1844,7 +1783,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RGB Motherboard",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].rgb + "\n",
@@ -1857,7 +1796,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Warna MotherBoard",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].warna + "\n",
@@ -1870,7 +1809,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Chipset Motherboard",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data5[global.id_detail].chipsetMobo + "\n",
@@ -1882,107 +1821,6 @@ class _DetailPartState extends State<DetailPart> {
                                   color: Color(0xffD7D7D7))),
                         ],
                       ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text("Rp " +
-                                          data5[global.id_detail]
-                                              .harga
-                                              .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data5[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: Card(
-                      elevation: 6,
-                      clipBehavior: Clip.antiAlias,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          side: BorderSide(
-                              width: 2,
-                              color: Color.fromARGB(167, 209, 206, 198))),
-                      margin: EdgeInsets.all(40),
-                      // child: SizedBox(
-                      //   height: 200,
-                      //   child: ListTile(
-                      //     //Text(questions[index])
-                      //     title: Column(
-                      //       children: <Widget>[
-                      //         Text("Chipset Motherboard",
-                      //             style: GoogleFonts.poppins(fontSize: 20)),
-                      //         Text(data5[global.id_detail].chipsetMobo,
-                      //             style: GoogleFonts.poppins(fontSize: 14))
-                      //       ],
-                      //       mainAxisAlignment: MainAxisAlignment.center,
-                      //     ),
-                      //     //subtitle: Text(penjelas[index]),
-                      //     selected: true,
-                      //     selectedTileColor: Color.fromARGB(221, 241, 237, 241),
-                      //   ),
-                      // ),
                     ),
                   ),
                 ],
@@ -2054,47 +1892,121 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama RAM",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        if (global.seng_diganti == 1) {
-                                          global.id_ram_adv = int.parse(
-                                              data6[global.id_detail].idRam);
-                                          global.hargaram1 = int.parse(
-                                              data6[global.id_detail].harga);
-                                        } else {
-                                          global.id_ram2_adv = int.parse(
-                                              data6[global.id_detail].idRam);
-                                          global.hargaram2 = int.parse(
-                                              data6[global.id_detail].harga);
-                                        }
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data6[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data6[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    if (global.seng_diganti == 1) {
+                                      global.id_ram_adv = int.parse(
+                                          data6[global.id_detail].idRam);
+                                      global.hargaram1 = int.parse(
+                                          data6[global.id_detail].harga);
+                                    } else {
+                                      global.id_ram2_adv = int.parse(
+                                          data6[global.id_detail].idRam);
+                                      global.hargaram2 = int.parse(
+                                          data6[global.id_detail].harga);
+                                    }
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama RAM",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].namaRam + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -2105,7 +2017,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Type",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].memoryType + "\n",
@@ -2118,7 +2030,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Size",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].memorySize + "\n",
@@ -2131,7 +2043,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Speed",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].memorySpeed + "\n",
@@ -2144,7 +2056,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek RAM",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].merkRam + "\n",
@@ -2157,7 +2069,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Color RAM",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].color + "\n",
@@ -2170,7 +2082,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RGB ",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].rgb + "\n",
@@ -2183,7 +2095,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Heat Spreader",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data6[global.id_detail].heatSpreader + "\n",
@@ -2193,76 +2105,6 @@ class _DetailPartState extends State<DetailPart> {
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
                                   color: Color(0xffD7D7D7))),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text(data6[global.id_detail]
-                                          .harga
-                                          .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data6[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -2336,49 +2178,121 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama Storage",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        if (global.seng_diganti == 1) {
-                                          global.id_storage_adv = int.parse(
-                                              data7[global.id_detail]
-                                                  .idStorage);
-                                          global.hargastorage1 = int.parse(
-                                              data7[global.id_detail].harga);
-                                        } else if (global.seng_diganti == 2) {
-                                          global.id_storage2_adv = int.parse(
-                                              data7[global.id_detail]
-                                                  .idStorage);
-                                          global.hargastorage2 = int.parse(
-                                              data7[global.id_detail].harga);
-                                        }
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data7[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data7[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    if (global.seng_diganti == 1) {
+                                      global.id_storage_adv = int.parse(
+                                          data7[global.id_detail].idStorage);
+                                      global.hargastorage1 = int.parse(
+                                          data7[global.id_detail].harga);
+                                    } else if (global.seng_diganti == 2) {
+                                      global.id_storage2_adv = int.parse(
+                                          data7[global.id_detail].idStorage);
+                                      global.hargastorage2 = int.parse(
+                                          data7[global.id_detail].harga);
+                                    }
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama Storage",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].namaStorage + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -2389,7 +2303,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Type Storage",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].typeStorage + "\n",
@@ -2402,7 +2316,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merk Storage",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].merkStorage + "\n",
@@ -2415,7 +2329,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Storage Capacity",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].storageCapacity + "\n",
@@ -2428,7 +2342,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Read Speed",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].readSpeed + "\n",
@@ -2441,7 +2355,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Write Speed",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].writeSpeed + "\n",
@@ -2454,7 +2368,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Rpm",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].rpm + "\n",
@@ -2467,7 +2381,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Storage Watt",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].storageWatt + "\n",
@@ -2480,7 +2394,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Cache",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].cache + "\n",
@@ -2493,7 +2407,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Form Factor",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].formFactor + "\n",
@@ -2506,7 +2420,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Storage Interface",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data7[global.id_detail].storageInterface + "\n",
@@ -2516,76 +2430,6 @@ class _DetailPartState extends State<DetailPart> {
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
                                   color: Color(0xffD7D7D7))),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text(data7[global.id_detail]
-                                          .harga
-                                          .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data7[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -2659,40 +2503,114 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama PSU",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        global.id_psu_adv = int.parse(
-                                            data8[global.id_detail].idPsu);
-                                        global.hargapsu = int.parse(
-                                            data8[global.id_detail].harga);
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data8[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data8[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_psu_adv = int.parse(
+                                        data8[global.id_detail].idPsu);
+                                    global.hargapsu = int.parse(
+                                        data8[global.id_detail].harga);
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama PSU",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].namaPsu + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -2703,7 +2621,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Watt PSU",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].wattPsu + "\n",
@@ -2716,7 +2634,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek PSU",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].merkPsu + "\n",
@@ -2729,7 +2647,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Modular",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].modular + "\n",
@@ -2742,7 +2660,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("ATX Connector",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].atxConnector + "\n",
@@ -2755,7 +2673,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("PCI-E Connector",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].pcieConnector + "\n",
@@ -2768,7 +2686,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Sata Connector",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].sataConnector + "\n",
@@ -2781,7 +2699,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Silent Mode",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].silentMode + "\n",
@@ -2794,7 +2712,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RGB ",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].rgb + "\n",
@@ -2807,7 +2725,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Fan Size",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].fanSize + "\n",
@@ -2820,7 +2738,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("PSU Color",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].colorPsu + "\n",
@@ -2833,7 +2751,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Form Factor",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data8[global.id_detail].formFactor + "\n",
@@ -2843,76 +2761,6 @@ class _DetailPartState extends State<DetailPart> {
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
                                   color: Color(0xffD7D7D7))),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text(data8[global.id_detail]
-                                          .harga
-                                          .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data8[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                         ],
                       ),
                     ),
@@ -2983,40 +2831,114 @@ class _DetailPartState extends State<DetailPart> {
                         children: <Widget>[
                           Row(
                             children: [
-                              Text("Nama VGA",
-                                  textAlign: TextAlign.left,
-                                  style: GoogleFonts.poppins(
-                                      fontWeight: FontWeight.bold ,
-                                      fontSize: 22,
-                                      color: Color(0xffD7D7D7))),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(10.0)),
-                                    minimumSize:
-                                        const Size(100, 40), //////// HERE
-                                  ),
-                                  onPressed: () {
-                                    Navigator.pushNamed(
-                                        context, '/build/advanced');
-                                    setState(
-                                      () {
-                                        global.id_vga_adv = int.parse(
-                                            data9[global.id_detail].idVga);
-                                        global.hargavga = int.parse(
-                                            data9[global.id_detail].harga);
-                                      },
-                                    );
+                              Expanded(
+                                  child: Card(
+                                color: Colors.green,
+                                child: InkWell(
+                                  onTap: () async {
+                                    final url = data9[global.id_detail].links;
+
+                                    if (await canLaunch(url)) {
+                                      await launch(url);
+                                    }
                                   },
-                                  child: const Text('Add to Build')),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: <Widget>[
+                                      ListTile(
+                                          leading: Image.asset(
+                                            "assets/img/tokopedia.png",
+                                            width: 37,
+                                            height: 37,
+                                          ),
+                                          title: Row(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                "Beli Part",
+                                                style: GoogleFonts.poppins(
+                                                  fontSize: 18.0,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                              ),
+                                              SizedBox(
+                                                width: 9,
+                                              ),
+                                              ElevatedButton(
+                                                  style:
+                                                      ElevatedButton.styleFrom(
+                                                    primary: Color.fromARGB(
+                                                        255, 233, 237, 240),
+
+                                                    elevation: 3,
+                                                    shape:
+                                                        RoundedRectangleBorder(
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        32.0)),
+                                                    minimumSize: const Size(
+                                                        100, 30), //////// HERE
+                                                  ),
+                                                  onPressed: () async {},
+                                                  child: Text(
+                                                      "Rp " +
+                                                          data9[global
+                                                                  .id_detail]
+                                                              .harga
+                                                              .toString(),
+                                                      style:
+                                                          GoogleFonts.poppins(
+                                                              color:
+                                                                  Colors.black,
+                                                              fontSize: 12,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600))),
+                                            ],
+                                          )),
+                                    ],
+                                  ),
+                                ),
+                              ))
                             ],
                           ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Colors.blue,
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_vga_adv = int.parse(
+                                        data9[global.id_detail].idVga);
+                                    global.hargavga = int.parse(
+                                        data9[global.id_detail].harga);
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Build')),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text("Nama VGA",
+                              textAlign: TextAlign.left,
+                              style: GoogleFonts.poppins(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22,
+                                  color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].namaVga + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -3027,10 +2949,9 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Merek VGA",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                  color: Color(0xffD7D7D7)
-                              )),
+                                  color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].merkVga + "\n",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -3041,7 +2962,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Architecture",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].architecture + "\n",
@@ -3054,7 +2975,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Clocks",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(
@@ -3071,7 +2992,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Clock",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].memoryClock + "\n",
@@ -3084,7 +3005,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Type",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].memoryType + "\n",
@@ -3097,7 +3018,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory VGA",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].memoryVga + "\n",
@@ -3110,7 +3031,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Memory Bus",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].memoryBus + "\n",
@@ -3123,7 +3044,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("VGA Interface",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].vgaInterface + "\n",
@@ -3135,7 +3056,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Output Port",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].outputPort + "\n",
@@ -3148,7 +3069,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Power Connection",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].powerConnection + "\n",
@@ -3161,7 +3082,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Power Consumption",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].powerConsumption + "\n",
@@ -3174,7 +3095,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Graphic Api",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].graphicApi + "\n",
@@ -3187,7 +3108,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Dimension VGA",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].dimensionVga + "\n",
@@ -3200,7 +3121,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Display Technology",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].displayTechnology + "\n",
@@ -3213,7 +3134,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Generation",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].generation + "\n",
@@ -3226,7 +3147,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("Year",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].releaseDate + "\n",
@@ -3239,7 +3160,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RGB ",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].rgb + "\n",
@@ -3252,7 +3173,7 @@ class _DetailPartState extends State<DetailPart> {
                           Text("RTCores",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold ,
+                                  fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                   color: Color(0xffD7D7D7))),
                           Text(data9[global.id_detail].rTcores + "\n",
@@ -3262,76 +3183,6 @@ class _DetailPartState extends State<DetailPart> {
                                   fontWeight: FontWeight.normal,
                                   height: 1.5,
                                   color: Color(0xffD7D7D7))),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Container(
-                    child: ListTile(
-                      contentPadding: EdgeInsets.symmetric(horizontal: 50),
-                      title: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        verticalDirection: VerticalDirection.down,
-                        textBaseline: TextBaseline.alphabetic,
-                        textDirection: TextDirection.ltr,
-                        mainAxisSize: MainAxisSize.max,
-                        children: <Widget>[
-                          Row(
-                            children: [
-                              Image.asset(
-                                "assets/img/tokopedia.png",
-                                width: 50,
-                                height: 50,
-                              ),
-                              Spacer(),
-                              Column(
-                                children: [
-                                  ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        primary:
-                                            Color.fromARGB(255, 233, 237, 240),
-                                        onPrimary: Color.fromARGB(255, 0, 0, 0),
-                                        shadowColor: Colors.greenAccent,
-                                        elevation: 3,
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(32.0)),
-                                        minimumSize:
-                                            const Size(100, 30), //////// HERE
-                                      ),
-                                      onPressed: () {},
-                                      child: Text(data9[global.id_detail]
-                                          .harga
-                                          .toString())),
-                                  Text("Tersedia",
-                                      style: GoogleFonts.poppins(
-                                          fontSize: 14, color: Colors.white)),
-                                ],
-                              ),
-                              Spacer(),
-                              ElevatedButton(
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.blue,
-                                    onPrimary: Colors.white,
-                                    shadowColor: Colors.greenAccent,
-                                    elevation: 3,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(32.0)),
-                                    minimumSize:
-                                        const Size(60, 40), //////// HERE
-                                  ),
-                                  onPressed: () async {
-                                    final url = data9[global.id_detail].links;
-
-                                    if (await canLaunch(url)) {
-                                      await launch(url);
-                                    }
-                                  },
-                                  child: const Text('Beli')),
-                            ],
-                          ),
                         ],
                       ),
                     ),
