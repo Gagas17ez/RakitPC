@@ -53,7 +53,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             margin: EdgeInsets.fromLTRB(15, 30, 15, 10),
                             child: LinearPercentIndicator(
-                              width: 360,
+                              width: 330,
                               lineHeight: 30,
                               percent: 100 / 100,
                               animation: true,
@@ -118,21 +118,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, '/part/list/detail');
-                                              setState(() {
-                                                global.id_detail =
-                                                    int.parse(build.ram) - 1;
-                                                global.nama_part = "Ram";
-                                              });
-                                            },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.ram) - 1;
+                                      global.nama_part = "Ram";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -149,44 +149,44 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaCpu,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaCpu
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaCpu,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaCpu
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -197,21 +197,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, '/part/list/detail');
-                                              setState(() {
-                                                global.id_detail =
-                                                    int.parse(build.ram) - 1;
-                                                global.nama_part = "Ram";
-                                              });
-                                            },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.ram) - 1;
+                                      global.nama_part = "Ram";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -228,44 +228,44 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaMobo,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaMobo
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaMobo,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaMobo
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -276,21 +276,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                              Navigator.pushNamed(
-                                                  context, '/part/list/detail');
-                                              setState(() {
-                                                global.id_detail =
-                                                    int.parse(build.ram) - 1;
-                                                global.nama_part = "Ram";
-                                              });
-                                            },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.ram) - 1;
+                                      global.nama_part = "Ram";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -307,47 +307,45 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaRam,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaRam
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaRam,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaRam
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                        
                                       ],
                                     ),
                                   ),
@@ -357,21 +355,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.vga) - 1;
-                                                  global.nama_part = "VGA";
-                                                });
-                                              },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.vga) - 1;
+                                      global.nama_part = "VGA";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -388,44 +386,48 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaVga,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaVga,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: int.parse(
+                                                            build.hargaVga) ==
+                                                        0
+                                                    ? Text(
+                                                        "Gratis dengan CPU",
                                                         style:
                                                             GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
+                                                                fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: int.parse(build
-                                                                  .hargaVga) ==
-                                                              0
-                                                          ? Text(
-                                                              "Gratis dengan CPU",
-                                                              style: GoogleFonts.poppins(
-                                                                  fontSize:
-                                                                      12.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  color: Color(
-                                                                      0xff52BB6F)),
-                                                            )
-                                                          :Text(
+                                                                        .bold,
+                                                                color: Color(
+                                                                    0xff52BB6F)),
+                                                      )
+                                                    : Text(
                                                         "Rp " +
                                                             formatter
-                                                                .format(int.parse(
-                                                                    build.hargaVga
+                                                                .format(int
+                                                                    .parse(build
+                                                                        .hargaVga
                                                                         .toString()))
                                                                 .toString(),
                                                         style:
@@ -437,11 +439,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                               Color(0xff52BB6F),
                                                         ),
                                                       ),
-                                                    ),
-                                                  ],
-                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
-                                        
                                       ],
                                     ),
                                   ),
@@ -451,22 +452,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.storage) -
-                                                          1;
-                                                  global.nama_part = "Storage";
-                                                });
-                                              },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.storage) - 1;
+                                      global.nama_part = "Storage";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -483,71 +483,69 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaStorage,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaStorage
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaStorage,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaStorage
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
                                   ),
                                 ),
-                               
                                 const SizedBox(
                                   height: 10,
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.psu) - 1;
-                                                  global.nama_part = "PSU";
-                                                });
-                                              },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.psu) - 1;
+                                      global.nama_part = "PSU";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -564,45 +562,44 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaPsu,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaPsu
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaPsu,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaPsu
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -613,23 +610,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail = int.parse(
-                                                          build.cpuCooler) -
-                                                      1;
-                                                  global.nama_part =
-                                                      "CPU Cooler";
-                                                });
-                                              },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.cpuCooler) - 1;
+                                      global.nama_part = "CPU Cooler";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -646,46 +641,48 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaCpuCooler,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaCpuCooler,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
+                                                ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: int.parse(build
+                                                            .hargaCpuCooler) ==
+                                                        0
+                                                    ? Text(
+                                                        "Gratis",
                                                         style:
                                                             GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
+                                                                fontSize: 12.0,
                                                                 fontWeight:
                                                                     FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: int.parse(build
-                                                                  .hargaCpuCooler) ==
-                                                              0
-                                                          ? Text(
-                                                              "Gratis",
-                                                              style: GoogleFonts.poppins(
-                                                                  fontSize:
-                                                                      12.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  color: Color(
-                                                                      0xff52BB6F)),
-                                                            )
-                                                          :Text(
+                                                                        .bold,
+                                                                color: Color(
+                                                                    0xff52BB6F)),
+                                                      )
+                                                    : Text(
                                                         "Rp " +
                                                             formatter
-                                                                .format(int.parse(
-                                                                    build.hargaCpuCooler
-                                                                        .toString()))
+                                                                .format(int.parse(build
+                                                                    .hargaCpuCooler
+                                                                    .toString()))
                                                                 .toString(),
                                                         style:
                                                             GoogleFonts.poppins(
@@ -696,9 +693,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                               Color(0xff52BB6F),
                                                         ),
                                                       ),
-                                                    ),
-                                                  ],
-                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -709,21 +706,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.fans) - 1;
-                                                  global.nama_part = "Fan";
-                                                });
-                                              },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.fans) - 1;
+                                      global.nama_part = "Fan";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -740,45 +737,44 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaFans,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaFans
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaFans,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaFans
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
@@ -789,22 +785,21 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.casing) -
-                                                          1;
-                                                  global.nama_part = "Casing";
-                                                });
-                                              },
-                                  child:Container(
-                                    margin: EdgeInsets.symmetric(horizontal: 10),
-                                    
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.casing) - 1;
+                                      global.nama_part = "Casing";
+                                    });
+                                  },
+                                  child: Container(
+                                    margin:
+                                        EdgeInsets.symmetric(horizontal: 10),
                                     width: 350,
                                     child: Row(
-                                      crossAxisAlignment:CrossAxisAlignment.center,
-                                    
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
                                       children: <Widget>[
                                         Padding(
                                           padding: const EdgeInsets.only(
@@ -821,45 +816,44 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                         ),
                                         Expanded(
                                           child: Column(
-                                          mainAxisAlignment: MainAxisAlignment.center,
-                                          crossAxisAlignment: CrossAxisAlignment.start,
-                                                  children: <Widget>[
-                                                    
-                                                     Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        build.namaCasing,
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 18.0,
-                                                                color:
-                                                                    Colors.white,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                    ),
-                                                    Padding(
-                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
-                                                      child: Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(
-                                                                    build.hargaCasing
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ],
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: <Widget>[
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  build.namaCasing,
+                                                  style: GoogleFonts.poppins(
+                                                      fontSize: 18.0,
+                                                      color: Colors.white,
+                                                      fontWeight:
+                                                          FontWeight.bold),
                                                 ),
+                                              ),
+                                              Padding(
+                                                padding:
+                                                    const EdgeInsets.fromLTRB(
+                                                        2.0, 2.0, 2.0, 2.0),
+                                                child: Text(
+                                                  "Rp " +
+                                                      formatter
+                                                          .format(int.parse(
+                                                              build.hargaCasing
+                                                                  .toString()))
+                                                          .toString(),
+                                                  style: GoogleFonts.poppins(
+                                                    fontSize: 12.0,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Color(0xff52BB6F),
+                                                  ),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
                                         ),
                                       ],
                                     ),
