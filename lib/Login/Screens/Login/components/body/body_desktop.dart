@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:rakit_pc/Login/Screens/ForgotPassword/forgot_pw_page.dart';
 import 'package:rakit_pc/Login/Screens/Login/components/background.dart';
 import 'package:rakit_pc/Login/Screens/Signup/signup_screen.dart';
 import 'package:rakit_pc/Login/components/already_have_an_account_acheck.dart';
+import 'package:rakit_pc/Login/components/forgot_password_check.dart';
 import 'package:rakit_pc/Login/components/rounded_button.dart';
 import 'package:rakit_pc/Login/components/rounded_input_field.dart';
 import 'package:rakit_pc/Login/components/rounded_password_field.dart';
@@ -63,6 +65,18 @@ class _BodyDesktopState extends State<BodyDesktop> {
                       setState(() {
                         _password = value.trim();
                       });
+                    },
+                  ),
+                  ForgotPasswordCheck(
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const ForgotPasswordPage();
+                          },
+                        ),
+                      );
                     },
                   ),
                   RoundedButton(
