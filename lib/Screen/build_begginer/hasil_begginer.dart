@@ -861,7 +861,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                             height: 0,
                           ),
                           const SizedBox(
-                            height: 30,
+                            height: 20,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -873,7 +873,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   style: ButtonStyle(
                                       backgroundColor:
                                           MaterialStateProperty.all(
-                                              HexColor("DBD8E3")),
+                                              Colors.white),
                                       shape: MaterialStateProperty.all<
                                               RoundedRectangleBorder>(
                                           RoundedRectangleBorder(
@@ -883,8 +883,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     "Beli Build",
                                     textAlign: TextAlign.center,
                                     style: GoogleFonts.poppins(
-                                      color: Colors.black,
+                                      color: HexColor("#9997FF"),
                                       fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                   onPressed: () async {
@@ -906,7 +907,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all(
-                                                HexColor("DBD8E3")),
+                                                Colors.white),
                                         shape: MaterialStateProperty.all<
                                                 RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
@@ -917,8 +918,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                       "Simpan Build",
                                       textAlign: TextAlign.center,
                                       style: GoogleFonts.poppins(
-                                        color: Colors.black,
+                                        color: HexColor("#9997FF"),
                                         fontSize: 18.0,
+                                        fontWeight: FontWeight.bold,
+                                        height: 1.2,
                                       ),
                                     ),
                                     onPressed: () {
@@ -938,7 +941,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     }),
                               ),
                               SizedBox(
-                                height: 50.0,
+                                height: 100.0,
                               ),
                             ],
                           ),
