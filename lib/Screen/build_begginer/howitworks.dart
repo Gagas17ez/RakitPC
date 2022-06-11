@@ -58,7 +58,7 @@ class _howItworksState extends State<howItworks> {
                     height: 100,
                     child: Text(
                       "Step 1 :",
-                      textAlign: TextAlign.right,
+                      textAlign: TextAlign.left,
                       style: GoogleFonts.poppins(
                         fontSize: 15.0,
                         color: Colors.white,
@@ -102,7 +102,7 @@ class _howItworksState extends State<howItworks> {
                     height: 100,
                     child: Text(
                       "Step 2 :",
-                      textAlign: TextAlign.right,
+                      textAlign: TextAlign.left,
                       style: GoogleFonts.poppins(
                         fontSize: 15.0,
                         color: Colors.white,
