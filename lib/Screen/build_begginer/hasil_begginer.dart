@@ -53,9 +53,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Container(
                             margin: EdgeInsets.fromLTRB(15, 30, 15, 10),
                             child: LinearPercentIndicator(
-                              width: 330,
+                              width: 360,
                               lineHeight: 30,
                               percent: 100 / 100,
+                              animation: true,
                               animationDuration: 500,
                               animateFromLastPercent: true,
                               barRadius: Radius.circular(20),
@@ -115,187 +116,8 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 const SizedBox(
                                   height: 25,
                                 ),
-                                Container(
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  height: 80,
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgCpu),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.cpu) - 1;
-                                                  global.nama_part = "CPU";
-                                                });
-                                              },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaCpu,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 18.0,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                    ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(
-                                                                  build.hargaCpu
-                                                                      .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                        fontSize: 12.0,
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        color:
-                                                            Color(0xff52BB6F),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ],
-                                              ))),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Container(
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  height: 80,
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgMobo),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                        onTap: () {
-                                          Navigator.pushNamed(
-                                              context, '/part/list/detail');
-                                          setState(() {
-                                            global.id_detail =
-                                                int.parse(build.motherboard) -
-                                                    1;
-                                            global.nama_part = "Motherboard";
-                                          });
-                                        },
-                                        child: Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            Container(
-                                              child: Text(
-                                                build.namaMobo,
-                                                style: GoogleFonts.poppins(
-                                                    fontSize: 18.0,
-                                                    color: Colors.white,
-                                                    fontWeight:
-                                                        FontWeight.bold),
-                                              ),
-                                            ),
-                                            const SizedBox(
-                                              height: 8.0,
-                                            ),
-                                            Container(
-                                              child: Text(
-                                                "Rp " +
-                                                    formatter
-                                                        .format(int.parse(build
-                                                            .hargaMobo
-                                                            .toString()))
-                                                        .toString(),
-                                                style: GoogleFonts.poppins(
-                                                  fontSize: 12.0,
-                                                  fontWeight: FontWeight.bold,
-                                                  color: Color(0xff52BB6F),
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      )),
-                                    ],
-                                  ),
-                                ),
-                                const SizedBox(
-                                  height: 10,
-                                ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgRam),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: InkWell(
-                                            onTap: () {
+                                InkWell(
+                                  onTap: () {
                                               Navigator.pushNamed(
                                                   context, '/part/list/detail');
                                               setState(() {
@@ -304,77 +126,237 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                 global.nama_part = "Ram";
                                               });
                                             },
-                                            child: Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.spaceEvenly,
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: <Widget>[
-                                                Container(
-                                                  child: Text(
-                                                    build.namaRam,
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold,
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgCpu),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaCpu,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
                                                     ),
-                                                  ),
-                                                ),
-                                                const SizedBox(
-                                                  height: 8.0,
-                                                ),
-                                                Container(
-                                                  child: Text(
-                                                    "Rp " +
-                                                        formatter
-                                                            .format(int.parse(
-                                                                build.hargaRam
-                                                                    .toString()))
-                                                            .toString(),
-                                                    style: GoogleFonts.poppins(
-                                                      fontSize: 12.0,
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      color: Color(0xff52BB6F),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaCpu
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
+                                                  ],
                                                 ),
-                                              ],
-                                            )),
-                                      )
-                                    ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                            image: NetworkImage(
-                                              build.imgVga,
-                                            ),
-                                            fit: BoxFit.contain,
-                                          )),
+                                InkWell(
+                                  onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, '/part/list/detail');
+                                              setState(() {
+                                                global.id_detail =
+                                                    int.parse(build.ram) - 1;
+                                                global.nama_part = "Ram";
+                                              });
+                                            },
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgMobo),
+                                                    fit: BoxFit.contain)),
+                                          ),
                                         ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaMobo,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaMobo
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                InkWell(
+                                  onTap: () {
+                                              Navigator.pushNamed(
+                                                  context, '/part/list/detail');
+                                              setState(() {
+                                                global.id_detail =
+                                                    int.parse(build.ram) - 1;
+                                                global.nama_part = "Ram";
+                                              });
+                                            },
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgRam),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaRam,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaRam
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                        ),
+                                        
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                InkWell(
+                                  onTap: () {
                                                 Navigator.pushNamed(context,
                                                     '/part/list/detail');
                                                 setState(() {
@@ -383,30 +365,48 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   global.nama_part = "VGA";
                                                 });
                                               },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaVga,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 18.0,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgVga),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaVga,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
                                                       child: int.parse(build
                                                                   .hargaVga) ==
                                                               0
@@ -421,54 +421,36 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                                   color: Color(
                                                                       0xff52BB6F)),
                                                             )
-                                                          : Text(
-                                                              "Rp " +
-                                                                  formatter
-                                                                      .format(int.parse(build
-                                                                          .hargaVga
-                                                                          .toString()))
-                                                                      .toString(),
-                                                              style: GoogleFonts.poppins(
-                                                                  fontSize:
-                                                                      12.0,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .bold,
-                                                                  color: Color(
-                                                                      0xff52BB6F)),
-                                                            )),
-                                                ],
-                                              ))),
-                                    ],
+                                                          :Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaVga
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                ),
+                                        ),
+                                        
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgStorage),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
+                                InkWell(
+                                  onTap: () {
                                                 Navigator.pushNamed(context,
                                                     '/part/list/detail');
                                                 setState(() {
@@ -478,78 +460,79 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   global.nama_part = "Storage";
                                                 });
                                               },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaStorage,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                        fontSize: 18.0,
-                                                        color: Colors.white,
-                                                        fontWeight:
-                                                            FontWeight.bold,
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgStorage),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaStorage,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
                                                       ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(build
-                                                                  .hargaStorage
-                                                                  .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color(
-                                                                  0xff52BB6F)),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaStorage
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ))),
-                                    ],
+                                                  ],
+                                                ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
+                               
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgPsu),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
+                                InkWell(
+                                  onTap: () {
                                                 Navigator.pushNamed(context,
                                                     '/part/list/detail');
                                                 setState(() {
@@ -558,79 +541,78 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   global.nama_part = "PSU";
                                                 });
                                               },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaPsu,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 18.0,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgPsu),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaPsu,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(
-                                                                  build.hargaPsu
-                                                                      .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color(
-                                                                  0xff52BB6F)),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaPsu
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ))),
-                                    ],
+                                                  ],
+                                                ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgCpuCooler),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
+                                InkWell(
+                                  onTap: () {
                                                 Navigator.pushNamed(context,
                                                     '/part/list/detail');
                                                 setState(() {
@@ -641,79 +623,92 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                       "CPU Cooler";
                                                 });
                                               },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaCpuCooler,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 18.0,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgCpuCooler),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaCpuCooler,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(build
-                                                                  .hargaCpuCooler
-                                                                  .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color(
-                                                                  0xff52BB6F)),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: int.parse(build
+                                                                  .hargaCpuCooler) ==
+                                                              0
+                                                          ? Text(
+                                                              "Gratis",
+                                                              style: GoogleFonts.poppins(
+                                                                  fontSize:
+                                                                      12.0,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold,
+                                                                  color: Color(
+                                                                      0xff52BB6F)),
+                                                            )
+                                                          :Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaCpuCooler
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ))),
-                                    ],
+                                                  ],
+                                                ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgFans),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
+                                InkWell(
+                                  onTap: () {
                                                 Navigator.pushNamed(context,
                                                     '/part/list/detail');
                                                 setState(() {
@@ -722,80 +717,78 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   global.nama_part = "Fan";
                                                 });
                                               },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaFans,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 18.0,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgFans),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaFans,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(
-                                                                  build
-                                                                      .hargaFans
-                                                                      .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color(
-                                                                  0xff52BB6F)),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaFans
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ))),
-                                    ],
+                                                  ],
+                                                ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Container(
-                                  height: 80,
-                                  margin: EdgeInsets.symmetric(horizontal: 20),
-                                  width: 350,
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: <Widget>[
-                                      Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 10.0, right: 10.0),
-                                        child: Container(
-                                          width: 70,
-                                          height: 70,
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  image: NetworkImage(
-                                                      build.imgCasing),
-                                                  fit: BoxFit.contain)),
-                                        ),
-                                      ),
-                                      Expanded(
-                                          child: InkWell(
-                                              onTap: () {
+                                InkWell(
+                                  onTap: () {
                                                 Navigator.pushNamed(context,
                                                     '/part/list/detail');
                                                 setState(() {
@@ -805,50 +798,71 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                                   global.nama_part = "Casing";
                                                 });
                                               },
-                                              child: Column(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceEvenly,
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: <Widget>[
-                                                  Container(
-                                                    child: Text(
-                                                      build.namaCasing,
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 18.0,
-                                                              color:
-                                                                  Colors.white,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
+                                  child:Container(
+                                    margin: EdgeInsets.symmetric(horizontal: 10),
+                                    
+                                    width: 350,
+                                    child: Row(
+                                      crossAxisAlignment:CrossAxisAlignment.center,
+                                    
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              left: 10.0, right: 10.0),
+                                          child: Container(
+                                            width: 70,
+                                            height: 70,
+                                            decoration: BoxDecoration(
+                                                image: DecorationImage(
+                                                    image: NetworkImage(
+                                                        build.imgCasing),
+                                                    fit: BoxFit.contain)),
+                                          ),
+                                        ),
+                                        Expanded(
+                                          child: Column(
+                                          mainAxisAlignment: MainAxisAlignment.center,
+                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                                  children: <Widget>[
+                                                    
+                                                     Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        build.namaCasing,
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                                fontSize: 18.0,
+                                                                color:
+                                                                    Colors.white,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold),
+                                                      ),
                                                     ),
-                                                  ),
-                                                  const SizedBox(
-                                                    height: 8.0,
-                                                  ),
-                                                  Container(
-                                                    child: Text(
-                                                      "Rp " +
-                                                          formatter
-                                                              .format(int.parse(build
-                                                                  .hargaCasing
-                                                                  .toString()))
-                                                              .toString(),
-                                                      style:
-                                                          GoogleFonts.poppins(
-                                                              fontSize: 12.0,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold,
-                                                              color: Color(
-                                                                  0xff52BB6F)),
+                                                    Padding(
+                                                      padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                                                      child: Text(
+                                                        "Rp " +
+                                                            formatter
+                                                                .format(int.parse(
+                                                                    build.hargaCasing
+                                                                        .toString()))
+                                                                .toString(),
+                                                        style:
+                                                            GoogleFonts.poppins(
+                                                          fontSize: 12.0,
+                                                          fontWeight:
+                                                              FontWeight.bold,
+                                                          color:
+                                                              Color(0xff52BB6F),
+                                                        ),
+                                                      ),
                                                     ),
-                                                  ),
-                                                ],
-                                              ))),
-                                    ],
+                                                  ],
+                                                ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
