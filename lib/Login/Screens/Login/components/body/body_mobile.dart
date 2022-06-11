@@ -112,13 +112,13 @@ class _BodyMobileState extends State<BodyMobile> {
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
         case "invalid-email":
-          errorMessage = "Your email address appears to be malformed.";
+          errorMessage = "Password/Email yang dimasukan tidak valid.";
           break;
         case "wrong-password":
-          errorMessage = "Your password is wrong.";
+          errorMessage = "Password/Email yang dimasukan tidak valid.";
           break;
         case "user-not-found":
-          errorMessage = "User with this email doesn't exist.";
+          errorMessage = "User dengan email tersebut tidak ditemukan.";
           break;
         case "user-disabled":
           errorMessage = "User with this email has been disabled.";
@@ -130,7 +130,7 @@ class _BodyMobileState extends State<BodyMobile> {
           errorMessage = "Signing in with Email and Password is not enabled.";
           break;
         default:
-          errorMessage = "An undefined Error happened.";
+          errorMessage = "Semua Kolom input harus diisi.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
       print(error.code);

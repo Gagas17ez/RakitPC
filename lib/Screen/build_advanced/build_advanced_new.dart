@@ -629,6 +629,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         compatible: global.compatible,
         // harga: global.hargacooler + global.hargacase,
         harga: (global.hargacase +
+            global.hargavga +
             global.hargacooler +
             global.hargacpu +
             global.hargafan1 +

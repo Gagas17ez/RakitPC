@@ -36,6 +36,7 @@ class _Simpan extends State<Simpan> {
     return Scaffold(
       backgroundColor: Color(0xff272B40),
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.transparent,
         leading: Padding(
           padding: const EdgeInsets.all(8),

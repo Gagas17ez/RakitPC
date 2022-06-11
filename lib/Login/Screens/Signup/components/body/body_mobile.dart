@@ -42,10 +42,6 @@ class _BodyMobileState extends State<BodyMobile> {
               width: size.width * 0.4,
             ),
             SizedBox(height: size.height * 0.03),
-            // SvgPicture.asset(
-            //   "assets/icons/signup.svg",
-            //   height: size.height * 0.35,
-            // ),
             RoundedNamaField(
               hintText: " Name",
               onChanged: (value) {
@@ -105,13 +101,13 @@ class _BodyMobileState extends State<BodyMobile> {
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
         case "email-already-in-use":
-          errorMessage = "Account with this email already exist.";
+          errorMessage = "Akun dengan email ini sudah ada.";
           break;
         case "invalid-email":
-          errorMessage = "Your email address appears to be malformed.";
+          errorMessage = "Password/Email yang dimasukan tidak valid.";
           break;
         case "wrong-password":
-          errorMessage = "Your password is wrong.";
+          errorMessage = "Password/Email yang dimasukan tidak valid.";
           break;
         case "user-not-found":
           errorMessage = "User with this email doesn't exist.";
@@ -127,7 +123,7 @@ class _BodyMobileState extends State<BodyMobile> {
           break;
 
         default:
-          errorMessage = "All coulum need to be filled.";
+          errorMessage = "Semua Kolom input harus diisi.";
           break;
       }
       Fluttertoast.showToast(msg: errorMessage!);

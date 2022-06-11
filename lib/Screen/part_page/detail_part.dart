@@ -114,6 +114,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -486,6 +487,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -795,6 +797,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -1128,6 +1131,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -1432,6 +1436,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -1830,6 +1835,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -2116,6 +2122,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -2441,6 +2448,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),
@@ -2772,6 +2780,7 @@ class _DetailPartState extends State<DetailPart> {
       return Scaffold(
         backgroundColor: Color(0xff342C4C),
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
             padding: const EdgeInsets.all(8),

@@ -62,16 +62,35 @@ class _BodyMobileState extends State<BodyMobile> {
           .sendPasswordResetEmail(email: email)
           .then((value) => _status = ' successful');
       print(_status);
-      Fluttertoast.showToast(msg: 'Password reset has been sent to Email ');
-      Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const LoginScreen()));
+      // Fluttertoast.showToast(msg: 'Password reset has been sent to Email ');
+      Widget okButton = FlatButton(
+        child: Text("OK"),
+        onPressed: () {
+          Navigator.of(context).pushReplacement(
+              MaterialPageRoute(builder: (context) => const LoginScreen()));
+        },
+      );
+      AlertDialog alert = AlertDialog(
+        title: Text("Notice"),
+        content: Text(
+            "Password reset sudah terkirim ke email, jika belum diterima cek folder spam"),
+        actions: [
+          okButton,
+        ],
+      );
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return alert;
+        },
+      );
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
         case "invalid-email":
-          errorMessage = "Your email address appears to be malformed.";
+          errorMessage = "Email yang dimasukan tidak valid.";
           break;
         case "user-not-found":
-          errorMessage = "User with this email doesn't exist.";
+          errorMessage = "User dengan email tersebut tidak ditemukan.";
           break;
         case "user-disabled":
           errorMessage = "User with this email has been disabled.";
@@ -80,7 +99,7 @@ class _BodyMobileState extends State<BodyMobile> {
           errorMessage = "Too many requests";
           break;
         default:
-          errorMessage = "Coulumn need to be filled.";
+          errorMessage = "Kolom email harus diisi.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
       print(error.code);

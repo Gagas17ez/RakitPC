@@ -20,13 +20,11 @@ import 'package:rakit_pc/Screen/part_page/list_storage.dart';
 import 'package:rakit_pc/Screen/part_page/list_vga.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:rakit_pc/Screen/simpan_build/simpanbuild.dart';
-import 'package:rakit_pc/coba.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'Screen/part_page/part_page.dart';
-
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
