@@ -120,14 +120,15 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.ram) - 1;
-                                      global.nama_part = "Ram";
-                                    });
-                                  },
+                                                Navigator.pushNamed(context,
+                                                    '/part/list/detail');
+                                                setState(() {
+                                                  global.id_detail =
+                                                      int.parse(build.cpu) - 1;
+                                                  global.nama_part = "CPU";
+                                                });
+                                              },
+
                                   child: Container(
                                     margin:
                                         EdgeInsets.symmetric(horizontal: 10),
@@ -199,14 +200,16 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.ram) - 1;
-                                      global.nama_part = "Ram";
-                                    });
-                                  },
+                                          Navigator.pushNamed(
+                                              context, '/part/list/detail');
+                                          setState(() {
+                                            global.id_detail =
+                                                int.parse(build.motherboard) -
+                                                    1;
+                                            global.nama_part = "Motherboard";
+                                          });
+                                        },
+
                                   child: Container(
                                     margin:
                                         EdgeInsets.symmetric(horizontal: 10),

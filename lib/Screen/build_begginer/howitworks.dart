@@ -74,8 +74,9 @@ class _howItworksState extends State<howItworks> {
                     flex: 2,
                     child: Container(
                       height: 100,
+                      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                       child: Text(
-                        "Kita akan menanyai beberapa pertanyaan untuk memahami kebutuhan & budget anda",
+                        "Kami akan menanyakan beberapa pertanyaan untuk memahami kebutuhan serta budget Anda",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           fontSize: 15.0,
@@ -118,8 +119,9 @@ class _howItworksState extends State<howItworks> {
                     flex: 2,
                     child: Container(
                       height: 100,
+                      padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                       child: Text(
-                        "Kami akan memberikan rekomendasi part PC terbaik sesuai kebutuhan anda",
+                        "Kemudian akan kami berikan rekomendasi part PC terbaik sesuai kebutuhan Anda",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           fontSize: 15.0,
