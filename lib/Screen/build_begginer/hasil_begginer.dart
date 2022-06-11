@@ -51,17 +51,19 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                       child: Column(
                         children: <Widget>[
                           Container(
-                            margin: EdgeInsets.fromLTRB(15, 30, 15, 10),
-                            child: LinearPercentIndicator(
-                              width: 330,
-                              lineHeight: 30,
-                              percent: 100 / 100,
-                              animation: true,
-                              animationDuration: 500,
-                              animateFromLastPercent: true,
-                              barRadius: Radius.circular(20),
-                              backgroundColor: HexColor("#C9C9C9"),
-                              progressColor: HexColor("#EE5584"),
+                            margin: EdgeInsets.only(top: 20),
+                            child: Center(
+                              child: LinearPercentIndicator(
+                                width: 360,
+                                animation: true,
+                                lineHeight: 30,
+                                percent: 100 / 100,
+                                animationDuration: 500,
+                                animateFromLastPercent: true,
+                                barRadius: Radius.circular(20),
+                                backgroundColor: HexColor("#C9C9C9"),
+                                progressColor: HexColor("#EE5584"),
+                              ),
                             ),
                           ),
                           const SizedBox(
