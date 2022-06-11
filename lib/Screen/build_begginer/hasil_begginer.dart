@@ -347,10 +347,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                   ),
                                 ),
                                 const SizedBox(
-                                  height: 40,
+                                  height: 10,
                                 ),
                                 Container(
-                                  height: 107,
+                                  height: 80,
                                   margin: EdgeInsets.symmetric(horizontal: 20),
                                   width: 350,
                                   child: Row(

@@ -166,6 +166,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       setState(() {
                         global.id_case_adv = 0;
                         global.hargacase = 0;
+                        global.compatible = "All parts compatible";
                         init();
                       });
                     },
@@ -214,6 +215,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_cpu_adv = 0;
                         global.hargacpu = 0;
                         messageCompability = "";
+                        global.compatible = "All parts compatible";
                         init();
                       });
                     },
@@ -260,6 +262,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_cpu_cooler_adv = 0;
                         global.id_cpu_cooler_adv = 0;
                         global.hargacooler = 0;
+                        global.compatible = "All parts compatible";
                         init();
                       });
                     },
@@ -308,6 +311,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_mobo_adv = 0;
                         global.hargamobo = 0;
                         messageCompability = "";
+                        global.compatible = "All parts compatible";
                         init();
                       });
                     },
@@ -355,7 +359,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       setState(() {
                         global.hargapsu = 0;
                         global.id_psu_adv = 0;
-
+                        global.compatible = "All parts compatible";
                         init();
                       });
                     },
@@ -405,6 +409,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_ram2_adv = 0;
                         global.hargaram1 = 0;
                         global.hargaram2 = 0;
+                        global.compatible = "All parts compatible";
                         init();
                       });
                     },
@@ -552,6 +557,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.hargafan1 = 0;
                         global.hargafan2 = 0;
                         global.hargafan3 = 0;
+                        global.compatible = "";
                         init();
                       });
                     },
@@ -749,6 +755,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         global.id_mobo_adv == 0 &&
         global.id_ram_adv == 0 &&
         global.id_ram2_adv == 0) {
+      setState(() {
+        global.compatible = "All parts compatible";
+      });
       return Column(
         children: <Widget>[
           Card(
@@ -809,11 +818,14 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       );
     } else {
       setState(() {
-        global.compatible = "Some part Incompatible";
+        global.compatible = "All parts compatible";
       });
       if ((global.socket_cpu.toLowerCase() !=
               global.socket_mobo.toLowerCase()) ||
           (global.id_ram_adv != global.id_ram2_adv)) {
+        setState(() {
+          global.compatible = "Some part Incompatible";
+        });
         if (global.socket_cpu.toLowerCase() !=
             global.socket_mobo.toLowerCase()) {
           messageCompability +=
