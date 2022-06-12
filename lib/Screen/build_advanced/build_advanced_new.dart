@@ -68,6 +68,17 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           global.hargaram2 +
           global.hargastorage1 +
           global.hargastorage2;
+      global.wattTotal = global.wattcooler +
+          global.wattcpu +
+          global.wattvga +
+          global.wattcooler +
+          global.wattfan1 +
+          global.wattfan2 +
+          global.wattfan3 +
+          global.wattram1 +
+          global.wattram2 +
+          global.wattstorage1 +
+          global.wattstorage2;
     });
   }
 
@@ -166,6 +177,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       setState(() {
                         global.id_case_adv = 0;
                         global.hargacase = 0;
+                        messageCompability = "";
                         global.compatible = "All parts compatible";
                         init();
                       });
@@ -214,6 +226,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       setState(() {
                         global.id_cpu_adv = 0;
                         global.hargacpu = 0;
+                        global.wattcpu = 0;
                         messageCompability = "";
                         global.compatible = "All parts compatible";
                         init();
@@ -262,6 +275,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_cpu_cooler_adv = 0;
                         global.id_cpu_cooler_adv = 0;
                         global.hargacooler = 0;
+                        global.wattcooler = 0;
+                        messageCompability = "";
                         global.compatible = "All parts compatible";
                         init();
                       });
@@ -359,6 +374,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       setState(() {
                         global.hargapsu = 0;
                         global.id_psu_adv = 0;
+                        messageCompability = "";
                         global.compatible = "All parts compatible";
                         init();
                       });
@@ -409,6 +425,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_ram2_adv = 0;
                         global.hargaram1 = 0;
                         global.hargaram2 = 0;
+                        messageCompability = "";
+                        global.wattram1 = 0;
+                        global.wattram2 = 0;
                         global.compatible = "All parts compatible";
                         init();
                       });
@@ -459,6 +478,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.id_storage2_adv = 0;
                         global.hargastorage1 = 0;
                         global.hargastorage2 = 0;
+                        global.wattstorage1 = 0;
+                        global.wattstorage2 = 0;
+                        messageCompability = "";
                         init();
                       });
                     },
@@ -506,6 +528,8 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       setState(() {
                         global.id_vga_adv = 0;
                         global.hargavga = 0;
+                        global.wattvga = 0;
+                        messageCompability = "";
                         init();
                       });
                     },
@@ -557,7 +581,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                         global.hargafan1 = 0;
                         global.hargafan2 = 0;
                         global.hargafan3 = 0;
+                        global.wattfan1 = 0;
+                        global.wattfan2 = 0;
+                        global.wattfan3 = 0;
                         global.compatible = "";
+                        messageCompability = "";
                         init();
                       });
                     },
@@ -806,7 +834,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     color: Colors.white,
                     size: 32,
                   ),
-                  title: Text('Estimated Wattage : ',
+                  title: Text(
+                      'Estimated Wattage : ' +
+                          global.wattTotal.toString() +
+                          "W",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 17,
@@ -830,11 +861,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         if (global.socket_cpu.toLowerCase() !=
             global.socket_mobo.toLowerCase()) {
           messageCompability +=
-              "Cpu might not compatible with the current Motherboard\n";
+              "- Cpu might not compatible with the current Motherboard\n";
         }
         if (global.id_ram_adv != global.id_ram2_adv) {
           messageCompability +=
-              "Single or Different Ram speed & size might cause instability or error\n";
+              "- Single or Different Ram speed & size might cause instability or error\n";
         }
 
         return Column(
@@ -884,7 +915,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       color: Colors.white,
                       size: 32,
                     ),
-                    title: Text('Estimated Wattage : ',
+                    title: Text(
+                        'Estimated Wattage : ' +
+                            global.wattTotal.toString() +
+                            "W",
                         style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 17,
@@ -941,7 +975,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     Icons.offline_bolt_outlined,
                     color: Colors.white,
                   ),
-                  title: Text('Estimated Wattage : ',
+                  title: Text(
+                      'Estimated Wattage : ' +
+                          global.wattTotal.toString() +
+                          "W",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 17,

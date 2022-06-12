@@ -48,6 +48,7 @@ class _homepageState extends State<homepage>
     global.id_case_adv = 0;
     global.id_vga_adv = 0;
     global.id_cpu_adv = 0;
+    global.compatible = "All parts compatible";
     global.id_cpu_cooler_adv = 0;
     global.id_fan_adv = 0;
     global.id_fan2_adv = 0;

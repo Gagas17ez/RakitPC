@@ -100,11 +100,14 @@ class _BodyMobileState extends State<BodyMobile> {
           .then((value) => {postDetailsToFirestore()});
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
+        case "weak-password":
+          errorMessage = "Password terlalu singkat.";
+          break;
         case "email-already-in-use":
           errorMessage = "Akun dengan email ini sudah ada.";
           break;
         case "invalid-email":
-          errorMessage = "Password/Email yang dimasukan tidak valid.";
+          errorMessage = "Email yang dimasukan tidak valid.";
           break;
         case "wrong-password":
           errorMessage = "Password/Email yang dimasukan tidak valid.";

@@ -31,6 +31,17 @@ int hargavga = 0;
 int hargaharga = 0;
 bool darisimpan = false;
 bool janganTampilkanTutor = false;
+int wattTotal = 0;
+int wattcpu = 0;
+int wattvga = 0;
+int wattcooler = 0;
+int wattfan1 = 0;
+int wattfan2 = 0;
+int wattfan3 = 0;
+int wattram1 = 0;
+int wattram2 = 0;
+int wattstorage1 = 0;
+int wattstorage2 = 0;
 
 //gawe pilihan advanced
 int id_case_adv = 0;

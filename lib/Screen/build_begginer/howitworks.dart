@@ -121,7 +121,7 @@ class _howItworksState extends State<howItworks> {
                       height: 100,
                       padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
                       child: Text(
-                        "Kemudian akan kami berikan rekomendasi part PC terbaik sesuai kebutuhan Anda",
+                        "Kemudian kami akan merekomendasikan part PC terbaik sesuai kebutuhan Anda",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
                           fontSize: 15.0,

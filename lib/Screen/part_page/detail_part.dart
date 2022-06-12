@@ -645,6 +645,8 @@ class _DetailPartState extends State<DetailPart> {
                                         data2[global.id_detail].idCooler);
                                     global.hargacooler = int.parse(
                                         data2[global.id_detail].harga);
+                                    global.wattcooler = int.parse(
+                                        data2[global.id_detail].powerCooler);
                                   },
                                 );
                               },
@@ -953,6 +955,8 @@ class _DetailPartState extends State<DetailPart> {
                                         data3[global.id_detail].socket;
                                     global.hargacpu = int.parse(
                                         data3[global.id_detail].harga);
+                                    global.wattcpu = int.parse(
+                                        data3[global.id_detail].defaultTdp);
                                   },
                                 );
                               },
@@ -1290,16 +1294,22 @@ class _DetailPartState extends State<DetailPart> {
                                           data4[global.id_detail].idFans);
                                       global.hargafan1 = int.parse(
                                           data4[global.id_detail].harga);
+                                      global.wattfan1 = int.parse(
+                                          data4[global.id_detail].powerFans);
                                     } else if (global.seng_diganti == 2) {
                                       global.id_fan2_adv = int.parse(
                                           data4[global.id_detail].idFans);
                                       global.hargafan2 = int.parse(
                                           data4[global.id_detail].harga);
+                                      global.wattfan2 = int.parse(
+                                          data4[global.id_detail].powerFans);
                                     } else if (global.seng_diganti == 3) {
                                       global.id_fan3_adv = int.parse(
                                           data4[global.id_detail].idFans);
                                       global.hargafan3 = int.parse(
                                           data4[global.id_detail].harga);
+                                      global.wattfan3 = int.parse(
+                                          data4[global.id_detail].powerFans);
                                     }
                                   },
                                 );
@@ -1994,11 +2004,13 @@ class _DetailPartState extends State<DetailPart> {
                                           data6[global.id_detail].idRam);
                                       global.hargaram1 = int.parse(
                                           data6[global.id_detail].harga);
+                                      global.wattram1 = 5;
                                     } else {
                                       global.id_ram2_adv = int.parse(
                                           data6[global.id_detail].idRam);
                                       global.hargaram2 = int.parse(
                                           data6[global.id_detail].harga);
+                                      global.wattram2 = 5;
                                     }
                                   },
                                 );
@@ -2281,11 +2293,15 @@ class _DetailPartState extends State<DetailPart> {
                                           data7[global.id_detail].idStorage);
                                       global.hargastorage1 = int.parse(
                                           data7[global.id_detail].harga);
+                                      global.wattstorage1 = int.parse(
+                                          data7[global.id_detail].storageWatt);
                                     } else if (global.seng_diganti == 2) {
                                       global.id_storage2_adv = int.parse(
                                           data7[global.id_detail].idStorage);
                                       global.hargastorage2 = int.parse(
                                           data7[global.id_detail].harga);
+                                      global.wattstorage2 = int.parse(
+                                          data7[global.id_detail].storageWatt);
                                     }
                                   },
                                 );
@@ -2935,6 +2951,9 @@ class _DetailPartState extends State<DetailPart> {
                                         data9[global.id_detail].idVga);
                                     global.hargavga = int.parse(
                                         data9[global.id_detail].harga);
+                                    global.wattvga = int.parse(
+                                        data9[global.id_detail]
+                                            .powerConsumption);
                                   },
                                 );
                               },
