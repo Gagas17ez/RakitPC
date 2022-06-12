@@ -67,7 +67,7 @@ class _BodyMobileState extends State<BodyMobile> {
             ),
             RoundedButton(
               color: Colors.black,
-              text: "SIGNUP",
+              text: "SIGN UP",
               press: () {
                 signUp(_email, _password);
               },

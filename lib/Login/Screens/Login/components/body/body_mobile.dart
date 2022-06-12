@@ -70,7 +70,7 @@ class _BodyMobileState extends State<BodyMobile> {
               },
             ),
             RoundedButton(
-              text: "LOGIN",
+              text: "LOG IN",
               color: Colors.black,
               press: () async {
                 final SharedPreferences login =
