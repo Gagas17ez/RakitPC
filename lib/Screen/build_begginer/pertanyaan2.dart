@@ -99,6 +99,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   onPressed: () {
                     setState(() {
                       global.kegunaan = 1;
+                      global.compatible = "All parts compatible";
                     });
                     Navigator.pushNamed(context, '/build/begginer/hasil');
                   },
