@@ -37,20 +37,20 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
             const SizedBox(
               height: 30,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              child: LinearPercentIndicator(
-                width: 360,
-                animation: true,
-                lineHeight: 30,
-                percent: 75 / 100,
-                animationDuration: 500,
-                animateFromLastPercent: true,
-                barRadius: Radius.circular(20),
-                backgroundColor: HexColor("#C9C9C9"),
-                progressColor: HexColor("#EE5584"),
-              ),
-            ),
+            Padding(
+                            padding: EdgeInsets.fromLTRB(35, 30, 0, 0),
+                            child: LinearPercentIndicator(
+                              width: 320,
+                              lineHeight: 30,
+                              percent: 75 / 100,
+                              animation: true,
+                              animationDuration: 500,
+                              animateFromLastPercent: true,
+                              barRadius: Radius.circular(20),
+                              backgroundColor: HexColor("#C9C9C9"),
+                              progressColor: HexColor("#EE5584"),
+                            ),
+                          ),
             const SizedBox(
               height: 20,
             ),
@@ -235,6 +235,9 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                   textStyle: GoogleFonts.poppins(
                     fontSize: 16.0,
                   )),
+            ),
+            const SizedBox(
+              height: 30,
             ),
           ],
         ),

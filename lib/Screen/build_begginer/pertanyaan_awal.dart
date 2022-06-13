@@ -29,26 +29,27 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
             const SizedBox(
               height: 30,
             ),
-            Container(
-              margin: EdgeInsets.only(top: 20),
-              child: LinearPercentIndicator(
-                width: 360,
-                animation: true,
-                lineHeight: 30,
-                percent: 25 / 100,
-                animationDuration: 500,
-                animateFromLastPercent: true,
-                barRadius: Radius.circular(20),
-                backgroundColor: HexColor("#C9C9C9"),
-                progressColor: HexColor("#EE5584"),
-              ),
-            ),
+            Padding(
+                            padding: EdgeInsets.fromLTRB(35, 30, 0, 0),
+                            child: LinearPercentIndicator(
+                              width: 330,
+                              lineHeight: 30,
+                              percent: 25 / 100,
+                              animation: true,
+                              animationDuration: 500,
+                              animateFromLastPercent: true,
+                              barRadius: Radius.circular(20),
+                              backgroundColor: HexColor("#C9C9C9"),
+                              progressColor: HexColor("#EE5584"),
+                            ),
+                          ),
+
             const SizedBox(
               height: 20,
             ),
             Container(
               height: 60,
-              width: 300,
+              width: 310,
               alignment: Alignment.center,
               child: Text(
                 "Apakah anda sudah berpengalaman di bidang komputer ? ",
@@ -61,7 +62,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               ),
             ),
             const SizedBox(
-              height: 270,
+              height: 170,
             ),
             Container(
                 height: 40,
