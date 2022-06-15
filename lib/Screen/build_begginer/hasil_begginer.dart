@@ -49,11 +49,13 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
 
                     return Center(
                       child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(35, 30, 0, 0),
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.1,
+                            width: MediaQuery.of(context).size.width * 0.87,
                             child: LinearPercentIndicator(
-                              width: 320,
+                              width: 335,
                               lineHeight: 30,
                               percent: 100 / 100,
                               animation: true,
@@ -62,10 +64,10 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                               barRadius: Radius.circular(20),
                               backgroundColor: HexColor("#C9C9C9"),
                               progressColor: HexColor("#EE5584"),
-                            ),
+                                          ),
                           ),
                           const SizedBox(
-                            height: 25,
+                            height: 10,
                           ),
                           Container(
                             decoration: BoxDecoration(
