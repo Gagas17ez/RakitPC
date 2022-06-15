@@ -77,6 +77,7 @@ class _homepageState extends State<homepage>
     global.hargastorage1 = 0;
     global.hargastorage2 = 0;
     global.hargaharga = 0;
+    global.wattTotal = 0;
     checkLogin();
 
     //get the data from firestore
