@@ -24,136 +24,136 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
       body: Center(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height,
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                  height: 30,
-                   ),
-                  Container(
-                    alignment: Alignment.center,
-                    height: MediaQuery.of(context).size.height * 0.1,
-                    width: MediaQuery.of(context).size.width * 0.85,
-                    child: LinearPercentIndicator(
-                                    width: 330,
-                                    lineHeight: 30,
-                                    percent: 25 / 100,
-                                    animation: true,
-                                    animationDuration: 500,
-                                    animateFromLastPercent: true,
-                                    barRadius: Radius.circular(20),
-                                    backgroundColor: HexColor("#C9C9C9"),
-                                    progressColor: HexColor("#EE5584"),
-                                  ),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                    // height: MediaQuery.of(context).size.height * 0.1,
-                    // width: MediaQuery.of(context).size.width * 0.9,
-                     child: Column(
-                      children: <Widget>[
-                        Container(
-                          height: 60,
-                          width: 310,
-                          alignment: Alignment.center,
-                          child: Text(
-                            "Apakah anda sudah berpengalaman di bidang komputer ? ",
-                            textAlign: TextAlign.left,
-                            style: GoogleFonts.poppins(
-                              fontSize: 16.0,
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            children: <Widget>[
+              SizedBox(
+                height: 30,
+              ),
+              Container(
+                alignment: Alignment.center,
+                height: MediaQuery.of(context).size.height * 0.1,
+                width: MediaQuery.of(context).size.width * 0.90,
+                child: LinearPercentIndicator(
+                  width: MediaQuery.of(context).size.width * 0.90,
+                  lineHeight: 30,
+                  percent: 25 / 100,
+                  animation: true,
+                  animationDuration: 500,
+                  animateFromLastPercent: true,
+                  barRadius: Radius.circular(20),
+                  backgroundColor: HexColor("#C9C9C9"),
+                  progressColor: HexColor("#EE5584"),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                // height: MediaQuery.of(context).size.height * 0.1,
+                // width: MediaQuery.of(context).size.width * 0.9,
+                child: Column(
+                  children: <Widget>[
+                    Container(
+                      height: 60,
+                      width: 310,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Apakah anda sudah berpengalaman di bidang komputer ? ",
+                        textAlign: TextAlign.left,
+                        style: GoogleFonts.poppins(
+                          fontSize: 16.0,
+                          color: Colors.white,
+                          height: 1.5,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 220,
+                    ),
+                    Container(
+                        height: 40,
+                        width: 320,
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: OutlinedButton(
+                          onPressed: () {
+                            Navigator.pushNamed(context, '/build/advanced');
+                          },
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                            side: BorderSide(
                               color: Colors.white,
-                              height: 1.5,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
                             ),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 220,
-                        ),
-                        
-                        Container(
-                            height: 40,
-                            width: 320,
-                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                            child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/build/advanced');
-                              },
-                              style: OutlinedButton.styleFrom(
-                                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                                side: BorderSide(
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text("Sudah",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16.0,
                                   color: Colors.white,
+                                  height: 1.5,
                                 ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Sudah",
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 16.0,
-                                      color: Colors.white,
-                                      height: 1.5,
-                                    ),
-                                    textAlign: TextAlign.left),
-                              ),
-                            )),
-                        SizedBox(height: 20),
-                        Container(
-                            height: 40,
-                            width: 320,
-                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                            child: OutlinedButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
-                              },
-                              style: OutlinedButton.styleFrom(
-                                padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                                side: BorderSide(
-                                  color: Colors.white,
-                                ),
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                ),
-                              ),
-                              child: Align(
-                                alignment: Alignment.centerLeft,
-                                child: Text("Belum",
-                                    style: GoogleFonts.poppins(
-                                      fontSize: 16.0,
-                                      color: Colors.white,
-                                      height: 1.5,
-                                    ),
-                                    textAlign: TextAlign.left),
-                              ),
-                            )),
-                        SizedBox(height: 24),
-                        ElevatedButton(
-                          child: const Text('Back'),
+                                textAlign: TextAlign.left),
+                          ),
+                        )),
+                    SizedBox(height: 20),
+                    Container(
+                        height: 40,
+                        width: 320,
+                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                        child: OutlinedButton(
                           onPressed: () {
-                            Navigator.pushNamed(context, '/');
+                            Navigator.pushNamed(
+                                context, '/build/begginer/pertanyaan1');
                           },
-                          style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              primary: HexColor("#7A77FF"),
-                              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
-                              textStyle: GoogleFonts.poppins(
-                                fontSize: 16.0,
-                              )),
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                            side: BorderSide(
+                              color: Colors.white,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
                           ),
-                        ],
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text("Belum",
+                                style: GoogleFonts.poppins(
+                                  fontSize: 16.0,
+                                  color: Colors.white,
+                                  height: 1.5,
+                                ),
+                                textAlign: TextAlign.left),
                           ),
-                  ),
-                  
-                ],
+                        )),
+                    SizedBox(height: 24),
+                    ElevatedButton(
+                      child: const Text('Back'),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/');
+                      },
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          primary: HexColor("#7A77FF"),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 25, vertical: 10),
+                          textStyle: GoogleFonts.poppins(
+                            fontSize: 16.0,
+                          )),
+                    ),
+                  ],
+                ),
               ),
-            ),
+            ],
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {

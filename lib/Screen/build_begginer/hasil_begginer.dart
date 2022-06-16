@@ -53,9 +53,9 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                         children: <Widget>[
                           Container(
                             height: MediaQuery.of(context).size.height * 0.1,
-                            width: MediaQuery.of(context).size.width * 0.87,
+                            width: MediaQuery.of(context).size.width * 0.90,
                             child: LinearPercentIndicator(
-                              width: 335,
+                              width: MediaQuery.of(context).size.width * 0.90,
                               lineHeight: 30,
                               percent: 100 / 100,
                               animation: true,
@@ -64,7 +64,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                               barRadius: Radius.circular(20),
                               backgroundColor: HexColor("#C9C9C9"),
                               progressColor: HexColor("#EE5584"),
-                                          ),
+                            ),
                           ),
                           const SizedBox(
                             height: 10,
@@ -120,15 +120,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                                Navigator.pushNamed(context,
-                                                    '/part/list/detail');
-                                                setState(() {
-                                                  global.id_detail =
-                                                      int.parse(build.cpu) - 1;
-                                                  global.nama_part = "CPU";
-                                                });
-                                              },
-
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.cpu) - 1;
+                                      global.nama_part = "CPU";
+                                    });
+                                  },
                                   child: Container(
                                     margin:
                                         EdgeInsets.symmetric(horizontal: 10),
@@ -200,16 +199,14 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                 ),
                                 InkWell(
                                   onTap: () {
-                                          Navigator.pushNamed(
-                                              context, '/part/list/detail');
-                                          setState(() {
-                                            global.id_detail =
-                                                int.parse(build.motherboard) -
-                                                    1;
-                                            global.nama_part = "Motherboard";
-                                          });
-                                        },
-
+                                    Navigator.pushNamed(
+                                        context, '/part/list/detail');
+                                    setState(() {
+                                      global.id_detail =
+                                          int.parse(build.motherboard) - 1;
+                                      global.nama_part = "Motherboard";
+                                    });
+                                  },
                                   child: Container(
                                     margin:
                                         EdgeInsets.symmetric(horizontal: 10),
