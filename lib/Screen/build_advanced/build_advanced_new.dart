@@ -696,6 +696,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
               return ListView.builder(
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (BuildContext context, index) {
                     Casing casinggan = snapshot.data[index];
 
@@ -999,6 +1000,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1092,6 +1094,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1186,6 +1189,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1280,6 +1284,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1374,6 +1379,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1468,6 +1474,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1562,6 +1569,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1655,6 +1663,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1749,6 +1758,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1843,6 +1853,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -1940,6 +1951,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
@@ -2037,6 +2049,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   itemCount: snapshot.data!.length,
                   shrinkWrap: true,
                   itemBuilder: (BuildContext context, index) {
