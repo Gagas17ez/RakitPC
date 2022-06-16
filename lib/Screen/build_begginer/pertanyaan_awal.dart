@@ -71,7 +71,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                       ),
                     ),
                     const SizedBox(
-                      height: 220,
+                      height: 250,
                     ),
                     Container(
                         height: 40,

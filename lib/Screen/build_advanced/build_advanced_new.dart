@@ -605,7 +605,10 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ElevatedButton(
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  width: MediaQuery.of(context).size.width * 0.50,
+                  child: ElevatedButton(
                   onPressed: () {
                     _onSaveBuild();
                     Navigator.pushNamed(context, '/history');
@@ -618,12 +621,14 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,
                     // primary: Colors.white,
-                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 70),
+                    // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 70),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14.89),
                     ),
                   ),
                 ),
+                ),
+                
                 SizedBox(
                   height: 20,
                 ),

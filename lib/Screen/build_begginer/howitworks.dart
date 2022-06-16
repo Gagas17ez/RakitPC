@@ -59,6 +59,7 @@ class _howItworksState extends State<howItworks> {
                         ),
                         Container(
                           height: 100,
+                          width: MediaQuery.of(context).size.width * 0.14,
                           child: Text(
                             "Step 1 :",
                             textAlign: TextAlign.left,
@@ -104,6 +105,7 @@ class _howItworksState extends State<howItworks> {
                         ),
                         Container(
                           height: 100,
+                          width: MediaQuery.of(context).size.width * 0.14,
                           child: Text(
                             "Step 2 :",
                             textAlign: TextAlign.left,
