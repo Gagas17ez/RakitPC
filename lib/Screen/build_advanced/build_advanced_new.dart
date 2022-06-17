@@ -609,26 +609,25 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width * 0.50,
                   child: ElevatedButton(
-                  onPressed: () {
-                    _onSaveBuild();
-                    Navigator.pushNamed(context, '/history');
-                  },
-                  child: Text('Simpan Build',
-                      style: GoogleFonts.poppins(
-                          color: HexColor("#9997FF"),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold)),
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    // primary: Colors.white,
-                    // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 70),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14.89),
+                    onPressed: () {
+                      _onSaveBuild();
+                      Navigator.pushNamed(context, '/history');
+                    },
+                    child: Text('Simpan Build',
+                        style: GoogleFonts.poppins(
+                            color: HexColor("#9997FF"),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold)),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.white,
+                      // primary: Colors.white,
+                      // padding: EdgeInsets.symmetric(vertical: 15, horizontal: 70),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14.89),
+                      ),
                     ),
                   ),
                 ),
-                ),
-                
                 SizedBox(
                   height: 20,
                 ),
@@ -814,7 +813,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   title: Text('Compatiblity : ',
                       style: GoogleFonts.poppins(
                           color: Colors.white,
-                          fontSize: 19,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600)),
                   subtitle: Text('No issues or incompatibilities found.',
                       style: GoogleFonts.poppins(
@@ -895,7 +894,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     title: Text('Compatiblity : ',
                         style: GoogleFonts.poppins(
                             color: Colors.white,
-                            fontSize: 19,
+                            fontSize: 17,
                             fontWeight: FontWeight.w600)),
                     subtitle: Text(messageCompability,
                         style: GoogleFonts.poppins(
@@ -956,7 +955,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                   title: Text('Compatiblity : ',
                       style: GoogleFonts.poppins(
                           color: Colors.white,
-                          fontSize: 19,
+                          fontSize: 17,
                           fontWeight: FontWeight.w600)),
                   subtitle: Text('No issues or incompatibilities found.',
                       style: GoogleFonts.poppins(

@@ -256,7 +256,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -629,7 +629,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -937,7 +937,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -1277,7 +1277,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -1588,7 +1588,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -1987,7 +1987,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -2276,7 +2276,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -2606,7 +2606,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
@@ -2935,7 +2935,7 @@ class _DetailPartState extends State<DetailPart> {
                           ),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.blue,
+                                primary: Color.fromARGB(255, 121, 119, 255),
                                 onPrimary: Colors.white,
                                 shadowColor: Colors.greenAccent,
                                 elevation: 3,
