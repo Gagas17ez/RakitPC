@@ -221,7 +221,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     ),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("≤  Rp 15.0000.000",
+                      child: Text("≥ Rp 15.0000.000",
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
                             color: Colors.white,
