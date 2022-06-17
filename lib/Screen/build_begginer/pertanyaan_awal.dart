@@ -57,8 +57,8 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      height: 60,
-                      width: 310,
+                      width: MediaQuery.of(context).size.width * 0.80,
+                      height: MediaQuery.of(context).size.height * 0.10,
                       alignment: Alignment.center,
                       child: Text(
                         "Apakah anda sudah berpengalaman di bidang komputer ? ",
@@ -70,8 +70,8 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 250,
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.36,
                     ),
                     Container(
                         height: 40,
