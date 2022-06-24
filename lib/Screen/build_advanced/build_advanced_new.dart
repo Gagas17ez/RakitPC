@@ -859,7 +859,9 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
       });
       if ((global.socket_cpu.toLowerCase() !=
               global.socket_mobo.toLowerCase()) ||
-          (global.id_ram_adv != global.id_ram2_adv)) {
+          (global.id_ram_adv != global.id_ram2_adv &&
+              global.id_ram_adv != 0 &&
+              global.id_ram2_adv != 0)) {
         setState(() {
           global.compatible = "Some part Incompatible";
         });

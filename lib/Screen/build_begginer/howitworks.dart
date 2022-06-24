@@ -163,9 +163,7 @@ class _howItworksState extends State<howItworks> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, '/buildAwal');
-        },
+        onPressed: () {},
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(
           Icons.build,

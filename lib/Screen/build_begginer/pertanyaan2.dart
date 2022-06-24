@@ -250,7 +250,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
+          Navigator.pushNamed(context, '/build');
         },
         backgroundColor: HexColor("#7A77FF"),
         child: const Icon(

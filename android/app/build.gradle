@@ -53,7 +53,7 @@ android {
         applicationId "com.rakitpc.rakitpc"
         minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
-        versionCode 4
+        versionCode 5
         versionName "0.0.2"
     }
 

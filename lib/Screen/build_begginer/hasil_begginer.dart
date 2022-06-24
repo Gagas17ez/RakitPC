@@ -936,7 +936,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                     ),
                                     onPressed: () {
                                       onSaveBuild(
-                                          global.compatible,
+                                          "All parts compatible",
                                           build.hargaBuilds,
                                           int.parse(build.casing),
                                           int.parse(build.cpu),
@@ -1014,7 +1014,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
         idPsu: idpsu,
         idRam1: idram1,
         idRam2: 0,
-        idStorage1: idvga,
+        idStorage1: idstorage1,
         idStorage2: 0,
         idVga: idvga,
         idFan1: idfan,
