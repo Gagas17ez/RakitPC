@@ -119,7 +119,7 @@ class _Pertanyaan2State extends State<Pertanyaan2> {
                     ),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Kerja /Browse / Video / Sekolah",
+                      child: Text("Kerja / Browse / Video / Sekolah",
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
                             color: Colors.white,
