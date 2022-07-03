@@ -60,10 +60,8 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 height: 10,
               ),
               Container(
-                padding:
-                    EdgeInsets.only(top: 0, right: 220, left: 0, bottom: 0),
-                height: 30,
-                width: 310,
+                height: MediaQuery.of(context).size.height * 0.03,
+                width: MediaQuery.of(context).size.width * 0.77,
                 alignment: Alignment.topLeft,
                 child: Text(
                   "Question 1",
@@ -80,11 +78,9 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 height: 10,
               ),
               Container(
-                padding:
-                    EdgeInsets.only(top: 0, right: 110, left: 0, bottom: 5),
-                height: 30,
-                width: 310,
-                alignment: Alignment.center,
+                height: MediaQuery.of(context).size.height * 0.03,
+                width: MediaQuery.of(context).size.width * 0.77,
+                alignment: Alignment.bottomLeft,
                 child: Text(
                   "Berapakah budget anda ?",
                   textAlign: TextAlign.left,
