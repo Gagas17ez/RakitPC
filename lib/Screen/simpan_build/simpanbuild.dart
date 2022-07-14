@@ -147,8 +147,8 @@ class _Simpan extends State<Simpan> {
                               global.id_vga_adv = build.idVga;
                               global.id_cpu_cooler_adv = build.idCpuCooler;
                               global.id_fan_adv = build.idFan1;
-                              global.id_fan2_adv = build.idFan2;
-                              global.id_fan3_adv = build.idFan3;
+                              global.id_fan2_adv = build.idFan1;
+                              global.id_fan3_adv = build.idFan1;
                               global.id_psu_adv = build.idPsu;
                               global.id_storage_adv = build.idStorage1;
                               global.id_storage2_adv = build.idStorage2;
@@ -256,7 +256,7 @@ class _Simpan extends State<Simpan> {
                               global.id_psu_adv = build.idPsu;
                               global.id_storage_adv = build.idStorage1;
                               global.id_storage2_adv = 0;
-                              global.id_ram_adv = 0;
+                              global.id_ram_adv = build.idRam1;
                             });
                             const SizedBox(
                               height: 50,
