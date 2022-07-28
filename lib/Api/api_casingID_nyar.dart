@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class CasingApi {
   static Future<List<Casing>> fetch_casingID_nyar(String query) async {
-    final url = Uri.parse("http://rakitpc.garuda.net.id/Api/ApiCasing.php");
+    final url = Uri.parse("http://103.105.78.74/Api/ApiCasing.php");
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

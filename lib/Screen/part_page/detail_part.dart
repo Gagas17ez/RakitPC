@@ -961,6 +961,26 @@ class _DetailPartState extends State<DetailPart> {
                                 );
                               },
                               child: const Text('Add to Build')),
+                          ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                primary: Color.fromARGB(255, 121, 119, 255),
+                                onPrimary: Colors.white,
+                                shadowColor: Colors.greenAccent,
+                                elevation: 3,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0)),
+                                minimumSize: const Size(100, 40), //////// HERE
+                              ),
+                              onPressed: () {
+                                Navigator.pushNamed(context, '/build/advanced');
+                                setState(
+                                  () {
+                                    global.id_compare1 = int.parse(
+                                        data3[global.id_detail].idCpu);
+                                  },
+                                );
+                              },
+                              child: const Text('Add to Compare')),
                           SizedBox(
                             height: 10,
                           ),

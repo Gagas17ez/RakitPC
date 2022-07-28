@@ -58,6 +58,11 @@ int id_storage2_adv = 0;
 int id_ram_adv = 0;
 int id_ram2_adv = 0;
 
+//gawe compare
+int id_compare1 = 0;
+int id_compare2 = 0;
+int id_compare3 = 0;
+
 //gawe compability
 String socket_cpu = "";
 String socket_mobo = "";

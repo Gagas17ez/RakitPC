@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class CpuCoolerApi {
   static Future<List<CpuCooler>> fetch_cpu_coolerID_nyar(String query) async {
-    final url = Uri.parse("http://rakitpc.garuda.net.id/Api/ApiCpuCooler.php");
+    final url = Uri.parse("http://103.105.78.74/Api/ApiCpuCooler.php");
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

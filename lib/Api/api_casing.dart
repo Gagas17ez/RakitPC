@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 import 'package:rakit_pc/Models/models_casing.dart';
 
 Future<List<Casing>> fetch_casing() async {
-  String link = "http://rakitpc.garuda.net.id/Api/ApiCasing.php";
+  String link = "http://103.105.78.74/Api/ApiCasing.php";
   final response = await http.get(Uri.parse(link));
 
   if (response.statusCode == 200) {

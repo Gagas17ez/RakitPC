@@ -28,7 +28,7 @@ class _BodyMobileState extends State<BodyMobile> {
             SizedBox(height: size.height * 0.05),
             SizedBox(height: size.height * 0.05),
             RoundedButton(
-              text: "LOG IN",
+              text: "MASUK",
               color: Colors.black,
               press: () {
                 Navigator.push(
@@ -42,7 +42,7 @@ class _BodyMobileState extends State<BodyMobile> {
               },
             ),
             RoundedButton(
-              text: "SIGN UP",
+              text: "DAFTAR",
               color: Colors.white,
               textColor: Colors.black,
               press: () {

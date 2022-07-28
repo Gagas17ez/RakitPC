@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:rakit_pc/Models/models_fan.dart';
 
 Future<List<Fan>> fetch_fan_id(int id) async {
-  String link = "http://rakitpc.garuda.net.id/Api/ApiFanID.php";
+  String link = "http://103.105.78.74/Api/ApiFanID.php";
   final response =
       await http.post(Uri.parse(link), body: {'ID': id.toString()});
 

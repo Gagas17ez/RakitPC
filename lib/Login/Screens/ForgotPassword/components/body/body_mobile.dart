@@ -60,7 +60,7 @@ class _BodyMobileState extends State<BodyMobile> {
     try {
       await auth
           .sendPasswordResetEmail(email: email)
-          .then((value) => _status = ' successful');
+          .then((value) => _status = 'Berhasil');
       print(_status);
       // Fluttertoast.showToast(msg: 'Password reset has been sent to Email ');
       Widget okButton = FlatButton(
@@ -71,7 +71,7 @@ class _BodyMobileState extends State<BodyMobile> {
         },
       );
       AlertDialog alert = AlertDialog(
-        title: Text("Notice"),
+        title: Text("Pemberitahuan"),
         content: Text(
             "Password reset sudah terkirim ke email, jika belum diterima cek folder spam"),
         actions: [

@@ -5,6 +5,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/build_begginer/howitworks.dart';
 import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
+import 'package:rakit_pc/Screen/compare_part/compare_cpu.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
@@ -45,7 +46,7 @@ void main() async {
     routes: {
       '/': (context) => global.currentState,
       '/history': (context) => Simpan(),
-      '/build': (context) => howItworks(),
+      '/build': (context) => howItworks(), //compare_cpu(),
       '/buildAwal': (context) => pertanyaan_awal(),
       '/build/advanced': (context) => buildpc_advanced(),
       '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),

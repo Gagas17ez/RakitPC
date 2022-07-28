@@ -104,7 +104,7 @@ class _BodyMobileState extends State<BodyMobile> {
       await auth
           .signInWithEmailAndPassword(email: email, password: password)
           .then((uid) => {
-                Fluttertoast.showToast(msg: "Login Successful"),
+                Fluttertoast.showToast(msg: "Login Berhasil"),
                 Navigator.of(context).pushAndRemoveUntil(
                     MaterialPageRoute(builder: (context) => homepage()),
                     (Route<dynamic> route) => false),

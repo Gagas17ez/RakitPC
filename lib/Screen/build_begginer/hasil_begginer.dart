@@ -84,7 +84,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                                       Align(
                                         alignment: Alignment.center,
                                         child: Text(
-                                          'Rekomendasi system',
+                                          'Rekomendasi Sistem',
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.poppins(
                                             fontSize: 24,

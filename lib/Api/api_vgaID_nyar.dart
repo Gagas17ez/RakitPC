@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class VgaApi {
   static Future<List<Vga>> fetch_vgaID_nyar(String query) async {
-    final url = Uri.parse("http://rakitpc.garuda.net.id/Api/ApiVga.php");
+    final url = Uri.parse("http://103.105.78.74/Api/ApiVga.php");
     final response = await http.get(url);
 
     if (response.statusCode == 200) {

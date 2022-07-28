@@ -64,7 +64,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 width: MediaQuery.of(context).size.width * 0.77,
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "Question 1",
+                  "Pertanyaan  1",
                   textAlign: TextAlign.left,
                   style: GoogleFonts.poppins(
                     fontSize: 16.0,
@@ -228,7 +228,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   )),
               SizedBox(height: 24),
               ElevatedButton(
-                child: const Text('Back'),
+                child: const Text('Kembali'),
                 onPressed: () {
                   Navigator.pushNamed(context, '/buildAwal');
                 },

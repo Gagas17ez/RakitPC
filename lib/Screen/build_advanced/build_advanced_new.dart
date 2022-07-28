@@ -96,7 +96,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         ),
         centerTitle: true,
         title: Text(
-          'System Builder',
+          'Sistem Pembangun Komputer',
           textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
             fontSize: 20,
@@ -815,7 +815,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           color: Colors.white,
                           fontSize: 17,
                           fontWeight: FontWeight.w600)),
-                  subtitle: Text('No issues or incompatibilities found.',
+                  subtitle: Text('Tidak ada isu atau masalah ditemukan.',
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 14,
@@ -840,9 +840,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     size: 32,
                   ),
                   title: Text(
-                      'Estimated Wattage : ' +
-                          global.wattTotal.toString() +
-                          "W",
+                      'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 17,
@@ -868,11 +866,11 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
         if (global.socket_cpu.toLowerCase() !=
             global.socket_mobo.toLowerCase()) {
           messageCompability +=
-              "- Cpu might not compatible with the current Motherboard\n";
+              "- CPU tidak kompatible dengan motherboard pilihan\n";
         }
         if (global.id_ram_adv != global.id_ram2_adv) {
           messageCompability +=
-              "- Single or Different Ram speed & size might cause instability or error\n";
+              "- Single atau Ram yang berbeda bisa menimbulkan error\n";
         }
 
         return Column(
@@ -923,9 +921,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                       size: 32,
                     ),
                     title: Text(
-                        'Estimated Wattage : ' +
-                            global.wattTotal.toString() +
-                            "W",
+                        'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
                         style: GoogleFonts.poppins(
                             color: Colors.white,
                             fontSize: 17,
@@ -959,7 +955,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                           color: Colors.white,
                           fontSize: 17,
                           fontWeight: FontWeight.w600)),
-                  subtitle: Text('No issues or incompatibilities found.',
+                  subtitle: Text('Tidak ada isu atau masalah ditemukan.',
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 14,
@@ -983,9 +979,7 @@ class _buildpc_advancedState extends State<buildpc_advanced> {
                     color: Colors.white,
                   ),
                   title: Text(
-                      'Estimated Wattage : ' +
-                          global.wattTotal.toString() +
-                          "W",
+                      'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 17,

@@ -3,7 +3,7 @@ import 'package:rakit_pc/Models/models_builds.dart';
 import 'package:rakit_pc/global.dart' as global;
 
 Future<List<Builds>> fetch_builds_id() async {
-  String link = "http://rakitpc.garuda.net.id/Api/ApiBuildsID.php";
+  String link = "http://103.105.78.74/Api/ApiBuildsID.php";
   int pilihan_pc = 0;
 
   if (global.budget == 1 && global.kegunaan == 1) {

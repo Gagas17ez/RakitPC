@@ -67,7 +67,7 @@ class _BodyMobileState extends State<BodyMobile> {
             ),
             RoundedButton(
               color: Colors.black,
-              text: "SIGN UP",
+              text: "DAFTAR",
               press: () {
                 signUp(_email, _password);
               },
@@ -116,7 +116,7 @@ class _BodyMobileState extends State<BodyMobile> {
           errorMessage = "User with this email doesn't exist.";
           break;
         case "user-disabled":
-          errorMessage = "User with this email has been disabled.";
+          errorMessage = "Anda sudah di banned.";
           break;
         case "too-many-requests":
           errorMessage = "Too many requests";
@@ -153,7 +153,7 @@ class _BodyMobileState extends State<BodyMobile> {
         .collection("users")
         .doc(user.uid)
         .set(userModel.toMap());
-    Fluttertoast.showToast(msg: "Account created successfully :) ");
+    Fluttertoast.showToast(msg: "Akun berhasil dibuat :) ");
 
     Navigator.push(
       context,

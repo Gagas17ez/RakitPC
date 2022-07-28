@@ -191,13 +191,13 @@ class _homepageState extends State<homepage>
     var timeNow = DateTime.now().hour;
 
     if (timeNow <= 12) {
-      return 'Good Morning, ';
+      return 'Selamat Pagi, ';
     } else if (timeNow > 12 && timeNow <= 16) {
-      return 'Good Afternoon, ';
+      return 'Selamat Siang, ';
     } else if (timeNow > 16 && timeNow < 20) {
-      return 'Good Evening, ';
+      return 'Selamat Sore, ';
     } else {
-      return 'Good Night, ';
+      return 'Selamat Malam, ';
     }
   }
 }

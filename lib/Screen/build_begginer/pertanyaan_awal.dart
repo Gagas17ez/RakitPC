@@ -133,7 +133,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                         )),
                     SizedBox(height: 24),
                     ElevatedButton(
-                      child: const Text('Back'),
+                      child: const Text('Kembali'),
                       onPressed: () {
                         Navigator.pushNamed(context, '/');
                       },

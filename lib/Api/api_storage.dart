@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'package:rakit_pc/Models/models_storage.dart';
 
 Future<List<Storage>> fetch_storage() async {
-  String link = "http://rakitpc.garuda.net.id/Api/ApiStorage.php";
+  String link = "http://103.105.78.74/Api/ApiStorage.php";
   final response = await http.get(Uri.parse(link));
 
   if (response.statusCode == 200) {

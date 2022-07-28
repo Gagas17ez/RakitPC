@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 
 class PsuApi {
   static Future<List<Psu>> fetch_psuID_nyar(String query) async {
-    final url = Uri.parse("http://rakitpc.garuda.net.id/Api/ApiPsu.php");
+    final url = Uri.parse("http://103.105.78.74/Api/ApiPsu.php");
     final response = await http.get(url);
 
     if (response.statusCode == 200) {
