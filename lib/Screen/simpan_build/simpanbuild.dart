@@ -89,7 +89,7 @@ class _Simpan extends State<Simpan> {
                             children: [
                               build.compatible == "All parts compatible"
                                   ? Text(
-                                      build.compatible.toString(),
+                                      "Semua part kompatible",
                                       style: GoogleFonts.poppins(
                                         color: Color(0xff52BB6F),
                                         fontSize: 13,
@@ -97,7 +97,7 @@ class _Simpan extends State<Simpan> {
                                       ),
                                     )
                                   : Text(
-                                      build.compatible.toString(),
+                                      "Ada part tidak kompatible",
                                       style: GoogleFonts.poppins(
                                         color: Color(0xffEE3C6D),
                                         fontSize: 13,
@@ -193,7 +193,7 @@ class _Simpan extends State<Simpan> {
                             children: [
                               build.compatible == "All parts compatible"
                                   ? Text(
-                                      build.compatible.toString(),
+                                      "Semua part compatible",
                                       style: GoogleFonts.poppins(
                                         color: Color(0xff52BB6F),
                                         fontSize: 13,
@@ -201,7 +201,7 @@ class _Simpan extends State<Simpan> {
                                       ),
                                     )
                                   : Text(
-                                      build.compatible.toString(),
+                                      "Beberapa part tidak kompatible",
                                       style: GoogleFonts.poppins(
                                         color: Color(0xffEE3C6D),
                                         fontSize: 13,

@@ -17,7 +17,7 @@ class ForgotPasswordCheck extends StatelessWidget {
           GestureDetector(
             onTap: press,
             child: const Text(
-              "Forgot Password ?",
+              "Lupa Password ?",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
