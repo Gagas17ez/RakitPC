@@ -57,7 +57,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                 child: Column(
                   children: <Widget>[
                     Container(
-                      width: MediaQuery.of(context).size.width * 0.80,
+                      width: MediaQuery.of(context).size.width * 0.79,
                       height: MediaQuery.of(context).size.height * 0.10,
                       alignment: Alignment.center,
                       child: Text(

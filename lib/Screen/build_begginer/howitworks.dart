@@ -60,10 +60,10 @@ class _howItworksState extends State<howItworks> {
                     Container(
                       height: 100,
                       child: Text(
-                        "langkah 1 :",
+                        "Langkah 1 :",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
-                          fontSize: 15.0,
+                          fontSize: 14.7,
                           color: Colors.white,
                           height: 1.5,
                         ),
@@ -76,13 +76,14 @@ class _howItworksState extends State<howItworks> {
                     Expanded(
                       flex: 2,
                       child: Container(
-                        height: 100,
-                        padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                        height: MediaQuery.of(context).size.height * 0.18,
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.fromLTRB(0, 20, 10, 0),
                         child: Text(
                           "Kami akan menanyakan beberapa pertanyaan untuk memahami kebutuhan serta budget Anda",
                           textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
-                            fontSize: 15.0,
+                            fontSize: 14.7,
                             color: Colors.white,
                             height: 1.5,
                           ),
@@ -105,10 +106,10 @@ class _howItworksState extends State<howItworks> {
                     Container(
                       height: 100,
                       child: Text(
-                        "langkah 2 :",
+                        "Langkah 2 :",
                         textAlign: TextAlign.left,
                         style: GoogleFonts.poppins(
-                          fontSize: 15.0,
+                          fontSize: 14.7,
                           color: Colors.white,
                           height: 1.5,
                         ),
@@ -121,13 +122,14 @@ class _howItworksState extends State<howItworks> {
                     Expanded(
                       flex: 2,
                       child: Container(
-                        height: 100,
-                        padding: EdgeInsets.fromLTRB(0, 0, 10, 0),
+                        height: MediaQuery.of(context).size.height * 0.18,
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.fromLTRB(0, 20, 10, 0),
                         child: Text(
                           "Kemudian kami akan merekomendasikan part PC terbaik sesuai kebutuhan Anda",
                           textAlign: TextAlign.left,
                           style: GoogleFonts.poppins(
-                            fontSize: 15.0,
+                            fontSize: 14.7,
                             color: Colors.white,
                             height: 1.5,
                           ),
