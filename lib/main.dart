@@ -6,6 +6,8 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/build_begginer/howitworks.dart';
 import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
 import 'package:rakit_pc/Screen/compare_part/compare_cpu.dart';
+import 'package:rakit_pc/Screen/compare_part/list_part_compare.dart';
+import 'package:rakit_pc/Screen/compare_part/pilih_compare_cpu.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
@@ -64,6 +66,9 @@ void main() async {
       '/part/list/storage': (context) => listStorage(),
       '/part/list/vga': (context) => listVga(),
       '/part/list/detail': (context) => DetailPart(),
+      '/compare': (context) => listCompare(),
+      '/compare/cpu': (context) => compare_cpu(),
+      '/compare/cpu/list': (context) => listCompareCpu(),
     },
   ));
 }

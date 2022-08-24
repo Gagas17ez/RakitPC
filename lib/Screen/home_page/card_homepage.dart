@@ -29,6 +29,8 @@ class card_home extends StatelessWidget {
                         false, context),
                     _buildCard('Part PC', 'assets/img/assemble.png', false,
                         false, context),
+                    _buildCard('Compare Part', 'assets/RPC_final.png', false,
+                        false, context),
                   ])),
           const SizedBox(height: 15.0)
         ],
@@ -88,6 +90,8 @@ Future returnbutton(context, name) {
     return Navigator.pushNamed(context, '/build');
   } else if (name == "Part PC") {
     return Navigator.pushNamed(context, '/part');
+  } else if (name == "Compare Part") {
+    return Navigator.pushNamed(context, '/compare');
   } else {
     return Navigator.pushNamed(context, '/build');
   }

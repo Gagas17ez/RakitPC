@@ -33,7 +33,7 @@ class _compare_cpuState extends State<compare_cpu> {
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
         title: Text(
-          'Compare CPU',
+          global.id_compare2.toString(),
           textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
             fontSize: 20,
@@ -45,75 +45,156 @@ class _compare_cpuState extends State<compare_cpu> {
       body: Center(
         child: Row(
           children: <Widget>[
-            InkWell(
-              child: Container(
-                  decoration: BoxDecoration(
-                      color: Color(0xffDBD8E3).withOpacity(0.3),
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  margin: EdgeInsets.only(left: 5),
-                  height: MediaQuery.of(context).size.height * 0.7,
-                  width: MediaQuery.of(context).size.width * 0.46,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.add_box_rounded,
-                        color: Colors.white,
-                        size: 90.0,
-                      ),
-                      Text(
-                        "Tambah CPU",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                          fontSize: 19.0,
+            if (global.id_compare1 == 0 && global.id_compare2 == 0) ...[
+              InkWell(
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: Color(0xffDBD8E3).withOpacity(0.3),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    margin: EdgeInsets.only(left: 5),
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    width: MediaQuery.of(context).size.width * 0.46,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.add_box_rounded,
                           color: Colors.white,
+                          size: 90.0,
                         ),
-                      ),
-                    ],
-                  )),
-              onTap: () {
-                Navigator.pushNamed(context, '/part/list/cpu');
-              },
-            ),
-            VerticalDivider(
-              color: Colors.white,
-              thickness: 3,
-              width: 20,
-              indent: 50,
-              endIndent: 50,
-            ),
-            InkWell(
-              child: Container(
-                  decoration: BoxDecoration(
-                      color: Color(0xffDBD8E3).withOpacity(0.3),
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  margin: EdgeInsets.only(right: 5),
-                  height: MediaQuery.of(context).size.height * 0.7,
-                  width: MediaQuery.of(context).size.width * 0.46,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.add_box_rounded,
-                        color: Colors.white,
-                        size: 90.0,
-                      ),
-                      Text(
-                        "Tambah CPU",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.poppins(
-                          fontSize: 19.0,
+                        Text(
+                          "Tambah CPUs",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            fontSize: 19.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    )),
+                onTap: () {
+                  Navigator.pushNamed(context, '/compare/cpu/list');
+                  setState(() {
+                    global.id_yang_dicompare = 1;
+                  });
+                },
+              ),
+              VerticalDivider(
+                color: Colors.white,
+                thickness: 3,
+                width: 20,
+                indent: 50,
+                endIndent: 50,
+              ),
+              InkWell(
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: Color(0xffDBD8E3).withOpacity(0.3),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    margin: EdgeInsets.only(right: 5),
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    width: MediaQuery.of(context).size.width * 0.46,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.add_box_rounded,
                           color: Colors.white,
+                          size: 90.0,
                         ),
-                      ),
-                    ],
-                  )),
-              onTap: () {
-                Navigator.pushNamed(context, '/part/list/cpu');
-              },
-            )
+                        Text(
+                          "Tambah CPU",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            fontSize: 19.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    )),
+                onTap: () {
+                  Navigator.pushNamed(context, '/compare/cpu/list');
+                  setState(() {
+                    global.id_yang_dicompare = 2;
+                  });
+                },
+              ),
+            ] else if (global.id_compare1 != 0 && global.id_compare2 == 0) ...[
+              InkWell(
+                child: Container(
+                    margin: EdgeInsets.only(left: 5),
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    width: MediaQuery.of(context).size.width * 0.46,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.add_box_rounded,
+                          color: Colors.white,
+                          size: 90.0,
+                        ),
+                        Text(
+                          "cpu wes onok",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            fontSize: 19.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    )),
+                onTap: () {
+                  Navigator.pushNamed(context, '/compare/cpu/list');
+                  setState(() {
+                    global.id_yang_dicompare = 1;
+                  });
+                },
+              ),
+              VerticalDivider(
+                color: Colors.white,
+                thickness: 3,
+                width: 20,
+                indent: 50,
+                endIndent: 50,
+              ),
+              InkWell(
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: Color(0xffDBD8E3).withOpacity(0.3),
+                        borderRadius: BorderRadius.all(Radius.circular(10))),
+                    margin: EdgeInsets.only(right: 5),
+                    height: MediaQuery.of(context).size.height * 0.7,
+                    width: MediaQuery.of(context).size.width * 0.46,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Icon(
+                          Icons.add_box_rounded,
+                          color: Colors.white,
+                          size: 90.0,
+                        ),
+                        Text(
+                          "Tambah CPU",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.poppins(
+                            fontSize: 19.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    )),
+                onTap: () {
+                  Navigator.pushNamed(context, '/compare/cpu/list');
+                  setState(() {
+                    global.id_yang_dicompare = 2;
+                  });
+                },
+              ),
+            ],
           ],
         ),
       ),

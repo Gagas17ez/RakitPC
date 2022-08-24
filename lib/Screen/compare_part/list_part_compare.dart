@@ -8,13 +8,13 @@ import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:rakit_pc/global.dart' as global;
 
-class Part extends StatefulWidget {
-  Part({Key? key}) : super(key: key);
+class listCompare extends StatefulWidget {
+  listCompare({Key? key}) : super(key: key);
   @override
-  State<Part> createState() => _PartState();
+  State<listCompare> createState() => _listCompareState();
 }
 
-class _PartState extends State<Part> {
+class _listCompareState extends State<listCompare> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff272B40),
@@ -33,7 +33,7 @@ class _PartState extends State<Part> {
         ),
         //backgroundColor: Color.fromARGB(240, 143, 5, 131),
         title: Text(
-          'Part Compare',
+          'list Part',
           textAlign: TextAlign.center,
           style: GoogleFonts.poppins(
             fontSize: 20,
@@ -45,7 +45,6 @@ class _PartState extends State<Part> {
       body: ListView(
         children: [
           //Padding(padding:  EdgeInsets.symmetric(horizontal: 10)),
-
           Container(
             child: Card(
               color: Colors.transparent,
@@ -96,10 +95,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/casing');
-                    setState(() {
-                      global.nama_part = "Casing";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/casing');
                   },
                 ),
               ),
@@ -154,10 +150,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/cpu');
-                    setState(() {
-                      global.nama_part = "CPU";
-                    });
+                    Navigator.pushNamed(context, '/compare/cpu');
                   },
                 ),
               ),
@@ -213,10 +206,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/vga');
-                    setState(() {
-                      global.nama_part = "VGA";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/vga');
                   },
                 ),
               ),
@@ -271,10 +261,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/cooler');
-                    setState(() {
-                      global.nama_part = "CPU Cooler";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/cooler');
                   },
                 ),
               ),
@@ -329,10 +316,8 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/motherboard');
-                    setState(() {
-                      global.nama_part = "Motherboard";
-                    });
+                    Navigator.pushNamed(
+                        context, '/listCompare/list/motherboard');
                   },
                 ),
               ),
@@ -387,10 +372,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/ram');
-                    setState(() {
-                      global.nama_part = "Ram";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/ram');
                   },
                 ),
               ),
@@ -445,10 +427,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/fan');
-                    setState(() {
-                      global.nama_part = "Fan";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/fan');
                   },
                 ),
               ),
@@ -504,10 +483,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/storage');
-                    setState(() {
-                      global.nama_part = "Storage";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/storage');
                   },
                 ),
               ),
@@ -562,10 +538,7 @@ class _PartState extends State<Part> {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   onTap: () {
-                    Navigator.pushNamed(context, '/part/list/psu');
-                    setState(() {
-                      global.nama_part = "PSU";
-                    });
+                    Navigator.pushNamed(context, '/listCompare/list/psu');
                   },
                 ),
               ),
