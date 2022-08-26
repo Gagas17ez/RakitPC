@@ -2,7 +2,6 @@
 //
 //     final vga = vgaFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Vga> vgaFromJson(String str) =>

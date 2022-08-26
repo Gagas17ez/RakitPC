@@ -2,7 +2,6 @@
 //
 //     final builds = buildsFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Builds> buildsFromJson(String str) =>

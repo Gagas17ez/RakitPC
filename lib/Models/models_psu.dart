@@ -2,6 +2,7 @@
 //
 //     final psu = psuFromJson(jsonString);
 
+// ignore: unused_import
 import 'package:meta/meta.dart';
 import 'dart:convert';
 

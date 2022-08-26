@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/list_part.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';

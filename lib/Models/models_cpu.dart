@@ -2,7 +2,6 @@
 //
 //     final cpu = cpuFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Cpu> cpuFromJson(String str) =>

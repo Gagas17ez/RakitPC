@@ -2,30 +2,24 @@
 import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Api/api_builds_id.dart';
-import 'package:rakit_pc/Api/api_cpu.dart';
 import 'package:rakit_pc/Models/models_builds.dart';
-import 'package:rakit_pc/Models/models_cpu.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
-import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_SimpanBuild.dart';
 import 'package:rakit_pc/MySqflite.dart';
 import 'package:percent_indicator/percent_indicator.dart';
-import 'package:syncfusion_flutter_datagrid/datagrid.dart';
-import 'package:syncfusion_flutter_core/theme.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Rekomendasi_pc extends StatefulWidget {
-  const Rekomendasi_pc({Key? key}) : super(key: key);
+class RekomendasiPc extends StatefulWidget {
+  const RekomendasiPc({Key? key}) : super(key: key);
 
   @override
-  State<Rekomendasi_pc> createState() => _RekomendasiPCState();
+  State<RekomendasiPc> createState() => _RekomendasiPCState();
 }
 
-class _RekomendasiPCState extends State<Rekomendasi_pc> {
+class _RekomendasiPCState extends State<RekomendasiPc> {
   var formatter = NumberFormat('#,###,000');
 
   @override
@@ -51,7 +45,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Container(
+                          SizedBox(
                             height: MediaQuery.of(context).size.height * 0.1,
                             width: MediaQuery.of(context).size.width * 0.90,
                             child: LinearPercentIndicator(
@@ -876,7 +870,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              Container(
+                              SizedBox(
                                 width: 140,
                                 height: 54,
                                 child: ElevatedButton(
@@ -910,7 +904,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
                               const SizedBox(
                                 width: 20,
                               ),
-                              Container(
+                              SizedBox(
                                 width: 140,
                                 height: 54,
                                 child: ElevatedButton(
@@ -998,7 +992,7 @@ class _RekomendasiPCState extends State<Rekomendasi_pc> {
     int idstorage1,
     int idvga,
   ) async {
-    FocusScope.of(context).requestFocus(new FocusNode());
+    FocusScope.of(context).requestFocus(FocusNode());
 
     if ((global.id_case_adv != null) &&
         (global.id_cpu_adv != null) &&

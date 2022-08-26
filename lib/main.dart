@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
 import 'package:rakit_pc/Screen/build_begginer/hasil_begginer.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
-import 'package:rakit_pc/Screen/build_begginer/howitworks.dart';
+import 'package:rakit_pc/Screen/build_begginer/how_it_works.dart';
 import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
 import 'package:rakit_pc/Screen/compare_part/compare_cpu.dart';
 import 'package:rakit_pc/Screen/compare_part/list_part_compare.dart';
 import 'package:rakit_pc/Screen/compare_part/pilih_compare_cpu.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
+import 'package:rakit_pc/Screen/build_begginer/pertanyaan_1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
 import 'package:rakit_pc/Screen/part_page/list_casing.dart';
 import 'package:rakit_pc/Screen/part_page/list_cpu.dart';
@@ -48,12 +48,12 @@ void main() async {
     routes: {
       '/': (context) => global.currentState,
       '/history': (context) => Simpan(),
-      '/build': (context) => howItworks(), //compare_cpu(),
-      '/buildAwal': (context) => pertanyaan_awal(),
+      '/build': (context) => HowItWorks(), //compare_cpu(),
+      '/buildAwal': (context) => PertanyaanAwal(),
       '/build/advanced': (context) => buildpc_advanced(),
       '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
       '/build/begginer/pertanyaan2': (context) => Pertanyaan2(),
-      '/build/begginer/hasil': (context) => Rekomendasi_pc(),
+      '/build/begginer/hasil': (context) => RekomendasiPc(),
       '/part': (context) => Part(),
       '/part/list': (context) => ListPart(),
       '/part/list/casing': (context) => listCasing(),

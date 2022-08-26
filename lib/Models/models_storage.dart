@@ -2,7 +2,6 @@
 //
 //     final storage = storageFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Storage> storageFromJson(String str) =>

@@ -2,7 +2,6 @@
 //
 //     final ram = ramFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Ram> ramFromJson(String str) =>

@@ -2,7 +2,6 @@
 //
 //     final motherboard = motherboardFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<Motherboard> motherboardFromJson(String str) => List<Motherboard>.from(

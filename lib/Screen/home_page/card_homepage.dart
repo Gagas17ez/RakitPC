@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/part_page/part_page.dart';
 import 'package:hexcolor/hexcolor.dart';

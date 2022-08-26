@@ -2,7 +2,6 @@
 //
 //     final cpuCooler = cpuCoolerFromJson(jsonString);
 
-import 'package:meta/meta.dart';
 import 'dart:convert';
 
 List<CpuCooler> cpuCoolerFromJson(String str) =>

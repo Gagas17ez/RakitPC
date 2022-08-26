@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan2.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
-
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 
-class Pertanyaan1 extends StatefulWidget {
-  Pertanyaan1({Key? key}) : super(key: key);
+class Pertanyaan2 extends StatefulWidget {
+  const Pertanyaan2({Key? key}) : super(key: key);
 
   @override
-  State<Pertanyaan1> createState() => _Pertanyaan1State();
+  State<Pertanyaan2> createState() => _Pertanyaan2State();
 }
 
-class _Pertanyaan1State extends State<Pertanyaan1> {
-  int? _value = 1;
+class _Pertanyaan2State extends State<Pertanyaan2> {
   String button1color = "#DBD8E3";
   String button2color = "#DBD8E3";
   String button3color = "#DBD8E3";
@@ -30,10 +24,11 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
       // appBar: AppBar(
-      //     title: const Text('Pertanyaan 1', textAlign: TextAlign.center),
+      //     title: const Text('Pertanyaan 2', textAlign: TextAlign.center),
       //     backgroundColor: HexColor("#0C062A")),
       body: Center(
-        child: Container(
+        // padding: const EdgeInsets.all(20),
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Column(
@@ -41,17 +36,17 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
               const SizedBox(
                 height: 30,
               ),
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height * 0.1,
                 width: MediaQuery.of(context).size.width * 0.90,
                 child: LinearPercentIndicator(
                   width: MediaQuery.of(context).size.width * 0.90,
                   lineHeight: 30,
-                  percent: 50 / 100,
+                  percent: 75 / 100,
                   animation: true,
                   animationDuration: 500,
                   animateFromLastPercent: true,
-                  barRadius: Radius.circular(20),
+                  barRadius: const Radius.circular(20),
                   backgroundColor: HexColor("#C9C9C9"),
                   progressColor: HexColor("#EE5584"),
                 ),
@@ -64,7 +59,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 width: MediaQuery.of(context).size.width * 0.77,
                 alignment: Alignment.topLeft,
                 child: Text(
-                  "Pertanyaan  1",
+                  "Pertanyaan 2",
                   textAlign: TextAlign.left,
                   style: GoogleFonts.poppins(
                     fontSize: 16.0,
@@ -82,7 +77,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                 width: MediaQuery.of(context).size.width * 0.77,
                 alignment: Alignment.bottomLeft,
                 child: Text(
-                  "Berapakah budget anda ?",
+                  "Apa kegunaan dari komputer tersebut ?",
                   textAlign: TextAlign.left,
                   style: GoogleFonts.poppins(
                     fontSize: 16.0,
@@ -101,15 +96,14 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   child: OutlinedButton(
                     onPressed: () {
                       setState(() {
-                        global.budget = 1;
+                        global.kegunaan = 1;
+                        global.compatible = "All parts compatible";
                       });
-
-                      Navigator.pushNamed(
-                          context, '/build/begginer/pertanyaan2');
+                      Navigator.pushNamed(context, '/build/begginer/hasil');
                     },
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Colors.white,
                       ),
                       shape: RoundedRectangleBorder(
@@ -118,7 +112,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     ),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Rp 3.000.000 - Rp 6.0000.000",
+                      child: Text("Kerja / Browse / Video / Sekolah",
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
                             color: Colors.white,
@@ -127,7 +121,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                           textAlign: TextAlign.left),
                     ),
                   )),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                   height: 40,
                   width: 320,
@@ -135,14 +129,13 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   child: OutlinedButton(
                     onPressed: () {
                       setState(() {
-                        global.budget = 2;
+                        global.kegunaan = 2;
                       });
-                      Navigator.pushNamed(
-                          context, '/build/begginer/pertanyaan2');
+                      Navigator.pushNamed(context, '/build/begginer/hasil');
                     },
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Colors.white,
                       ),
                       shape: RoundedRectangleBorder(
@@ -151,7 +144,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     ),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Rp 6.100.000 - Rp 9.0000.000",
+                      child: Text("Kuliah / Programming",
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
                             color: Colors.white,
@@ -160,7 +153,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                           textAlign: TextAlign.left),
                     ),
                   )),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                   height: 40,
                   width: 320,
@@ -168,14 +161,13 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   child: OutlinedButton(
                     onPressed: () {
                       setState(() {
-                        global.budget = 3;
+                        global.kegunaan = 3;
                       });
-                      Navigator.pushNamed(
-                          context, '/build/begginer/pertanyaan2');
+                      Navigator.pushNamed(context, '/build/begginer/hasil');
                     },
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Colors.white,
                       ),
                       shape: RoundedRectangleBorder(
@@ -184,7 +176,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     ),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("Rp 9.100.000 - Rp 15.0000.000",
+                      child: Text("Bermain game / Video editing",
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
                             color: Colors.white,
@@ -193,7 +185,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                           textAlign: TextAlign.left),
                     ),
                   )),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
                   height: 40,
                   width: 320,
@@ -201,14 +193,13 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                   child: OutlinedButton(
                     onPressed: () {
                       setState(() {
-                        global.budget = 4;
+                        global.kegunaan = 4;
                       });
-                      Navigator.pushNamed(
-                          context, '/build/begginer/pertanyaan2');
+                      Navigator.pushNamed(context, '/build/begginer/hasil');
                     },
                     style: OutlinedButton.styleFrom(
                       padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Colors.white,
                       ),
                       shape: RoundedRectangleBorder(
@@ -217,7 +208,7 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                     ),
                     child: Align(
                       alignment: Alignment.centerLeft,
-                      child: Text("≥ Rp 15.0000.000",
+                      child: Text("Workstation",
                           style: GoogleFonts.poppins(
                             fontSize: 16.0,
                             color: Colors.white,
@@ -226,11 +217,11 @@ class _Pertanyaan1State extends State<Pertanyaan1> {
                           textAlign: TextAlign.left),
                     ),
                   )),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               ElevatedButton(
                 child: const Text('Kembali'),
                 onPressed: () {
-                  Navigator.pushNamed(context, '/buildAwal');
+                  Navigator.pushNamed(context, '/build/begginer/pertanyaan1');
                 },
                 style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(

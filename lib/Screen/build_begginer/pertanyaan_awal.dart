@@ -1,35 +1,29 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:flutter/widgets.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rakit_pc/Screen/build_advanced/build_advanced_new.dart';
-import 'package:rakit_pc/Screen/build_begginer/pertanyaan1.dart';
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 
-class pertanyaan_awal extends StatefulWidget {
-  const pertanyaan_awal({Key? key}) : super(key: key);
+class PertanyaanAwal extends StatefulWidget {
+  const PertanyaanAwal({Key? key}) : super(key: key);
 
   @override
-  _pertanyaan_awal createState() => _pertanyaan_awal();
+  _PertanyaanAwal createState() => _PertanyaanAwal();
 }
 
-class _pertanyaan_awal extends State<pertanyaan_awal> {
-  int? _value = 1;
+class _PertanyaanAwal extends State<PertanyaanAwal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: HexColor("#272B40"),
       body: Center(
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Column(
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               Container(
@@ -43,7 +37,7 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
                   animation: true,
                   animationDuration: 500,
                   animateFromLastPercent: true,
-                  barRadius: Radius.circular(20),
+                  barRadius: const Radius.circular(20),
                   backgroundColor: HexColor("#C9C9C9"),
                   progressColor: HexColor("#EE5584"),
                 ),
@@ -51,105 +45,101 @@ class _pertanyaan_awal extends State<pertanyaan_awal> {
               const SizedBox(
                 height: 10,
               ),
-              Container(
-                // height: MediaQuery.of(context).size.height * 0.1,
-                // width: MediaQuery.of(context).size.width * 0.9,
-                child: Column(
-                  children: <Widget>[
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.79,
-                      height: MediaQuery.of(context).size.height * 0.10,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "Apakah anda sudah berpengalaman di bidang komputer ? ",
-                        textAlign: TextAlign.left,
-                        style: GoogleFonts.poppins(
-                          fontSize: 16.0,
-                          color: Colors.white,
-                          height: 1.5,
-                        ),
+              Column(
+                children: <Widget>[
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.79,
+                    height: MediaQuery.of(context).size.height * 0.10,
+                    alignment: Alignment.center,
+                    child: Text(
+                      "Apakah anda sudah berpengalaman di bidang komputer ? ",
+                      textAlign: TextAlign.left,
+                      style: GoogleFonts.poppins(
+                        fontSize: 16.0,
+                        color: Colors.white,
+                        height: 1.5,
                       ),
                     ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.36,
-                    ),
-                    Container(
-                        height: 40,
-                        width: 320,
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: OutlinedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(context, '/build/advanced');
-                          },
-                          style: OutlinedButton.styleFrom(
-                            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            side: BorderSide(
-                              color: Colors.white,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.36,
+                  ),
+                  Container(
+                      height: 40,
+                      width: 320,
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: OutlinedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/build/advanced');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          side: const BorderSide(
+                            color: Colors.white,
                           ),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text("Sudah",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16.0,
-                                  color: Colors.white,
-                                  height: 1.5,
-                                ),
-                                textAlign: TextAlign.left),
-                          ),
-                        )),
-                    SizedBox(height: 20),
-                    Container(
-                        height: 40,
-                        width: 320,
-                        padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                        child: OutlinedButton(
-                          onPressed: () {
-                            Navigator.pushNamed(
-                                context, '/build/begginer/pertanyaan1');
-                          },
-                          style: OutlinedButton.styleFrom(
-                            padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
-                            side: BorderSide(
-                              color: Colors.white,
-                            ),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                          ),
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text("Belum",
-                                style: GoogleFonts.poppins(
-                                  fontSize: 16.0,
-                                  color: Colors.white,
-                                  height: 1.5,
-                                ),
-                                textAlign: TextAlign.left),
-                          ),
-                        )),
-                    SizedBox(height: 24),
-                    ElevatedButton(
-                      child: const Text('Kembali'),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/');
-                      },
-                      style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          primary: HexColor("#7A77FF"),
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 25, vertical: 10),
-                          textStyle: GoogleFonts.poppins(
-                            fontSize: 16.0,
-                          )),
-                    ),
-                  ],
-                ),
+                        ),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("Sudah",
+                              style: GoogleFonts.poppins(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left),
+                        ),
+                      )),
+                  const SizedBox(height: 20),
+                  Container(
+                      height: 40,
+                      width: 320,
+                      padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                      child: OutlinedButton(
+                        onPressed: () {
+                          Navigator.pushNamed(
+                              context, '/build/begginer/pertanyaan1');
+                        },
+                        style: OutlinedButton.styleFrom(
+                          padding: const EdgeInsets.fromLTRB(20, 0, 0, 0),
+                          side: const BorderSide(
+                            color: Colors.white,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                        ),
+                        child: Align(
+                          alignment: Alignment.centerLeft,
+                          child: Text("Belum",
+                              style: GoogleFonts.poppins(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left),
+                        ),
+                      )),
+                  const SizedBox(height: 24),
+                  ElevatedButton(
+                    child: const Text('Kembali'),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        primary: HexColor("#7A77FF"),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 25, vertical: 10),
+                        textStyle: GoogleFonts.poppins(
+                          fontSize: 16.0,
+                        )),
+                  ),
+                ],
               ),
             ],
           ),
