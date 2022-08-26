@@ -127,23 +127,7 @@ class _compare_cpuState extends State<compare_cpu> {
                     height: MediaQuery.of(context).size.height * 0.7,
                     width: MediaQuery.of(context).size.width * 0.46,
                     child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Icon(
-                          Icons.add_box_rounded,
-                          color: Colors.white,
-                          size: 90.0,
-                        ),
-                        Text(
-                          "cpu wes onok",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.poppins(
-                            fontSize: 19.0,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
+                      children: [],
                     )),
                 onTap: () {
                   Navigator.pushNamed(context, '/compare/cpu/list');
