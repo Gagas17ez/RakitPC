@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_SimpanBuild.dart';
-import 'package:flutter/material.dart';
 import 'package:rakit_pc/MySqflite.dart';
 import 'package:intl/intl.dart';
 
@@ -34,7 +32,7 @@ class _Simpan extends State<Simpan> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff272B40),
+      backgroundColor: const Color(0xff272B40),
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -59,7 +57,7 @@ class _Simpan extends State<Simpan> {
 
             return index == builds.length - 1
                 ? Container(
-                    margin: EdgeInsets.only(bottom: 30),
+                    margin: const EdgeInsets.only(bottom: 30),
                     child: Card(
                       color: Colors.transparent,
                       elevation: 6,
@@ -91,7 +89,7 @@ class _Simpan extends State<Simpan> {
                                   ? Text(
                                       "Semua part kompatible",
                                       style: GoogleFonts.poppins(
-                                        color: Color(0xff52BB6F),
+                                        color: const Color(0xff52BB6F),
                                         fontSize: 13,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -99,7 +97,7 @@ class _Simpan extends State<Simpan> {
                                   : Text(
                                       "Ada part tidak kompatible",
                                       style: GoogleFonts.poppins(
-                                        color: Color(0xffEE3C6D),
+                                        color: const Color(0xffEE3C6D),
                                         fontSize: 13,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -126,13 +124,13 @@ class _Simpan extends State<Simpan> {
                                 onPressed: () {
                                   _onDeleteBuild(build.waktu.toString());
                                 },
-                                icon: Icon(Icons.delete),
+                                icon: const Icon(Icons.delete),
                                 iconSize: 30,
                               ),
                             ],
                           ),
                           selected: true,
-                          selectedTileColor: Color(0xFFffffff),
+                          selectedTileColor: const Color(0xFFffffff),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -195,7 +193,7 @@ class _Simpan extends State<Simpan> {
                                   ? Text(
                                       "Semua part compatible",
                                       style: GoogleFonts.poppins(
-                                        color: Color(0xff52BB6F),
+                                        color: const Color(0xff52BB6F),
                                         fontSize: 13,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -203,7 +201,7 @@ class _Simpan extends State<Simpan> {
                                   : Text(
                                       "Beberapa part tidak kompatible",
                                       style: GoogleFonts.poppins(
-                                        color: Color(0xffEE3C6D),
+                                        color: const Color(0xffEE3C6D),
                                         fontSize: 13,
                                         fontWeight: FontWeight.w600,
                                       ),
@@ -230,13 +228,13 @@ class _Simpan extends State<Simpan> {
                                 onPressed: () {
                                   _onDeleteBuild(build.waktu.toString());
                                 },
-                                icon: Icon(Icons.delete),
+                                icon: const Icon(Icons.delete),
                                 iconSize: 30,
                               ),
                             ],
                           ),
                           selected: true,
-                          selectedTileColor: Color(0xFFffffff),
+                          selectedTileColor: const Color(0xFFffffff),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10),
                           ),

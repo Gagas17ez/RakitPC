@@ -9,14 +9,14 @@ import '../../../../../Models/models_ram.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listRam extends StatefulWidget {
-  listRam({Key? key}) : super(key: key);
+class ListRam extends StatefulWidget {
+  ListRam({Key? key}) : super(key: key);
 
   @override
-  State<listRam> createState() => _listRamState();
+  State<ListRam> createState() => _ListRamState();
 }
 
-class _listRamState extends State<listRam> {
+class _ListRamState extends State<ListRam> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<Ram> ram = [];
@@ -47,7 +47,7 @@ class _listRamState extends State<listRam> {
   }
 
   Future init() async {
-    final ramm = await RamApi.fetch_ramID_nyar(query);
+    final ramm = await RamApi.fetchRamIdNyar(query);
     setState(() => this.ram = ramm);
   }
 
@@ -185,7 +185,7 @@ class _listRamState extends State<listRam> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final rammm = await RamApi.fetch_ramID_nyar(query);
+        final rammm = await RamApi.fetchRamIdNyar(query);
 
         if (!mounted) return;
 

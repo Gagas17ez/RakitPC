@@ -3,7 +3,7 @@ import 'package:rakit_pc/Models/models_fan.dart';
 import 'package:http/http.dart' as http;
 
 class FanApi {
-  static Future<List<Fan>> fetch_fanID_nyar(String query) async {
+  static Future<List<Fan>> fetchFanIdNyar(String query) async {
     final url = Uri.parse("http://103.105.78.74/Api/ApiFan.php");
     final response = await http.get(url);
 

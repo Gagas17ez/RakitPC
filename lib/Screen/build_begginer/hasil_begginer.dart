@@ -32,7 +32,7 @@ class _RekomendasiPCState extends State<RekomendasiPc> {
       //   title: const Text('Hasil Rekomendasi', textAlign: TextAlign.center),
       // ),
       body: FutureBuilder(
-          future: fetch_builds_id(),
+          future: fetchBuildsId(),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(

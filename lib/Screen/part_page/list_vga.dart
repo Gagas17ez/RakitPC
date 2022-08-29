@@ -8,14 +8,14 @@ import '../../../../../Models/models_vga.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listVga extends StatefulWidget {
-  listVga({Key? key}) : super(key: key);
+class ListVga extends StatefulWidget {
+  ListVga({Key? key}) : super(key: key);
 
   @override
-  State<listVga> createState() => _listVgaState();
+  State<ListVga> createState() => _ListVgaState();
 }
 
-class _listVgaState extends State<listVga> {
+class _ListVgaState extends State<ListVga> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<Vga> vga = [];
@@ -27,10 +27,10 @@ class _listVgaState extends State<listVga> {
 
     init();
   }
-  
+
   Future init() async {
-    final Vgau = await VgaApi.fetch_vgaID_nyar(query);
-    setState(() => this.vga = Vgau);
+    final vga = await VgaApi.fetchVgaIdNyar(query);
+    setState(() => this.vga = vga);
   }
 
   @override
@@ -49,8 +49,6 @@ class _listVgaState extends State<listVga> {
 
     debouncer = Timer(duration, callback);
   }
-
-  
 
   @override
   Widget build(BuildContext context) {
@@ -199,13 +197,13 @@ class _listVgaState extends State<listVga> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final Vgauu = await VgaApi.fetch_vgaID_nyar(query);
+        final vga2 = await VgaApi.fetchVgaIdNyar(query);
 
         if (!mounted) return;
 
         setState(() {
           this.query = query;
-          this.vga = Vgauu;
+          this.vga = vga2;
         });
       });
 }

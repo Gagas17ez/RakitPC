@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 
 import 'package:rakit_pc/Models/models_ram.dart';
 
-Future<List<Ram>> fetch_ram_id(int id) async {
+Future<List<Ram>> fetchRamId(int id) async {
   String link = "http://103.105.78.74/Api/ApiRamID.php";
   final response =
       await http.post(Uri.parse(link), body: {'ID': id.toString()});

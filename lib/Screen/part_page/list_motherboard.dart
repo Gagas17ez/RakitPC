@@ -9,14 +9,14 @@ import '../../../../../Models/models_motherboard.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listMotherboard extends StatefulWidget {
-  listMotherboard({Key? key}) : super(key: key);
+class ListMotherboard extends StatefulWidget {
+  ListMotherboard({Key? key}) : super(key: key);
 
   @override
-  State<listMotherboard> createState() => _listMotherboardState();
+  State<ListMotherboard> createState() => _ListMotherboardState();
 }
 
-class _listMotherboardState extends State<listMotherboard> {
+class _ListMotherboardState extends State<ListMotherboard> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<Motherboard> mobo = [];
@@ -47,7 +47,7 @@ class _listMotherboardState extends State<listMotherboard> {
   }
 
   Future init() async {
-    final moboo = await MoboApi.fetch_motherboardID_nyar(query);
+    final moboo = await MoboApi.fetchMotherboardIdNyar(query);
     setState(() => this.mobo = moboo);
   }
 
@@ -185,7 +185,7 @@ class _listMotherboardState extends State<listMotherboard> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final mobooo = await MoboApi.fetch_motherboardID_nyar(query);
+        final mobooo = await MoboApi.fetchMotherboardIdNyar(query);
 
         if (!mounted) return;
 

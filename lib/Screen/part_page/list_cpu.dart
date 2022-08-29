@@ -8,14 +8,14 @@ import '../../../../../Models/models_cpu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCpu extends StatefulWidget {
-  listCpu({Key? key}) : super(key: key);
+class ListCpu extends StatefulWidget {
+  ListCpu({Key? key}) : super(key: key);
 
   @override
-  State<listCpu> createState() => _listCpuState();
+  State<ListCpu> createState() => _ListCpuState();
 }
 
-class _listCpuState extends State<listCpu> {
+class _ListCpuState extends State<ListCpu> {
   var formatter = NumberFormat('#,###,000');
   late Future data;
 
@@ -47,17 +47,17 @@ class _listCpuState extends State<listCpu> {
   }
 
   Future init() async {
-    final cpuu = await CpuApi.fetch_cpuID_nyar(query);
+    final cpuu = await CpuApi.fetchCpuIdNyar(query);
     setState(() => this.cpu = cpuu);
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xff342C4C),
+      backgroundColor: const Color(0xff342C4C),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+        backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
         leading: Padding(
           padding: const EdgeInsets.all(8),
           child: GestureDetector(
@@ -102,12 +102,12 @@ class _listCpuState extends State<listCpu> {
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
-            side: BorderSide(
+            side: const BorderSide(
               width: 2,
               // color: Color.fromARGB(167, 209, 206, 198)
               color: Colors.deepPurpleAccent,
             )),
-        margin: EdgeInsets.fromLTRB(30, 15, 30, 10),
+        margin: const EdgeInsets.fromLTRB(30, 15, 30, 10),
         child: InkWell(
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
@@ -128,7 +128,7 @@ class _listCpuState extends State<listCpu> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Image.network(hasil.imageLink),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           hasil.namaCpu,
                           style: const TextStyle(
@@ -183,14 +183,14 @@ class _listCpuState extends State<listCpu> {
                 mainAxisAlignment: MainAxisAlignment.center,
               ),
               selected: true,
-              selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+              selectedTileColor: const Color.fromARGB(221, 241, 237, 241),
             ),
           ),
         ),
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final cpuuu = await CpuApi.fetch_cpuID_nyar(query);
+        final cpuuu = await CpuApi.fetchCpuIdNyar(query);
 
         if (!mounted) return;
 

@@ -4,7 +4,6 @@ import 'package:rakit_pc/Login/Screens/ForgotPassword/components/background.dart
 import 'package:rakit_pc/Login/components/rounded_button.dart';
 import 'package:rakit_pc/Login/components/rounded_input_field.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../../../../../Screen/home_page/homepage.dart';
 // import 'package:flutter_svg/flutter_svg.dart';
 
 class BodyDesktop extends StatefulWidget {
@@ -73,7 +72,7 @@ class _BodyDesktopState extends State<BodyDesktop> {
       await auth
           .sendPasswordResetEmail(email: email)
           .then((value) => _status = ' successful');
-      //print(_status);
+
       Fluttertoast.showToast(msg: 'Password reset has been sent to Email ');
     } on FirebaseAuthException catch (error) {
       switch (error.code) {
@@ -93,7 +92,6 @@ class _BodyDesktopState extends State<BodyDesktop> {
           errorMessage = "Coulumn need to be filled.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
-      print(error.code);
     }
   }
 }

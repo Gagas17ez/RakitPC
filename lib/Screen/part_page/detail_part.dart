@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer__ructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +31,7 @@ import 'detail_part.dart';
 import 'list_part.dart';
 
 class DetailPart extends StatefulWidget {
-  const DetailPart({Key? key}) : super(key: key);
+  DetailPart({Key? key}) : super(key: key);
 
   @override
   State<DetailPart> createState() => _DetailPartState();
@@ -52,49 +52,49 @@ class _DetailPartState extends State<DetailPart> {
 
   void initState() {
     if (global.nama_part == "Casing") {
-      data = fetch_casing();
+      data = fetchCasing();
       data.then((value) => setState(() {
             data1 = value;
             //ListCasing(data1);
           }));
     } else if (global.nama_part == "CPU Cooler") {
-      data = fetch_cpu_cooler();
+      data = fetchCpuCooler();
       data.then((value) => setState(() {
             data2 = value;
             // /ListCpu_cooler(data2);
           }));
     } else if (global.nama_part == "CPU") {
-      data = fetch_cpu();
+      data = fetchCpu();
       data.then((value) => setState(() {
             data3 = value;
           }));
     } else if (global.nama_part == "Fan") {
-      data = fetch_fan();
+      data = fetchFan();
       data.then((value) => setState(() {
             data4 = value;
           }));
     } else if (global.nama_part == "Motherboard") {
-      data = fetch_motherboard();
+      data = fetchMotherboard();
       data.then((value) => setState(() {
             data5 = value;
           }));
     } else if (global.nama_part == "Ram") {
-      data = fetch_ram();
+      data = fetchRam();
       data.then((value) => setState(() {
             data6 = value;
           }));
     } else if (global.nama_part == "Storage") {
-      data = fetch_storage();
+      data = fetchStorage();
       data.then((value) => setState(() {
             data7 = value;
           }));
     } else if (global.nama_part == "PSU") {
-      data = fetch_psu();
+      data = fetchPsu();
       data.then((value) => setState(() {
             data8 = value;
           }));
     } else if (global.nama_part == "VGA") {
-      data = fetch_vga();
+      data = fetchVga();
       data.then((value) => setState(() {
             data9 = value;
           }));
@@ -117,7 +117,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/casing');
@@ -225,7 +225,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -262,7 +262,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -275,7 +275,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           SizedBox(
                             height: 10,
                           ),
@@ -490,7 +490,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/cooler');
@@ -598,7 +598,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -635,7 +635,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(20, 40), //////// HERE
+                                minimumSize: Size(20, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -650,7 +650,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text(
+                              child: Text(
                                 'Add to Build',
                               )),
                           SizedBox(
@@ -802,7 +802,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/cpu');
@@ -906,7 +906,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         110, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -943,7 +943,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -960,7 +960,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 primary: Color.fromARGB(255, 121, 119, 255),
@@ -969,7 +969,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -980,7 +980,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Compare')),
+                              child: Text('Add to Compare')),
                           SizedBox(
                             height: 10,
                           ),
@@ -1158,7 +1158,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/fan');
@@ -1266,7 +1266,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -1303,7 +1303,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -1334,7 +1334,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           SizedBox(
                             height: 10,
                           ),
@@ -1469,7 +1469,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/motherboard');
@@ -1577,7 +1577,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -1614,7 +1614,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -1629,7 +1629,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           Text("Nama Motherboard",
                               textAlign: TextAlign.left,
                               style: GoogleFonts.poppins(
@@ -1868,7 +1868,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/ram');
@@ -1976,7 +1976,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -2013,7 +2013,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -2035,7 +2035,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           SizedBox(
                             height: 10,
                           ),
@@ -2157,7 +2157,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/storage');
@@ -2265,7 +2265,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -2302,7 +2302,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -2326,7 +2326,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           SizedBox(
                             height: 10,
                           ),
@@ -2487,7 +2487,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/psu');
@@ -2595,7 +2595,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -2632,7 +2632,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -2645,7 +2645,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           SizedBox(
                             height: 10,
                           ),
@@ -2819,7 +2819,7 @@ class _DetailPartState extends State<DetailPart> {
           elevation: 0,
           backgroundColor: Colors.transparent,
           leading: Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/part/list/vga');
@@ -2924,7 +2924,7 @@ class _DetailPartState extends State<DetailPart> {
                                                                 BorderRadius
                                                                     .circular(
                                                                         32.0)),
-                                                    minimumSize: const Size(
+                                                    minimumSize: Size(
                                                         100, 30), //////// HERE
                                                   ),
                                                   onPressed: () async {},
@@ -2961,7 +2961,7 @@ class _DetailPartState extends State<DetailPart> {
                                 elevation: 3,
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10.0)),
-                                minimumSize: const Size(100, 40), //////// HERE
+                                minimumSize: Size(100, 40), //////// HERE
                               ),
                               onPressed: () {
                                 Navigator.pushNamed(context, '/build/advanced');
@@ -2977,7 +2977,7 @@ class _DetailPartState extends State<DetailPart> {
                                   },
                                 );
                               },
-                              child: const Text('Add to Build')),
+                              child: Text('Add to Build')),
                           SizedBox(
                             height: 10,
                           ),

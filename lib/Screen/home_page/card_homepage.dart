@@ -5,7 +5,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class card_home extends StatelessWidget {
+class CardHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class card_home extends StatelessWidget {
                         false, context),
                     _buildCard('Part PC', 'assets/img/assemble.png', false,
                         false, context),
-                    _buildCard('Compare Part', 'assets/RPC_final.png', false,
+                    _buildCard('Compare Part', 'assets/img/compare.png', false,
                         false, context),
                   ])),
           const SizedBox(height: 15.0)

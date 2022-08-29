@@ -2,23 +2,22 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
-import 'package:rakit_pc/Screen/home_page/card_homepage.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:rakit_pc/Screen/home_page/card_homepage.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:rakit_pc/Models/model_user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class homepage extends StatefulWidget {
-  const homepage({Key? key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  _homepageState createState() => _homepageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _homepageState extends State<homepage>
+class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
   User? user = FirebaseAuth.instance.currentUser;
@@ -30,7 +29,7 @@ class _homepageState extends State<homepage>
     var email = logindata.getString('email');
     if (email != null) {
       setState(() {
-        global.currentState = const homepage();
+        global.currentState = const HomePage();
       });
     } else {
       setState(() {
@@ -132,7 +131,7 @@ class _homepageState extends State<homepage>
           Container(
             padding: const EdgeInsets.fromLTRB(15, 0, 0, 1),
             child: Text(
-              "Homepage",
+              "HomePage",
               style: GoogleFonts.poppins(
                 color: Colors.white70,
                 fontSize: 19,
@@ -155,7 +154,7 @@ class _homepageState extends State<homepage>
               height: MediaQuery.of(context).size.height - 60.0,
               width: double.infinity,
               child: TabBarView(
-                  controller: _tabController, children: [card_home()]))
+                  controller: _tabController, children: [CardHome()]))
         ],
       ),
       floatingActionButton: FloatingActionButton(

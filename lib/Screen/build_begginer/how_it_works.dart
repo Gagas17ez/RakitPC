@@ -12,7 +12,6 @@ class HowItWorks extends StatefulWidget {
 }
 
 class _HowItWorksState extends State<HowItWorks> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -133,7 +132,7 @@ class _HowItWorksState extends State<HowItWorks> {
                   ),
                 ],
               ),
-              const SizedBox(height: 200),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.2),
               ElevatedButton(
                 child: const Text('Next'),
                 onPressed: () {

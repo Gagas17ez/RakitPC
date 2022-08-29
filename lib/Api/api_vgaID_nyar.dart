@@ -3,7 +3,7 @@ import 'package:rakit_pc/Models/models_vga.dart';
 import 'package:http/http.dart' as http;
 
 class VgaApi {
-  static Future<List<Vga>> fetch_vgaID_nyar(String query) async {
+  static Future<List<Vga>> fetchVgaIdNyar(String query) async {
     final url = Uri.parse("http://103.105.78.74/Api/ApiVga.php");
     final response = await http.get(url);
 

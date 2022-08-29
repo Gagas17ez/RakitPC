@@ -8,14 +8,14 @@ import '../../../../../Models/models_cpu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCompareCpu extends StatefulWidget {
-  listCompareCpu({Key? key}) : super(key: key);
+class ListCompareCpu extends StatefulWidget {
+  ListCompareCpu({Key? key}) : super(key: key);
 
   @override
-  State<listCompareCpu> createState() => _listCompareCpuState();
+  State<ListCompareCpu> createState() => _ListCompareCpuState();
 }
 
-class _listCompareCpuState extends State<listCompareCpu> {
+class _ListCompareCpuState extends State<ListCompareCpu> {
   var formatter = NumberFormat('#,###,000');
   late Future data;
 
@@ -47,7 +47,7 @@ class _listCompareCpuState extends State<listCompareCpu> {
   }
 
   Future init() async {
-    final cpuu = await CpuApi.fetch_cpuID_nyar(query);
+    final cpuu = await CpuApi.fetchCpuIdNyar(query);
     setState(() => this.cpu = cpuu);
   }
 
@@ -193,7 +193,7 @@ class _listCompareCpuState extends State<listCompareCpu> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final cpuuu = await CpuApi.fetch_cpuID_nyar(query);
+        final cpuuu = await CpuApi.fetchCpuIdNyar(query);
 
         if (!mounted) return;
 

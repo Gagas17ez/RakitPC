@@ -31,7 +31,7 @@ void main() {
 }
 
 class BuildAdvanced extends StatefulWidget {
-  BuildAdvanced({Key? key}) : super(key: key);
+  const BuildAdvanced({Key? key}) : super(key: key);
 
   @override
   State<BuildAdvanced> createState() => _BuildAdvancedState();
@@ -690,7 +690,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getcasing() {
     if (global.id_case_adv != 0) {
       return FutureBuilder(
-          future: fetch_casing_id(global.id_case_adv),
+          future: fetchCasingId(global.id_case_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -992,7 +992,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getfan() {
     if (global.id_fan_adv != 0) {
       return FutureBuilder(
-          future: fetch_fan_id(global.id_fan_adv),
+          future: fetchFanId(global.id_fan_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1086,7 +1086,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getfanAgain() {
     if (global.id_fan2_adv != 0) {
       return FutureBuilder(
-          future: fetch_fan_id(global.id_fan2_adv),
+          future: fetchFanId(global.id_fan2_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1181,7 +1181,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getfanAgainAgain() {
     if (global.id_fan3_adv != 0) {
       return FutureBuilder(
-          future: fetch_fan_id(global.id_fan3_adv),
+          future: fetchFanId(global.id_fan3_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1276,7 +1276,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getcpuwoi() {
     if (global.id_cpu_adv != 0) {
       return FutureBuilder(
-          future: fetch_cpu_id(global.id_cpu_adv),
+          future: fetchCpuId(global.id_cpu_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1371,7 +1371,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getcpucooler() {
     if (global.id_cpu_cooler_adv != 0) {
       return FutureBuilder(
-          future: fetch_cpu_cooler_id(global.id_cpu_cooler_adv),
+          future: fetchCpuCoolerId(global.id_cpu_cooler_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1466,7 +1466,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getmobo() {
     if (global.id_mobo_adv != 0) {
       return FutureBuilder(
-          future: fetch_motherboard_id(global.id_mobo_adv),
+          future: fetchMotherboardId(global.id_mobo_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1561,7 +1561,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getpower() {
     if (global.id_psu_adv != 0) {
       return FutureBuilder(
-          future: fetch_psu_id(global.id_psu_adv),
+          future: fetchPsuId(global.id_psu_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1655,7 +1655,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getram() {
     if (global.id_ram_adv != 0) {
       return FutureBuilder(
-          future: fetch_ram_id(global.id_ram_adv),
+          future: fetchRamId(global.id_ram_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1750,7 +1750,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getramAgain() {
     if (global.id_ram2_adv != 0) {
       return FutureBuilder(
-          future: fetch_ram_id(global.id_ram2_adv),
+          future: fetchRamId(global.id_ram2_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1845,7 +1845,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getstorage() {
     if (global.id_storage_adv != 0) {
       return FutureBuilder(
-          future: fetch_storage_id(global.id_storage_adv),
+          future: fetchStorageId(global.id_storage_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1943,7 +1943,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getstorageAgain() {
     if (global.id_storage2_adv != 0) {
       return FutureBuilder(
-          future: fetch_storage_id(global.id_storage2_adv),
+          future: fetchStorageId(global.id_storage2_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -2041,7 +2041,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   Widget getvga() {
     if (global.id_vga_adv != 0) {
       return FutureBuilder(
-          future: fetch_vga_id(global.id_vga_adv),
+          future: fetchVgaId(global.id_vga_adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(

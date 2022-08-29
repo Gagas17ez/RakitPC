@@ -8,7 +8,6 @@ import 'package:rakit_pc/Login/components/forgot_password_check.dart';
 import 'package:rakit_pc/Login/components/rounded_button.dart';
 import 'package:rakit_pc/Login/components/rounded_input_field.dart';
 import 'package:rakit_pc/Login/components/rounded_password_field.dart';
-import 'package:rakit_pc/Login/responsive/responsive.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../../../../../Screen/home_page/homepage.dart';
@@ -125,7 +124,7 @@ class _BodyDesktopState extends State<BodyDesktop> {
           .then((uid) => {
                 Fluttertoast.showToast(msg: "Login Successful"),
                 Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(builder: (context) => homepage()),
+                    MaterialPageRoute(builder: (context) => const HomePage()),
                     (Route<dynamic> route) => false),
               });
     } on FirebaseAuthException catch (error) {
@@ -153,7 +152,6 @@ class _BodyDesktopState extends State<BodyDesktop> {
           errorMessage = "An undefined Error happened.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
-      print(error.code);
     }
   }
 }

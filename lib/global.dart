@@ -67,4 +67,4 @@ int id_compare2 = 0;
 String socket_cpu = "";
 String socket_mobo = "";
 
-Widget currentState = const homepage();
+Widget currentState = const HomePage();

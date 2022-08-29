@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 
 import 'package:rakit_pc/Models/models_motherboard.dart';
 
-Future<List<Motherboard>> fetch_motherboard_id(int id) async {
+Future<List<Motherboard>> fetchMotherboardId(int id) async {
   String link = "http://103.105.78.74/Api/ApiMotherboardID.php";
 
   final response =

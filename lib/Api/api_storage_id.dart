@@ -2,7 +2,7 @@ import 'package:http/http.dart' as http;
 
 import 'package:rakit_pc/Models/models_storage.dart';
 
-Future<List<Storage>> fetch_storage_id(int id) async {
+Future<List<Storage>> fetchStorageId(int id) async {
   String link = "http://103.105.78.74/Api/ApiStorageID.php";
 
   final response =

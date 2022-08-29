@@ -150,7 +150,6 @@ class _BodyDesktopState extends State<BodyDesktop> {
           errorMessage = "An undefined Error happened.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
-      print(error.code);
     }
   }
 

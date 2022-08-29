@@ -7,7 +7,6 @@ import 'package:rakit_pc/Login/components/forgot_password_check.dart';
 import 'package:rakit_pc/Login/components/rounded_button.dart';
 import 'package:rakit_pc/Login/components/rounded_input_field.dart';
 import 'package:rakit_pc/Login/components/rounded_password_field.dart';
-import 'package:rakit_pc/global.dart' as global;
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -106,7 +105,7 @@ class _BodyMobileState extends State<BodyMobile> {
           .then((uid) => {
                 Fluttertoast.showToast(msg: "Login Berhasil"),
                 Navigator.of(context).pushAndRemoveUntil(
-                    MaterialPageRoute(builder: (context) => homepage()),
+                    MaterialPageRoute(builder: (context) => HomePage()),
                     (Route<dynamic> route) => false),
               });
     } on FirebaseAuthException catch (error) {
@@ -133,7 +132,6 @@ class _BodyMobileState extends State<BodyMobile> {
           errorMessage = "Semua Kolom input harus diisi.";
       }
       Fluttertoast.showToast(msg: errorMessage!);
-      print(error.code);
     }
   }
 }

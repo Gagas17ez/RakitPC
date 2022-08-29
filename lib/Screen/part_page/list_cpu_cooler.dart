@@ -9,14 +9,14 @@ import '../../../../../Models/models_cpu_cooler.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCpuCooler extends StatefulWidget {
-  listCpuCooler({Key? key}) : super(key: key);
+class ListCpuCooler extends StatefulWidget {
+  ListCpuCooler({Key? key}) : super(key: key);
 
   @override
-  State<listCpuCooler> createState() => _listCpuCoolerState();
+  State<ListCpuCooler> createState() => _ListCpuCoolerState();
 }
 
-class _listCpuCoolerState extends State<listCpuCooler> {
+class _ListCpuCoolerState extends State<ListCpuCooler> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<CpuCooler> cpucooler = [];
@@ -47,7 +47,7 @@ class _listCpuCoolerState extends State<listCpuCooler> {
   }
 
   Future init() async {
-    final cooler = await CpuCoolerApi.fetch_cpu_coolerID_nyar(query);
+    final cooler = await CpuCoolerApi.fetchCpuCoolerIdNyar(query);
     setState(() => this.cpucooler = cooler);
   }
 
@@ -188,7 +188,7 @@ class _listCpuCoolerState extends State<listCpuCooler> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final coolerr = await CpuCoolerApi.fetch_cpu_coolerID_nyar(query);
+        final coolerr = await CpuCoolerApi.fetchCpuCoolerIdNyar(query);
 
         if (!mounted) return;
 

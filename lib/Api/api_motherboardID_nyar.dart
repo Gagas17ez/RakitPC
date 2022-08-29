@@ -3,8 +3,7 @@ import 'package:rakit_pc/Models/models_motherboard.dart';
 import 'package:http/http.dart' as http;
 
 class MoboApi {
-  static Future<List<Motherboard>> fetch_motherboardID_nyar(
-      String query) async {
+  static Future<List<Motherboard>> fetchMotherboardIdNyar(String query) async {
     final url = Uri.parse("http://103.105.78.74/Api/ApiMotherboard.php");
     final response = await http.get(url);
 

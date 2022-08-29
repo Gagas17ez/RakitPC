@@ -13,7 +13,7 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
-    return Responsive(
+    return const Responsive(
       mobile: BodyMobile(),
       tablet: BodyDesktop(),
       desktop: BodyDesktop(),

@@ -34,40 +34,40 @@ void main() async {
   SharedPreferences logindata = await SharedPreferences.getInstance();
   var email = logindata.getString('email');
   if (email != null) {
-    global.currentState = const homepage();
+    global.currentState = HomePage();
   } else {
-    global.currentState = const WelcomeScreen();
+    global.currentState = WelcomeScreen();
   }
   //global.checkLogin();
   runApp(MaterialApp(
     theme: ThemeData(
-      scaffoldBackgroundColor: const Color(0xff9837a5),
+      scaffoldBackgroundColor: Color(0xff9837a5),
     ),
     initialRoute: '/',
     routes: {
       '/': (context) => global.currentState,
       '/history': (context) => Simpan(),
-      '/build': (context) => const HowItWorks(), //compare_cpu(),
-      '/buildAwal': (context) => const PertanyaanAwal(),
+      '/build': (context) => HowItWorks(), //compare_cpu(),
+      '/buildAwal': (context) => PertanyaanAwal(),
       '/build/advanced': (context) => BuildAdvanced(),
-      '/build/begginer/pertanyaan1': (context) => const Pertanyaan1(),
-      '/build/begginer/pertanyaan2': (context) => const Pertanyaan2(),
-      '/build/begginer/hasil': (context) => const RekomendasiPc(),
+      '/build/begginer/pertanyaan1': (context) => Pertanyaan1(),
+      '/build/begginer/pertanyaan2': (context) => Pertanyaan2(),
+      '/build/begginer/hasil': (context) => RekomendasiPc(),
       '/part': (context) => Part(),
-      '/part/list': (context) => const ListPart(),
-      '/part/list/casing': (context) => listCasing(),
-      '/part/list/cooler': (context) => listCpuCooler(),
-      '/part/list/cpu': (context) => listCpu(),
-      '/part/list/fan': (context) => listFan(),
-      '/part/list/motherboard': (context) => listMotherboard(),
-      '/part/list/psu': (context) => listPsu(),
-      '/part/list/ram': (context) => listRam(),
-      '/part/list/storage': (context) => listStorage(),
-      '/part/list/vga': (context) => listVga(),
-      '/part/list/detail': (context) => const DetailPart(),
-      '/compare': (context) => listCompare(),
-      '/compare/cpu': (context) => compare_cpu(),
-      '/compare/cpu/list': (context) => listCompareCpu(),
+      '/part/list': (context) => ListPart(),
+      '/part/list/casing': (context) => ListCasing(),
+      '/part/list/cooler': (context) => ListCpuCooler(),
+      '/part/list/cpu': (context) => ListCpu(),
+      '/part/list/fan': (context) => ListFan(),
+      '/part/list/motherboard': (context) => ListMotherboard(),
+      '/part/list/psu': (context) => ListPsu(),
+      '/part/list/ram': (context) => ListRam(),
+      '/part/list/storage': (context) => ListStorage(),
+      '/part/list/vga': (context) => ListVga(),
+      '/part/list/detail': (context) => DetailPart(),
+      '/compare': (context) => ListCompare(),
+      '/compare/cpu': (context) => CompareCpu(),
+      '/compare/cpu/list': (context) => ListCompareCpu(),
     },
   ));
 }

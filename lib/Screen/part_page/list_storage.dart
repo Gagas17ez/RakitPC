@@ -9,14 +9,14 @@ import '../../../../../Models/models_storage.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listStorage extends StatefulWidget {
-  listStorage({Key? key}) : super(key: key);
+class ListStorage extends StatefulWidget {
+  ListStorage({Key? key}) : super(key: key);
 
   @override
-  State<listStorage> createState() => _listStorageState();
+  State<ListStorage> createState() => _ListStorageState();
 }
 
-class _listStorageState extends State<listStorage> {
+class _ListStorageState extends State<ListStorage> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<Storage> storage = [];
@@ -47,7 +47,7 @@ class _listStorageState extends State<listStorage> {
   }
 
   Future init() async {
-    final storageu = await StorageApi.fetch_storageID_nyar(query);
+    final storageu = await StorageApi.fetchStorageIdNyar(query);
     setState(() => this.storage = storageu);
   }
 
@@ -185,13 +185,13 @@ class _listStorageState extends State<listStorage> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final Storageuu = await StorageApi.fetch_storageID_nyar(query);
+        final storageu = await StorageApi.fetchStorageIdNyar(query);
 
         if (!mounted) return;
 
         setState(() {
           this.query = query;
-          this.storage = Storageuu;
+          this.storage = storageu;
         });
       });
 }

@@ -13,15 +13,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     return (await showDialog(
         context: context,
         builder: (context) => AlertDialog(
-              title: Text('Are You sure?'),
-              content: Text('Do you want to exit App'),
+              title: const Text('Are You sure?'),
+              content: const Text('Do you want to exit App'),
               actions: <Widget>[
                 TextButton(
                     onPressed: () => Navigator.of(context).pop(false),
-                    child: Text('No')),
+                    child: const Text('No')),
                 TextButton(
                     onPressed: () => Navigator.of(context).pop(true),
-                    child: Text('Yes')),
+                    child: const Text('Yes')),
               ],
             )));
   }

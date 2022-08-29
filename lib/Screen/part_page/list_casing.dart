@@ -2,21 +2,20 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 import '../../Api/api_casingID_nyar.dart';
 import '../../../../../Models/models_casing.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listCasing extends StatefulWidget {
-  listCasing({Key? key}) : super(key: key);
+class ListCasing extends StatefulWidget {
+  ListCasing({Key? key}) : super(key: key);
 
   @override
-  State<listCasing> createState() => _listCasingState();
+  State<ListCasing> createState() => _ListCasingState();
 }
 
-class _listCasingState extends State<listCasing> {
+class _ListCasingState extends State<ListCasing> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<Casing> casing = [];
@@ -47,7 +46,7 @@ class _listCasingState extends State<listCasing> {
   }
 
   Future init() async {
-    final casee = await CasingApi.fetch_casingID_nyar(query);
+    final casee = await CasingApi.fetchCasingIdNyar(query);
     setState(() => this.casing = casee);
   }
 
@@ -185,7 +184,7 @@ class _listCasingState extends State<listCasing> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final caseee = await CasingApi.fetch_casingID_nyar(query);
+        final caseee = await CasingApi.fetchCasingIdNyar(query);
 
         if (!mounted) return;
 

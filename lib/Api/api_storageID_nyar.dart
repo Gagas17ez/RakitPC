@@ -3,7 +3,7 @@ import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:http/http.dart' as http;
 
 class StorageApi {
-  static Future<List<Storage>> fetch_storageID_nyar(String query) async {
+  static Future<List<Storage>> fetchStorageIdNyar(String query) async {
     final url = Uri.parse("http://103.105.78.74/Api/ApiStorage.php");
     final response = await http.get(url);
 

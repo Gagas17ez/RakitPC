@@ -130,7 +130,6 @@ class _BodyMobileState extends State<BodyMobile> {
           break;
       }
       Fluttertoast.showToast(msg: errorMessage!);
-      print(error.code);
     }
   }
 

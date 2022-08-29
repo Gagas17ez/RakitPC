@@ -6,8 +6,6 @@ import 'package:rakit_pc/Models/models_psu.dart';
 import 'package:rakit_pc/Models/models_ram.dart';
 import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
-import 'package:rakit_pc/Screen/part_page/part_page.dart';
-import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
 import '../../../../../Api/api_casing.dart';
 import '../../../../../Models/models_casing.dart';
@@ -22,7 +20,6 @@ import '../../Api/api_ram.dart';
 import '../../Api/api_storage.dart';
 import '../../Api/api_vga.dart';
 import '../../Models/models_cpu.dart';
-import 'detail_part.dart';
 
 class ListPart extends StatefulWidget {
   const ListPart({Key? key}) : super(key: key);
@@ -44,51 +41,52 @@ class _ListPartState extends State<ListPart> {
   List<Psu> data8 = [];
   List<Vga> data9 = [];
 
+  @override
   void initState() {
     if (global.nama_part == "Casing") {
-      data = fetch_casing();
+      data = fetchCasing();
       data.then((value) => setState(() {
             data1 = value;
             //ListCasing(data1);
           }));
     } else if (global.nama_part == "CPU Cooler") {
-      data = fetch_cpu_cooler();
+      data = fetchCpuCooler();
       data.then((value) => setState(() {
             data2 = value;
             // /ListCpu_cooler(data2);
           }));
     } else if (global.nama_part == "CPU") {
-      data = fetch_cpu();
+      data = fetchCpu();
       data.then((value) => setState(() {
             data3 = value;
           }));
     } else if (global.nama_part == "Fan") {
-      data = fetch_fan();
+      data = fetchFan();
       data.then((value) => setState(() {
             data4 = value;
           }));
     } else if (global.nama_part == "Motherboard") {
-      data = fetch_motherboard();
+      data = fetchMotherboard();
       data.then((value) => setState(() {
             data5 = value;
           }));
     } else if (global.nama_part == "Ram") {
-      data = fetch_ram();
+      data = fetchRam();
       data.then((value) => setState(() {
             data6 = value;
           }));
     } else if (global.nama_part == "Storage") {
-      data = fetch_storage();
+      data = fetchStorage();
       data.then((value) => setState(() {
             data7 = value;
           }));
     } else if (global.nama_part == "PSU") {
-      data = fetch_psu();
+      data = fetchPsu();
       data.then((value) => setState(() {
             data8 = value;
           }));
     } else if (global.nama_part == "VGA") {
-      data = fetch_vga();
+      data = fetchVga();
       data.then((value) => setState(() {
             data9 = value;
           }));
@@ -106,9 +104,9 @@ class _ListPartState extends State<ListPart> {
   Widget getPart() {
     if (global.nama_part == "Casing") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -121,9 +119,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('Casing'),
         ),
-        body: data1.length == 0
+        body: data1.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -135,12 +133,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -208,7 +206,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -217,9 +216,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "CPU Cooler") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -232,9 +231,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('CPU Cooler'),
         ),
-        body: data2.length == 0
+        body: data2.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -246,12 +245,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -319,7 +318,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -329,9 +329,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "CPU") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -344,9 +344,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('CPU'),
         ),
-        body: data3.length == 0
+        body: data3.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -358,12 +358,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -431,7 +431,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -440,9 +441,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "Fan") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -455,9 +456,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('Fan'),
         ),
-        body: data4.length == 0
+        body: data4.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -469,12 +470,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -542,7 +543,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -551,9 +553,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "Motherboard") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -566,9 +568,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('Motherboard'),
         ),
-        body: data5.length == 0
+        body: data5.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -580,12 +582,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -653,7 +655,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -662,9 +665,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "Ram") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -677,7 +680,7 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('RAM'),
         ),
-        body: data6.length == 0
+        body: data6.isEmpty
             ? const Center(
                 child: CircularProgressIndicator(
                   color: Colors.black,
@@ -691,12 +694,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -771,7 +774,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -780,9 +784,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "Storage") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -795,9 +799,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('Storage'),
         ),
-        body: data7.length == 0
+        body: data7.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -809,12 +813,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -889,7 +893,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -898,9 +903,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "PSU") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -913,9 +918,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('PSU'),
         ),
-        body: data8.length == 0
+        body: data8.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -927,12 +932,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -1007,7 +1012,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -1016,9 +1022,9 @@ class _ListPartState extends State<ListPart> {
       );
     } else if (global.nama_part == "VGA") {
       return Scaffold(
-        backgroundColor: Color(0xff342C4C),
+        backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
-          backgroundColor: Color(0xFF272B40).withOpacity(0.0),
+          backgroundColor: const Color(0xFF272B40).withOpacity(0.0),
           leading: Padding(
             padding: const EdgeInsets.all(8),
             child: GestureDetector(
@@ -1031,9 +1037,9 @@ class _ListPartState extends State<ListPart> {
           //backgroundColor: Color.fromARGB(240, 143, 5, 131),
           title: const Text('VGA'),
         ),
-        body: data9.length == 0
+        body: data9.isEmpty
             ? const Center(
-                child: const CircularProgressIndicator(
+                child: CircularProgressIndicator(
                   color: Colors.black,
                 ),
               )
@@ -1045,12 +1051,12 @@ class _ListPartState extends State<ListPart> {
                     clipBehavior: Clip.antiAlias,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
-                        side: BorderSide(
+                        side: const BorderSide(
                           width: 2,
                           // color: Color.fromARGB(167, 209, 206, 198)
                           color: Colors.deepPurpleAccent,
                         )),
-                    margin: EdgeInsets.all(30),
+                    margin: const EdgeInsets.all(30),
                     child: InkWell(
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
@@ -1118,7 +1124,8 @@ class _ListPartState extends State<ListPart> {
                             mainAxisAlignment: MainAxisAlignment.center,
                           ),
                           selected: true,
-                          selectedTileColor: Color.fromARGB(221, 241, 237, 241),
+                          selectedTileColor:
+                              const Color.fromARGB(221, 241, 237, 241),
                         ),
                       ),
                     ),
@@ -1127,7 +1134,7 @@ class _ListPartState extends State<ListPart> {
       );
     } else {
       return const Scaffold(
-          body: const Center(
+          body: Center(
         child: CircularProgressIndicator(
           color: Colors.black,
         ),

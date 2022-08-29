@@ -9,14 +9,14 @@ import '../../../../../Models/models_psu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
 
-class listPsu extends StatefulWidget {
-  listPsu({Key? key}) : super(key: key);
+class ListPsu extends StatefulWidget {
+  ListPsu({Key? key}) : super(key: key);
 
   @override
-  State<listPsu> createState() => _listPsuState();
+  State<ListPsu> createState() => _ListPsuState();
 }
 
-class _listPsuState extends State<listPsu> {
+class _ListPsuState extends State<ListPsu> {
   late Future data;
   var formatter = NumberFormat('#,###,000');
   List<Psu> psu = [];
@@ -47,7 +47,7 @@ class _listPsuState extends State<listPsu> {
   }
 
   Future init() async {
-    final psuu = await PsuApi.fetch_psuID_nyar(query);
+    final psuu = await PsuApi.fetchPsuIdNyar(query);
     setState(() => this.psu = psuu);
   }
 
@@ -185,7 +185,7 @@ class _listPsuState extends State<listPsu> {
       );
 
   Future searchGan(String query) async => debounce(() async {
-        final psuuu = await PsuApi.fetch_psuID_nyar(query);
+        final psuuu = await PsuApi.fetchPsuIdNyar(query);
 
         if (!mounted) return;
 
