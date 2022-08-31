@@ -50,6 +50,7 @@ class _DetailPartState extends State<DetailPart> {
   List<Psu> data8 = [];
   List<Vga> data9 = [];
 
+  @override
   void initState() {
     if (global.nama_part == "Casing") {
       data = fetchCasing();
