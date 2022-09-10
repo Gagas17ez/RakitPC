@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import '../../Api/api_casingID_nyar.dart';
+import '../../Api/api_casing_id_nyar.dart';
 import '../../../../../Models/models_casing.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -111,8 +111,8 @@ class _ListCasingState extends State<ListCasing> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCasing) - 1;
-              global.nama_part = "Casing";
+              global.idDetail = int.parse(hasil.idCasing) - 1;
+              global.namaPart = "Casing";
             });
           },
           child: SizedBox(

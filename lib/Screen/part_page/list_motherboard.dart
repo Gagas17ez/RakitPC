@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_motherboardID_nyar.dart';
+import '../../Api/api_motherboard_id_nyar.dart';
 import '../../../../../Models/models_motherboard.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListMotherboardState extends State<ListMotherboard> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.nama_part = "Motherboard";
-              global.id_detail = int.parse(hasil.idMotherboard) - 1;
+              global.namaPart = "Motherboard";
+              global.idDetail = int.parse(hasil.idMotherboard) - 1;
             });
           },
           child: SizedBox(

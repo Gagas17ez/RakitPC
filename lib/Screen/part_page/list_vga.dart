@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 import 'package:intl/intl.dart';
-import '../../Api/api_vgaID_nyar.dart';
+import '../../Api/api_vga_id_nyar.dart';
 import '../../../../../Models/models_vga.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -111,8 +111,8 @@ class _ListVgaState extends State<ListVga> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.nama_part = "VGA";
-              global.id_detail = int.parse(hasil.idVga) - 1;
+              global.namaPart = "VGA";
+              global.idDetail = int.parse(hasil.idVga) - 1;
             });
           },
           child: SizedBox(

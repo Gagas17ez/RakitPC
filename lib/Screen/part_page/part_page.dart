@@ -97,7 +97,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/casing');
                     setState(() {
-                      global.nama_part = "Casing";
+                      global.namaPart = "Casing";
                     });
                   },
                 ),
@@ -155,7 +155,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/cpu');
                     setState(() {
-                      global.nama_part = "CPU";
+                      global.namaPart = "CPU";
                     });
                   },
                 ),
@@ -214,7 +214,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/vga');
                     setState(() {
-                      global.nama_part = "VGA";
+                      global.namaPart = "VGA";
                     });
                   },
                 ),
@@ -272,7 +272,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/cooler');
                     setState(() {
-                      global.nama_part = "CPU Cooler";
+                      global.namaPart = "CPU Cooler";
                     });
                   },
                 ),
@@ -330,7 +330,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/motherboard');
                     setState(() {
-                      global.nama_part = "Motherboard";
+                      global.namaPart = "Motherboard";
                     });
                   },
                 ),
@@ -388,7 +388,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/ram');
                     setState(() {
-                      global.nama_part = "Ram";
+                      global.namaPart = "Ram";
                     });
                   },
                 ),
@@ -446,7 +446,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/fan');
                     setState(() {
-                      global.nama_part = "Fan";
+                      global.namaPart = "Fan";
                     });
                   },
                 ),
@@ -505,7 +505,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/storage');
                     setState(() {
-                      global.nama_part = "Storage";
+                      global.namaPart = "Storage";
                     });
                   },
                 ),
@@ -563,7 +563,7 @@ class _PartState extends State<Part> {
                   onTap: () {
                     Navigator.pushNamed(context, '/part/list/psu');
                     setState(() {
-                      global.nama_part = "PSU";
+                      global.namaPart = "PSU";
                     });
                   },
                 ),

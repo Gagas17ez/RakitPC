@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_ramID_nyar.dart';
+import '../../Api/api_ram_id_nyar.dart';
 import '../../../../../Models/models_ram.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListRamState extends State<ListRam> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.nama_part = "Ram";
-              global.id_detail = int.parse(hasil.idRam) - 1;
+              global.namaPart = "Ram";
+              global.idDetail = int.parse(hasil.idRam) - 1;
             });
           },
           child: SizedBox(

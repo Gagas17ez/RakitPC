@@ -1,6 +1,6 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
-import 'package:rakit_pc/Models/models_SimpanBuild.dart';
+import 'package:rakit_pc/Models/models_simpan_build.dart';
 
 class MySqflite {
   static const _databaseName = "SimpanBuild.db";

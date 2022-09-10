@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_storageID_nyar.dart';
+import '../../Api/api_storage_id_nyar.dart';
 import '../../../../../Models/models_storage.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListStorageState extends State<ListStorage> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.nama_part = "Storage";
-              global.id_detail = int.parse(hasil.idStorage) - 1;
+              global.namaPart = "Storage";
+              global.idDetail = int.parse(hasil.idStorage) - 1;
             });
           },
           child: SizedBox(

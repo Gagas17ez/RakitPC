@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_fanID_nyar.dart';
+import '../../Api/api_fan_id_nyar.dart';
 import '../../../../../Models/models_fan.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListFanState extends State<ListFan> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.nama_part = "Fan";
-              global.id_detail = int.parse(hasil.idFans) - 1;
+              global.namaPart = "Fan";
+              global.idDetail = int.parse(hasil.idFans) - 1;
             });
           },
           child: SizedBox(

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_cpu_coolerID_nyar.dart';
+import '../../Api/api_cpu_cooler_id_nyar.dart';
 import '../../../../../Models/models_cpu_cooler.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListCpuCoolerState extends State<ListCpuCooler> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCooler) - 1;
-              global.nama_part = "CPU Cooler";
+              global.idDetail = int.parse(hasil.idCooler) - 1;
+              global.namaPart = "CPU Cooler";
             });
           },
           child: SizedBox(

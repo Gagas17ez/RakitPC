@@ -23,7 +23,7 @@ import 'package:rakit_pc/Models/models_storage.dart';
 import 'package:rakit_pc/Models/models_vga.dart';
 import 'package:rakit_pc/Models/models_fan.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:rakit_pc/Models/models_SimpanBuild.dart';
+import 'package:rakit_pc/Models/models_simpan_build.dart';
 import 'package:rakit_pc/MySqflite.dart';
 
 void main() {
@@ -51,30 +51,30 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
 
   void init() async {
     setState(() {
-      global.hargaharga = global.hargacase +
-          global.hargacooler +
-          global.hargacpu +
-          global.hargavga +
-          global.hargafan1 +
-          global.hargafan2 +
-          global.hargafan3 +
-          global.hargamobo +
-          global.hargapsu +
-          global.hargaram1 +
-          global.hargaram2 +
-          global.hargastorage1 +
-          global.hargastorage2;
-      global.wattTotal = global.wattcooler +
-          global.wattcpu +
-          global.wattvga +
-          global.wattcooler +
-          global.wattfan1 +
-          global.wattfan2 +
-          global.wattfan3 +
-          global.wattram1 +
-          global.wattram2 +
-          global.wattstorage1 +
-          global.wattstorage2;
+      global.hargaHarga = global.hargaCase +
+          global.hargaCooler +
+          global.hargaCpu +
+          global.hargaVga +
+          global.hargaFan1 +
+          global.hargaFan2 +
+          global.hargaFan3 +
+          global.hargaMobo +
+          global.hargaPsu +
+          global.hargaRam1 +
+          global.hargaRam2 +
+          global.hargaStorage1 +
+          global.hargaStorage2;
+      global.wattTotal = global.wattCooler +
+          global.wattCpu +
+          global.wattVga +
+          global.wattCooler +
+          global.wattFan1 +
+          global.wattFan2 +
+          global.wattFan3 +
+          global.wattRam1 +
+          global.wattRam2 +
+          global.wattStorage1 +
+          global.wattStorage2;
     });
   }
 
@@ -128,7 +128,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
               alignment: Alignment.center,
               child: Text(
                   "Rp " +
-                      formatter.format(int.parse(global.hargaharga.toString())),
+                      formatter.format(int.parse(global.hargaHarga.toString())),
                   textAlign: TextAlign.center,
                   style: GoogleFonts.poppins(
                     fontSize: 36,
@@ -171,10 +171,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_case_adv = 0;
-                        global.hargacase = 0;
-                        messageCompability = "";
-                        global.compatible = "All parts compatible";
+                        global.idCaseAdv = 0;
+                        global.hargaCase = 0;
+
                         init();
                       });
                     },
@@ -220,11 +219,10 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_cpu_adv = 0;
-                        global.hargacpu = 0;
-                        global.wattcpu = 0;
-                        messageCompability = "";
-                        global.compatible = "All parts compatible";
+                        global.idCpuAdv = 0;
+                        global.hargaCpu = 0;
+                        global.wattCpu = 0;
+
                         init();
                       });
                     },
@@ -268,12 +266,10 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_cpu_cooler_adv = 0;
-                        global.id_cpu_cooler_adv = 0;
-                        global.hargacooler = 0;
-                        global.wattcooler = 0;
-                        messageCompability = "";
-                        global.compatible = "All parts compatible";
+                        global.idCpuCoolerAdv = 0;
+                        global.hargaCooler = 0;
+                        global.wattCooler = 0;
+
                         init();
                       });
                     },
@@ -319,10 +315,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_mobo_adv = 0;
-                        global.hargamobo = 0;
-                        messageCompability = "";
-                        global.compatible = "All parts compatible";
+                        global.idMoboAdv = 0;
+                        global.hargaMobo = 0;
+
                         init();
                       });
                     },
@@ -368,10 +363,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.hargapsu = 0;
-                        global.id_psu_adv = 0;
-                        messageCompability = "";
-                        global.compatible = "All parts compatible";
+                        global.hargaPsu = 0;
+                        global.idPsuAdv = 0;
+
                         init();
                       });
                     },
@@ -417,14 +411,14 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_ram_adv = 0;
-                        global.id_ram2_adv = 0;
-                        global.hargaram1 = 0;
-                        global.hargaram2 = 0;
-                        messageCompability = "";
-                        global.wattram1 = 0;
-                        global.wattram2 = 0;
-                        global.compatible = "All parts compatible";
+                        global.idRamAdv = 0;
+                        global.idRam2Adv = 0;
+                        global.hargaRam1 = 0;
+                        global.hargaRam2 = 0;
+
+                        global.wattRam1 = 0;
+                        global.wattRam2 = 0;
+
                         init();
                       });
                     },
@@ -470,13 +464,13 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_storage_adv = 0;
-                        global.id_storage2_adv = 0;
-                        global.hargastorage1 = 0;
-                        global.hargastorage2 = 0;
-                        global.wattstorage1 = 0;
-                        global.wattstorage2 = 0;
-                        messageCompability = "";
+                        global.idStorageAdv = 0;
+                        global.idStorage2Adv = 0;
+                        global.hargaStorage1 = 0;
+                        global.hargaStorage2 = 0;
+                        global.wattStorage1 = 0;
+                        global.wattStorage2 = 0;
+
                         init();
                       });
                     },
@@ -522,10 +516,10 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_vga_adv = 0;
-                        global.hargavga = 0;
-                        global.wattvga = 0;
-                        messageCompability = "";
+                        global.idVgaAdv = 0;
+                        global.hargaVga = 0;
+                        global.wattVga = 0;
+
                         init();
                       });
                     },
@@ -571,17 +565,16 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                     ),
                     onTap: () {
                       setState(() {
-                        global.id_fan_adv = 0;
-                        global.id_fan2_adv = 0;
-                        global.id_fan3_adv = 0;
-                        global.hargafan1 = 0;
-                        global.hargafan2 = 0;
-                        global.hargafan3 = 0;
-                        global.wattfan1 = 0;
-                        global.wattfan2 = 0;
-                        global.wattfan3 = 0;
-                        global.compatible = "";
-                        messageCompability = "";
+                        global.idFanAdv = 0;
+                        global.idFan2Adv = 0;
+                        global.idFan3Adv = 0;
+                        global.hargaFan1 = 0;
+                        global.hargaFan2 = 0;
+                        global.hargaFan3 = 0;
+                        global.wattFan1 = 0;
+                        global.wattFan2 = 0;
+                        global.wattFan3 = 0;
+
                         init();
                       });
                     },
@@ -650,47 +643,47 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   _onSaveBuild() async {
     FocusScope.of(context).requestFocus(FocusNode());
 
-    if ((global.id_case_adv != null) &&
-        (global.id_cpu_adv != null) &&
-        (global.id_vga_adv != null)) {
+    if ((global.idCaseAdv != null) &&
+        (global.idCpuAdv != null) &&
+        (global.idVgaAdv != null)) {
       await MySqflite.instance.insertBuild(SimpanBuild(
         compatible: global.compatible,
         // harga: global.hargacooler + global.hargacase,
-        harga: (global.hargacase +
-            global.hargavga +
-            global.hargacooler +
-            global.hargacpu +
-            global.hargafan1 +
-            global.hargafan2 +
-            global.hargafan3 +
-            global.hargamobo +
-            global.hargapsu +
-            global.hargaram1 +
-            global.hargaram2 +
-            global.hargastorage1 +
-            global.hargastorage2),
+        harga: (global.hargaCase +
+            global.hargaVga +
+            global.hargaCooler +
+            global.hargaCpu +
+            global.hargaFan1 +
+            global.hargaFan2 +
+            global.hargaFan3 +
+            global.hargaMobo +
+            global.hargaPsu +
+            global.hargaRam1 +
+            global.hargaRam2 +
+            global.hargaStorage1 +
+            global.hargaStorage2),
         waktu: DateTime.now().toString(),
-        idCasing: global.id_case_adv,
-        idCpu: global.id_cpu_adv,
-        idCpuCooler: global.id_cpu_cooler_adv,
-        idMotherboard: global.id_mobo_adv,
-        idPsu: global.id_psu_adv,
-        idRam1: global.id_ram_adv,
-        idRam2: global.id_ram2_adv,
-        idStorage1: global.id_storage_adv,
-        idStorage2: global.id_storage2_adv,
-        idVga: global.id_vga_adv,
-        idFan1: global.id_fan_adv,
-        idFan2: global.id_fan2_adv,
-        idFan3: global.id_fan3_adv,
+        idCasing: global.idCaseAdv,
+        idCpu: global.idCpuAdv,
+        idCpuCooler: global.idCpuCoolerAdv,
+        idMotherboard: global.idMoboAdv,
+        idPsu: global.idPsuAdv,
+        idRam1: global.idRamAdv,
+        idRam2: global.idRam2Adv,
+        idStorage1: global.idStorageAdv,
+        idStorage2: global.idStorage2Adv,
+        idVga: global.idVgaAdv,
+        idFan1: global.idFanAdv,
+        idFan2: global.idFan2Adv,
+        idFan3: global.idFan3Adv,
       ));
     }
   }
 
   Widget getcasing() {
-    if (global.id_case_adv != 0) {
+    if (global.idCaseAdv != 0) {
       return FutureBuilder(
-          future: fetchCasingId(global.id_case_adv),
+          future: fetchCasingId(global.idCaseAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -711,7 +704,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/casing');
                               setState(
                                 () {
-                                  global.nama_part = "Casing";
+                                  global.namaPart = "Casing";
                                 },
                               );
                             },
@@ -769,7 +762,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/casing');
             setState(
               () {
-                global.nama_part = "Casing";
+                global.namaPart = "Casing";
               },
             );
           },
@@ -781,10 +774,10 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget kotakCompability() {
-    if (global.id_cpu_adv == 0 &&
-        global.id_mobo_adv == 0 &&
-        global.id_ram_adv == 0 &&
-        global.id_ram2_adv == 0) {
+    if (global.idCpuAdv == 0 &&
+        global.idMoboAdv == 0 &&
+        global.idRamAdv == 0 &&
+        global.idRam2Adv == 0) {
       setState(() {
         global.compatible = "All parts compatible";
       });
@@ -851,20 +844,18 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
       setState(() {
         global.compatible = "All parts compatible";
       });
-      if ((global.socket_cpu.toLowerCase() !=
-              global.socket_mobo.toLowerCase()) ||
-          (global.id_ram_adv != global.id_ram2_adv &&
-              global.id_ram_adv != 0 &&
-              global.id_ram2_adv != 0)) {
+      if ((global.socketCpu.toLowerCase() != global.socketMobo.toLowerCase()) ||
+          (global.idRamAdv != global.idRam2Adv &&
+              global.idRamAdv != 0 &&
+              global.idRam2Adv != 0)) {
         setState(() {
           global.compatible = "Some part Incompatible";
         });
-        if (global.socket_cpu.toLowerCase() !=
-            global.socket_mobo.toLowerCase()) {
+        if (global.socketCpu.toLowerCase() != global.socketMobo.toLowerCase()) {
           messageCompability +=
               "- CPU tidak kompatible dengan motherboard pilihan\n";
         }
-        if (global.id_ram_adv != global.id_ram2_adv) {
+        if (global.idRamAdv != global.idRam2Adv) {
           messageCompability +=
               "- Single atau Ram yang berbeda bisa menimbulkan error\n";
         }
@@ -990,9 +981,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getfan() {
-    if (global.id_fan_adv != 0) {
+    if (global.idFanAdv != 0) {
       return FutureBuilder(
-          future: fetchFanId(global.id_fan_adv),
+          future: fetchFanId(global.idFanAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1012,9 +1003,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/fan');
                               setState(
                                 () {
-                                  global.seng_diganti = 1;
-                                  global.nama_part = "Fan";
-                                  global.hargafan1 = int.parse(fangan.harga);
+                                  global.sengDiganti = 1;
+                                  global.namaPart = "Fan";
+                                  global.hargaFan1 = int.parse(fangan.harga);
                                 },
                               );
                             },
@@ -1071,8 +1062,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/fan');
             setState(
               () {
-                global.seng_diganti = 1;
-                global.nama_part = "Fan";
+                global.sengDiganti = 1;
+                global.namaPart = "Fan";
               },
             );
           },
@@ -1084,9 +1075,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getfanAgain() {
-    if (global.id_fan2_adv != 0) {
+    if (global.idFan2Adv != 0) {
       return FutureBuilder(
-          future: fetchFanId(global.id_fan2_adv),
+          future: fetchFanId(global.idFan2Adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1106,9 +1097,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/fan');
                               setState(
                                 () {
-                                  global.seng_diganti = 2;
-                                  global.nama_part = "Fan";
-                                  global.hargafan1 = int.parse(fangan.harga);
+                                  global.sengDiganti = 2;
+                                  global.namaPart = "Fan";
+                                  global.hargaFan1 = int.parse(fangan.harga);
                                 },
                               );
                             },
@@ -1166,8 +1157,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/fan');
             setState(
               () {
-                global.seng_diganti = 2;
-                global.nama_part = "Fan";
+                global.sengDiganti = 2;
+                global.namaPart = "Fan";
               },
             );
           },
@@ -1179,9 +1170,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getfanAgainAgain() {
-    if (global.id_fan3_adv != 0) {
+    if (global.idFan3Adv != 0) {
       return FutureBuilder(
-          future: fetchFanId(global.id_fan3_adv),
+          future: fetchFanId(global.idFan3Adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1201,9 +1192,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/fan');
                               setState(
                                 () {
-                                  global.seng_diganti = 3;
-                                  global.nama_part = "Fan";
-                                  global.hargafan3 = int.parse(fangan.harga);
+                                  global.sengDiganti = 3;
+                                  global.namaPart = "Fan";
+                                  global.hargaFan3 = int.parse(fangan.harga);
                                 },
                               );
                             },
@@ -1261,8 +1252,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/fan');
             setState(
               () {
-                global.seng_diganti = 3;
-                global.nama_part = "Fan";
+                global.sengDiganti = 3;
+                global.namaPart = "Fan";
               },
             );
           },
@@ -1274,9 +1265,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getcpuwoi() {
-    if (global.id_cpu_adv != 0) {
+    if (global.idCpuAdv != 0) {
       return FutureBuilder(
-          future: fetchCpuId(global.id_cpu_adv),
+          future: fetchCpuId(global.idCpuAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1296,8 +1287,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/cpu');
                               setState(
                                 () {
-                                  global.nama_part = "CPU";
-                                  global.hargacpu =
+                                  global.namaPart = "CPU";
+                                  global.hargaCpu =
                                       int.parse(cpugan.harga.toString());
                                 },
                               );
@@ -1357,7 +1348,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/cpu');
             setState(
               () {
-                global.nama_part = "CPU";
+                global.namaPart = "CPU";
               },
             );
           },
@@ -1369,9 +1360,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getcpucooler() {
-    if (global.id_cpu_cooler_adv != 0) {
+    if (global.idCpuCoolerAdv != 0) {
       return FutureBuilder(
-          future: fetchCpuCoolerId(global.id_cpu_cooler_adv),
+          future: fetchCpuCoolerId(global.idCpuCoolerAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1391,8 +1382,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/cooler');
                               setState(
                                 () {
-                                  global.nama_part = "CPU Cooler";
-                                  global.hargacooler =
+                                  global.namaPart = "CPU Cooler";
+                                  global.hargaCooler =
                                       int.parse(cpucoolergan.harga);
                                 },
                               );
@@ -1452,7 +1443,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/cooler');
             setState(
               () {
-                global.nama_part = "CPU Cooler";
+                global.namaPart = "CPU Cooler";
               },
             );
           },
@@ -1464,9 +1455,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getmobo() {
-    if (global.id_mobo_adv != 0) {
+    if (global.idMoboAdv != 0) {
       return FutureBuilder(
-          future: fetchMotherboardId(global.id_mobo_adv),
+          future: fetchMotherboardId(global.idMoboAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1487,8 +1478,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                                   context, '/part/list/motherboard');
                               setState(
                                 () {
-                                  global.hargamobo = int.parse(mobogan.harga);
-                                  global.nama_part = "Motherboard";
+                                  global.hargaMobo = int.parse(mobogan.harga);
+                                  global.namaPart = "Motherboard";
                                 },
                               );
                             },
@@ -1547,7 +1538,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/motherboard');
             setState(
               () {
-                global.nama_part = "Motherboard";
+                global.namaPart = "Motherboard";
               },
             );
           },
@@ -1559,9 +1550,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getpower() {
-    if (global.id_psu_adv != 0) {
+    if (global.idPsuAdv != 0) {
       return FutureBuilder(
-          future: fetchPsuId(global.id_psu_adv),
+          future: fetchPsuId(global.idPsuAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1581,8 +1572,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/psu');
                               setState(
                                 () {
-                                  global.nama_part = "PSU";
-                                  global.hargapsu = int.parse(psugan.harga);
+                                  global.namaPart = "PSU";
+                                  global.hargaPsu = int.parse(psugan.harga);
                                 },
                               );
                             },
@@ -1641,7 +1632,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/psu');
             setState(
               () {
-                global.nama_part = "PSU";
+                global.namaPart = "PSU";
               },
             );
           },
@@ -1653,9 +1644,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getram() {
-    if (global.id_ram_adv != 0) {
+    if (global.idRamAdv != 0) {
       return FutureBuilder(
-          future: fetchRamId(global.id_ram_adv),
+          future: fetchRamId(global.idRamAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1675,9 +1666,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/ram');
                               setState(
                                 () {
-                                  global.seng_diganti = 1;
-                                  global.nama_part = "Ram";
-                                  global.hargaram1 = int.parse(ramgan.harga);
+                                  global.sengDiganti = 1;
+                                  global.namaPart = "Ram";
+                                  global.hargaRam1 = int.parse(ramgan.harga);
                                 },
                               );
                             },
@@ -1735,8 +1726,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/ram');
             setState(
               () {
-                global.seng_diganti = 1;
-                global.nama_part = "Ram";
+                global.sengDiganti = 1;
+                global.namaPart = "Ram";
               },
             );
           },
@@ -1748,9 +1739,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getramAgain() {
-    if (global.id_ram2_adv != 0) {
+    if (global.idRam2Adv != 0) {
       return FutureBuilder(
-          future: fetchRamId(global.id_ram2_adv),
+          future: fetchRamId(global.idRam2Adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1770,9 +1761,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/ram');
                               setState(
                                 () {
-                                  global.seng_diganti = 2;
-                                  global.nama_part = "Ram";
-                                  global.hargaram2 = int.parse(ramgan.harga);
+                                  global.sengDiganti = 2;
+                                  global.namaPart = "Ram";
+                                  global.hargaRam2 = int.parse(ramgan.harga);
                                 },
                               );
                             },
@@ -1830,8 +1821,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/ram');
             setState(
               () {
-                global.seng_diganti = 2;
-                global.nama_part = "Ram";
+                global.sengDiganti = 2;
+                global.namaPart = "Ram";
               },
             );
           },
@@ -1843,9 +1834,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getstorage() {
-    if (global.id_storage_adv != 0) {
+    if (global.idStorageAdv != 0) {
       return FutureBuilder(
-          future: fetchStorageId(global.id_storage_adv),
+          future: fetchStorageId(global.idStorageAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1866,9 +1857,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                                   context, '/part/list/storage');
                               setState(
                                 () {
-                                  global.seng_diganti = 1;
-                                  global.nama_part = "Storage";
-                                  global.hargastorage1 =
+                                  global.sengDiganti = 1;
+                                  global.namaPart = "Storage";
+                                  global.hargaStorage1 =
                                       int.parse(storagegan.harga);
                                 },
                               );
@@ -1928,8 +1919,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/storage');
             setState(
               () {
-                global.seng_diganti = 1;
-                global.nama_part = "Storage";
+                global.sengDiganti = 1;
+                global.namaPart = "Storage";
               },
             );
           },
@@ -1941,9 +1932,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getstorageAgain() {
-    if (global.id_storage2_adv != 0) {
+    if (global.idStorage2Adv != 0) {
       return FutureBuilder(
-          future: fetchStorageId(global.id_storage2_adv),
+          future: fetchStorageId(global.idStorage2Adv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -1964,9 +1955,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                                   context, '/part/list/storage');
                               setState(
                                 () {
-                                  global.seng_diganti = 2;
-                                  global.nama_part = "Storage";
-                                  global.hargastorage2 =
+                                  global.sengDiganti = 2;
+                                  global.namaPart = "Storage";
+                                  global.hargaStorage2 =
                                       int.parse(storagegan.harga);
                                 },
                               );
@@ -2026,8 +2017,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/storage');
             setState(
               () {
-                global.seng_diganti = 2;
-                global.nama_part = "Storage";
+                global.sengDiganti = 2;
+                global.namaPart = "Storage";
               },
             );
           },
@@ -2039,9 +2030,9 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget getvga() {
-    if (global.id_vga_adv != 0) {
+    if (global.idVgaAdv != 0) {
       return FutureBuilder(
-          future: fetchVgaId(global.id_vga_adv),
+          future: fetchVgaId(global.idVgaAdv),
           builder: (context, AsyncSnapshot snapshot) {
             if (snapshot.hasData) {
               return ListView.builder(
@@ -2061,8 +2052,8 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                               Navigator.pushNamed(context, '/part/list/vga');
                               setState(
                                 () {
-                                  global.nama_part = "VGA";
-                                  global.hargavga = 69;
+                                  global.namaPart = "VGA";
+                                  global.hargaVga = 69;
                                 },
                               );
                             },
@@ -2121,7 +2112,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
             Navigator.pushNamed(context, '/part/list/vga');
             setState(
               () {
-                global.nama_part = "VGA";
+                global.namaPart = "VGA";
               },
             );
           },

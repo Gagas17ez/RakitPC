@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_psuID_nyar.dart';
+import '../../Api/api_psu_id_nyar.dart';
 import '../../../../../Models/models_psu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListPsuState extends State<ListPsu> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.nama_part = "PSU";
-              global.id_detail = int.parse(hasil.idPsu) - 1;
+              global.namaPart = "PSU";
+              global.idDetail = int.parse(hasil.idPsu) - 1;
             });
           },
           child: SizedBox(

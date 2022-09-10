@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:rakit_pc/Models/models_SimpanBuild.dart';
+import 'package:rakit_pc/Models/models_simpan_build.dart';
 import 'package:rakit_pc/MySqflite.dart';
 import 'package:intl/intl.dart';
 
@@ -137,21 +137,21 @@ class _Simpan extends State<Simpan> {
                           onTap: () {
                             Navigator.pushNamed(context, '/build/advanced');
                             setState(() {
-                              global.hargaharga = build.harga;
-                              global.darisimpan = true;
-                              global.id_case_adv = build.idCasing;
-                              global.id_cpu_adv = build.idCpu;
-                              global.id_mobo_adv = build.idMotherboard;
-                              global.id_vga_adv = build.idVga;
-                              global.id_cpu_cooler_adv = build.idCpuCooler;
-                              global.id_fan_adv = build.idFan1;
-                              global.id_fan2_adv = build.idFan1;
-                              global.id_fan3_adv = build.idFan1;
-                              global.id_psu_adv = build.idPsu;
-                              global.id_storage_adv = build.idStorage1;
-                              global.id_storage2_adv = build.idStorage2;
-                              global.id_ram_adv = build.idRam1;
-                              global.id_ram2_adv = build.idRam2;
+                              global.hargaHarga = build.harga;
+                              global.dariSimpan = true;
+                              global.idCaseAdv = build.idCasing;
+                              global.idCpuAdv = build.idCpu;
+                              global.idMoboAdv = build.idMotherboard;
+                              global.idVgaAdv = build.idVga;
+                              global.idCpuCoolerAdv = build.idCpuCooler;
+                              global.idFanAdv = build.idFan1;
+                              global.idFan2Adv = build.idFan1;
+                              global.idFan3Adv = build.idFan1;
+                              global.idPsuAdv = build.idPsu;
+                              global.idStorageAdv = build.idStorage1;
+                              global.idStorage2Adv = build.idStorage2;
+                              global.idRamAdv = build.idRam1;
+                              global.idRam2Adv = build.idRam2;
                             });
                             const SizedBox(
                               height: 50,
@@ -241,20 +241,20 @@ class _Simpan extends State<Simpan> {
                           onTap: () {
                             Navigator.pushNamed(context, '/build/advanced');
                             setState(() {
-                              global.hargaharga = build.harga;
-                              global.darisimpan = true;
-                              global.id_case_adv = build.idCasing;
-                              global.id_cpu_adv = build.idCpu;
-                              global.id_mobo_adv = build.idMotherboard;
-                              global.id_vga_adv = build.idVga;
-                              global.id_cpu_cooler_adv = build.idCpuCooler;
-                              global.id_fan_adv = build.idFan1;
-                              global.id_fan2_adv = build.idFan1;
-                              global.id_fan3_adv = build.idFan1;
-                              global.id_psu_adv = build.idPsu;
-                              global.id_storage_adv = build.idStorage1;
-                              global.id_storage2_adv = 0;
-                              global.id_ram_adv = build.idRam1;
+                              global.hargaHarga = build.harga;
+                              global.dariSimpan = true;
+                              global.idCaseAdv = build.idCasing;
+                              global.idCpuAdv = build.idCpu;
+                              global.idMoboAdv = build.idMotherboard;
+                              global.idVgaAdv = build.idVga;
+                              global.idCpuCoolerAdv = build.idCpuCooler;
+                              global.idFanAdv = build.idFan1;
+                              global.idFan2Adv = build.idFan1;
+                              global.idFan3Adv = build.idFan1;
+                              global.idPsuAdv = build.idPsu;
+                              global.idStorageAdv = build.idStorage1;
+                              global.idStorage2Adv = 0;
+                              global.idRamAdv = build.idRam1;
                             });
                             const SizedBox(
                               height: 50,

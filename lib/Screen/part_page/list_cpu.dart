@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:scaffold_gradient_background/scaffold_gradient_background.dart';
 
-import '../../Api/api_cpuID_nyar.dart';
+import '../../Api/api_cpu_id_nyar.dart';
 import '../../../../../Models/models_cpu.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/widget/search_widget.dart';
@@ -112,8 +112,8 @@ class _ListCpuState extends State<ListCpu> {
           onTap: () {
             Navigator.pushNamed(context, '/part/list/detail');
             setState(() {
-              global.id_detail = int.parse(hasil.idCpu) - 1;
-              global.nama_part = "CPU";
+              global.idDetail = int.parse(hasil.idCpu) - 1;
+              global.namaPart = "CPU";
             });
           },
           child: SizedBox(

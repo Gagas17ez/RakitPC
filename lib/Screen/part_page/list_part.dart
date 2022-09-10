@@ -43,49 +43,49 @@ class _ListPartState extends State<ListPart> {
 
   @override
   void initState() {
-    if (global.nama_part == "Casing") {
+    if (global.namaPart == "Casing") {
       data = fetchCasing();
       data.then((value) => setState(() {
             data1 = value;
             //ListCasing(data1);
           }));
-    } else if (global.nama_part == "CPU Cooler") {
+    } else if (global.namaPart == "CPU Cooler") {
       data = fetchCpuCooler();
       data.then((value) => setState(() {
             data2 = value;
             // /ListCpu_cooler(data2);
           }));
-    } else if (global.nama_part == "CPU") {
+    } else if (global.namaPart == "CPU") {
       data = fetchCpu();
       data.then((value) => setState(() {
             data3 = value;
           }));
-    } else if (global.nama_part == "Fan") {
+    } else if (global.namaPart == "Fan") {
       data = fetchFan();
       data.then((value) => setState(() {
             data4 = value;
           }));
-    } else if (global.nama_part == "Motherboard") {
+    } else if (global.namaPart == "Motherboard") {
       data = fetchMotherboard();
       data.then((value) => setState(() {
             data5 = value;
           }));
-    } else if (global.nama_part == "Ram") {
+    } else if (global.namaPart == "Ram") {
       data = fetchRam();
       data.then((value) => setState(() {
             data6 = value;
           }));
-    } else if (global.nama_part == "Storage") {
+    } else if (global.namaPart == "Storage") {
       data = fetchStorage();
       data.then((value) => setState(() {
             data7 = value;
           }));
-    } else if (global.nama_part == "PSU") {
+    } else if (global.namaPart == "PSU") {
       data = fetchPsu();
       data.then((value) => setState(() {
             data8 = value;
           }));
-    } else if (global.nama_part == "VGA") {
+    } else if (global.namaPart == "VGA") {
       data = fetchVga();
       data.then((value) => setState(() {
             data9 = value;
@@ -102,7 +102,7 @@ class _ListPartState extends State<ListPart> {
   }
 
   Widget getPart() {
-    if (global.nama_part == "Casing") {
+    if (global.namaPart == "Casing") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -143,8 +143,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 1;
-                          global.id_detail = index;
+                          global.idPart = 1;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -214,7 +214,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "CPU Cooler") {
+    } else if (global.namaPart == "CPU Cooler") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -255,8 +255,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 2;
-                          global.id_detail = index;
+                          global.idPart = 2;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -327,7 +327,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "CPU") {
+    } else if (global.namaPart == "CPU") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -368,8 +368,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 3;
-                          global.id_detail = index;
+                          global.idPart = 3;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -439,7 +439,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "Fan") {
+    } else if (global.namaPart == "Fan") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -480,8 +480,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 4;
-                          global.id_detail = index;
+                          global.idPart = 4;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -551,7 +551,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "Motherboard") {
+    } else if (global.namaPart == "Motherboard") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -592,8 +592,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 5;
-                          global.id_detail = index;
+                          global.idPart = 5;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -663,7 +663,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "Ram") {
+    } else if (global.namaPart == "Ram") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -704,8 +704,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 6;
-                          global.id_detail = index;
+                          global.idPart = 6;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -782,7 +782,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "Storage") {
+    } else if (global.namaPart == "Storage") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -823,8 +823,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 7;
-                          global.id_detail = index;
+                          global.idPart = 7;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -901,7 +901,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "PSU") {
+    } else if (global.namaPart == "PSU") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -942,8 +942,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 8;
-                          global.id_detail = index;
+                          global.idPart = 8;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(
@@ -1020,7 +1020,7 @@ class _ListPartState extends State<ListPart> {
                   );
                 }),
       );
-    } else if (global.nama_part == "VGA") {
+    } else if (global.namaPart == "VGA") {
       return Scaffold(
         backgroundColor: const Color(0xff342C4C),
         appBar: AppBar(
@@ -1061,8 +1061,8 @@ class _ListPartState extends State<ListPart> {
                       onTap: () {
                         Navigator.pushNamed(context, '/part/list/detail');
                         setState(() {
-                          global.id_part = 9;
-                          global.id_detail = index;
+                          global.idPart = 9;
+                          global.idDetail = index;
                         });
                       },
                       child: SizedBox(

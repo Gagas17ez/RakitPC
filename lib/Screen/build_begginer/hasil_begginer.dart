@@ -7,7 +7,7 @@ import 'package:rakit_pc/Screen/home_page/bottom_navbar.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:rakit_pc/global.dart' as global;
-import 'package:rakit_pc/Models/models_SimpanBuild.dart';
+import 'package:rakit_pc/Models/models_simpan_build.dart';
 import 'package:rakit_pc/MySqflite.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -26,11 +26,6 @@ class _RekomendasiPCState extends State<RekomendasiPc> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xff342C4C),
-      // appBar: AppBar(
-      //   elevation: 0,
-      //   backgroundColor: Colors.transparent,
-      //   title: const Text('Hasil Rekomendasi', textAlign: TextAlign.center),
-      // ),
       body: FutureBuilder(
           future: fetchBuildsId(),
           builder: (context, AsyncSnapshot snapshot) {
@@ -112,757 +107,44 @@ class _RekomendasiPCState extends State<RekomendasiPc> {
                                 const SizedBox(
                                   height: 25,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.cpu) - 1;
-                                      global.nama_part = "CPU";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgCpu),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaCpu,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaCpu
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printCpu(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.motherboard) - 1;
-                                      global.nama_part = "Motherboard";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgMobo),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaMobo,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaMobo
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printMobo(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.ram) - 1;
-                                      global.nama_part = "Ram";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgRam),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaRam,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaRam
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printRam(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.vga) - 1;
-                                      global.nama_part = "VGA";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgVga),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaVga,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: int.parse(
-                                                            build.hargaVga) ==
-                                                        0
-                                                    ? Text(
-                                                        "Gratis dengan CPU",
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 12.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                color: Color(
-                                                                    0xff52BB6F)),
-                                                      )
-                                                    : Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int
-                                                                    .parse(build
-                                                                        .hargaVga
-                                                                        .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printVga(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.storage) - 1;
-                                      global.nama_part = "Storage";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgStorage),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaStorage,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaStorage
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printStorage(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.psu) - 1;
-                                      global.nama_part = "PSU";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgPsu),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaPsu,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaPsu
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printPsu(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.cpuCooler) - 1;
-                                      global.nama_part = "CPU Cooler";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgCpuCooler),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaCpuCooler,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: int.parse(build
-                                                            .hargaCpuCooler) ==
-                                                        0
-                                                    ? Text(
-                                                        "Gratis dengan CPU",
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                                fontSize: 12.0,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold,
-                                                                color: Color(
-                                                                    0xff52BB6F)),
-                                                      )
-                                                    : Text(
-                                                        "Rp " +
-                                                            formatter
-                                                                .format(int.parse(build
-                                                                    .hargaCpuCooler
-                                                                    .toString()))
-                                                                .toString(),
-                                                        style:
-                                                            GoogleFonts.poppins(
-                                                          fontSize: 12.0,
-                                                          fontWeight:
-                                                              FontWeight.bold,
-                                                          color:
-                                                              Color(0xff52BB6F),
-                                                        ),
-                                                      ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printCpuCooler(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.fans) - 1;
-                                      global.nama_part = "Fan";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgFans),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaFans,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaFans
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printFanCooler(build),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.pushNamed(
-                                        context, '/part/list/detail');
-                                    setState(() {
-                                      global.id_detail =
-                                          int.parse(build.casing) - 1;
-                                      global.nama_part = "Casing";
-                                    });
-                                  },
-                                  child: Container(
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 10),
-                                    width: 350,
-                                    child: Row(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      children: <Widget>[
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              left: 10.0, right: 10.0),
-                                          child: Container(
-                                            width: 70,
-                                            height: 70,
-                                            decoration: BoxDecoration(
-                                                image: DecorationImage(
-                                                    image: NetworkImage(
-                                                        build.imgCasing),
-                                                    fit: BoxFit.contain)),
-                                          ),
-                                        ),
-                                        Expanded(
-                                          child: Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: <Widget>[
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  build.namaCasing,
-                                                  style: GoogleFonts.poppins(
-                                                      fontSize: 18.0,
-                                                      color: Colors.white,
-                                                      fontWeight:
-                                                          FontWeight.bold),
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.fromLTRB(
-                                                        2.0, 2.0, 2.0, 2.0),
-                                                child: Text(
-                                                  "Rp " +
-                                                      formatter
-                                                          .format(int.parse(
-                                                              build.hargaCasing
-                                                                  .toString()))
-                                                          .toString(),
-                                                  style: GoogleFonts.poppins(
-                                                    fontSize: 12.0,
-                                                    fontWeight: FontWeight.bold,
-                                                    color: Color(0xff52BB6F),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
+                                printCase(build),
                                 const SizedBox(
                                   height: 5,
                                 ),
                               ],
                             ),
-                          ),
-                          const SizedBox(
-                            height: 0,
                           ),
                           const SizedBox(
                             height: 20,
@@ -963,7 +245,6 @@ class _RekomendasiPCState extends State<RekomendasiPc> {
               ),
             );
           }),
-
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.pushNamed(context, '/build');
@@ -976,6 +257,600 @@ class _RekomendasiPCState extends State<RekomendasiPc> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomBar(),
+    );
+  }
+
+  Widget printCpu(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.cpu) - 1;
+          global.namaPart = "CPU";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgCpu),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaCpu,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaCpu.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printMobo(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.motherboard) - 1;
+          global.namaPart = "Motherboard";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgMobo),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaMobo,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaMobo.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printRam(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.ram) - 1;
+          global.namaPart = "Ram";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgRam),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaRam,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaRam.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printVga(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.vga) - 1;
+          global.namaPart = "VGA";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgVga),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaVga,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: int.parse(build.hargaVga) == 0
+                        ? Text(
+                            "Gratis dengan CPU",
+                            style: GoogleFonts.poppins(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xff52BB6F)),
+                          )
+                        : Text(
+                            "Rp " +
+                                formatter
+                                    .format(
+                                        int.parse(build.hargaVga.toString()))
+                                    .toString(),
+                            style: GoogleFonts.poppins(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff52BB6F),
+                            ),
+                          ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printStorage(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.storage) - 1;
+          global.namaPart = "Storage";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgStorage),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaStorage,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaStorage.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printPsu(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.psu) - 1;
+          global.namaPart = "PSU";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgPsu),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaPsu,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaPsu.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printCpuCooler(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.cpuCooler) - 1;
+          global.namaPart = "CPU Cooler";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgCpuCooler),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaCpuCooler,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: int.parse(build.hargaCpuCooler) == 0
+                        ? Text(
+                            "Gratis dengan CPU",
+                            style: GoogleFonts.poppins(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xff52BB6F)),
+                          )
+                        : Text(
+                            "Rp " +
+                                formatter
+                                    .format(int.parse(
+                                        build.hargaCpuCooler.toString()))
+                                    .toString(),
+                            style: GoogleFonts.poppins(
+                              fontSize: 12.0,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xff52BB6F),
+                            ),
+                          ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printFanCooler(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.fans) - 1;
+          global.namaPart = "Fan";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgFans),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaFans,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaFans.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget printCase(build) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, '/part/list/detail');
+        setState(() {
+          global.idDetail = int.parse(build.casing) - 1;
+          global.namaPart = "Casing";
+        });
+      },
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: 10),
+        width: 350,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              child: Container(
+                width: 70,
+                height: 70,
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(build.imgCasing),
+                        fit: BoxFit.contain)),
+              ),
+            ),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      build.namaCasing,
+                      style: GoogleFonts.poppins(
+                          fontSize: 18.0,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(2.0, 2.0, 2.0, 2.0),
+                    child: Text(
+                      "Rp " +
+                          formatter
+                              .format(int.parse(build.hargaCasing.toString()))
+                              .toString(),
+                      style: GoogleFonts.poppins(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff52BB6F),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
@@ -994,9 +869,9 @@ class _RekomendasiPCState extends State<RekomendasiPc> {
   ) async {
     FocusScope.of(context).requestFocus(FocusNode());
 
-    if ((global.id_case_adv != null) &&
-        (global.id_cpu_adv != null) &&
-        (global.id_vga_adv != null)) {
+    if ((global.idCaseAdv != null) &&
+        (global.idCpuAdv != null) &&
+        (global.idVgaAdv != null)) {
       await MySqflite.instance.insertBuild(SimpanBuild(
         compatible: compatible,
         harga: int.parse(hargaTotal),
