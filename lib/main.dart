@@ -5,20 +5,7 @@ import 'package:rakit_pc/Screen/build_begginer/pertanyaan_2.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_awal.dart';
 import 'package:rakit_pc/Screen/build_begginer/how_it_works.dart';
 import 'package:rakit_pc/Login/Screens/Welcome/welcome_screen.dart';
-// import 'package:rakit_pc/Screen/compare_part/compare_cpu.dart';
-// import 'package:rakit_pc/Screen/compare_part/compare_mobo.dart';
-// import 'package:rakit_pc/Screen/compare_part/compare_psu.dart';
-// import 'package:rakit_pc/Screen/compare_part/compare_ram.dart';
-// import 'package:rakit_pc/Screen/compare_part/compare_storage.dart';
-// import 'package:rakit_pc/Screen/compare_part/compare_vga.dart';
-// import 'package:rakit_pc/Screen/compare_part/list_part_compare.dart';
-// import 'package:rakit_pc/Screen/compare_part/pilih_compare_cpu.dart';
-// import 'package:rakit_pc/Screen/compare_part/pilih_compare_mobo.dart';
-// import 'package:rakit_pc/Screen/compare_part/pilih_compare_psu.dart';
-// import 'package:rakit_pc/Screen/compare_part/pilih_compare_storage.dart';
-// import 'package:rakit_pc/Screen/compare_part/pilih_compare_vga.dart';
-// import 'package:rakit_pc/Screen/compare_part/pilih_compare_ram.dart';
-// import 'package:rakit_pc/Screen/compare_part/how_it_works_compare.dart';
+
 import 'package:rakit_pc/Screen/home_page/homepage.dart';
 import 'package:rakit_pc/Screen/build_begginer/pertanyaan_1.dart';
 import 'package:rakit_pc/Screen/part_page/detail_part.dart';
@@ -77,20 +64,6 @@ void main() async {
       '/part/list/storage': (context) => ListStorage(),
       '/part/list/vga': (context) => ListVga(),
       '/part/list/detail': (context) => DetailPart(),
-      // '/compare': (context) => HowItWorksCompare(),
-      // '/compare/list': (context) => ListCompare(),
-      // '/compare/cpu': (context) => CompareCpu(),
-      // '/compare/ram': (context) => CompareRam(),
-      // '/compare/vga': (context) => CompareVga(),
-      // '/compare/storage': (context) => CompareStorage(),
-      // '/compare/psu': (context) => ComparePsu(),
-      // '/compare/motherboard': (context) => CompareMobo(),
-      // '/compare/cpu/list': (context) => ListCompareCpu(),
-      // '/compare/ram/list': (context) => ListCompareRam(),
-      // '/compare/vga/list': (context) => ListCompareVga(),
-      // '/compare/storage/list': (context) => ListCompareStorage(),
-      // '/compare/motherboard/list': (context) => ListCompareMobo(),
-      // '/compare/psu/list': (context) => ListComparePsu(),
     },
   ));
 }
