@@ -24,7 +24,7 @@ import 'package:rakit_pc/Models/models_vga.dart';
 import 'package:rakit_pc/Models/models_fan.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_simpan_build.dart';
-import 'package:rakit_pc/MySqflite.dart';
+import 'package:rakit_pc/my_sqf_lite.dart';
 
 void main() {
   runApp(BuildAdvanced());
@@ -774,152 +774,25 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
   }
 
   Widget kotakCompability() {
-    if (global.idCpuAdv == 0 &&
-        global.idMoboAdv == 0 &&
-        global.idRamAdv == 0 &&
-        global.idRam2Adv == 0) {
+    setState(() {
+      global.compatible = "All parts compatible";
+    });
+    if ((global.socketCpu.toLowerCase() != global.socketMobo.toLowerCase()) ||
+        (global.idRamAdv != global.idRam2Adv &&
+            global.idRamAdv != 0 &&
+            global.idRam2Adv != 0)) {
       setState(() {
-        global.compatible = "All parts compatible";
+        global.compatible = "Some part Incompatible";
       });
-      return Column(
-        children: <Widget>[
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(0),
-            ),
-            margin: const EdgeInsets.all(0.0),
-            color: HexColor("#00B16A"),
-            clipBehavior: Clip.antiAlias,
-            child: Column(
-              children: [
-                ListTile(
-                  dense: true,
-                  leading: const Icon(
-                    Icons.check_circle_outline_rounded,
-                    color: Colors.white,
-                    size: 32,
-                  ),
-                  title: Text('Compatiblity : ',
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600)),
-                  subtitle: Text('Tidak ada isu atau masalah ditemukan.',
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400)),
-                ),
-              ],
-            ),
-          ),
-          Card(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(0),
-            ),
-            margin: const EdgeInsets.all(0.0),
-            color: HexColor("#2C85C5"),
-            clipBehavior: Clip.antiAlias,
-            child: Column(
-              children: [
-                ListTile(
-                  leading: const Icon(
-                    Icons.offline_bolt_outlined,
-                    color: Colors.white,
-                    size: 32,
-                  ),
-                  title: Text(
-                      'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
-                      style: GoogleFonts.poppins(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontWeight: FontWeight.w600)),
-                ),
-              ],
-            ),
-          ),
-        ],
-      );
-    } else {
-      setState(() {
-        global.compatible = "All parts compatible";
-      });
-      if ((global.socketCpu.toLowerCase() != global.socketMobo.toLowerCase()) ||
-          (global.idRamAdv != global.idRam2Adv &&
-              global.idRamAdv != 0 &&
-              global.idRam2Adv != 0)) {
-        setState(() {
-          global.compatible = "Some part Incompatible";
-        });
-        if (global.socketCpu.toLowerCase() != global.socketMobo.toLowerCase()) {
-          messageCompability +=
-              "- CPU tidak kompatible dengan motherboard pilihan\n";
-        }
-        if (global.idRamAdv != global.idRam2Adv) {
-          messageCompability +=
-              "- Single atau Ram yang berbeda bisa menimbulkan error\n";
-        }
-
-        return Column(
-          children: <Widget>[
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(0),
-              ),
-              margin: const EdgeInsets.all(0.0),
-              color: HexColor("#d62828"),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  ListTile(
-                    dense: true,
-                    leading: const Icon(
-                      Icons.clear_rounded,
-                      color: Colors.white,
-                      size: 32,
-                    ),
-                    title: Text('Compatiblity : ',
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 17,
-                            fontWeight: FontWeight.w600)),
-                    subtitle: Text(messageCompability,
-                        style: GoogleFonts.poppins(
-                            color: const Color(0xffffba08),
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700)),
-                  ),
-                ],
-              ),
-            ),
-            Card(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(0),
-              ),
-              margin: const EdgeInsets.all(0.0),
-              color: HexColor("#2C85C5"),
-              clipBehavior: Clip.antiAlias,
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: const Icon(
-                      Icons.offline_bolt_outlined,
-                      color: Colors.white,
-                      size: 32,
-                    ),
-                    title: Text(
-                        'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
-                        style: GoogleFonts.poppins(
-                            color: Colors.white,
-                            fontSize: 17,
-                            fontWeight: FontWeight.w600)),
-                  ),
-                ],
-              ),
-            ),
-          ],
-        );
+      if (global.socketCpu.toLowerCase() != global.socketMobo.toLowerCase()) {
+        messageCompability +=
+            "- CPU tidak kompatible dengan motherboard pilihan\n";
       }
+      if (global.idRamAdv != global.idRam2Adv) {
+        messageCompability +=
+            "- Single atau Ram yang berbeda bisa menimbulkan error\n";
+      }
+
       return Column(
         children: <Widget>[
           Card(
@@ -927,26 +800,27 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
               borderRadius: BorderRadius.circular(0),
             ),
             margin: const EdgeInsets.all(0.0),
-            color: HexColor("#00B16A"),
+            color: HexColor("#d62828"),
             clipBehavior: Clip.antiAlias,
             child: Column(
               children: [
                 ListTile(
                   dense: true,
                   leading: const Icon(
-                    Icons.check_circle_outline_rounded,
+                    Icons.clear_rounded,
                     color: Colors.white,
+                    size: 32,
                   ),
                   title: Text('Compatiblity : ',
                       style: GoogleFonts.poppins(
                           color: Colors.white,
                           fontSize: 17,
                           fontWeight: FontWeight.w600)),
-                  subtitle: Text('Tidak ada isu atau masalah ditemukan.',
+                  subtitle: Text(messageCompability,
                       style: GoogleFonts.poppins(
-                          color: Colors.white,
+                          color: const Color(0xffffba08),
                           fontSize: 14,
-                          fontWeight: FontWeight.w400)),
+                          fontWeight: FontWeight.w700)),
                 ),
               ],
             ),
@@ -964,6 +838,7 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
                   leading: const Icon(
                     Icons.offline_bolt_outlined,
                     color: Colors.white,
+                    size: 32,
                   ),
                   title: Text(
                       'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
@@ -978,6 +853,63 @@ class _BuildAdvancedState extends State<BuildAdvanced> {
         ],
       );
     }
+    return Column(
+      children: <Widget>[
+        Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(0),
+          ),
+          margin: const EdgeInsets.all(0.0),
+          color: HexColor("#00B16A"),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            children: [
+              ListTile(
+                dense: true,
+                leading: const Icon(
+                  Icons.check_circle_outline_rounded,
+                  color: Colors.white,
+                ),
+                title: Text('Compatiblity : ',
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600)),
+                subtitle: Text('Tidak ada isu atau masalah ditemukan.',
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400)),
+              ),
+            ],
+          ),
+        ),
+        Card(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(0),
+          ),
+          margin: const EdgeInsets.all(0.0),
+          color: HexColor("#2C85C5"),
+          clipBehavior: Clip.antiAlias,
+          child: Column(
+            children: [
+              ListTile(
+                leading: const Icon(
+                  Icons.offline_bolt_outlined,
+                  color: Colors.white,
+                ),
+                title: Text(
+                    'Perkiraan Watt : ' + global.wattTotal.toString() + "W",
+                    style: GoogleFonts.poppins(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600)),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
   }
 
   Widget getfan() {

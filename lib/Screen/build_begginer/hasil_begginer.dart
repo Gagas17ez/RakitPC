@@ -8,7 +8,7 @@ import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:rakit_pc/global.dart' as global;
 import 'package:rakit_pc/Models/models_simpan_build.dart';
-import 'package:rakit_pc/MySqflite.dart';
+import 'package:rakit_pc/my_sqf_lite.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 import 'package:google_fonts/google_fonts.dart';
 
