@@ -30,3 +30,14 @@ subprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+plugins {
+  id "org.sonarqube" version "3.4.0.2513"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "p142_rakit-pc-b2"
+    property "sonar.organization", "p142"
+  }
+}
